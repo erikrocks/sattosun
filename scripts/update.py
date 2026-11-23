@@ -99,6 +99,22 @@ def write_json(rel, data):
 
 # ---------- games ----------
 
+def watch_info(comp):
+    """Where a game is shown: ([{"name": "Fox", "type": "TV" or "Streaming"}], "Ford Field, Detroit, MI")."""
+    watch, seen = [], set()
+    for b in (comp.get("geoBroadcasts") or comp.get("broadcasts") or []):
+        names = [(b.get("media") or {}).get("shortName")] if b.get("media") else (b.get("names") or [])
+        for n in names:
+            if n and n not in seen:
+                seen.add(n)
+                kind = (b.get("type") or {}).get("shortName") if isinstance(b.get("type"), dict) else None
+                watch.append({"name": n, "type": kind or "TV"})
+    v = comp.get("venue") or {}
+    addr = v.get("address") or {}
+    venue = ", ".join(x for x in (v.get("fullName"), addr.get("city"), addr.get("state")) if x)
+    return watch, venue
+
+
 def build_week(sb):
     games = []
     for ev in sb.get("events", []):
@@ -114,12 +130,15 @@ def build_week(sb):
         state = st.get("state", "pre")                     # pre | in | post
         broadcasts = comp.get("broadcasts") or []
         network = broadcasts[0]["names"][0] if broadcasts and broadcasts[0].get("names") else ""
+        watch, venue = watch_info(comp)
         games.append({
             "id": ev["id"],
             "kickoff": ev["date"],
             "state": state,
             "detail": st.get("shortDetail", "") if state != "pre" else "",
             "network": network,
+            "watch": watch if state != "post" else [],
+            "venue": venue,
             "away": sides.get("away"),
             "home": sides.get("home"),
         })
@@ -577,8 +596,10 @@ def college_game(ev, team_id):
     network = ((b[0].get("media") or {}).get("shortName") or "") if b else ""
     side = lambda c: {"id": str(c["team"].get("id")), "abbr": c["team"].get("abbreviation"), "name": c["team"].get("location") or c["team"].get("displayName"),
                       "rank": rank_of(c), "score": score_of(c) if state != "pre" else None}
+    watch, venue = watch_info(comp)
     return {"id": ev["id"], "kickoff": ev["date"], "state": state,
             "detail": st.get("shortDetail", "") if state != "pre" else "", "network": network,
+            "watch": watch if state != "post" else [], "venue": venue,
             "where": "neutral" if comp.get("neutralSite") else us.get("homeAway", "home"),
             "homeAway": us.get("homeAway", "home"),
             "us": side(us), "opp": side(opp),

@@ -2,7 +2,7 @@
  "season": 2026,
  "week": 11,
  "seasonType": "regular",
- "updated": "2026-11-23T05:10:21Z",
+ "updated": "2026-11-23T05:12:03Z",
  "source": "ESPN scoreboard",
  "games": [
   {
@@ -11,6 +11,13 @@
    "state": "pre",
    "detail": "",
    "network": "ESPN",
+   "watch": [
+    {
+     "name": "ESPN",
+     "type": "TV"
+    }
+   ],
+   "venue": "Northwest Stadium, Landover, MD",
    "away": {
     "abbr": "CIN",
     "score": 0
@@ -26,6 +33,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Prime Video",
+   "watch": [],
+   "venue": "Reliant Stadium, Houston, TX",
    "away": {
     "abbr": "IND",
     "score": 3
@@ -41,6 +50,8 @@
    "state": "post",
    "detail": "Final",
    "network": "CBS",
+   "watch": [],
+   "venue": "Highmark Stadium, Orchard Park, NY",
    "away": {
     "abbr": "MIA",
     "score": 9
@@ -56,6 +67,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Fox",
+   "watch": [],
+   "venue": "Soldier Field, Chicago, IL",
    "away": {
     "abbr": "NO",
     "score": 13
@@ -71,6 +84,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Fox",
+   "watch": [],
+   "venue": "AT&T Stadium, Arlington, TX",
    "away": {
     "abbr": "TEN",
     "score": 30
@@ -86,6 +101,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Fox",
+   "watch": [],
+   "venue": "Ford Field, Detroit, MI",
    "away": {
     "abbr": "TB",
     "score": 21
@@ -101,6 +118,8 @@
    "state": "post",
    "detail": "Final",
    "network": "CBS",
+   "watch": [],
+   "venue": "Arrowhead Stadium, Kansas City, MO",
    "away": {
     "abbr": "ARI",
     "score": 7
@@ -116,6 +135,8 @@
    "state": "post",
    "detail": "Final",
    "network": "CBS",
+   "watch": [],
+   "venue": "Lincoln Financial Field, Philadelphia, PA",
    "away": {
     "abbr": "PIT",
     "score": 16
@@ -131,6 +152,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Fox",
+   "watch": [],
+   "venue": "Bank of America Stadium, Charlotte, NC",
    "away": {
     "abbr": "BAL",
     "score": 33
@@ -146,6 +169,8 @@
    "state": "post",
    "detail": "Final",
    "network": "Fox",
+   "watch": [],
+   "venue": "SoFi Stadium, Inglewood, CA",
    "away": {
     "abbr": "NYJ",
     "score": 27
@@ -161,6 +186,8 @@
    "state": "post",
    "detail": "Final",
    "network": "CBS",
+   "watch": [],
+   "venue": "Empower Field at Mile High, Denver, CO",
    "away": {
     "abbr": "LV",
     "score": 24
@@ -176,6 +203,8 @@
    "state": "post",
    "detail": "Final",
    "network": "CBS",
+   "watch": [],
+   "venue": "MetLife Stadium, East Rutherford, NJ",
    "away": {
     "abbr": "JAX",
     "score": 18
@@ -191,6 +220,8 @@
    "state": "post",
    "detail": "Final",
    "network": "NBC",
+   "watch": [],
+   "venue": "Estadio Banorte, Mexico City",
    "away": {
     "abbr": "MIN",
     "score": 10

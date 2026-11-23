@@ -152,6 +152,11 @@
   .plays .what{flex:1;color:var(--muted)}
   .plays .us .what{color:var(--text)}
   .plays .sc{flex:none;font-weight:700;font-variant-numeric:tabular-nums}
+  .watch{border-top:1px solid var(--line);padding:10px 14px 11px;font-size:14px;line-height:1.45}
+  .watch h4{margin:0 0 3px;font:700 11px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .watch b{font-weight:700}
+  .watch a{color:var(--accent);text-decoration:none;font-weight:600}
+  .watch small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
   /* Player sheet */
   .sheet{position:fixed;inset:0;z-index:40;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
   .sheet-h{position:sticky;top:0;background:var(--bg);border-bottom:3px solid var(--accent);z-index:1}
@@ -276,6 +281,37 @@ const IMG = "https://a.espncdn.com/combiner/i?img=";
 const nflLogo = abbr => `<img class="logo" alt="" loading="lazy" src="${IMG}/i/teamlogos/nfl/500-dark/${({WAS:"wsh"})[abbr] || abbr.toLowerCase()}.png&w=72&h=72" onerror="this.style.visibility='hidden'">`;
 const ncaaLogo = (id, cls="") => id ? `<img class="logo ${cls}" alt="" loading="lazy" src="${IMG}/i/teamlogos/ncaa/500-dark/${encodeURIComponent(id)}.png&w=72&h=72" onerror="this.style.visibility='hidden'">` : "";
 const headshot = (id, cls="head") => id ? `<img class="${cls}" alt="" loading="lazy" src="${IMG}/i/headshots/nfl/players/full/${encodeURIComponent(id)}.png&w=192&h=140" onerror="this.remove()">` : "";
+/* Where to watch. The network comes from ESPN; the streaming home for each network is listed here.
+   Check these when TV deals change. */
+const STREAM = {
+  "NBC":["Peacock","https://www.peacocktv.com/"], "Peacock":["Peacock","https://www.peacocktv.com/"],
+  "CBS":["Paramount+","https://www.paramountplus.com/"],
+  "Fox":["Fox One","https://www.fox.com/"], "FOX":["Fox One","https://www.fox.com/"], "FS1":["Fox One","https://www.fox.com/"],
+  "FS2":["Fox One","https://www.fox.com/"], "BTN":["Fox One","https://www.fox.com/"],
+  "ESPN":["the ESPN app","https://www.espn.com/watch/"], "ABC":["the ESPN app","https://www.espn.com/watch/"], "ESPN2":["the ESPN app","https://www.espn.com/watch/"],
+  "ESPNU":["the ESPN app","https://www.espn.com/watch/"], "ESPN+":["the ESPN app","https://www.espn.com/watch/"], "SECN":["the ESPN app","https://www.espn.com/watch/"],
+  "ACCN":["the ESPN app","https://www.espn.com/watch/"],
+  "Prime Video":["Prime Video","https://www.primevideo.com/"], "Netflix":["Netflix","https://www.netflix.com/"],
+  "NFL Net":["NFL+","https://www.nfl.com/plus"], "NFL Network":["NFL+","https://www.nfl.com/plus"],
+  "TNT":["HBO Max","https://www.hbomax.com/"], "TBS":["HBO Max","https://www.hbomax.com/"], "truTV":["HBO Max","https://www.hbomax.com/"],
+  "The CW":["the CW app","https://www.cwtv.com/"], "CW":["the CW app","https://www.cwtv.com/"]
+};
+function watchHTML(g, league){
+  if(g.state === "post") return "";
+  const list = (g.watch && g.watch.length) ? g.watch : (g.network ? [{name:g.network, type:"TV"}] : []);
+  if(!list.length) return g.venue ? `<div class="watch"><h4>Where to watch</h4>TV details aren't announced yet.<small>${esc(g.venue)}</small></div>` : "";
+  const tv = list.filter(w => w.type !== "Streaming"), streamOnly = list.filter(w => w.type === "Streaming");
+  const seen = new Set(), links = [];
+  for(const w of list){ const st = STREAM[w.name]; if(st && !seen.has(st[0])){ seen.add(st[0]); links.push(`<a href="${st[1]}" target="_blank" rel="noopener">${esc(st[0])} ↗</a>`); } }
+  let line = tv.length ? `<b>${tv.map(w => esc(w.name)).join(", ")}</b>${links.length ? " · stream on " + links.join(" or ") : ""}`
+                       : `Streaming only on ${links.length ? links.join(" or ") : `<b>${streamOnly.map(w => esc(w.name)).join(", ")}</b>`}`;
+  const notes = [];
+  const sundayRegional = league === "nfl" && new Date(g.kickoff).getDay() === 0 && tv.some(w => /^(CBS|Fox)$/i.test(w.name));
+  if(sundayRegional) notes.push(`Sunday afternoon games air in selected areas, so check your local ${esc(tv[0].name)} station. Out-of-area games are on <a href="https://tv.youtube.com/learn/nflsundayticket/" target="_blank" rel="noopener">NFL Sunday Ticket ↗</a>.`);
+  if(league === "nfl" && !tv.length) notes.push("Also on local TV in the two teams' home areas.");
+  if(g.venue) notes.push(esc(g.venue));
+  return `<div class="watch"><h4>${g.state === "in" ? "Watch now" : "Where to watch"}</h4>${line}${notes.map(n => `<small>${n}</small>`).join("")}</div>`;
+}
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
 const norm = a => ALIAS[(a||"").toUpperCase()] || (a||"").toUpperCase();
 // Same rule as scripts/update.py: "T.J. Hockenson" == "TJ Hockenson", suffixes dropped.
@@ -347,7 +383,8 @@ function parseScoreboard(sb){
     }
     const st = (ev.status || {}).type || {};
     const b = (comp.broadcasts || [])[0];
-    return {id: ev.id, kickoff: ev.date, state: st.state || "pre", detail: st.state === "pre" ? "" : (st.shortDetail || ""),
+    const watch = (comp.geoBroadcasts || []).map(x => ({name:(x.media || {}).shortName, type:((x.type || {}).shortName) || "TV"})).filter(x => x.name);
+    return {...(watch.length && st.state !== "post" ? {watch} : {}), id: ev.id, kickoff: ev.date, state: st.state || "pre", detail: st.state === "pre" ? "" : (st.shortDetail || ""),
             network: b && b.names ? b.names[0] : "", away: sides.away, home: sides.home};
   });
 }
@@ -619,6 +656,7 @@ function gameCard(g){
   return `<article class="game ${g.state === "in" ? "live" : ""}">
     <div class="gtop">${statusText(g)}<span class="count">${esc(plural(away.length + home.length, school().short))}</span></div>
     <div class="teams">${teamRow(g.away, g.home, g)}${teamRow(g.home, g.away, g)}</div>
+    ${watchHTML(g, "nfl")}
     <div class="players">${group(g.away.abbr, away)}${group(g.home.abbr, home)}</div>
   </article>`;
 }
@@ -810,6 +848,7 @@ function collegeCard(g){
   return `<article class="game ${g.state === "in" ? "live" : ""}">
     <div class="gtop">${collegeStatus(g)}<span class="count">${esc(place)}</span></div>
     <div class="teams">${g.where === "home" ? oppRow + usRow : usRow + oppRow}</div>
+    ${watchHTML(g, "college")}
     ${g.state === "pre" ? "" : `<div class="players">
       ${tops.map(t => `<div class="p static"><span class="pos cat">${esc(t.tag)}</span><span class="pmain"><span class="pname">${esc(t.name)}</span><span class="sl">${esc(t.line)}</span></span></div>`).join("")}
       <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="${esc(key)}"><span class="pmain more">Full ${esc(state.college.team.abbr || "")} box score</span>${CHEV}</div>
