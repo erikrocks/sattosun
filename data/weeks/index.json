@@ -1,0 +1,45 @@
+{
+ "season": 2026,
+ "weeks": [
+  {
+   "key": "2-1",
+   "label": "Week 1"
+  },
+  {
+   "key": "2-2",
+   "label": "Week 2"
+  },
+  {
+   "key": "2-3",
+   "label": "Week 3"
+  },
+  {
+   "key": "2-4",
+   "label": "Week 4"
+  },
+  {
+   "key": "2-5",
+   "label": "Week 5"
+  },
+  {
+   "key": "2-6",
+   "label": "Week 6"
+  },
+  {
+   "key": "2-7",
+   "label": "Week 7"
+  },
+  {
+   "key": "2-8",
+   "label": "Week 8"
+  },
+  {
+   "key": "2-9",
+   "label": "Week 9"
+  },
+  {
+   "key": "2-10",
+   "label": "Week 10"
+  }
+ ]
+}

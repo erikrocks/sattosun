@@ -1,0 +1,584 @@
+{
+ "season": 2026,
+ "week": 6,
+ "seasonType": "regular",
+ "updated": "2026-11-23T04:40:59Z",
+ "source": "ESPN scoreboard",
+ "games": [
+  {
+   "id": "401872995",
+   "kickoff": "2026-10-16T00:15Z",
+   "state": "post",
+   "detail": "Final/OT",
+   "network": "Prime Video",
+   "away": {
+    "abbr": "SEA",
+    "score": 14
+   },
+   "home": {
+    "abbr": "DEN",
+    "score": 17
+   }
+  },
+  {
+   "id": "401872996",
+   "kickoff": "2026-10-18T13:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NFL Net",
+   "away": {
+    "abbr": "HOU",
+    "score": 34
+   },
+   "home": {
+    "abbr": "JAX",
+    "score": 31
+   }
+  },
+  {
+   "id": "401872999",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "CHI",
+    "score": 31
+   },
+   "home": {
+    "abbr": "ATL",
+    "score": 23
+   }
+  },
+  {
+   "id": "401872997",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "BAL",
+    "score": 10
+   },
+   "home": {
+    "abbr": "CLE",
+    "score": 13
+   }
+  },
+  {
+   "id": "401873003",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "TEN",
+    "score": 26
+   },
+   "home": {
+    "abbr": "IND",
+    "score": 20
+   }
+  },
+  {
+   "id": "401873001",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "NYJ",
+    "score": 19
+   },
+   "home": {
+    "abbr": "NE",
+    "score": 26
+   }
+  },
+  {
+   "id": "401873000",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "NO",
+    "score": 34
+   },
+   "home": {
+    "abbr": "NYG",
+    "score": 27
+   }
+  },
+  {
+   "id": "401872998",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "CAR",
+    "score": 25
+   },
+   "home": {
+    "abbr": "PHI",
+    "score": 14
+   }
+  },
+  {
+   "id": "401873002",
+   "kickoff": "2026-10-18T17:00Z",
+   "state": "post",
+   "detail": "Final/OT",
+   "network": "CBS",
+   "away": {
+    "abbr": "PIT",
+    "score": 26
+   },
+   "home": {
+    "abbr": "TB",
+    "score": 19
+   }
+  },
+  {
+   "id": "401873004",
+   "kickoff": "2026-10-18T20:05Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "ARI",
+    "score": 18
+   },
+   "home": {
+    "abbr": "LAR",
+    "score": 16
+   }
+  },
+  {
+   "id": "401873006",
+   "kickoff": "2026-10-18T20:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "LAC",
+    "score": 6
+   },
+   "home": {
+    "abbr": "KC",
+    "score": 22
+   }
+  },
+  {
+   "id": "401873005",
+   "kickoff": "2026-10-18T20:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "BUF",
+    "score": 33
+   },
+   "home": {
+    "abbr": "LV",
+    "score": 30
+   }
+  },
+  {
+   "id": "401873007",
+   "kickoff": "2026-10-19T00:20Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NBC",
+   "away": {
+    "abbr": "DAL",
+    "score": 13
+   },
+   "home": {
+    "abbr": "GB",
+    "score": 23
+   }
+  },
+  {
+   "id": "401873008",
+   "kickoff": "2026-10-20T00:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "ESPN",
+   "away": {
+    "abbr": "WAS",
+    "score": 17
+   },
+   "home": {
+    "abbr": "SF",
+    "score": 23
+   }
+  }
+ ],
+ "byes": [
+  "CIN",
+  "DET",
+  "MIA",
+  "MIN"
+ ],
+ "key": "2-6",
+ "label": "Week 6",
+ "complete": true,
+ "stats": {
+  "401872995": {
+   "final": true,
+   "players": {
+    "riley moss": {
+     "team": "DEN",
+     "id": "4382401",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401872996": {
+   "final": true,
+   "players": {
+    "kaevon merriweather": {
+     "team": "JAX",
+     "id": "4360502",
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401872999": {
+   "final": true,
+   "players": {
+    "tory taylor": {
+     "team": "CHI",
+     "id": "4686889",
+     "cats": {
+      "punting": {
+       "NO": "5",
+       "YDS": "224",
+       "AVG": "44.8",
+       "TB": "1",
+       "In 20": "3",
+       "LONG": "50"
+      }
+     }
+    }
+   }
+  },
+  "401872997": {
+   "final": true,
+   "players": {}
+  },
+  "401873003": {
+   "final": true,
+   "players": {
+    "amani hooker": {
+     "team": "TEN",
+     "id": "4036134",
+     "cats": {
+      "defensive": {
+       "TOT": "13",
+       "SOLO": "7",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873001": {
+   "final": true,
+   "players": {
+    "dane belton": {
+     "team": "NYJ",
+     "id": "4426686",
+     "cats": {
+      "defensive": {
+       "TOT": "9",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873000": {
+   "final": true,
+   "players": {
+    "noah fant": {
+     "team": "NO",
+     "id": "4036131",
+     "cats": {
+      "receiving": {
+       "REC": "0",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "0",
+       "TGTS": "1"
+      }
+     }
+    }
+   }
+  },
+  "401872998": {
+   "final": true,
+   "players": {
+    "cooper dejean": {
+     "team": "PHI",
+     "id": "4682618",
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873002": {
+   "final": true,
+   "players": {
+    "yahya black": {
+     "team": "PIT",
+     "id": "4430947",
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    "kaden wetjen": {
+     "team": "PIT",
+     "id": "5081338",
+     "cats": {
+      "kickReturns": {
+       "NO": "4",
+       "YDS": "105",
+       "AVG": "26.3",
+       "LONG": "29",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "2",
+       "YDS": "0",
+       "AVG": "0.0",
+       "LONG": "4",
+       "TD": "0"
+      }
+     }
+    },
+    "anthony nelson": {
+     "team": "TB",
+     "id": "3894856",
+     "cats": {
+      "defensive": {
+       "TOT": "0",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873004": {
+   "final": true,
+   "players": {
+    "casey kreiter": {
+     "team": "ARI",
+     "id": "17304",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873006": {
+   "final": true,
+   "players": {
+    "xavier nwankpa": {
+     "team": "KC",
+     "id": "4685491",
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873005": {
+   "final": true,
+   "players": {}
+  },
+  "401873007": {
+   "final": true,
+   "players": {
+    "tyler goodson": {
+     "team": "DAL",
+     "id": "4429676",
+     "cats": {
+      "rushing": {
+       "CAR": "2",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "2"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "9",
+       "AVG": "9.0",
+       "TD": "0",
+       "LONG": "9",
+       "TGTS": "3"
+      },
+      "kickReturns": {
+       "NO": "5",
+       "YDS": "122",
+       "AVG": "24.4",
+       "LONG": "30",
+       "TD": "0"
+      }
+     }
+    },
+    "kaleb johnson": {
+     "team": "GB",
+     "id": "4819231",
+     "cats": {
+      "rushing": {
+       "CAR": "1",
+       "YDS": "-2",
+       "AVG": "-2.0",
+       "TD": "0",
+       "LONG": "-2"
+      }
+     }
+    },
+    "lukas van ness": {
+     "team": "GB",
+     "id": "4686906",
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "2",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    "kristian welch": {
+     "team": "GB",
+     "id": "4036153",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873008": {
+   "final": true,
+   "players": {
+    "drew stevens": {
+     "team": "WAS",
+     "id": "5081335",
+     "cats": {
+      "kicking": {
+       "FG": "1/1",
+       "PCT": "100.0",
+       "LONG": "51",
+       "XP": "2/2",
+       "PTS": "5"
+      }
+     }
+    },
+    "george kittle": {
+     "team": "SF",
+     "id": "3040151",
+     "cats": {
+      "receiving": {
+       "REC": "5",
+       "YDS": "69",
+       "AVG": "13.8",
+       "TD": "1",
+       "LONG": "35",
+       "TGTS": "8"
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -2,24 +2,9 @@
  "season": 2026,
  "week": 11,
  "seasonType": "regular",
- "updated": "2026-11-23T04:21:53Z",
+ "updated": "2026-11-23T04:40:36Z",
  "source": "ESPN scoreboard",
  "games": [
-  {
-   "id": "401873077",
-   "kickoff": "2026-11-23T01:20Z",
-   "state": "in",
-   "detail": "2:00 - 4th",
-   "network": "NBC",
-   "away": {
-    "abbr": "MIN",
-    "score": 10
-   },
-   "home": {
-    "abbr": "SF",
-    "score": 35
-   }
-  },
   {
    "id": "401873070",
    "kickoff": "2026-11-22T18:00Z",
@@ -168,6 +153,21 @@
    "home": {
     "abbr": "NYG",
     "score": 23
+   }
+  },
+  {
+   "id": "401873077",
+   "kickoff": "2026-11-23T01:20Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NBC",
+   "away": {
+    "abbr": "MIN",
+    "score": 10
+   },
+   "home": {
+    "abbr": "SF",
+    "score": 35
    }
   },
   {

@@ -1,42 +1,9 @@
 {
  "season": 2026,
  "week": 11,
- "updated": "2026-11-23T04:21:56Z",
+ "updated": "2026-11-23T04:40:43Z",
  "source": "ESPN game summaries",
  "games": {
-  "401873077": {
-   "final": false,
-   "players": {
-    "tj hockenson": {
-     "team": "MIN",
-     "id": "4036133",
-     "cats": {
-      "receiving": {
-       "REC": "6",
-       "YDS": "55",
-       "AVG": "9.2",
-       "TD": "0",
-       "LONG": "20",
-       "TGTS": "7"
-      }
-     }
-    },
-    "george kittle": {
-     "team": "SF",
-     "id": "3040151",
-     "cats": {
-      "receiving": {
-       "REC": "3",
-       "YDS": "34",
-       "AVG": "11.3",
-       "TD": "2",
-       "LONG": "17",
-       "TGTS": "3"
-      }
-     }
-    }
-   }
-  },
   "401873070": {
    "final": true,
    "players": {
@@ -273,6 +240,39 @@
        "PD": "1",
        "QB HTS": "0",
        "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873077": {
+   "final": true,
+   "players": {
+    "tj hockenson": {
+     "team": "MIN",
+     "id": "4036133",
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "55",
+       "AVG": "9.2",
+       "TD": "0",
+       "LONG": "20",
+       "TGTS": "7"
+      }
+     }
+    },
+    "george kittle": {
+     "team": "SF",
+     "id": "3040151",
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "34",
+       "AVG": "11.3",
+       "TD": "2",
+       "LONG": "17",
+       "TGTS": "3"
       }
      }
     }

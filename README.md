@@ -16,6 +16,7 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `data/players/<school>.json` | That school's NFL players (Sleeper API, checked against ESPN team rosters) |
 | `data/stats.json` | Box-score lines for tracked players (ESPN game summaries) |
 | `data/college/<school>.json` | The school's own season for the Saturday tab: schedule, scores, box scores, season leaders, news (ESPN) |
+| `data/weeks/<season>/<type>-<week>.json` | One file per finished NFL week (scores and stat lines) for the week picker; `data/weeks/index.json` lists them. Missing weeks are rebuilt on the next full refresh |
 | `data/status.json` | When each part last refreshed, and any problems from the last run |
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
@@ -28,6 +29,10 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 2. **Settings → Pages**: Source = "Deploy from a branch", branch `main`, folder `/ (root)`.
 3. **Actions tab**: enable workflows, open "Update data" and click **Run workflow** once. That swaps the preview snapshot for live data.
 4. Custom domain: `iahawks.com` (apex A/AAAA records to GitHub Pages, `www` CNAME to `erikrocks.github.io`), set under Settings → Pages. `hawks.eriksheridan.com` redirects to it.
+
+## Past weeks
+
+Tap the week badge on the Sunday tab to look back at any finished week of the season. Players are shown with the team they actually played for that week (matched on ESPN id in that week's box scores), so a mid-season trade shows correctly. Roster status and injury tags aren't kept for past weeks.
 
 ## When something breaks
 

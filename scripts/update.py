@@ -6,6 +6,7 @@ Writes:
   data/players/<school>.json   every NFL player from that school (Sleeper, checked against ESPN team rosters)
   data/stats.json              box-score lines for tracked players (ESPN game summaries)
   data/college/<school>.json   the school's own season: schedule, scores, box scores, season leaders, news (ESPN)
+  data/weeks/<season>/<k>.json one file per finished NFL week (scores + stat lines), for the week picker
   data/status.json             when each part last refreshed, and any problems from the last run
 
 Standard library only, so it runs on a bare GitHub Actions runner.
@@ -315,6 +316,76 @@ def update_stats(week, schools):
 
 
 
+# ---------- finished weeks (the week picker) ----------
+
+STYPE_NUM = {"pre": 1, "regular": 2, "post": 3}
+POST_LABELS = {1: "Wild Card", 2: "Divisional", 3: "Conference", 4: "Pro Bowl", 5: "Super Bowl"}
+
+
+def parse_summary_by_id(summary, by_id, by_name):
+    """Like parse_summary, but for old weeks: a player is found wherever he actually played, matched on
+    ESPN id (so a namesake on another team isn't picked up), and keyed by the name we list him under."""
+    found = {}
+    for tp in summary.get("boxscore", {}).get("players", []):
+        team = norm(tp.get("team", {}).get("abbreviation"))
+        for cat in tp.get("statistics", []):
+            labels = cat.get("labels", [])
+            for a in cat.get("athletes", []):
+                ath = a.get("athlete", {})
+                key = by_id.get(str(ath.get("id"))) or by_name.get(norm_name(ath.get("displayName")))
+                if not key:
+                    continue
+                entry = found.setdefault(key, {"team": team, "id": ath.get("id"), "cats": {}})
+                entry["cats"][cat.get("name", "other")] = dict(zip(labels, a.get("stats", [])))
+    return found
+
+
+def archive_weeks(current, schools):
+    """Save every finished week of this season that isn't saved yet. Self-healing: a missing file is rebuilt."""
+    season, now_type = current.get("season"), STYPE_NUM.get(current.get("seasonType"), 2)
+    if not season or now_type < 2 or not current.get("week"):
+        return
+    by_id, by_name = {}, {}
+    for key in schools:
+        for p in (read_json(f"data/players/{key}.json", {}) or {}).get("players", []):
+            if p.get("espn_id"):
+                by_id[str(p["espn_id"])] = norm_name(p["name"])
+            else:
+                by_name[norm_name(p["name"])] = norm_name(p["name"])
+    targets = [(2, w) for w in range(1, (current["week"] if now_type == 2 else 18) + 1)]
+    if now_type == 3:
+        targets += [(3, w) for w in range(1, current["week"] + 1)]
+    folder, made = f"data/weeks/{season}", 0
+    for stype, w in targets:
+        rel = f"{folder}/{stype}-{w}.json"
+        if (read_json(rel) or {}).get("complete"):
+            continue
+        is_current = (stype, w) == (now_type, current["week"])
+        try:
+            wk = current if is_current else build_week(get_json(f"{SCOREBOARD}?dates={season}&seasontype={stype}&week={w}"))
+            if wk.get("week") != w or not wk["games"]:
+                continue
+            complete = all(g["state"] == "post" for g in wk["games"])
+            if is_current and not complete:
+                continue                                  # still in progress: the live view covers it
+            stats = {g["id"]: {"final": True, "players": parse_summary_by_id(get_json(SUMMARY.format(g["id"])), by_id, by_name)}
+                     for g in wk["games"] if g["state"] == "post"}
+        except Exception as e:
+            problem(f"saving week {stype}-{w} failed: {e}")
+            continue
+        label = f"Week {w}" if stype == 2 else POST_LABELS.get(w, f"Playoffs {w}")
+        write_json(rel, {**wk, "key": f"{stype}-{w}", "label": label, "complete": complete, "stats": stats})
+        made += 1
+    weeks = []
+    for name in os.listdir(os.path.join(ROOT, folder)) if os.path.isdir(os.path.join(ROOT, folder)) else []:
+        d = read_json(f"{folder}/{name}") if name.endswith(".json") and name != "index.json" else None
+        if d and d.get("key"):
+            weeks.append({"key": d["key"], "label": d["label"]})
+    weeks.sort(key=lambda x: tuple(int(n) for n in x["key"].split("-")))
+    write_json("data/weeks/index.json", {"season": season, "weeks": weeks})
+    print(f"weeks: {len(weeks)} saved ({made} new)")
+
+
 # ---------- college (the school's own games) ----------
 
 LEADER_CATS = [  # (label, box category, column to rank by, columns to show)
@@ -522,6 +593,11 @@ def main():
                 update_stats(week, schools)
             except Exception as e:
                 problem(f"NFL box scores failed: {e}")
+            if not auto:
+                try:
+                    archive_weeks(week, schools)
+                except Exception as e:
+                    problem(f"saving finished weeks failed: {e}")
 
     for key, school in schools.items():
         if not auto or key in college_live:

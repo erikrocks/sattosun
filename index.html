@@ -36,6 +36,12 @@
   h1{margin:4px 0 0;font:800 28px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em}
   .week{flex:none;background:var(--accent);color:var(--accent-ink);border-radius:999px;
     font:800 15px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;padding:8px 12px;letter-spacing:.04em;white-space:nowrap}
+  .weekwrap{position:relative;display:block}
+  .weekwrap select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+  .weekwrap.pick .week::after{content:"";display:inline-block;margin-left:7px;vertical-align:2px;
+    border:4px solid transparent;border-top:5px solid currentColor;border-bottom:0}
+  .pastbar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .pastbar button{flex:none;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:700;cursor:pointer}
   select.school{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:14px}
 
   /* Stats */
@@ -159,7 +165,7 @@
       <h1 id="title">Hawkeyes in the NFL</h1>
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-      <div class="week" id="week">Week —</div>
+      <label class="weekwrap" id="weekwrap"><div class="week" id="week">Week —</div><select id="weekSel" aria-label="Choose a week" hidden></select></label>
       <select class="school" id="school" aria-label="School" hidden></select>
     </div>
   </div>
@@ -214,6 +220,7 @@ const normName = n => (n||"").toLowerCase().replace(/-/g," ").replace(/[^a-z ]/g
 
 const state = { schools:null, schoolKey:null, week:null, stats:{}, players:[], filter:null, q:"",
                 direct:false, directTried:false, lastSync:null, open:new Set(), box:{},
+                weeks:null, past:null, live:null, pastTeam:{},
                 tab:"sunday", college:null, collegeSync:null, copen:new Set() };
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -302,13 +309,14 @@ function liveWindow(){
     now >= new Date(g.kickoff) - LIVE_BEFORE && now <= +new Date(g.kickoff) + LIVE_AFTER);
 }
 async function syncDirect(){
+  if(state.past) return false;
   if(state.directTried && !state.direct) return false;
   state.directTried = true;
   try{
     const sb = await getJSON(`${ESPN}/scoreboard`, false);
     const fresh = parseScoreboard(sb);
     const wk = sb.week && sb.week.number;
-    if(wk && wk !== state.week.week) return false;          // ESPN rolled to a new week; leave it to the daily refresh
+    if(state.past || (wk && wk !== state.week.week)) return false;          // ESPN rolled to a new week; leave it to the daily refresh
     const byId = Object.fromEntries(fresh.map(g => [g.id, g]));
     state.week.games = state.week.games.map(g => byId[g.id] ? {...g, ...byId[g.id]} : g);
     const tracked = new Set(state.players.map(p => normName(p.name)));
@@ -324,6 +332,7 @@ async function syncDirect(){
 async function syncOwnFiles(){
   try{
     const [w, st] = await Promise.all([getJSON("data/week.json"), getJSON("data/stats.json").catch(() => null)]);
+    if(state.past) return;
     if(w.week === state.week.week || !state.direct){ state.week = w; if(st) state.stats = st.games || {}; }
   }catch(e){}
 }
@@ -380,13 +389,29 @@ async function loadSchool(){
   render();
 }
 
-function isOut(p){ return OUT.test(p.status || ""); }
+// Past weeks: status tags aren't known, and a player sits with the team he actually played for that week.
+function isOut(p){ return !state.past && OUT.test(p.status || ""); }
+const teamOf = p => (state.past && state.pastTeam[normName(p.name)]) || p.team;
+async function showWeek(key){
+  if(key){
+    const a = await getJSON(`data/weeks/${state.weeks.season}/${key}.json`);
+    if(!state.live) state.live = {week: state.week, stats: state.stats};
+    state.week = a; state.stats = a.stats || {}; state.past = a; state.pastTeam = {};
+    for(const g of Object.values(state.stats)) for(const [k, e] of Object.entries(g.players || {})) state.pastTeam[k] = norm(e.team);
+  }else if(state.live){
+    state.week = state.live.week; state.stats = state.live.stats; state.live = null; state.past = null; state.pastTeam = {};
+  }
+  state.open.clear(); state.filter = null;
+  render(); window.scrollTo(0, 0);
+  if(!key && liveWindow() && await syncDirect()) render();
+  schedule();
+}
 const fmtKick = iso => new Date(iso).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"});
 const fmtTime = d => d ? new Date(d).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}) : "—";
 const plural = (n, w) => `${n} ${n === 1 ? w.replace(/s$/,"") : w}`;
 
 function playersFor(team){
-  return state.players.filter(p => p.team === team).sort((a,b) => isOut(a) - isOut(b) || a.name.localeCompare(b.name));
+  return state.players.filter(p => teamOf(p) === team).sort((a,b) => isOut(a) - isOut(b) || a.name.localeCompare(b.name));
 }
 const matchesQ = p => !state.q || p.name.toLowerCase().includes(state.q);
 function hl(name){
@@ -425,9 +450,9 @@ function profileLinks(p, entry){
   return `<div class="links"><a href="${espn}" target="_blank" rel="noopener">ESPN profile ↗</a></div>`;
 }
 function detailHTML(p, g){
-  const facts = [p.college && `College: ${p.college}`, p.status !== "Active" && p.status, p.injury && `Injury: ${p.injury}`].filter(Boolean);
+  const facts = [p.college && `College: ${p.college}`, !state.past && p.status !== "Active" && p.status, !state.past && p.injury && `Injury: ${p.injury}`].filter(Boolean);
   const factLine = facts.length ? `<div class="msg">${esc(facts.join(" · "))}</div>` : "";
-  if(!g) return `${factLine}<div class="msg">On a bye this week.</div>${profileLinks(p)}`;
+  if(!g) return `${factLine}<div class="msg">On a bye ${state.past ? "that" : "this"} week.</div>${profileLinks(p)}`;
   if(g.state === "pre") return `${factLine}<div class="msg">Box score appears once the game kicks off (${esc(fmtKick(g.kickoff))}).</div>${profileLinks(p)}`;
   const b = boxFor(g), live = state.box[g.id];
   const entry = b && b.players ? b.players[normName(p.name)] : null;
@@ -453,14 +478,14 @@ function toggle(el){
   const k = el.dataset.k, gid = el.dataset.g;
   if(state.open.has(k)) state.open.delete(k); else state.open.add(k);
   const g = gid && state.week.games.find(x => String(x.id) === gid);
-  if(state.open.has(k) && g && g.state !== "pre") loadBox(g);
+  if(state.open.has(k) && g && g.state !== "pre" && !state.past) loadBox(g);
   render();
 }
 
 function playerRow(p, g){
   const tags = [];
-  if(p.injury) tags.push(`<span class="tag inj">${esc(({Questionable:"Q",Doubtful:"D"})[p.injury] || p.injury)}</span>`);
-  if(p.status && p.status !== "Active") tags.push(`<span class="tag">${esc(p.status === "Practice Squad" ? "Practice sq." : p.status)}</span>`);
+  if(p.injury && !state.past) tags.push(`<span class="tag inj">${esc(({Questionable:"Q",Doubtful:"D"})[p.injury] || p.injury)}</span>`);
+  if(p.status && p.status !== "Active" && !state.past) tags.push(`<span class="tag">${esc(p.status === "Practice Squad" ? "Practice sq." : p.status)}</span>`);
   const key = normName(p.name), open = state.open.has(key);
   return `<div class="p ${isOut(p) ? "out" : ""}" role="button" tabindex="0" aria-expanded="${open}" data-k="${esc(key)}" data-g="${g ? esc(g.id) : ""}">
     <span class="pos">${esc(p.pos || "—")}</span>
@@ -495,7 +520,7 @@ function gameCard(g){
 function rosterView(games){
   const gameOf = {};
   for(const g of games){ gameOf[g.away.abbr] = g; gameOf[g.home.abbr] = g; }
-  const teams = [...new Set(state.players.map(p => p.team))].sort((a,b) => (TEAMS[a]||[a])[1].localeCompare((TEAMS[b]||[b])[1]));
+  const teams = [...new Set(state.players.map(teamOf))].sort((a,b) => (TEAMS[a]||[a])[1].localeCompare((TEAMS[b]||[b])[1]));
   const blocks = teams.map(t => {
     const list = playersFor(t).filter(matchesQ);
     if(!list.length) return "";
@@ -670,7 +695,17 @@ function renderSunday(){
   const games = (w.games || []).map(g => ({...g, away:{...g.away, abbr:norm(g.away.abbr)}, home:{...g.home, abbr:norm(g.home.abbr)}}))
     .sort((a,b) => ORDER[a.state] - ORDER[b.state] || new Date(a.kickoff) - new Date(b.kickoff));
   const offseason = !games.length;
-  $("week").textContent = offseason ? "Offseason" : w.seasonType === "post" ? "Playoffs" : w.seasonType === "pre" ? "Preseason" : `Week ${w.week}`;
+  const weekLabel = x => x.label || (x.seasonType === "post" ? "Playoffs" : x.seasonType === "pre" ? "Preseason" : `Week ${x.week}`);
+  $("week").textContent = offseason ? "Offseason" : weekLabel(w);
+  // Week picker: a native select laid invisibly over the badge.
+  const lw = state.live ? state.live.week : w, lkey = `${({pre:1, regular:2, post:3})[lw.seasonType] || 2}-${lw.week}`;
+  const olds = ((state.weeks || {}).weeks || []).filter(x => x.key !== lkey).reverse();
+  const sel = $("weekSel"), pick = olds.length > 0 && state.tab !== "saturday";
+  $("weekwrap").classList.toggle("pick", pick); sel.hidden = !pick;
+  if(pick){
+    sel.innerHTML = `<option value="">${esc((lw.games || []).length ? weekLabel(lw) : "Offseason")} (this week)</option>` + olds.map(x => `<option value="${esc(x.key)}">${esc(x.label)}</option>`).join("");
+    sel.value = state.past ? state.past.key : "";
+  }
   const byes = (w.byes || []).map(norm);
   const playing = new Set(games.flatMap(g => [g.away.abbr, g.home.abbr]));
   const liveCount = games.filter(g => g.state === "in").length;
@@ -678,9 +713,9 @@ function renderSunday(){
 
   $("stats").innerHTML = `
     <div class="stat"><b>${state.players.length}</b><span>${esc(s.nickname)} on NFL rosters</span></div>
-    <div class="stat"><b>${offseason ? new Set(state.players.map(p=>p.team)).size : state.players.filter(p => playing.has(p.team) && !isOut(p)).length}</b>
-      <span>${offseason ? "NFL teams with one" : "Active in this week's games"}</span></div>
-    <div class="stat"><b>${offseason ? "—" : liveCount || toPlay}</b><span>${offseason ? "No games this week" : liveCount ? "Games live now" : "Games still to play"}</span></div>`;
+    <div class="stat"><b>${state.past ? Object.keys(state.pastTeam).length : offseason ? new Set(state.players.map(p=>p.team)).size : state.players.filter(p => playing.has(p.team) && !isOut(p)).length}</b>
+      <span>${state.past ? "Recorded a stat that week" : offseason ? "NFL teams with one" : "Active in this week's games"}</span></div>
+    <div class="stat"><b>${state.past ? games.length : offseason ? "—" : liveCount || toPlay}</b><span>${state.past ? "Games that week" : offseason ? "No games this week" : liveCount ? "Games live now" : "Games still to play"}</span></div>`;
 
   const counts = {all: games.length, live: liveCount, pre: toPlay, post: games.filter(g => g.state === "post").length,
                   bye: byes.length, roster: state.players.length};
@@ -692,7 +727,7 @@ function renderSunday(){
   // stale / delayed notice
   const updated = state.direct ? state.lastSync : new Date(w.updated);
   const stale = liveCount && !state.direct && Date.now() - new Date(w.updated) > 40*60e3;
-  $("notice").innerHTML = stale ? `<div class="warn">Scores last updated ${esc(fmtTime(w.updated))}. They may be a few minutes behind while games are live.</div>` : "";
+  $("notice").innerHTML = state.past ? `<div class="warn pastbar"><span>Looking back at <b>${esc(weekLabel(w))}</b>. Players are shown with the team they played for that week.</span><button id="backNow">This week</button></div>` : stale ? `<div class="warn">Scores last updated ${esc(fmtTime(w.updated))}. They may be a few minutes behind while games are live.</div>` : "";
 
   const has = g => playersFor(g.away.abbr).length + playersFor(g.home.abbr).length > 0;
   const f = state.filter;
@@ -721,6 +756,12 @@ function renderSunday(){
   }
   $("content").innerHTML = html;
 
+  if(state.past){
+    $("footer").innerHTML = `${esc(weekLabel(w))}, ${esc(w.season)} season · final.<br>
+      Roster status and injury tags aren't kept for past weeks, and players without a stat line are listed with their current team.<br>
+      Data: <a href="https://sleeper.com" target="_blank" rel="noopener">Sleeper</a> rosters, ESPN scores and box scores. Not affiliated with the NFL or any school.`;
+    return;
+  }
   $("footer").innerHTML = `<span class="sync ${state.direct ? "on" : ""}">${state.direct ? `Live · synced ${esc(fmtTime(state.lastSync))}` : `Scores updated ${esc(fmtTime(updated))}`}</span>
     · Rosters updated ${esc(fmtTime(state.playersUpdated))}.<br>
     “College” is the last school a player attended. Reserve, inactive and practice-squad players are dimmed.<br>
@@ -748,6 +789,8 @@ $("tabbar").addEventListener("click", e => {
   history.replaceState(null, "", "#" + (sch ? sch + "/" : "") + state.tab);
   render(); window.scrollTo(0, 0);
 });
+$("weekSel").addEventListener("change", e => showWeek(e.target.value).catch(showErr));
+$("notice").addEventListener("click", e => { if(e.target.closest("#backNow")) showWeek("").catch(showErr); });
 $("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; render(); });
 $("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
 $("school").addEventListener("change", e => { location.hash = e.target.value; });
@@ -756,7 +799,9 @@ function showErr(e){ $("content").innerHTML = `<div class="err">Couldn't load da
 
 (async function init(){
   try{
-    const [schools, week, stats] = await Promise.all([getJSON("schools.json"), getJSON("data/week.json"), getJSON("data/stats.json").catch(() => null)]);
+    const [schools, week, stats, weeks] = await Promise.all([getJSON("schools.json"), getJSON("data/week.json"), getJSON("data/stats.json").catch(() => null),
+      getJSON("data/weeks/index.json").catch(() => null)]);
+    state.weeks = weeks && weeks.season === week.season ? weeks : null;
     state.schools = schools; state.week = week; state.stats = (stats && stats.week === week.week && stats.games) || {};
     const keys = Object.keys(schools.schools);
     if(keys.length > 1){
