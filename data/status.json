@@ -1,9 +1,7 @@
 {
- "scores": "2026-11-23T05:12:03Z",
- "rosters": "2026-11-23T05:12:11Z",
- "college": "2026-11-23T05:12:14Z",
- "lastRun": "2026-11-23T05:12:14Z",
- "problems": [
-  "Test alert: this failure was triggered on purpose to check that notifications arrive. Nothing is wrong."
- ]
+ "scores": "2026-11-23T05:14:37Z",
+ "rosters": "2026-11-23T05:14:41Z",
+ "college": "2026-11-23T05:14:43Z",
+ "lastRun": "2026-11-23T05:14:43Z",
+ "problems": []
 }
