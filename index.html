@@ -73,6 +73,11 @@
     font-size:14px;font-weight:600;color:var(--muted);cursor:pointer}
   .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
   .chip .n{opacity:.7;margin-left:4px;font-weight:500}
+  /* Phones: the row scrolls sideways, fading at whichever edge has more. Wider screens: it wraps so nothing hides. */
+  .chips.more-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent)}
+  .chips.more-l{-webkit-mask-image:linear-gradient(270deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(270deg,#000 calc(100% - 44px),transparent)}
+  .chips.more-l.more-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 44px,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,transparent,#000 44px,#000 calc(100% - 44px),transparent)}
+  @media (min-width:560px){ .chips{flex-wrap:wrap;overflow:visible} }
 
   /* Game cards */
   .list{display:flex;flex-direction:column;gap:12px;padding:8px 0 20px}
@@ -945,11 +950,17 @@ function renderSunday(){
   const counts = {all: games.length, live: liveCount, pre: toPlay, post: games.filter(g => g.state === "post").length,
                   bye: byes.length, roster: state.players.length};
   const extra = !state.past;
-  const defs = [["all","Games"],["live","Live"],["pre","Upcoming"],["post","Final"],["bye","Bye week"],["roster","All players"],["leaders","Leaders"],["moves","Moves"]]
+  const defs = [["all","Games"],["live","Live"],["pre","Upcoming"],["post","Final"],["bye","Byes"],["roster","All players"],["leaders","Leaders"],["moves","Moves"]]
     .filter(([k]) => k === "roster" || (k === "leaders" ? extra && state.season : k === "moves" ? extra && state.moves : !offseason && (k === "all" || counts[k])));
   counts.moves = ((state.moves || {}).moves || []).length;
   if(!state.filter || !defs.some(([k]) => k === state.filter)) state.filter = offseason ? "roster" : (liveCount ? "all" : "all");
+  const chipScroll = $("chips").scrollLeft;
   $("chips").innerHTML = defs.map(([k,l]) => `<button class="chip" data-f="${k}" aria-pressed="${state.filter===k}">${l}${counts[k] != null && (k !== "moves" || counts[k]) ? `<span class="n">${counts[k]}</span>` : ""}</button>`).join("");
+
+  $("chips").scrollLeft = chipScroll;                       // re-rendering shouldn't jump the row back to the start
+  const onChip = $("chips").querySelector('[aria-pressed="true"]');
+  if(onChip && state.chipMoved){ onChip.scrollIntoView({inline:"center", block:"nearest"}); state.chipMoved = false; }
+  chipFade();
 
   // stale / delayed notice
   const updated = state.direct ? state.lastSync : new Date(w.updated);
@@ -1036,7 +1047,14 @@ $("tabbar").addEventListener("click", e => {
 });
 $("weekSel").addEventListener("change", e => showWeek(e.target.value).catch(showErr));
 $("notice").addEventListener("click", e => { if(e.target.closest("#backNow")) showWeek("").catch(showErr); });
-$("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; render(); });
+$("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; state.chipMoved = true; render(); });
+function chipFade(){
+  const c = $("chips"), max = c.scrollWidth - c.clientWidth;
+  c.classList.toggle("more-r", max > 4 && c.scrollLeft < max - 4);
+  c.classList.toggle("more-l", max > 4 && c.scrollLeft > 4);
+}
+$("chips").addEventListener("scroll", chipFade, {passive:true});
+window.addEventListener("resize", chipFade);
 $("q").addEventListener("input", e => { state.q = e.target.value.trim(); state.qt = fold(state.q).split(" ").filter(Boolean); render(); });
 $("school").addEventListener("change", e => { location.hash = e.target.value; });
 window.addEventListener("hashchange", () => loadSchool().catch(showErr));
