@@ -1,0 +1,5160 @@
+{
+ "school": "iowa",
+ "season": 2026,
+ "updated": "2026-11-23T04:53:07Z",
+ "through": "Week 11",
+ "players": {
+  "george kittle": {
+   "name": "George Kittle",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "SF",
+     "opp": "LAR",
+     "at": true,
+     "result": "W 27-7",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "12",
+       "AVG": "6.0",
+       "TD": "0",
+       "LONG": "6",
+       "TGTS": "5"
+      },
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "SF",
+     "opp": "MIA",
+     "at": false,
+     "result": "W 35-13",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "80",
+       "AVG": "20.0",
+       "TD": "1",
+       "LONG": "40",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "SF",
+     "opp": "ARI",
+     "at": false,
+     "result": "W 36-30",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "82",
+       "AVG": "13.7",
+       "TD": "2",
+       "LONG": "20",
+       "TGTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "SF",
+     "opp": "DEN",
+     "at": false,
+     "result": "W 24-14",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "70",
+       "AVG": "17.5",
+       "TD": "1",
+       "LONG": "56",
+       "TGTS": "6"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "SF",
+     "opp": "SEA",
+     "at": true,
+     "result": "W 32-29",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "5",
+       "YDS": "24",
+       "AVG": "4.8",
+       "TD": "0",
+       "LONG": "13",
+       "TGTS": "6"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "SF",
+     "opp": "WAS",
+     "at": false,
+     "result": "W 23-17",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "5",
+       "YDS": "69",
+       "AVG": "13.8",
+       "TD": "1",
+       "LONG": "35",
+       "TGTS": "8"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "SF",
+     "opp": "ATL",
+     "at": true,
+     "result": "L 20-29",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "8",
+       "YDS": "88",
+       "AVG": "11.0",
+       "TD": "0",
+       "LONG": "21",
+       "TGTS": "10"
+      },
+      "fumbles": {
+       "FUM": "1",
+       "LOST": "1",
+       "REC": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "SF",
+     "opp": "LV",
+     "at": false,
+     "result": "W 38-17",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "58",
+       "AVG": "14.5",
+       "TD": "0",
+       "LONG": "37",
+       "TGTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "SF",
+     "opp": "DAL",
+     "at": true,
+     "result": "W 46-40",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "74",
+       "AVG": "12.3",
+       "TD": "0",
+       "LONG": "20",
+       "TGTS": "9"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "SF",
+     "opp": "MIN",
+     "at": false,
+     "result": "W 35-10",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "34",
+       "AVG": "11.3",
+       "TD": "2",
+       "LONG": "17",
+       "TGTS": "3"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "receiving": {
+     "REC": "47",
+     "YDS": "591",
+     "TD": "7",
+     "LONG": "56",
+     "TGTS": "65"
+    },
+    "defensive": {
+     "TOT": "1",
+     "SOLO": "1",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    },
+    "fumbles": {
+     "FUM": "1",
+     "LOST": "1",
+     "REC": "0"
+    }
+   },
+   "gp": 10
+  },
+  "anthony nelson": {
+   "name": "Anthony Nelson",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "TB",
+     "opp": "CIN",
+     "at": true,
+     "result": "L 27-33",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "TB",
+     "opp": "CLE",
+     "at": false,
+     "result": "L 19-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "TB",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 16-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "TB",
+     "opp": "GB",
+     "at": false,
+     "result": "L 14-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "TB",
+     "opp": "PIT",
+     "at": false,
+     "result": "L 19-26",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "0",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "TB",
+     "opp": "CAR",
+     "at": true,
+     "result": "W 43-13",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "TB",
+     "opp": "ATL",
+     "at": false,
+     "result": "W 16-0",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "TB",
+     "opp": "CHI",
+     "at": true,
+     "result": "L 24-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "1",
+       "SACKS": "0.5",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "TB",
+     "opp": "DET",
+     "at": true,
+     "result": "L 21-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "13",
+     "SOLO": "6",
+     "SACKS": "1.5",
+     "TFL": "1",
+     "PD": "0",
+     "QB HTS": "4",
+     "TD": "0"
+    }
+   },
+   "gp": 9
+  },
+  "noah fant": {
+   "name": "Noah Fant",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "NO",
+     "opp": "DET",
+     "at": true,
+     "result": "L 30-31",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "33",
+       "AVG": "8.3",
+       "TD": "1",
+       "LONG": "10",
+       "TGTS": "8"
+      },
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "NO",
+     "opp": "LV",
+     "at": false,
+     "result": "L 27-35",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "33",
+       "AVG": "8.3",
+       "TD": "2",
+       "LONG": "16",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "NO",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 13-23",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "7",
+       "AVG": "7.0",
+       "TD": "0",
+       "LONG": "7",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "NO",
+     "opp": "NYG",
+     "at": true,
+     "result": "W 34-27",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "0",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "0",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "NO",
+     "opp": "PIT",
+     "at": false,
+     "result": "L 10-16",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "11",
+       "AVG": "5.5",
+       "TD": "0",
+       "LONG": "6",
+       "TGTS": "2"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "NO",
+     "opp": "CLE",
+     "at": false,
+     "result": "W 23-22",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "12",
+       "AVG": "12.0",
+       "TD": "0",
+       "LONG": "12",
+       "TGTS": "2"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "NO",
+     "opp": "CAR",
+     "at": false,
+     "result": "L 17-20",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "0",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "0",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "NO",
+     "opp": "CHI",
+     "at": true,
+     "result": "L 13-21",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "19",
+       "AVG": "9.5",
+       "TD": "0",
+       "LONG": "14",
+       "TGTS": "5"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "receiving": {
+     "REC": "14",
+     "YDS": "115",
+     "TD": "3",
+     "LONG": "16",
+     "TGTS": "24"
+    },
+    "defensive": {
+     "TOT": "1",
+     "SOLO": "1",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 8
+  },
+  "sam laporta": {
+   "name": "Sam LaPorta",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "DET",
+     "opp": "NO",
+     "at": false,
+     "result": "W 31-30",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "5",
+       "YDS": "48",
+       "AVG": "9.6",
+       "TD": "0",
+       "LONG": "19",
+       "TGTS": "8"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "DET",
+     "opp": "BUF",
+     "at": true,
+     "result": "L 31-41",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "52",
+       "AVG": "8.7",
+       "TD": "1",
+       "LONG": "18",
+       "TGTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "DET",
+     "opp": "NYJ",
+     "at": false,
+     "result": "W 31-24",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "44",
+       "AVG": "14.7",
+       "TD": "0",
+       "LONG": "28",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "DET",
+     "opp": "CAR",
+     "at": true,
+     "result": "L 26-32",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "8",
+       "YDS": "84",
+       "AVG": "10.5",
+       "TD": "1",
+       "LONG": "25",
+       "TGTS": "13"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "DET",
+     "opp": "ARI",
+     "at": true,
+     "result": "W 45-21",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "5",
+       "YDS": "88",
+       "AVG": "17.6",
+       "TD": "1",
+       "LONG": "38",
+       "TGTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "DET",
+     "opp": "GB",
+     "at": false,
+     "result": "W 20-17",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "18",
+       "AVG": "18.0",
+       "TD": "0",
+       "LONG": "18",
+       "TGTS": "2"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "DET",
+     "opp": "MIN",
+     "at": false,
+     "result": "W 19-15",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "1",
+       "YDS": "2",
+       "AVG": "2.0",
+       "TD": "0",
+       "LONG": "2"
+      },
+      "receiving": {
+       "REC": "3",
+       "YDS": "33",
+       "AVG": "11.0",
+       "TD": "0",
+       "LONG": "19",
+       "TGTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "DET",
+     "opp": "MIA",
+     "at": true,
+     "result": "W 19-9",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "32",
+       "AVG": "8.0",
+       "TD": "0",
+       "LONG": "11",
+       "TGTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "DET",
+     "opp": "NE",
+     "at": false,
+     "result": "W 35-10",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "16",
+       "AVG": "16.0",
+       "TD": "0",
+       "LONG": "16",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "DET",
+     "opp": "TB",
+     "at": false,
+     "result": "W 31-21",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "62",
+       "AVG": "20.7",
+       "TD": "0",
+       "LONG": "47",
+       "TGTS": "6"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "receiving": {
+     "REC": "39",
+     "YDS": "477",
+     "TD": "3",
+     "LONG": "47",
+     "TGTS": "59"
+    },
+    "rushing": {
+     "CAR": "1",
+     "YDS": "2",
+     "TD": "0",
+     "LONG": "2"
+    }
+   },
+   "gp": 10
+  },
+  "jack campbell": {
+   "name": "Jack Campbell",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "DET",
+     "opp": "NO",
+     "at": false,
+     "result": "W 31-30",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "DET",
+     "opp": "BUF",
+     "at": true,
+     "result": "L 31-41",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "DET",
+     "opp": "NYJ",
+     "at": false,
+     "result": "W 31-24",
+     "live": false,
+     "cats": {
+      "fumbles": {
+       "FUM": "0",
+       "LOST": "0",
+       "REC": "1"
+      },
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "DET",
+     "opp": "CAR",
+     "at": true,
+     "result": "L 26-32",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "13",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "DET",
+     "opp": "ARI",
+     "at": true,
+     "result": "W 45-21",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "11",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "DET",
+     "opp": "GB",
+     "at": false,
+     "result": "W 20-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "11",
+       "SOLO": "8",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "DET",
+     "opp": "MIN",
+     "at": false,
+     "result": "W 19-15",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "57",
+     "SOLO": "29",
+     "SACKS": "0",
+     "TFL": "1",
+     "PD": "0",
+     "QB HTS": "2",
+     "TD": "0"
+    },
+    "fumbles": {
+     "FUM": "0",
+     "LOST": "0",
+     "REC": "1"
+    }
+   },
+   "gp": 7
+  },
+  "dane belton": {
+   "name": "Dane Belton",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "NYJ",
+     "opp": "TEN",
+     "at": true,
+     "result": "W 23-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "NYJ",
+     "opp": "GB",
+     "at": false,
+     "result": "L 17-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "NYJ",
+     "opp": "DET",
+     "at": true,
+     "result": "L 24-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "NYJ",
+     "opp": "CHI",
+     "at": true,
+     "result": "L 12-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "14",
+       "SOLO": "6",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "NYJ",
+     "opp": "CLE",
+     "at": false,
+     "result": "W 17-12",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "8",
+       "SOLO": "3",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "NYJ",
+     "opp": "NE",
+     "at": true,
+     "result": "L 19-26",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "9",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "NYJ",
+     "opp": "MIA",
+     "at": false,
+     "result": "L 25-28",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "9",
+       "SOLO": "6",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "NYJ",
+     "opp": "LV",
+     "at": false,
+     "result": "L 33-38",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "12",
+       "SOLO": "8",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "NYJ",
+     "opp": "KC",
+     "at": true,
+     "result": "L 12-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "8",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "NYJ",
+     "opp": "BUF",
+     "at": false,
+     "result": "L 12-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "NYJ",
+     "opp": "LAC",
+     "at": true,
+     "result": "W 27-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "88",
+     "SOLO": "42",
+     "SACKS": "1",
+     "TFL": "2",
+     "PD": "5",
+     "QB HTS": "1",
+     "TD": "0"
+    }
+   },
+   "gp": 11
+  },
+  "amani hooker": {
+   "name": "Amani Hooker",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "TEN",
+     "opp": "NYJ",
+     "at": false,
+     "result": "L 10-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "10",
+       "SOLO": "6",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "TEN",
+     "opp": "PHI",
+     "at": false,
+     "result": "L 20-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "92",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "TEN",
+     "opp": "NYG",
+     "at": true,
+     "result": "L 7-12",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "TEN",
+     "opp": "BAL",
+     "at": true,
+     "result": "L 18-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "6",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "TEN",
+     "opp": "IND",
+     "at": true,
+     "result": "W 26-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "13",
+       "SOLO": "7",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "TEN",
+     "opp": "CLE",
+     "at": false,
+     "result": "L 24-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "TEN",
+     "opp": "CIN",
+     "at": true,
+     "result": "L 36-43",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "3",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "3",
+       "YDS": "22",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "BUF",
+     "opp": "NYJ",
+     "at": true,
+     "result": "W 31-12",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "BUF",
+     "opp": "MIA",
+     "at": false,
+     "result": "W 26-9",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "61",
+     "SOLO": "39",
+     "SACKS": "0",
+     "TFL": "1",
+     "PD": "8",
+     "QB HTS": "1",
+     "TD": "0"
+    },
+    "interceptions": {
+     "INT": "5",
+     "YDS": "114",
+     "TD": "0"
+    }
+   },
+   "gp": 9
+  },
+  "jay higgins": {
+   "name": "Jay Higgins IV",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "BAL",
+     "opp": "IND",
+     "at": true,
+     "result": "W 41-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "BAL",
+     "opp": "NO",
+     "at": false,
+     "result": "L 17-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "BAL",
+     "opp": "DAL",
+     "at": true,
+     "result": "W 34-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "BAL",
+     "opp": "CIN",
+     "at": false,
+     "result": "L 13-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "BAL",
+     "opp": "JAX",
+     "at": false,
+     "result": "L 10-33",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "BAL",
+     "opp": "LAC",
+     "at": false,
+     "result": "L 20-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "BAL",
+     "opp": "CAR",
+     "at": true,
+     "result": "L 33-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "8",
+     "SOLO": "3",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 7
+  },
+  "kaden wetjen": {
+   "name": "Kaden Wetjen",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "PIT",
+     "opp": "ATL",
+     "at": false,
+     "result": "W 20-13",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "1",
+       "YDS": "27",
+       "AVG": "27.0",
+       "LONG": "27",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "2",
+       "YDS": "13",
+       "AVG": "6.5",
+       "LONG": "8",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "PIT",
+     "opp": "NE",
+     "at": true,
+     "result": "L 3-20",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "4",
+       "YDS": "92",
+       "AVG": "23.0",
+       "LONG": "26",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "2",
+       "YDS": "21",
+       "AVG": "10.5",
+       "LONG": "17",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "PIT",
+     "opp": "CIN",
+     "at": false,
+     "result": "W 30-27",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "5",
+       "YDS": "102",
+       "AVG": "20.4",
+       "LONG": "22",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "5",
+       "AVG": "5.0",
+       "LONG": "5",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "PIT",
+     "opp": "CLE",
+     "at": true,
+     "result": "L 24-27",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "4",
+       "YDS": "96",
+       "AVG": "24.0",
+       "LONG": "27",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "2",
+       "YDS": "30",
+       "AVG": "15.0",
+       "LONG": "15",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "PIT",
+     "opp": "IND",
+     "at": false,
+     "result": "W 34-22",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "5",
+       "YDS": "110",
+       "AVG": "22.0",
+       "LONG": "27",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "0",
+       "AVG": "0.0",
+       "LONG": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "PIT",
+     "opp": "TB",
+     "at": true,
+     "result": "W 26-19",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "4",
+       "YDS": "105",
+       "AVG": "26.3",
+       "LONG": "29",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "2",
+       "YDS": "0",
+       "AVG": "0.0",
+       "LONG": "4",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "PIT",
+     "opp": "NO",
+     "at": true,
+     "result": "W 16-10",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "2",
+       "YDS": "60",
+       "AVG": "30.0",
+       "LONG": "35",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "13",
+       "AVG": "13.0",
+       "LONG": "13",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "PIT",
+     "opp": "CLE",
+     "at": false,
+     "result": "W 27-6",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "3",
+       "YDS": "80",
+       "AVG": "26.7",
+       "LONG": "31",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "0",
+       "AVG": "0.0",
+       "LONG": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "PIT",
+     "opp": "CIN",
+     "at": true,
+     "result": "L 18-38",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "5",
+       "YDS": "133",
+       "AVG": "26.6",
+       "LONG": "30",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "0",
+       "AVG": "0.0",
+       "LONG": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "kickReturns": {
+     "NO": "33",
+     "YDS": "805",
+     "LONG": "35",
+     "TD": "0"
+    },
+    "puntReturns": {
+     "NO": "13",
+     "YDS": "82",
+     "LONG": "17",
+     "TD": "0"
+    }
+   },
+   "gp": 9
+  },
+  "tory taylor": {
+   "name": "Tory Taylor",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "CHI",
+     "opp": "CAR",
+     "at": true,
+     "result": "W 59-37",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "2",
+       "YDS": "102",
+       "AVG": "51.0",
+       "TB": "0",
+       "In 20": "0",
+       "LONG": "54"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "CHI",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 3-9",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "4",
+       "YDS": "195",
+       "AVG": "48.8",
+       "TB": "0",
+       "In 20": "3",
+       "LONG": "63"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "CHI",
+     "opp": "PHI",
+     "at": false,
+     "result": "W 27-7",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "2",
+       "YDS": "105",
+       "AVG": "52.5",
+       "TB": "1",
+       "In 20": "0",
+       "LONG": "55"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "CHI",
+     "opp": "GB",
+     "at": true,
+     "result": "L 7-31",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "4",
+       "YDS": "212",
+       "AVG": "53.0",
+       "TB": "0",
+       "In 20": "1",
+       "LONG": "56"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "CHI",
+     "opp": "ATL",
+     "at": true,
+     "result": "W 31-23",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "5",
+       "YDS": "224",
+       "AVG": "44.8",
+       "TB": "1",
+       "In 20": "3",
+       "LONG": "50"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "CHI",
+     "opp": "NE",
+     "at": false,
+     "result": "W 30-24",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "2",
+       "YDS": "107",
+       "AVG": "53.5",
+       "TB": "0",
+       "In 20": "0",
+       "LONG": "65"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "CHI",
+     "opp": "SEA",
+     "at": true,
+     "result": "W 34-17",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "3",
+       "YDS": "147",
+       "AVG": "49.0",
+       "TB": "0",
+       "In 20": "0",
+       "LONG": "57"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "CHI",
+     "opp": "TB",
+     "at": false,
+     "result": "W 27-24",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "4",
+       "YDS": "161",
+       "AVG": "40.3",
+       "TB": "0",
+       "In 20": "2",
+       "LONG": "55"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "CHI",
+     "opp": "NO",
+     "at": false,
+     "result": "W 21-13",
+     "live": false,
+     "cats": {
+      "punting": {
+       "NO": "3",
+       "YDS": "140",
+       "AVG": "46.7",
+       "TB": "1",
+       "In 20": "2",
+       "LONG": "56"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "punting": {
+     "NO": "29",
+     "YDS": "1393",
+     "TB": "3",
+     "In 20": "11",
+     "LONG": "65"
+    }
+   },
+   "gp": 9
+  },
+  "lukas van ness": {
+   "name": "Lukas Van Ness",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "GB",
+     "opp": "MIN",
+     "at": true,
+     "result": "L 22-39",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "4",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "GB",
+     "opp": "NYJ",
+     "at": true,
+     "result": "W 20-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "10",
+       "SOLO": "7",
+       "SACKS": "1.5",
+       "TFL": "3",
+       "PD": "0",
+       "QB HTS": "4",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "GB",
+     "opp": "ATL",
+     "at": false,
+     "result": "L 14-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "GB",
+     "opp": "TB",
+     "at": true,
+     "result": "W 17-14",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "GB",
+     "opp": "CHI",
+     "at": false,
+     "result": "W 31-7",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "2",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "GB",
+     "opp": "DAL",
+     "at": false,
+     "result": "W 23-13",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "2",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "GB",
+     "opp": "DET",
+     "at": true,
+     "result": "L 17-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "0",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "GB",
+     "opp": "CAR",
+     "at": false,
+     "result": "W 27-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "3",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "GB",
+     "opp": "NE",
+     "at": true,
+     "result": "W 45-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "GB",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 10-30",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "2",
+       "SACKS": "1.5",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "2",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "38",
+     "SOLO": "23",
+     "SACKS": "6",
+     "TFL": "7",
+     "PD": "1",
+     "QB HTS": "13",
+     "TD": "0"
+    }
+   },
+   "gp": 10
+  },
+  "kristian welch": {
+   "name": "Kristian Welch",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "GB",
+     "opp": "MIN",
+     "at": true,
+     "result": "L 22-39",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "GB",
+     "opp": "DAL",
+     "at": false,
+     "result": "W 23-13",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "GB",
+     "opp": "CAR",
+     "at": false,
+     "result": "W 27-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "GB",
+     "opp": "NE",
+     "at": true,
+     "result": "W 45-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "GB",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 10-30",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "6",
+     "SOLO": "3",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 5
+  },
+  "nick niemann": {
+   "name": "Nick Niemann",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "GB",
+     "opp": "MIN",
+     "at": true,
+     "result": "L 22-39",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "GB",
+     "opp": "NYJ",
+     "at": true,
+     "result": "W 20-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "GB",
+     "opp": "ATL",
+     "at": false,
+     "result": "L 14-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "GB",
+     "opp": "CHI",
+     "at": false,
+     "result": "W 31-7",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "GB",
+     "opp": "DET",
+     "at": true,
+     "result": "L 17-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "GB",
+     "opp": "CAR",
+     "at": false,
+     "result": "W 27-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "GB",
+     "opp": "NE",
+     "at": true,
+     "result": "W 45-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "15",
+     "SOLO": "9",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "1",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 7
+  },
+  "kaleb johnson": {
+   "name": "Kaleb Johnson",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "GB",
+     "opp": "MIN",
+     "at": true,
+     "result": "L 22-39",
+     "live": false,
+     "cats": {
+      "kickReturns": {
+       "NO": "2",
+       "YDS": "52",
+       "AVG": "26.0",
+       "LONG": "27",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "GB",
+     "opp": "NYJ",
+     "at": true,
+     "result": "W 20-17",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "8",
+       "YDS": "32",
+       "AVG": "4.0",
+       "TD": "0",
+       "LONG": "12"
+      },
+      "fumbles": {
+       "FUM": "1",
+       "LOST": "0",
+       "REC": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "GB",
+     "opp": "ATL",
+     "at": false,
+     "result": "L 14-35",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "4",
+       "YDS": "6",
+       "AVG": "1.5",
+       "TD": "0",
+       "LONG": "5"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "10",
+       "AVG": "10.0",
+       "TD": "0",
+       "LONG": "10",
+       "TGTS": "3"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "GB",
+     "opp": "TB",
+     "at": true,
+     "result": "W 17-14",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "8",
+       "YDS": "42",
+       "AVG": "5.3",
+       "TD": "0",
+       "LONG": "31"
+      },
+      "fumbles": {
+       "FUM": "1",
+       "LOST": "1",
+       "REC": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "GB",
+     "opp": "CHI",
+     "at": false,
+     "result": "W 31-7",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "7",
+       "YDS": "26",
+       "AVG": "3.7",
+       "TD": "0",
+       "LONG": "23"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "GB",
+     "opp": "DAL",
+     "at": false,
+     "result": "W 23-13",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "1",
+       "YDS": "-2",
+       "AVG": "-2.0",
+       "TD": "0",
+       "LONG": "-2"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "GB",
+     "opp": "NE",
+     "at": true,
+     "result": "W 45-27",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "14",
+       "YDS": "68",
+       "AVG": "4.9",
+       "TD": "1",
+       "LONG": "34"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "GB",
+     "opp": "MIN",
+     "at": false,
+     "result": "L 10-30",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "10",
+       "YDS": "42",
+       "AVG": "4.2",
+       "TD": "0",
+       "LONG": "9"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "kickReturns": {
+     "NO": "2",
+     "YDS": "52",
+     "LONG": "27",
+     "TD": "0"
+    },
+    "rushing": {
+     "CAR": "52",
+     "YDS": "214",
+     "TD": "1",
+     "LONG": "34"
+    },
+    "fumbles": {
+     "FUM": "2",
+     "LOST": "1",
+     "REC": "0"
+    },
+    "receiving": {
+     "REC": "1",
+     "YDS": "10",
+     "TD": "0",
+     "LONG": "10",
+     "TGTS": "3"
+    }
+   },
+   "gp": 8
+  },
+  "tj hockenson": {
+   "name": "T.J. Hockenson",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "MIN",
+     "opp": "GB",
+     "at": false,
+     "result": "W 39-22",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "36",
+       "AVG": "9.0",
+       "TD": "1",
+       "LONG": "16",
+       "TGTS": "5"
+      },
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "MIN",
+     "opp": "CHI",
+     "at": true,
+     "result": "W 9-3",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "29",
+       "AVG": "9.7",
+       "TD": "0",
+       "LONG": "19",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "MIN",
+     "opp": "TB",
+     "at": true,
+     "result": "W 23-16",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "11",
+       "AVG": "5.5",
+       "TD": "0",
+       "LONG": "6",
+       "TGTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "MIN",
+     "opp": "MIA",
+     "at": false,
+     "result": "W 15-10",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "13",
+       "YDS": "119",
+       "AVG": "9.2",
+       "TD": "0",
+       "LONG": "22",
+       "TGTS": "13"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "MIN",
+     "opp": "NO",
+     "at": true,
+     "result": "W 23-13",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "7",
+       "AVG": "7.0",
+       "TD": "0",
+       "LONG": "7",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "MIN",
+     "opp": "IND",
+     "at": false,
+     "result": "W 16-10",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "35",
+       "AVG": "8.8",
+       "TD": "1",
+       "LONG": "22",
+       "TGTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "MIN",
+     "opp": "DET",
+     "at": true,
+     "result": "L 15-19",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "58",
+       "AVG": "14.5",
+       "TD": "1",
+       "LONG": "22",
+       "TGTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "MIN",
+     "opp": "BUF",
+     "at": false,
+     "result": "L 6-23",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "4",
+       "YDS": "33",
+       "AVG": "8.3",
+       "TD": "0",
+       "LONG": "14",
+       "TGTS": "7"
+      },
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "MIN",
+     "opp": "SF",
+     "at": true,
+     "result": "L 10-35",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "55",
+       "AVG": "9.2",
+       "TD": "0",
+       "LONG": "20",
+       "TGTS": "7"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "receiving": {
+     "REC": "41",
+     "YDS": "383",
+     "TD": "3",
+     "LONG": "22",
+     "TGTS": "51"
+    },
+    "defensive": {
+     "TOT": "2",
+     "SOLO": "2",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 9
+  },
+  "drew stevens": {
+   "name": "Drew Stevens",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "WAS",
+     "opp": "PHI",
+     "at": true,
+     "result": "L 22-24",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "1/2",
+       "PCT": "50.0",
+       "LONG": "55",
+       "XP": "1/2",
+       "PTS": "4"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "WAS",
+     "opp": "DAL",
+     "at": true,
+     "result": "L 20-37",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "2/3",
+       "PCT": "66.7",
+       "LONG": "47",
+       "XP": "2/2",
+       "PTS": "8"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "WAS",
+     "opp": "SEA",
+     "at": false,
+     "result": "W 33-31",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "2/2",
+       "PCT": "100.0",
+       "LONG": "57",
+       "XP": "3/4",
+       "PTS": "9"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "WAS",
+     "opp": "IND",
+     "at": false,
+     "result": "L 13-30",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "2/2",
+       "PCT": "100.0",
+       "LONG": "31",
+       "XP": "1/1",
+       "PTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "WAS",
+     "opp": "NYG",
+     "at": false,
+     "result": "T 27-27",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "2/2",
+       "PCT": "100.0",
+       "LONG": "40",
+       "XP": "1/2",
+       "PTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "WAS",
+     "opp": "SF",
+     "at": true,
+     "result": "L 17-23",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "1/1",
+       "PCT": "100.0",
+       "LONG": "51",
+       "XP": "2/2",
+       "PTS": "5"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "WAS",
+     "opp": "PHI",
+     "at": false,
+     "result": "W 27-10",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "4/5",
+       "PCT": "80.0",
+       "LONG": "56",
+       "XP": "1/1",
+       "PTS": "13"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "WAS",
+     "opp": "LAR",
+     "at": false,
+     "result": "L 13-20",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "2/2",
+       "PCT": "100.0",
+       "LONG": "41",
+       "XP": "1/1",
+       "PTS": "7"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "WAS",
+     "opp": "NYG",
+     "at": true,
+     "result": "W 24-21",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "1/1",
+       "PCT": "100.0",
+       "LONG": "46",
+       "XP": "3/3",
+       "PTS": "6"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "kicking": {
+     "FG": "17/20",
+     "LONG": "57",
+     "XP": "15/18",
+     "PTS": "66"
+    }
+   },
+   "gp": 9
+  },
+  "cooper dejean": {
+   "name": "Cooper DeJean",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "PHI",
+     "opp": "WAS",
+     "at": false,
+     "result": "W 24-22",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "8",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "PHI",
+     "opp": "TEN",
+     "at": true,
+     "result": "W 24-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "PHI",
+     "opp": "CHI",
+     "at": true,
+     "result": "L 7-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "2",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "PHI",
+     "opp": "LAR",
+     "at": false,
+     "result": "L 20-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "2",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "25",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "PHI",
+     "opp": "JAX",
+     "at": true,
+     "result": "L 17-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "10",
+       "SOLO": "6",
+       "SACKS": "0",
+       "TFL": "2",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "PHI",
+     "opp": "CAR",
+     "at": false,
+     "result": "L 14-25",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "5",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "PHI",
+     "opp": "DAL",
+     "at": false,
+     "result": "L 21-38",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "PHI",
+     "opp": "WAS",
+     "at": true,
+     "result": "L 10-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "1",
+       "YDS": "12",
+       "AVG": "12.0",
+       "LONG": "12",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "PHI",
+     "opp": "NYG",
+     "at": false,
+     "result": "L 11-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "puntReturns": {
+       "NO": "3",
+       "YDS": "21",
+       "AVG": "7.0",
+       "LONG": "13",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "PHI",
+     "opp": "PIT",
+     "at": false,
+     "result": "W 19-16",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "56",
+     "SOLO": "31",
+     "SACKS": "0",
+     "TFL": "5",
+     "PD": "6",
+     "QB HTS": "1",
+     "TD": "0"
+    },
+    "interceptions": {
+     "INT": "1",
+     "YDS": "25",
+     "TD": "0"
+    },
+    "puntReturns": {
+     "NO": "4",
+     "YDS": "33",
+     "LONG": "13",
+     "TD": "0"
+    }
+   },
+   "gp": 10
+  },
+  "aj epenesa": {
+   "name": "A.J. Epenesa",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "PHI",
+     "opp": "WAS",
+     "at": false,
+     "result": "W 24-22",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "PHI",
+     "opp": "LAR",
+     "at": false,
+     "result": "L 20-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "PHI",
+     "opp": "JAX",
+     "at": true,
+     "result": "L 17-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "PHI",
+     "opp": "DAL",
+     "at": false,
+     "result": "L 21-38",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "7",
+     "SOLO": "3",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "1",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 4
+  },
+  "karson sharar": {
+   "name": "Karson Sharar",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "ARI",
+     "opp": "LAC",
+     "at": true,
+     "result": "W 26-14",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "ARI",
+     "opp": "SEA",
+     "at": false,
+     "result": "L 7-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "ARI",
+     "opp": "SF",
+     "at": true,
+     "result": "L 30-36",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "ARI",
+     "opp": "NYG",
+     "at": true,
+     "result": "L 24-36",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "ARI",
+     "opp": "DET",
+     "at": false,
+     "result": "L 21-45",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "ARI",
+     "opp": "DEN",
+     "at": false,
+     "result": "L 16-30",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "ARI",
+     "opp": "LAR",
+     "at": false,
+     "result": "L 6-34",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "ARI",
+     "opp": "KC",
+     "at": true,
+     "result": "L 7-34",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "10",
+     "SOLO": "5",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 8
+  },
+  "chauncey golston": {
+   "name": "Chauncey Golston",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "NYG",
+     "opp": "DAL",
+     "at": false,
+     "result": "W 28-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "NYG",
+     "opp": "LAR",
+     "at": true,
+     "result": "L 6-28",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "NYG",
+     "opp": "TEN",
+     "at": false,
+     "result": "W 12-7",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "NYG",
+     "opp": "ARI",
+     "at": false,
+     "result": "W 36-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "12",
+     "SOLO": "9",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 4
+  },
+  "riley moss": {
+   "name": "Riley Moss",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "DEN",
+     "opp": "KC",
+     "at": true,
+     "result": "L 10-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "DEN",
+     "opp": "JAX",
+     "at": false,
+     "result": "W 20-13",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "3",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "3",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "DEN",
+     "opp": "LAR",
+     "at": false,
+     "result": "W 30-26",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "DEN",
+     "opp": "SF",
+     "at": true,
+     "result": "L 14-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "DEN",
+     "opp": "SEA",
+     "at": false,
+     "result": "W 17-14",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "DEN",
+     "opp": "ARI",
+     "at": true,
+     "result": "W 30-16",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "DEN",
+     "opp": "KC",
+     "at": false,
+     "result": "W 28-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "DEN",
+     "opp": "CAR",
+     "at": true,
+     "result": "W 26-21",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "DEN",
+     "opp": "LV",
+     "at": false,
+     "result": "W 38-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "31",
+     "SOLO": "20",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "8",
+     "QB HTS": "0",
+     "TD": "0"
+    },
+    "interceptions": {
+     "INT": "1",
+     "YDS": "3",
+     "TD": "0"
+    }
+   },
+   "gp": 9
+  },
+  "xavier nwankpa": {
+   "name": "Xavier Nwankpa",
+   "games": [
+    {
+     "key": "2-1",
+     "label": "Week 1",
+     "team": "KC",
+     "opp": "DEN",
+     "at": false,
+     "result": "W 31-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "KC",
+     "opp": "MIA",
+     "at": true,
+     "result": "W 24-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "KC",
+     "opp": "LV",
+     "at": true,
+     "result": "W 30-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      },
+      "interceptions": {
+       "INT": "1",
+       "YDS": "3",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "KC",
+     "opp": "LAC",
+     "at": false,
+     "result": "W 22-6",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "KC",
+     "opp": "ATL",
+     "at": true,
+     "result": "W 35-13",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "10",
+     "SOLO": "6",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "1",
+     "QB HTS": "0",
+     "TD": "0"
+    },
+    "interceptions": {
+     "INT": "1",
+     "YDS": "3",
+     "TD": "0"
+    }
+   },
+   "gp": 5
+  },
+  "erick all": {
+   "name": "Erick All Jr.",
+   "games": [
+    {
+     "key": "2-2",
+     "label": "Week 2",
+     "team": "CIN",
+     "opp": "HOU",
+     "at": true,
+     "result": "W 20-6",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "5",
+       "AVG": "2.5",
+       "TD": "0",
+       "LONG": "5",
+       "TGTS": "3"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "CIN",
+     "opp": "MIA",
+     "at": true,
+     "result": "W 31-24",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "25",
+       "AVG": "8.3",
+       "TD": "0",
+       "LONG": "14",
+       "TGTS": "3"
+      },
+      "fumbles": {
+       "FUM": "1",
+       "LOST": "0",
+       "REC": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "CIN",
+     "opp": "BAL",
+     "at": true,
+     "result": "W 35-13",
+     "live": false,
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "26",
+       "AVG": "8.7",
+       "TD": "0",
+       "LONG": "9",
+       "TGTS": "3"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "receiving": {
+     "REC": "8",
+     "YDS": "56",
+     "TD": "0",
+     "LONG": "14",
+     "TGTS": "9"
+    },
+    "fumbles": {
+     "FUM": "1",
+     "LOST": "0",
+     "REC": "0"
+    }
+   },
+   "gp": 3
+  },
+  "yahya black": {
+   "name": "Yahya Black",
+   "games": [
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "PIT",
+     "opp": "CIN",
+     "at": false,
+     "result": "W 30-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "PIT",
+     "opp": "CLE",
+     "at": true,
+     "result": "L 24-27",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "PIT",
+     "opp": "IND",
+     "at": false,
+     "result": "W 34-22",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "PIT",
+     "opp": "TB",
+     "at": true,
+     "result": "W 26-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "1",
+       "TFL": "1",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "PIT",
+     "opp": "NO",
+     "at": true,
+     "result": "W 16-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "PIT",
+     "opp": "CLE",
+     "at": false,
+     "result": "W 27-6",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "PIT",
+     "opp": "CIN",
+     "at": true,
+     "result": "L 18-38",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "5",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "PIT",
+     "opp": "PHI",
+     "at": true,
+     "result": "L 16-19",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "24",
+     "SOLO": "10",
+     "SACKS": "1",
+     "TFL": "3",
+     "PD": "1",
+     "QB HTS": "3",
+     "TD": "0"
+    }
+   },
+   "gp": 8
+  },
+  "tyler goodson": {
+   "name": "Tyler Goodson",
+   "games": [
+    {
+     "key": "2-3",
+     "label": "Week 3",
+     "team": "DAL",
+     "opp": "BAL",
+     "at": false,
+     "result": "L 31-34",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "6",
+       "YDS": "22",
+       "AVG": "3.7",
+       "TD": "0",
+       "LONG": "10"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "-5",
+       "AVG": "-5.0",
+       "TD": "0",
+       "LONG": "-5",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "DAL",
+     "opp": "HOU",
+     "at": true,
+     "result": "W 34-30",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "3",
+       "YDS": "12",
+       "AVG": "4.0",
+       "TD": "0",
+       "LONG": "10"
+      },
+      "receiving": {
+       "REC": "0",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "0",
+       "TGTS": "1"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "DAL",
+     "opp": "GB",
+     "at": true,
+     "result": "L 13-23",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "2",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "2"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "9",
+       "AVG": "9.0",
+       "TD": "0",
+       "LONG": "9",
+       "TGTS": "3"
+      },
+      "kickReturns": {
+       "NO": "5",
+       "YDS": "122",
+       "AVG": "24.4",
+       "LONG": "30",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-7",
+     "label": "Week 7",
+     "team": "DAL",
+     "opp": "PHI",
+     "at": true,
+     "result": "W 38-21",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "10",
+       "YDS": "38",
+       "AVG": "3.8",
+       "TD": "0",
+       "LONG": "11"
+      },
+      "kickReturns": {
+       "NO": "2",
+       "YDS": "42",
+       "AVG": "21.0",
+       "LONG": "22",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "DAL",
+     "opp": "ARI",
+     "at": false,
+     "result": "L 30-33",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "7",
+       "YDS": "14",
+       "AVG": "2.0",
+       "TD": "0",
+       "LONG": "6"
+      },
+      "receiving": {
+       "REC": "2",
+       "YDS": "19",
+       "AVG": "9.5",
+       "TD": "0",
+       "LONG": "11",
+       "TGTS": "2"
+      },
+      "kickReturns": {
+       "NO": "3",
+       "YDS": "104",
+       "AVG": "34.7",
+       "LONG": "45",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "DAL",
+     "opp": "IND",
+     "at": true,
+     "result": "W 27-23",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "12",
+       "YDS": "77",
+       "AVG": "6.4",
+       "TD": "0",
+       "LONG": "13"
+      },
+      "receiving": {
+       "REC": "0",
+       "YDS": "0",
+       "AVG": "0.0",
+       "TD": "0",
+       "LONG": "0",
+       "TGTS": "1"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "rushing": {
+     "CAR": "40",
+     "YDS": "163",
+     "TD": "0",
+     "LONG": "13"
+    },
+    "receiving": {
+     "REC": "4",
+     "YDS": "23",
+     "TD": "0",
+     "LONG": "11",
+     "TGTS": "8"
+    },
+    "kickReturns": {
+     "NO": "10",
+     "YDS": "268",
+     "LONG": "45",
+     "TD": "0"
+    }
+   },
+   "gp": 6
+  },
+  "alaric jackson": {
+   "name": "Alaric Jackson",
+   "games": [
+    {
+     "key": "2-4",
+     "label": "Week 4",
+     "team": "LAR",
+     "opp": "PHI",
+     "at": true,
+     "result": "W 24-20",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "1",
+     "SOLO": "1",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 1
+  },
+  "kaevon merriweather": {
+   "name": "Kaevon Merriweather",
+   "games": [
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "JAX",
+     "opp": "PHI",
+     "at": false,
+     "result": "W 19-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "JAX",
+     "opp": "HOU",
+     "at": false,
+     "result": "L 31-34",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "7",
+       "SOLO": "4",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "JAX",
+     "opp": "IND",
+     "at": false,
+     "result": "W 42-7",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "JAX",
+     "opp": "BAL",
+     "at": true,
+     "result": "W 33-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "JAX",
+     "opp": "NYG",
+     "at": true,
+     "result": "L 18-23",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "15",
+     "SOLO": "8",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "1",
+     "QB HTS": "1",
+     "TD": "0"
+    }
+   },
+   "gp": 5
+  },
+  "jack heflin": {
+   "name": "Jack Heflin",
+   "games": [
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "NYJ",
+     "opp": "CLE",
+     "at": false,
+     "result": "W 17-12",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "NYJ",
+     "opp": "LV",
+     "at": false,
+     "result": "L 33-38",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "2",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "NYJ",
+     "opp": "KC",
+     "at": true,
+     "result": "L 12-35",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-10",
+     "label": "Week 10",
+     "team": "NYJ",
+     "opp": "BUF",
+     "at": false,
+     "result": "L 12-31",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "NYJ",
+     "opp": "LAC",
+     "at": true,
+     "result": "W 27-24",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0.5",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "9",
+     "SOLO": "1",
+     "SACKS": "0.5",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "4",
+     "TD": "0"
+    }
+   },
+   "gp": 5
+  },
+  "connor colby": {
+   "name": "Connor Colby",
+   "games": [
+    {
+     "key": "2-5",
+     "label": "Week 5",
+     "team": "SF",
+     "opp": "SEA",
+     "at": true,
+     "result": "W 32-29",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    {
+     "key": "2-9",
+     "label": "Week 9",
+     "team": "SF",
+     "opp": "LV",
+     "at": false,
+     "result": "W 38-17",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "2",
+     "SOLO": "2",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 2
+  },
+  "casey kreiter": {
+   "name": "Casey Kreiter",
+   "games": [
+    {
+     "key": "2-6",
+     "label": "Week 6",
+     "team": "ARI",
+     "opp": "LAR",
+     "at": true,
+     "result": "W 18-16",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "1",
+     "SOLO": "0",
+     "SACKS": "0",
+     "TFL": "0",
+     "PD": "0",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 1
+  },
+  "geno stone": {
+   "name": "Geno Stone",
+   "games": [
+    {
+     "key": "2-8",
+     "label": "Week 8",
+     "team": "BUF",
+     "opp": "BAL",
+     "at": false,
+     "result": "W 36-10",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "1",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   ],
+   "totals": {
+    "defensive": {
+     "TOT": "6",
+     "SOLO": "2",
+     "SACKS": "0",
+     "TFL": "1",
+     "PD": "1",
+     "QB HTS": "0",
+     "TD": "0"
+    }
+   },
+   "gp": 1
+  }
+ },
+ "leaders": [
+  {
+   "label": "Receiving yards",
+   "by": "YDS",
+   "players": [
+    {
+     "key": "george kittle",
+     "name": "George Kittle",
+     "team": "SF",
+     "value": "591",
+     "line": "47 REC · 591 YDS · 7 TD"
+    },
+    {
+     "key": "sam laporta",
+     "name": "Sam LaPorta",
+     "team": "DET",
+     "value": "477",
+     "line": "39 REC · 477 YDS · 3 TD"
+    },
+    {
+     "key": "tj hockenson",
+     "name": "T.J. Hockenson",
+     "team": "MIN",
+     "value": "383",
+     "line": "41 REC · 383 YDS · 3 TD"
+    },
+    {
+     "key": "noah fant",
+     "name": "Noah Fant",
+     "team": "NO",
+     "value": "115",
+     "line": "14 REC · 115 YDS · 3 TD"
+    },
+    {
+     "key": "erick all",
+     "name": "Erick All Jr.",
+     "team": "CIN",
+     "value": "56",
+     "line": "8 REC · 56 YDS · 0 TD"
+    }
+   ]
+  },
+  {
+   "label": "Rushing yards",
+   "by": "YDS",
+   "players": [
+    {
+     "key": "kaleb johnson",
+     "name": "Kaleb Johnson",
+     "team": "GB",
+     "value": "214",
+     "line": "52 CAR · 214 YDS · 1 TD"
+    },
+    {
+     "key": "tyler goodson",
+     "name": "Tyler Goodson",
+     "team": "DAL",
+     "value": "163",
+     "line": "40 CAR · 163 YDS · 0 TD"
+    },
+    {
+     "key": "sam laporta",
+     "name": "Sam LaPorta",
+     "team": "DET",
+     "value": "2",
+     "line": "1 CAR · 2 YDS · 0 TD"
+    }
+   ]
+  },
+  {
+   "label": "Tackles",
+   "by": "TOT",
+   "players": [
+    {
+     "key": "dane belton",
+     "name": "Dane Belton",
+     "team": "NYJ",
+     "value": "88",
+     "line": "88 TOT · 42 SOLO · 2 TFL"
+    },
+    {
+     "key": "amani hooker",
+     "name": "Amani Hooker",
+     "team": "BUF",
+     "value": "61",
+     "line": "61 TOT · 39 SOLO · 1 TFL"
+    },
+    {
+     "key": "jack campbell",
+     "name": "Jack Campbell",
+     "team": "DET",
+     "value": "57",
+     "line": "57 TOT · 29 SOLO · 1 TFL"
+    },
+    {
+     "key": "cooper dejean",
+     "name": "Cooper DeJean",
+     "team": "PHI",
+     "value": "56",
+     "line": "56 TOT · 31 SOLO · 5 TFL"
+    },
+    {
+     "key": "lukas van ness",
+     "name": "Lukas Van Ness",
+     "team": "GB",
+     "value": "38",
+     "line": "38 TOT · 23 SOLO · 7 TFL"
+    }
+   ]
+  },
+  {
+   "label": "Sacks",
+   "by": "SACKS",
+   "players": [
+    {
+     "key": "lukas van ness",
+     "name": "Lukas Van Ness",
+     "team": "GB",
+     "value": "6",
+     "line": "6 SACKS"
+    },
+    {
+     "key": "anthony nelson",
+     "name": "Anthony Nelson",
+     "team": "TB",
+     "value": "1.5",
+     "line": "1.5 SACKS"
+    },
+    {
+     "key": "dane belton",
+     "name": "Dane Belton",
+     "team": "NYJ",
+     "value": "1",
+     "line": "1 SACKS"
+    },
+    {
+     "key": "yahya black",
+     "name": "Yahya Black",
+     "team": "PIT",
+     "value": "1",
+     "line": "1 SACKS"
+    },
+    {
+     "key": "jack heflin",
+     "name": "Jack Heflin",
+     "team": "NYJ",
+     "value": "0.5",
+     "line": "0.5 SACKS"
+    }
+   ]
+  },
+  {
+   "label": "Passes defended",
+   "by": "PD",
+   "players": [
+    {
+     "key": "amani hooker",
+     "name": "Amani Hooker",
+     "team": "BUF",
+     "value": "8",
+     "line": "8 PD"
+    },
+    {
+     "key": "riley moss",
+     "name": "Riley Moss",
+     "team": "DEN",
+     "value": "8",
+     "line": "8 PD"
+    },
+    {
+     "key": "cooper dejean",
+     "name": "Cooper DeJean",
+     "team": "PHI",
+     "value": "6",
+     "line": "6 PD"
+    },
+    {
+     "key": "dane belton",
+     "name": "Dane Belton",
+     "team": "NYJ",
+     "value": "5",
+     "line": "5 PD"
+    },
+    {
+     "key": "lukas van ness",
+     "name": "Lukas Van Ness",
+     "team": "GB",
+     "value": "1",
+     "line": "1 PD"
+    }
+   ]
+  },
+  {
+   "label": "Interceptions",
+   "by": "INT",
+   "players": [
+    {
+     "key": "amani hooker",
+     "name": "Amani Hooker",
+     "team": "BUF",
+     "value": "5",
+     "line": "5 INT · 0 TD"
+    },
+    {
+     "key": "cooper dejean",
+     "name": "Cooper DeJean",
+     "team": "PHI",
+     "value": "1",
+     "line": "1 INT · 0 TD"
+    },
+    {
+     "key": "riley moss",
+     "name": "Riley Moss",
+     "team": "DEN",
+     "value": "1",
+     "line": "1 INT · 0 TD"
+    },
+    {
+     "key": "xavier nwankpa",
+     "name": "Xavier Nwankpa",
+     "team": "KC",
+     "value": "1",
+     "line": "1 INT · 0 TD"
+    }
+   ]
+  }
+ ]
+}

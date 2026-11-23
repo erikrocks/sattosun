@@ -1,6 +1,6 @@
-# Hawkeyes on Saturday and Sunday
+# IA Hawks
 
-A phone-first site with two tabs at the bottom. **Saturday** is the school's own season (Iowa to start): record, ranking, last and next game, season leaders, schedule with box scores, and news. **Sunday** is every former player in this week's NFL games, with live scores, stat lines, byes and roster status.
+A phone-first site with two tabs at the bottom. **Saturday** is the school's own season (Iowa to start): record, ranking, last and next game, season leaders, schedule with two-sided box scores and scoring plays, and Iowa football headlines from several outlets. **Sunday** is every former player in this week's NFL games, with live scores, stat lines, byes and roster status, plus each player's season page, season leaderboards, a roster-moves feed and a week picker.
 
 Live at https://iahawks.com.
 
@@ -17,6 +17,9 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `data/stats.json` | Box-score lines for tracked players (ESPN game summaries) |
 | `data/college/<school>.json` | The school's own season for the Saturday tab: schedule, scores, box scores, season leaders, news (ESPN) |
 | `data/weeks/<season>/<type>-<week>.json` | One file per finished NFL week (scores and stat lines) for the week picker; `data/weeks/index.json` lists them. Missing weeks are rebuilt on the next full refresh |
+| `data/season/<school>.json` | Each tracked player's NFL season (game log, totals) and the leaderboards, built from the saved weeks |
+| `data/moves/<school>.json` | Roster moves: signings, releases, team changes and reserve or practice-squad moves, from comparing each morning's roster with the previous one |
+| `about.html`, `404.html`, `og.png` | About page, not-found page, and the image shown when the link is shared |
 | `data/status.json` | When each part last refreshed, and any problems from the last run |
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
@@ -44,6 +47,14 @@ Nothing here needs babysitting, and it tells you when it needs attention:
 - Only one issue of each kind is open at a time, and each closes itself when the next full refresh or check passes.
 
 To get these on your phone, install the GitHub app and leave notifications on for this repo. Email goes to the address on your GitHub account (Settings → Notifications; keep "Actions: failed workflows" on).
+
+## Other things to know
+
+- **News sources** are listed per school in `schools.json` (`newsFeeds`). Headlines must match `newsMatch` and not mention another sport; a feed with `must` only keeps headlines matching that pattern. A feed that fails is skipped; the run only fails if every source fails.
+- **Logos and headshots** load from ESPN's image servers; nothing is stored here. If one is missing the page hides it.
+- **Visitor counts** use Cloudflare Web Analytics (no cookies). See them in the Cloudflare dashboard under Analytics → Web analytics → iahawks.com.
+- **The site name and tagline** are in `schools.json` under `site`.
+- **The share image** `og.png` is a 1200×630 screenshot; regenerate it if the name or tagline changes.
 
 ## Adding a school
 

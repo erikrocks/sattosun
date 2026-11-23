@@ -1,5 +1,5 @@
 {
- "name": "Hawkeyes on Saturday and Sunday",
+ "name": "IA Hawks",
  "short_name": "IA Hawks",
  "start_url": "./",
  "display": "standalone",
@@ -17,5 +17,6 @@
    "type": "image/png",
    "purpose": "any maskable"
   }
- ]
+ ],
+ "description": "Iowa football on Saturday. Every former Hawkeye in the NFL on Sunday."
 }

@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-23T04:41:12Z",
+ "updated": "2026-11-23T04:53:09Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -19,13 +19,16 @@
    "detail": "Final",
    "network": "BTN",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 22,
     "score": 40
    },
    "opp": {
+    "id": "2459",
     "abbr": "NIU",
     "name": "Northern Illinois",
     "rank": null,
@@ -40,13 +43,16 @@
    "detail": "Final",
    "network": "NBC",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 21,
     "score": 16
    },
    "opp": {
+    "id": "66",
     "abbr": "ISU",
     "name": "Iowa State",
     "rank": null,
@@ -61,13 +67,16 @@
    "detail": "Final",
    "network": "FS1",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 18,
     "score": 55
    },
    "opp": {
+    "id": "2460",
     "abbr": "UNI",
     "name": "Northern Iowa",
     "rank": null,
@@ -82,13 +91,16 @@
    "detail": "Final",
    "network": "CBS",
    "where": "away",
+   "homeAway": "away",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 17,
     "score": 20
    },
    "opp": {
+    "id": "130",
     "abbr": "MICH",
     "name": "Michigan",
     "rank": 18,
@@ -103,13 +115,16 @@
    "detail": "Final",
    "network": "CBS",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 14,
     "score": 14
    },
    "opp": {
+    "id": "194",
     "abbr": "OSU",
     "name": "Ohio State",
     "rank": 5,
@@ -124,13 +139,16 @@
    "detail": "Final",
    "network": "Fox",
    "where": "away",
+   "homeAway": "away",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 20,
     "score": 41
    },
    "opp": {
+    "id": "264",
     "abbr": "WASH",
     "name": "Washington",
     "rank": null,
@@ -145,13 +163,16 @@
    "detail": "Final",
    "network": "FS1",
    "where": "away",
+   "homeAway": "away",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 15,
     "score": 10
    },
    "opp": {
+    "id": "135",
     "abbr": "MINN",
     "name": "Minnesota",
     "rank": null,
@@ -166,13 +187,16 @@
    "detail": "Final",
    "network": "Fox",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": null,
     "score": 30
    },
    "opp": {
+    "id": "275",
     "abbr": "WIS",
     "name": "Wisconsin",
     "rank": 25,
@@ -187,13 +211,16 @@
    "detail": "Final",
    "network": "Fox",
    "where": "away",
+   "homeAway": "away",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 19,
     "score": 24
    },
    "opp": {
+    "id": "77",
     "abbr": "NU",
     "name": "Northwestern",
     "rank": null,
@@ -208,13 +235,16 @@
    "detail": "Final",
    "network": "NBC",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 15,
     "score": 28
    },
    "opp": {
+    "id": "2509",
     "abbr": "PUR",
     "name": "Purdue",
     "rank": null,
@@ -229,13 +259,16 @@
    "detail": "Final",
    "network": "BTN",
    "where": "away",
+   "homeAway": "away",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 15,
     "score": 34
    },
    "opp": {
+    "id": "356",
     "abbr": "ILL",
     "name": "Illinois",
     "rank": null,
@@ -250,13 +283,16 @@
    "detail": "",
    "network": "CBS",
    "where": "home",
+   "homeAway": "home",
    "us": {
+    "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 15,
     "score": null
    },
    "opp": {
+    "id": "158",
     "abbr": "NEB",
     "name": "Nebraska",
     "rank": null,
@@ -904,7 +940,617 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Taron Dickens",
+       "9/14",
+       "96",
+       "6.9",
+       "0",
+       "1",
+       "12.6"
+      ],
+      [
+       "Jalen Macon",
+       "4/10",
+       "17",
+       "1.7",
+       "0",
+       "0",
+       "4.8"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Telly Johnson Jr.",
+       "8",
+       "16",
+       "2.0",
+       "0",
+       "5"
+      ],
+      [
+       "Jaiduan Cranford",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "6"
+      ],
+      [
+       "Elijah Porter",
+       "3",
+       "6",
+       "2.0",
+       "0",
+       "4"
+      ],
+      [
+       "Triston White",
+       "2",
+       "2",
+       "1.0",
+       "0",
+       "1"
+      ],
+      [
+       "Cam Thompson",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ],
+      [
+       " Team",
+       "1",
+       "-3",
+       "-3.0",
+       "0",
+       "0"
+      ],
+      [
+       "Jalen Macon",
+       "8",
+       "-4",
+       "-0.5",
+       "0",
+       "6"
+      ],
+      [
+       "Taron Dickens",
+       "6",
+       "-19",
+       "-3.2",
+       "0",
+       "2"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kelan McInerney",
+       "3",
+       "55",
+       "18.3",
+       "0",
+       "22"
+      ],
+      [
+       "La'Don Bryant",
+       "4",
+       "42",
+       "10.5",
+       "0",
+       "20"
+      ],
+      [
+       "Glen Weber",
+       "2",
+       "10",
+       "5.0",
+       "0",
+       "6"
+      ],
+      [
+       "DeAree Rogers",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ],
+      [
+       "Telly Johnson Jr.",
+       "2",
+       "3",
+       "1.5",
+       "0",
+       "2"
+      ],
+      [
+       "Cam Thompson",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Taron Dickens",
+       "1",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jashawn Nelson",
+       "10",
+       "7",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Malik Armstrong",
+       "6",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jack Murray",
+       "6",
+       "3",
+       "0",
+       "0.5",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Kyon Conyers",
+       "6",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Romelo Walker",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cooper Mau",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jay'shon Thomas",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Matthew Scarlett",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Yassine Falke",
+       "3",
+       "2",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Avery Jones",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brady Kerperin",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Liam Lindo",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Marshall Washington",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Fawzy Omotoso",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob McGhee",
+       "2",
+       "1",
+       "0",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Amari Washington",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Trey Porter",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kole Sneed",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "James Bradley",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "George Dimopoulos",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dev'ion Reynolds",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Elijah Porter",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Andruw Ellis",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Broderick Windham",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aaron Warren",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Micah Cook",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Yassine Falke",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Dev'ion Reynolds",
+       "2",
+       "22",
+       "11.0",
+       "16",
+       "0"
+      ],
+      [
+       "Cam Thompson",
+       "1",
+       "13",
+       "13.0",
+       "13",
+       "0"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jake Ference",
+       "11",
+       "460",
+       "41.8",
+       "0",
+       "0",
+       "49"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "20",
+     "13",
+     "7",
+     "0"
+    ],
+    "opp": [
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "9:52",
+     "us": true,
+     "type": "TD",
+     "text": "Tony Diaz 6 Yd pass from Hank Brown (Caden Buhr PAT failed)",
+     "score": [
+      6,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "6:46",
+     "us": true,
+     "type": "TD",
+     "text": "Kamari Moulton 50 Yd Run (Caden Buhr Kick)",
+     "score": [
+      13,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "4:10",
+     "us": true,
+     "type": "TD",
+     "text": "Kamari Moulton 37 Yd Run (Caden Buhr Kick)",
+     "score": [
+      20,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "7:40",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 8 Yd pass from Jeremy Hecklinski (Caden Buhr Kick)",
+     "score": [
+      27,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "3:34",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 45 Yd Field Goal",
+     "score": [
+      30,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:02",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 34 Yd Field Goal",
+     "score": [
+      33,
+      0
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "2:20",
+     "us": true,
+     "type": "TD",
+     "text": "Evan James 77 Yd Punt Return (Caden Buhr Kick)",
+     "score": [
+      40,
+      0
+     ]
+    }
+   ]
   },
   "401856788": {
    "final": true,
@@ -1262,7 +1908,521 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Jaylen Raynor",
+       "10/19",
+       "117",
+       "6.2",
+       "1",
+       "0",
+       "42.6"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Aiden Flora",
+       "19",
+       "89",
+       "4.7",
+       "0",
+       "34"
+      ],
+      [
+       "Jaylen Raynor",
+       "8",
+       "18",
+       "2.3",
+       "0",
+       "6"
+      ],
+      [
+       "Omari Hayes",
+       "1",
+       "15",
+       "15.0",
+       "0",
+       "15"
+      ],
+      [
+       "Arnold Barnes III",
+       "3",
+       "9",
+       "3.0",
+       "0",
+       "4"
+      ],
+      [
+       "Cameron Pettaway",
+       "2",
+       "4",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       "Easton Miller",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Omari Hayes",
+       "3",
+       "39",
+       "13.0",
+       "0",
+       "28"
+      ],
+      [
+       "Carter Pabst",
+       "1",
+       "24",
+       "24.0",
+       "0",
+       "24"
+      ],
+      [
+       "Jamal Polite Jr.",
+       "1",
+       "20",
+       "20.0",
+       "0",
+       "20"
+      ],
+      [
+       "Ty Claiborne",
+       "1",
+       "15",
+       "15.0",
+       "0",
+       "15"
+      ],
+      [
+       "Vince Benetti",
+       "2",
+       "10",
+       "5.0",
+       "1",
+       "6"
+      ],
+      [
+       "Evan Boyd",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Aiden Flora",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Sullivan Schlimgen",
+       "9",
+       "6",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Carson Willich",
+       "6",
+       "4",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Surges",
+       "6",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Beau Goodwin",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "David Coffey",
+       "4",
+       "4",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Seth Johnson",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Caden Crawford",
+       "3",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Bryson Lamb",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Malaki Ta'ase",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brody Miller",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Beni Ngoyi",
+       "2",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Willie Breland III",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Isaac Terrell",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zaimir Hawk",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Donovan Fitzmaurice",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaheim Singletary",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Duhron Goodman",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Montreze Smith Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jack Janikowski",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Max Baloun",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ethan Stecker",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Kyle Konrardy",
+       "2/2",
+       "100.0",
+       "51",
+       "1/1",
+       "7"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jonah DuPont",
+       "6",
+       "260",
+       "43.3",
+       "0",
+       "0",
+       "58"
+      ],
+      [
+       "Ethan Gurney",
+       "1",
+       "47",
+       "47.0",
+       "0",
+       "1",
+       "47"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "0",
+     "10",
+     "0",
+     "6"
+    ],
+    "opp": [
+     "0",
+     "10",
+     "3",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 2,
+     "clock": "14:17",
+     "us": false,
+     "type": "FG",
+     "text": "Kyle Konrardy 29 Yd Field Goal",
+     "score": [
+      0,
+      3
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "7:51",
+     "us": false,
+     "type": "TD",
+     "text": "Vince Benetti 4 Yd pass from Jaylen Raynor (Kyle Konrardy Kick)",
+     "score": [
+      0,
+      10
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "5:34",
+     "us": true,
+     "type": "TD",
+     "text": "Hank Brown 1 Yd Run (Caden Buhr Kick)",
+     "score": [
+      7,
+      10
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:28",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 45 Yd Field Goal",
+     "score": [
+      10,
+      10
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "10:06",
+     "us": false,
+     "type": "FG",
+     "text": "Kyle Konrardy 51 Yd Field Goal",
+     "score": [
+      10,
+      13
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "6:22",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 32 Yd Field Goal",
+     "score": [
+      13,
+      13
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "0:15",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 42 Yd Field Goal",
+     "score": [
+      16,
+      13
+     ]
+    }
+   ]
   },
   "401858471": {
    "final": true,
@@ -1860,7 +3020,631 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Jaxon Dailey",
+       "11/27",
+       "91",
+       "3.4",
+       "0",
+       "2",
+       "--"
+      ],
+      [
+       "Cale McThenia",
+       "3/6",
+       "11",
+       "1.8",
+       "0",
+       "0",
+       "--"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Caleb Kamara",
+       "7",
+       "21",
+       "3.0",
+       "0",
+       "8"
+      ],
+      [
+       "Ben Gordon",
+       "5",
+       "12",
+       "2.4",
+       "0",
+       "4"
+      ],
+      [
+       "Michael Bormann",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ],
+      [
+       "Taj Hughes",
+       "2",
+       "5",
+       "2.5",
+       "0",
+       "6"
+      ],
+      [
+       "Christian Collins",
+       "4",
+       "4",
+       "1.0",
+       "0",
+       "5"
+      ],
+      [
+       "Kaden Amigon-Suiter",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ],
+      [
+       "Jaxon Dailey",
+       "5",
+       "3",
+       "0.6",
+       "0",
+       "8"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Ayden Price",
+       "2",
+       "32",
+       "16.0",
+       "0",
+       "28"
+      ],
+      [
+       "Brady McCullough",
+       "1",
+       "19",
+       "19.0",
+       "0",
+       "19"
+      ],
+      [
+       "Briggs Hughston",
+       "1",
+       "11",
+       "11.0",
+       "0",
+       "11"
+      ],
+      [
+       "Tay Norman",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "7"
+      ],
+      [
+       "Christian Collins",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "8"
+      ],
+      [
+       "Zach Mehmert",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Kaden Amigon-Suiter",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Taj Hughes",
+       "2",
+       "5",
+       "2.5",
+       "0",
+       "4"
+      ],
+      [
+       "Jaiden Ellis-Lahey",
+       "2",
+       "5",
+       "2.5",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Taj Hughes",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Calvin Jaworski",
+       "10",
+       "10",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mekhi Toms",
+       "5",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "John Powers",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Andrew Price",
+       "5",
+       "3",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jordan McClom",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Isaiah Pinks",
+       "4",
+       "3",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Tyson Cooreman",
+       "4",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kolben Miller",
+       "3",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aidan Ducharme",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Isley",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Braden McShane",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Franz Reisz",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ayden Price",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ian Collins",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ryan Kuennen",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brock Carpenter",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Connor Kayser",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Elijah Hoyt",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xhavion Reese",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jarrett Kies",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dominiq Vann",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kolby Gibbons",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kaleb Diers",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Hyson Bey-Buie",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Axel Ramazani",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Josiah Young",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Pettus",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Ben Gordon",
+       "2",
+       "42",
+       "21.0",
+       "27",
+       "0"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Logan Gregory",
+       "9",
+       "409",
+       "45.4",
+       "1",
+       "2",
+       "71"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "21",
+     "21",
+     "7",
+     "6"
+    ],
+    "opp": [
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "11:11",
+     "us": true,
+     "type": "TD",
+     "text": "Nathan McNeil 2 Yd Run (Caden Buhr Kick)",
+     "score": [
+      7,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "5:48",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 24 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      14,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "0:24",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 48 Yd Run (Caden Buhr Kick)",
+     "score": [
+      21,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "12:59",
+     "us": true,
+     "type": "TD",
+     "text": "Addison Ostrenga 14 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      28,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "10:06",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 16 Yd Run (Caden Buhr Kick)",
+     "score": [
+      35,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:46",
+     "us": true,
+     "type": "TD",
+     "text": "Nathan McNeil 12 Yd Run (Caden Buhr Kick)",
+     "score": [
+      42,
+      0
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "7:03",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 37 Yd Run (Caden Buhr Kick)",
+     "score": [
+      49,
+      0
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "12:37",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 62 Yd Run (Caden Buhr PAT blocked)",
+     "score": [
+      55,
+      0
+     ]
+    }
+   ]
   },
   "401858463": {
    "final": true,
@@ -2323,7 +4107,536 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Bryce Underwood",
+       "17/28",
+       "276",
+       "9.9",
+       "2",
+       "1",
+       "72.6"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jordan Marshall",
+       "11",
+       "59",
+       "5.4",
+       "0",
+       "17"
+      ],
+      [
+       "Savion Hiter",
+       "14",
+       "53",
+       "3.8",
+       "0",
+       "8"
+      ],
+      [
+       "Bryce Underwood",
+       "14",
+       "36",
+       "2.6",
+       "0",
+       "7"
+      ],
+      [
+       "Bryson Kuzdzal",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "JJ Buchanan",
+       "5",
+       "130",
+       "26.0",
+       "2",
+       "49"
+      ],
+      [
+       "Andrew Marsh",
+       "7",
+       "106",
+       "15.1",
+       "0",
+       "27"
+      ],
+      [
+       "Savion Hiter",
+       "1",
+       "19",
+       "19.0",
+       "0",
+       "19"
+      ],
+      [
+       "Hogan Hansen",
+       "2",
+       "13",
+       "6.5",
+       "0",
+       "8"
+      ],
+      [
+       "Eli Owens",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ],
+      [
+       "Jalen Hoffman",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jyaire Hill",
+       "7",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rod Moore Jr.",
+       "6",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Troy Bowles",
+       "6",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aisea Moa",
+       "4",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dom Nichols",
+       "4",
+       "1",
+       "0.5",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Enow Etta",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Smith Snowden",
+       "3",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Nathaniel Staehling",
+       "3",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zeke Berry",
+       "2",
+       "2",
+       "0",
+       "0",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Nathaniel Owusu-Boateng",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Nate Marshall",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Trey Pierce",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "John Henry Daley",
+       "2",
+       "1",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jonah Lea'ea",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Chris Bracy",
+       "2",
+       "0",
+       "0",
+       "0",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Tariq Boney",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kendrick Bell",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bobby Kanka",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jordan Young",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Curtis",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Chase Taylor",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Benny Patterson III",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Bryson Kuzdzal",
+       "2",
+       "53",
+       "26.5",
+       "36",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Andrew Marsh",
+       "1",
+       "-1",
+       "-1.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Trey Butkowski",
+       "2/2",
+       "100.0",
+       "41",
+       "1/1",
+       "7"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Cam Brown",
+       "4",
+       "170",
+       "42.5",
+       "0",
+       "1",
+       "51"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "opp": [
+     "7",
+     "3",
+     "3",
+     "6"
+    ],
+    "us": [
+     "7",
+     "0",
+     "0",
+     "13"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "1:58",
+     "us": false,
+     "type": "TD",
+     "text": "JJ Buchanan 18 Yd pass from Bryce Underwood (Trey Butkowski Kick)",
+     "score": [
+      0,
+      7
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "1:44",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 99 Yd Kickoff Return (Caden Buhr Kick)",
+     "score": [
+      7,
+      7
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "12:58",
+     "us": false,
+     "type": "FG",
+     "text": "Trey Butkowski 41 Yd Field Goal",
+     "score": [
+      7,
+      10
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "1:29",
+     "us": false,
+     "type": "FG",
+     "text": "Trey Butkowski 22 Yd Field Goal",
+     "score": [
+      7,
+      13
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "14:02",
+     "us": true,
+     "type": "TD",
+     "text": "Reece Vander Zee 16 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      14,
+      13
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "11:59",
+     "us": false,
+     "type": "TD",
+     "text": "JJ Buchanan 49 Yd pass from Bryce Underwood (Two-Point Pass Conversion Failed)",
+     "score": [
+      14,
+      19
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "0:00",
+     "us": true,
+     "type": "TD",
+     "text": "Reece Vander Zee 16 Yd pass from Hank Brown",
+     "score": [
+      20,
+      19
+     ]
+    }
+   ]
   },
   "401858473": {
    "final": true,
@@ -2773,7 +5086,542 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Julian Sayin",
+       "20/27",
+       "324",
+       "12.0",
+       "3",
+       "0",
+       "89.8"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Ja'Kobi Jackson",
+       "14",
+       "72",
+       "5.1",
+       "1",
+       "12"
+      ],
+      [
+       "Bo Jackson",
+       "16",
+       "70",
+       "4.4",
+       "0",
+       "16"
+      ],
+      [
+       "Isaiah West",
+       "7",
+       "21",
+       "3.0",
+       "0",
+       "8"
+      ],
+      [
+       "Julian Sayin",
+       "9",
+       "-1",
+       "-0.1",
+       "0",
+       "9"
+      ],
+      [
+       " Team",
+       "1",
+       "-2",
+       "-2.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jeremiah Smith",
+       "11",
+       "206",
+       "18.7",
+       "2",
+       "57"
+      ],
+      [
+       "Devin McCuin",
+       "4",
+       "80",
+       "20.0",
+       "1",
+       "34"
+      ],
+      [
+       "Brandon Inniss",
+       "2",
+       "14",
+       "7.0",
+       "0",
+       "8"
+      ],
+      [
+       "Nate Roberts",
+       "1",
+       "9",
+       "9.0",
+       "0",
+       "9"
+      ],
+      [
+       "Isaiah West",
+       "1",
+       "9",
+       "9.0",
+       "0",
+       "9"
+      ],
+      [
+       "Maxence LeBlanc",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Julian Sayin",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Christian Alliegro",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Payton Pierce",
+       "6",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Qua Russaw",
+       "5",
+       "2",
+       "1",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Eddrick Houston",
+       "4",
+       "2",
+       "0",
+       "0",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Zion Grady",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Leroy Roker III",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Earl Little Jr.",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Riley Pettijohn",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jermaine Mathews Jr.",
+       "3",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen McClain",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Christian Alliegro",
+       "3",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Devin Sanchez",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Simeon Caldwell",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tarvos Alford",
+       "2",
+       "2",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenyatta Jackson Jr.",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Calhoun",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "James Smith",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Beau Atkinson",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Jason Moore",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "John Walker",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "2",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jaylen McClain",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Phillip Bell",
+       "2",
+       "4",
+       "2.0",
+       "3",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Connor Hawkins",
+       "1/2",
+       "50.0",
+       "28",
+       "4/4",
+       "7"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Joe McGuire",
+       "2",
+       "80",
+       "40.0",
+       "0",
+       "1",
+       "47"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "6",
+     "0",
+     "0",
+     "8"
+    ],
+    "opp": [
+     "10",
+     "7",
+     "7",
+     "7"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "13:18",
+     "us": false,
+     "type": "TD",
+     "text": "Devin McCuin 15 Yd pass from Julian Sayin (Connor Hawkins Kick)",
+     "score": [
+      0,
+      7
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "10:01",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 43 Yd Field Goal",
+     "score": [
+      3,
+      7
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "4:17",
+     "us": false,
+     "type": "FG",
+     "text": "Connor Hawkins 28 Yd Field Goal",
+     "score": [
+      3,
+      10
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "0:00",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 48 Yd Field Goal",
+     "score": [
+      6,
+      10
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:12",
+     "us": false,
+     "type": "TD",
+     "text": "J. Sayin pass to Je. Smith for 12 yds, for a TD (C. Hawkins KICK)",
+     "score": [
+      6,
+      17
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "6:11",
+     "us": false,
+     "type": "TD",
+     "text": "Jeremiah Smith 57 Yd pass from Julian Sayin (Connor Hawkins Kick)",
+     "score": [
+      6,
+      24
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "12:47",
+     "us": false,
+     "type": "TD",
+     "text": "Ja'Kobi Jackson 7 Yd Run (Connor Hawkins Kick)",
+     "score": [
+      6,
+      31
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "9:30",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 2 Yd Run (Jeremy Hecklinski Pass to Reece Vander Zee for Two-Point Conversion)",
+     "score": [
+      14,
+      31
+     ]
+    }
+   ]
   },
   "401858487": {
    "final": true,
@@ -3251,7 +6099,601 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Elijah Brown",
+       "28/39",
+       "251",
+       "6.4",
+       "3",
+       "0",
+       "92.6"
+      ],
+      [
+       "Demond Williams Jr.",
+       "6/11",
+       "69",
+       "6.3",
+       "0",
+       "0",
+       "20.3"
+      ],
+      [
+       " Team",
+       "0/1",
+       "0",
+       "0.0",
+       "0",
+       "0",
+       "--"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Brian Bonner Jr.",
+       "10",
+       "17",
+       "1.7",
+       "0",
+       "5"
+      ],
+      [
+       "Trey Cooley",
+       "2",
+       "2",
+       "1.0",
+       "0",
+       "3"
+      ],
+      [
+       "Demond Williams Jr.",
+       "11",
+       "-8",
+       "-0.7",
+       "0",
+       "9"
+      ],
+      [
+       "Elijah Brown",
+       "2",
+       "-14",
+       "-7.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Chris Lawson",
+       "8",
+       "86",
+       "10.8",
+       "1",
+       "22"
+      ],
+      [
+       "Rashid Williams",
+       "5",
+       "66",
+       "13.2",
+       "0",
+       "24"
+      ],
+      [
+       "Dezmen Roebuck",
+       "8",
+       "49",
+       "6.1",
+       "1",
+       "12"
+      ],
+      [
+       "Trez Davis",
+       "3",
+       "49",
+       "16.3",
+       "0",
+       "29"
+      ],
+      [
+       "Jordan Clay",
+       "2",
+       "32",
+       "16.0",
+       "0",
+       "18"
+      ],
+      [
+       "Justice Williams",
+       "1",
+       "22",
+       "22.0",
+       "0",
+       "22"
+      ],
+      [
+       "Mason James",
+       "4",
+       "10",
+       "2.5",
+       "1",
+       "10"
+      ],
+      [
+       "Baron Naone",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Trey Cooley",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       "Decker DeGraaf",
+       "1",
+       "-2",
+       "-2.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Alex McLaughlin",
+       "8",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rylon Dillard-Allen",
+       "7",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dylan Robinson",
+       "5",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Manu",
+       "5",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Emmanuel Karnley",
+       "5",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zaydrius Rainey-Sale",
+       "5",
+       "2",
+       "0",
+       "0.5",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Lane",
+       "3",
+       "3",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Taariq Al-Uqdah",
+       "3",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xe'ree Alexander",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Elinneus Davis",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "DeSean Watts",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Isaiah Ward",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Colman-Brusa",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Logan George",
+       "2",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rahshawn Clark",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Paul Mencke Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darin Conley",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Ramonz Adams Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Devin Hyde",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Hayden Moore",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Donovan Robinson Jr.",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Rahshawn Clark",
+       "3",
+       "46",
+       "15.3",
+       "18",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Tyler Robles",
+       "1/1",
+       "100.0",
+       "30",
+       "1/1",
+       "4"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Hunter Green",
+       "7",
+       "331",
+       "47.3",
+       "0",
+       "0",
+       "59"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "opp": [
+     "0",
+     "3",
+     "15",
+     "6"
+    ],
+    "us": [
+     "13",
+     "14",
+     "7",
+     "7"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "12:30",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 51 Yd Field Goal",
+     "score": [
+      3,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "7:07",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 27 Yd Field Goal",
+     "score": [
+      6,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "0:10",
+     "us": true,
+     "type": "TD",
+     "text": "Kamari Moulton 56 Yd Run (Caden Buhr Kick)",
+     "score": [
+      13,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "9:05",
+     "us": true,
+     "type": "TD",
+     "text": "DJ Vonnahme 20 Yd pass from Jeremy Hecklinski (Caden Buhr Kick)",
+     "score": [
+      20,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "5:07",
+     "us": true,
+     "type": "TD",
+     "text": "DJ Vonnahme 24 Yd pass from Jeremy Hecklinski (Caden Buhr Kick)",
+     "score": [
+      27,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "1:56",
+     "us": false,
+     "type": "FG",
+     "text": "Tyler Robles 30 Yd Field Goal",
+     "score": [
+      27,
+      3
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "11:10",
+     "us": false,
+     "type": "TD",
+     "text": "Chris Lawson 10 Yd pass from Elijah Brown (Tyler Robles Kick)",
+     "score": [
+      27,
+      10
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "7:05",
+     "us": true,
+     "type": "TD",
+     "text": "Reece Vander Zee 8 Yd pass from Jeremy Hecklinski (Caden Buhr Kick)",
+     "score": [
+      34,
+      10
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "1:25",
+     "us": false,
+     "type": "TD",
+     "text": "Dezmen Roebuck 2 Yd pass from Elijah Brown (Elijah Brown Pass to Chris Lawson for Two-Point Conversion)",
+     "score": [
+      34,
+      18
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "12:06",
+     "us": true,
+     "type": "TD",
+     "text": "Kamari Moulton 3 Yd Run (Caden Buhr Kick)",
+     "score": [
+      41,
+      18
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "0:00",
+     "us": false,
+     "type": "TD",
+     "text": "Mason James 3 Yd pass from Elijah Brown",
+     "score": [
+      41,
+      24
+     ]
+    }
+   ]
   },
   "401858497": {
    "final": true,
@@ -3727,7 +7169,597 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Drake Lindsey",
+       "14/26",
+       "137",
+       "5.3",
+       "0",
+       "1",
+       "9.4"
+      ],
+      [
+       "Javon Tracy",
+       "0/1",
+       "0",
+       "0.0",
+       "0",
+       "0",
+       "--"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Xavier Ford",
+       "8",
+       "33",
+       "4.1",
+       "0",
+       "8"
+      ],
+      [
+       "Javon Tracy",
+       "2",
+       "22",
+       "11.0",
+       "0",
+       "23"
+      ],
+      [
+       "Darius Taylor",
+       "12",
+       "20",
+       "1.7",
+       "1",
+       "5"
+      ],
+      [
+       "TJ Thomas",
+       "6",
+       "8",
+       "1.3",
+       "0",
+       "5"
+      ],
+      [
+       "Drake Lindsey",
+       "7",
+       "-11",
+       "-1.6",
+       "0",
+       "4"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Javon Tracy",
+       "7",
+       "45",
+       "6.4",
+       "0",
+       "16"
+      ],
+      [
+       "Jalen Smith",
+       "1",
+       "39",
+       "39.0",
+       "0",
+       "39"
+      ],
+      [
+       "Roman Voss",
+       "3",
+       "34",
+       "11.3",
+       "0",
+       "23"
+      ],
+      [
+       "Darius Taylor",
+       "1",
+       "11",
+       "11.0",
+       "0",
+       "11"
+      ],
+      [
+       "Noah Jennings",
+       "1",
+       "7",
+       "7.0",
+       "0",
+       "7"
+      ],
+      [
+       "Xavier Ford",
+       "1",
+       "1",
+       "1.0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Drake Lindsey",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Maverick Baranowski",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Zack Harden",
+       "12",
+       "6",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "John Nestor",
+       "11",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joey Gerlach",
+       "9",
+       "3",
+       "0",
+       "0.5",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Maverick Baranowski",
+       "7",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kerry Brown",
+       "6",
+       "3",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "TJ Bush Jr.",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aydan West",
+       "3",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Naquan Crowder",
+       "3",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Matt Kingsbury",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xion Chapman",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aidan Gousby",
+       "2",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Smith",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Karter Menz",
+       "2",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Javon Tracy",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Garrison Monroe",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Donielle Hayes",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Carrier",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Alan Soukup",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Naiim Parrish",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ethan Stendel",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mekhai Smith",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaxon Howard",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Theorin Randle",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Joey Gerlach",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "TJ Bush Jr.",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Matt Kingsbury",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Quayd Hendryx",
+       "1",
+       "28",
+       "28.0",
+       "28",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Javon Tracy",
+       "2",
+       "43",
+       "21.5",
+       "27",
+       "0"
+      ],
+      [
+       "Mason Carrier",
+       "1",
+       "16",
+       "16.0",
+       "16",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Luke Drzewiecki",
+       "2/2",
+       "100.0",
+       "46",
+       "1/1",
+       "7"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tom Weston",
+       "9",
+       "376",
+       "41.8",
+       "0",
+       "2",
+       "49"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "opp": [
+     "3",
+     "0",
+     "7",
+     "3"
+    ],
+    "us": [
+     "0",
+     "3",
+     "0",
+     "7"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "12:14",
+     "us": false,
+     "type": "FG",
+     "text": "Luke Drzewiecki 31 Yd Field Goal",
+     "score": [
+      0,
+      3
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "6:49",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 32 Yd Field Goal",
+     "score": [
+      3,
+      3
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "8:08",
+     "us": false,
+     "type": "TD",
+     "text": "Darius Taylor 1 Yd Run (Luke Drzewiecki Kick)",
+     "score": [
+      3,
+      10
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "3:46",
+     "us": true,
+     "type": "TD",
+     "text": "Reece Vander Zee 37 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      10,
+      10
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "0:00",
+     "us": false,
+     "type": "FG",
+     "text": "Luke Drzewiecki 46 Yd Field Goal",
+     "score": [
+      10,
+      13
+     ]
+    }
+   ]
   },
   "401858502": {
    "final": true,
@@ -4234,7 +8266,571 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Ryan Hopkins",
+       "8/13",
+       "93",
+       "7.2",
+       "0",
+       "1",
+       "88.5"
+      ],
+      [
+       "Colton Joseph",
+       "5/14",
+       "90",
+       "6.4",
+       "0",
+       "0",
+       "16.9"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Abu Sama III",
+       "6",
+       "23",
+       "3.8",
+       "0",
+       "11"
+      ],
+      [
+       "Darrion Dupree",
+       "5",
+       "22",
+       "4.4",
+       "0",
+       "13"
+      ],
+      [
+       "Bryan Jackson II",
+       "5",
+       "6",
+       "1.2",
+       "0",
+       "3"
+      ],
+      [
+       "Colton Joseph",
+       "7",
+       "6",
+       "0.9",
+       "0",
+       "6"
+      ],
+      [
+       "Ryan Hopkins",
+       "1",
+       "-5",
+       "-5.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jaylon Domingeaux",
+       "6",
+       "86",
+       "14.3",
+       "0",
+       "41"
+      ],
+      [
+       "Tyrell Henry",
+       "2",
+       "54",
+       "27.0",
+       "0",
+       "57"
+      ],
+      [
+       "Chris Brooks Jr.",
+       "2",
+       "25",
+       "12.5",
+       "0",
+       "18"
+      ],
+      [
+       "Eugene Hilton Jr.",
+       "1",
+       "10",
+       "10.0",
+       "0",
+       "10"
+      ],
+      [
+       "Ryan Schwendeman",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Jacob Harris",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Tyrell Henry",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Colton Joseph",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Cooper Catalano",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cooper Catalano",
+       "16",
+       "5",
+       "0",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Posa",
+       "13",
+       "6",
+       "0",
+       "0.5",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Matthew Jung",
+       "12",
+       "9",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Sebastian Cheeks",
+       "5",
+       "4",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Junior Poyser",
+       "4",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Javan Robinson",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Aaron Witt",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tyreese Fearbry",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Marvin Burks Jr.",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Charles Perkins",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jai'mier Scott",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Micheal Garner",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Nolan Vils",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cairo Skanes",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Justus Boone",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Malachi Coleman",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Thomas Heiberger",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jon Jon Kamara",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Eric Fletcher Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Matthew Traynor",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Lane",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Hammond Russell IV",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce West",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landon Gauthier",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "James Roe",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Liam Danitz",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "JuJu Pope",
+       "3",
+       "60",
+       "20.0",
+       "27",
+       "0"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Sean West",
+       "6",
+       "279",
+       "46.5",
+       "0",
+       "1",
+       "55"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "10",
+     "10",
+     "10",
+     "0"
+    ],
+    "opp": [
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "9:08",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 24 Yd Field Goal",
+     "score": [
+      3,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "1:02",
+     "us": true,
+     "type": "REC",
+     "text": "DJ Vonnahme 4 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      10,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "1:30",
+     "us": true,
+     "type": "TD",
+     "text": "Tony Diaz 4 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      17,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:00",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 28 Yd Field Goal",
+     "score": [
+      20,
+      0
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "7:54",
+     "us": true,
+     "type": "TD",
+     "text": "DJ Vonnahme 2 Yd Run (Caden Buhr Kick)",
+     "score": [
+      27,
+      0
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "2:16",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 54 Yd Field Goal",
+     "score": [
+      30,
+      0
+     ]
+    }
+   ]
   },
   "401858513": {
    "final": true,
@@ -4724,7 +9320,485 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Nicco Marchiol",
+       "24/32",
+       "181",
+       "5.7",
+       "1",
+       "0",
+       "71.3"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Nicco Marchiol",
+       "23",
+       "52",
+       "2.3",
+       "0",
+       "11"
+      ],
+      [
+       "Joseph Himon II",
+       "6",
+       "27",
+       "4.5",
+       "0",
+       "9"
+      ],
+      [
+       "Caleb Komolafe",
+       "7",
+       "25",
+       "3.6",
+       "0",
+       "8"
+      ],
+      [
+       "Drew Wagner",
+       "1",
+       "1",
+       "1.0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Griffin Wilde",
+       "5",
+       "52",
+       "10.4",
+       "0",
+       "15"
+      ],
+      [
+       "Luke Dehnicke",
+       "5",
+       "52",
+       "10.4",
+       "0",
+       "22"
+      ],
+      [
+       "Hayden Eligon II",
+       "5",
+       "33",
+       "6.6",
+       "0",
+       "11"
+      ],
+      [
+       "Drew Wagner",
+       "2",
+       "24",
+       "12.0",
+       "0",
+       "16"
+      ],
+      [
+       "Joseph Himon II",
+       "3",
+       "13",
+       "4.3",
+       "1",
+       "6"
+      ],
+      [
+       "Caleb Komolafe",
+       "4",
+       "7",
+       "1.8",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Braydon Brus",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Kobie McKinzie",
+       "9",
+       "4",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Braydon Brus",
+       "7",
+       "5",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Robert Fitzgerald",
+       "7",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Damon Walters",
+       "6",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Braden Turner",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dominic Kirks",
+       "3",
+       "3",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ore Adeyi",
+       "3",
+       "3",
+       "0",
+       "0",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Montae Pate",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Mayne",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Migo Jackson",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jamaal Johnson",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brendan Flakes",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jack Sadowsky V",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Michael Kilbane",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tyler Gant",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Robert Fitzgerald",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Joseph Himon II",
+       "1",
+       "16",
+       "16.0",
+       "16",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Drew Wagner",
+       "2",
+       "0",
+       "0.0",
+       "2",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Jackson Kleather",
+       "1/1",
+       "100.0",
+       "45",
+       "1/1",
+       "4"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Nikola Dugandzic",
+       "5",
+       "202",
+       "40.4",
+       "0",
+       "3",
+       "48"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "opp": [
+     "0",
+     "0",
+     "3",
+     "7"
+    ],
+    "us": [
+     "7",
+     "7",
+     "10",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "11:10",
+     "us": true,
+     "type": "TD",
+     "text": "Hank Brown 21 Yd Run (Caden Buhr Kick)",
+     "score": [
+      7,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "13:25",
+     "us": true,
+     "type": "REC",
+     "text": "Tony Diaz 24 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      14,
+      0
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "4:14",
+     "us": false,
+     "type": "FG",
+     "text": "Jackson Kleather 45 Yd Field Goal",
+     "score": [
+      14,
+      3
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "4:03",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 96 Yd Kickoff Return (Caden Buhr Kick)",
+     "score": [
+      21,
+      3
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "1:08",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 52 Yd Field Goal",
+     "score": [
+      24,
+      3
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "1:51",
+     "us": false,
+     "type": "TD",
+     "text": "Joseph Himon II 2 Yd pass from Nicco Marchiol (Jackson Kleather Kick)",
+     "score": [
+      24,
+      10
+     ]
+    }
+   ]
   },
   "401858519": {
    "final": true,
@@ -5209,7 +10283,541 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Ryan Browne",
+       "14/23",
+       "158",
+       "6.9",
+       "1",
+       "1",
+       "57.2"
+      ],
+      [
+       "Evans Chuba",
+       "3/5",
+       "46",
+       "9.2",
+       "0",
+       "0",
+       "27.3"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Fame Ijeboi",
+       "15",
+       "64",
+       "4.3",
+       "0",
+       "13"
+      ],
+      [
+       "Antonio Harris",
+       "5",
+       "29",
+       "5.8",
+       "0",
+       "12"
+      ],
+      [
+       "Xavier Townsend",
+       "2",
+       "7",
+       "3.5",
+       "0",
+       "6"
+      ],
+      [
+       "Ryan Browne",
+       "3",
+       "1",
+       "0.3",
+       "0",
+       "8"
+      ],
+      [
+       "Evans Chuba",
+       "3",
+       "-2",
+       "-0.7",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Asaad Waseem",
+       "6",
+       "93",
+       "15.5",
+       "0",
+       "34"
+      ],
+      [
+       "Xavier Townsend",
+       "3",
+       "39",
+       "13.0",
+       "0",
+       "17"
+      ],
+      [
+       "Fame Ijeboi",
+       "3",
+       "27",
+       "9.0",
+       "0",
+       "15"
+      ],
+      [
+       "Bisi Owens",
+       "1",
+       "14",
+       "14.0",
+       "0",
+       "14"
+      ],
+      [
+       "Tra'Mar Harris",
+       "1",
+       "14",
+       "14.0",
+       "0",
+       "14"
+      ],
+      [
+       "De'Nylon Morrissette",
+       "1",
+       "8",
+       "8.0",
+       "0",
+       "8"
+      ],
+      [
+       "Antonio Harris",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "George Burhenn",
+       "1",
+       "3",
+       "3.0",
+       "1",
+       "3"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Ryan Browne",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Charles Correa",
+       "10",
+       "4",
+       "0",
+       "2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "John Slaughter",
+       "8",
+       "7",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Justin Denson",
+       "8",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jojo Hayden",
+       "7",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Smiley Bradford",
+       "5",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Hudauri Hines",
+       "5",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tre Moore",
+       "5",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Keyshawn Burgos",
+       "3",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Speca",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Don Saunders",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ian Jeffries",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Josiah Hope",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jeremy Lewis",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Curt Neal",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "CJ Madden",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "TJ Lindsey",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Breeon Ishmail",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mister Clark",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Raab",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Hudson Miller",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaxon Ott",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Travis Terrell Jr.",
+       "3",
+       "55",
+       "18.3",
+       "22",
+       "0"
+      ],
+      [
+       "Izaiah Wright",
+       "1",
+       "2",
+       "2.0",
+       "2",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Jacobo Echeverria Lozano",
+       "0/1",
+       "0.0",
+       "0",
+       "1/1",
+       "1"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Dylan Drennan",
+       "3",
+       "121",
+       "40.3",
+       "0",
+       "2",
+       "53"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "7",
+     "14",
+     "7",
+     "0"
+    ],
+    "opp": [
+     "0",
+     "7",
+     "0",
+     "0"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "3:19",
+     "us": true,
+     "type": "TD",
+     "text": "Hank Brown 1 Yd Run (Caden Buhr Kick)",
+     "score": [
+      7,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "6:35",
+     "us": true,
+     "type": "TD",
+     "text": "Tony Diaz 14 Yd Run (Caden Buhr Kick)",
+     "score": [
+      14,
+      0
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "1:49",
+     "us": false,
+     "type": "TD",
+     "text": "George Burhenn 3 Yd pass from Ryan Browne (Jacobo Echeverria Lozano Kick)",
+     "score": [
+      14,
+      7
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:05",
+     "us": true,
+     "type": "TD",
+     "text": "Braeden Jackson 44 Yd pass from Hank Brown (Caden Buhr Kick)",
+     "score": [
+      21,
+      7
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "11:07",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 48 Yd Run (Caden Buhr Kick)",
+     "score": [
+      28,
+      7
+     ]
+    }
+   ]
   },
   "401858527": {
    "final": true,
@@ -5612,7 +11220,523 @@
       ]
      ]
     }
-   }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Katin Houser",
+       "21/39",
+       "318",
+       "8.2",
+       "2",
+       "2",
+       "57.2"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Aidan Laughery",
+       "10",
+       "27",
+       "2.7",
+       "0",
+       "8"
+      ],
+      [
+       "Jordan Anderson",
+       "4",
+       "16",
+       "4.0",
+       "0",
+       "7"
+      ],
+      [
+       "Katin Houser",
+       "3",
+       "-15",
+       "-5.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Collin Dixon",
+       "8",
+       "142",
+       "17.8",
+       "0",
+       "38"
+      ],
+      [
+       "Brayden Trimble",
+       "4",
+       "121",
+       "30.3",
+       "1",
+       "75"
+      ],
+      [
+       "Kaden Feagin",
+       "3",
+       "30",
+       "10.0",
+       "0",
+       "15"
+      ],
+      [
+       "Eddie Kasper",
+       "2",
+       "12",
+       "6.0",
+       "0",
+       "7"
+      ],
+      [
+       "Davin Stoffel",
+       "1",
+       "11",
+       "11.0",
+       "1",
+       "11"
+      ],
+      [
+       "Christian Abney",
+       "1",
+       "4",
+       "4.0",
+       "0",
+       "4"
+      ],
+      [
+       "Jordan Anderson",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       "Aidan Laughery",
+       "1",
+       "-4",
+       "-4.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "James Kreutz",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Matthew Bailey",
+       "11",
+       "9",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ben Clawson",
+       "8",
+       "6",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "James Kreutz",
+       "8",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ismael Kante",
+       "6",
+       "4",
+       "0",
+       "1",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Scott",
+       "5",
+       "4",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Joe Barna",
+       "5",
+       "4",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Pat Farrell",
+       "5",
+       "2",
+       "0",
+       "0.5",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Will Holmes",
+       "5",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deuce Fillmore",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Juice Clarke",
+       "4",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Mason Muragin",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tanner Heckel",
+       "3",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Daniel Brown",
+       "3",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Darrell Prater",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Carter Janki",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ean Rhea",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ty Robinson",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Davin Stoffel",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jack Paris",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Mac Resetich",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Ethan Moczulski",
+       "1/1",
+       "100.0",
+       "39",
+       "2/2",
+       "5"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Lars Rau",
+       "3",
+       "114",
+       "38.0",
+       "0",
+       "1",
+       "49"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "opp": [
+     "3",
+     "14",
+     "0",
+     "0"
+    ],
+    "us": [
+     "3",
+     "14",
+     "3",
+     "14"
+    ]
+   },
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "10:49",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 45 Yd Field Goal",
+     "score": [
+      3,
+      0
+     ]
+    },
+    {
+     "q": 1,
+     "clock": "0:52",
+     "us": false,
+     "type": "FG",
+     "text": "Ethan Moczulski 39 Yd Field Goal",
+     "score": [
+      3,
+      3
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "12:08",
+     "us": true,
+     "type": "TD",
+     "text": "L.J. Phillips Jr. 2 Yd Run (Caden Buhr Kick)",
+     "score": [
+      10,
+      3
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "11:54",
+     "us": false,
+     "type": "TD",
+     "text": "Brayden Trimble 75 Yd pass from Katin Houser (Ethan Moczulski Kick)",
+     "score": [
+      10,
+      10
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "1:55",
+     "us": true,
+     "type": "TD",
+     "text": "Xavier Williams 2 Yd Run (Caden Buhr Kick)",
+     "score": [
+      17,
+      10
+     ]
+    },
+    {
+     "q": 2,
+     "clock": "0:07",
+     "us": false,
+     "type": "TD",
+     "text": "Davin Stoffel 11 Yd pass from Katin Houser (Ethan Moczulski Kick)",
+     "score": [
+      17,
+      17
+     ]
+    },
+    {
+     "q": 3,
+     "clock": "7:05",
+     "us": true,
+     "type": "FG",
+     "text": "Caden Buhr 33 Yd Field Goal",
+     "score": [
+      20,
+      17
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "7:25",
+     "us": true,
+     "type": "TD",
+     "text": "Hank Brown 2 Yd Run (Caden Buhr Kick)",
+     "score": [
+      27,
+      17
+     ]
+    },
+    {
+     "q": 4,
+     "clock": "2:56",
+     "us": true,
+     "type": "TD",
+     "text": "Jaylen Watson 40 Yd Interception Return (Caden Buhr Kick)",
+     "score": [
+      34,
+      17
+     ]
+    }
+   ]
   }
  },
  "leaders": [
@@ -5739,88 +11863,148 @@
  ],
  "news": [
   {
-   "headline": "What Week 12's unexpected results mean for Rivalry Week and beyond",
-   "description": "After another chaotic weekend, we look at the playoff and conference races on the line with one game to go.",
-   "published": "2026-11-22T23:54:19Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week"
+   "headline": "College Football Fans Craving Return Of Tradition Are Being Urged To Root For Iowa",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSEEyS1prcTNPZXFLd29hazlGa1hTeE9PWlQtelktT0oyU05WUTlZek5ldExVRGtsSmdhNFNkZFIyaFN3ekwtZDBjQ0Fwa1NUb3lzRUZiOEppNmZvcExpY3ZrZkM4TEpVdG9jNTJ6MjBqdDRDVjNrZkIxVVJQY054dlZpRFB2dHhGTzA5UlBR?oc=5",
+   "published": "2026-11-23T04:44:58Z",
+   "source": "Yahoo Sports"
   },
   {
-   "headline": "No Big Ten football teams in AP top 5 for first time since 2021",
-   "description": "A weekend of Big Ten upsets left the conference without a team in the top five of the AP Top 25 college football poll for the first time since 2021.",
-   "published": "2026-11-22T20:22:13Z",
-   "type": "HeadlineNews",
-   "url": "https://www.espn.com/college-football/story/_/id/50563638/no-big-ten-football-teams-ap-top-5-first-21"
+   "headline": "Charting Iowa’s Path to the Playoffs, Week 12",
+   "url": "https://www.blackheartgoldpants.com/football/72875/charting-iowas-path-to-the-playoffs-week-12",
+   "published": "2026-11-22T21:00:00Z",
+   "source": "Black Heart Gold Pants"
   },
   {
-   "headline": "AP college football Week 12 poll reaction: What's next for Top 25",
-   "description": "A look at the AP rankings, along with a key stat and what's ahead for each team.",
-   "published": "2026-11-22T21:04:23Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/50562947/week-12-ap-college-football-poll-reaction-next-top-25"
+   "headline": "Oddsmakers weigh in on Nebraska, Iowa point spread",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOM040Y3l3R3NPVlZxd09PeS1Tb0t5OS0yU215TXBhZFNFUTg2RGNDQk1IU3UzcEswVjBacTBSdG9LN0xMZXpVamp2aFV1ajROVWQxZW5WYkUtYVhiVEZLT3M2bDhUZy1xdUxCLUFtbW4wb0gwZVZHOWFBUTZDbmpQTmprTTV4XzZGbi1scW5xMkk2dDljdUF4QnJUOHRpNUo2NDE0OThQTDdsQldEeF9wN0Rpbnk2b3ExTWl0SVp6Wkdpb0NYRDdFV0xWVQ?oc=5",
+   "published": "2026-11-22T20:53:12Z",
+   "source": "247Sports"
   },
   {
-   "headline": "Which teams have the best odds to make the College Football Playoff?",
-   "description": "We are tracking the odds for making the CFP, earning a bye and winning it all.",
-   "published": "2026-11-22T05:08:22Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/50532919/college-football-playoff-odds-predictions"
+   "headline": "Where is Iowa football in newest AP Top 25 rankings?",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPeWtWRnZQTmdJVmtuZ3NnY2xLWlQ3bThhNTRBenl1VzBhZkpfOEktOW5jQlFyVHV1SkVsVFpqdFZKc1RqclRYUUU3NFNTeTY0SGZiWjVhMmRWa21LQ3Q4N0FrQU5kRi1DbGw2bjNpVmZabXFyNkxOUHVEX2VHNXl2Nm9YcVQ?oc=5",
+   "published": "2026-11-22T20:40:25Z",
+   "source": "Yahoo Sports"
   },
   {
-   "headline": "Nebraska's jab at Ohio State's 'THE' leads top Week 12 CFB trolls",
-   "description": "Nebraska deployed a simple but effective troll that poked fun at its opponent's propensity to emphasize the \"the\" in \"The Ohio State University.\"",
-   "published": "2026-11-22T04:22:49Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/50554531/nebraska-ohio-state-trolls-college-football-week-12"
+   "headline": "Iowa football vs. Illinois: Best photos of Hawkeyes' 34-17 win",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMGx4SzNZel9jeGJlOWNXcC1SVGZZRjZsS2Q1YWQ0dnRtN2tzN0hIaVJRczM2ZGswR3hlMkU4UDNmYVhCZkhWNG5PWjU2dWNZSkJBTlFCSEVXdXdrcm51R1hGM1J0cmRHUFlCTE5MYTRYajFDOVBldEtES253RlZUZmRsRlBQWVNuTnZ5QTZYY1pRRThlb0ZnUnRDV25Sb0hxVTZXdFJjc1RoMTF1SUxqN2V6ak5lUDhkYnlESFFnTHlLVHc0dTVOd1VpN2l1SzlCNXh1NnJR?oc=5",
+   "published": "2026-11-22T19:40:00Z",
+   "source": "Hawkeyes Wire"
   },
   {
-   "headline": "Betting buzz: Big Ten's odds of national champion four-peat getting slim",
-   "description": "Losses by UCLA, Indiana and Ohio State make the Big Ten's chances of winning the national championship this season a long shot.",
-   "published": "2026-11-22T13:53:04Z",
-   "type": "Story",
-   "url": "https://www.espn.com/espn/betting/story/_/id/49921234/college-football-betting-buzz-odds-updates-line-moves-spreads"
+   "headline": "Fans, media react to Iowa football win vs. Illinois",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOU0J5OVY3ZVp1WnlkTTU2QzE0OHZvamFxY2owdjNRS1ZRVlFSWEdNQ2NpRVJrSnFBMGl0c1NPQjVBRDMzeEpxTlNQMkp5bWctRWppS0ZxUmE1Q0VpTVNQTUhRT19Gak9jcFp1d0Q3dWhmVGR0dXZmSHBQRC1qSFBTRFREdm96Zw?oc=5",
+   "published": "2026-11-22T19:25:31Z",
+   "source": "Yahoo Sports"
   },
   {
-   "headline": "No. 13 Iowa shuts out Illinois in the second half, pulls away for 34-17 win to help playoff hopes",
-   "description": "— L.J. Phillips Jr. ran for 154 yards and a touchdown, Iowa's stingy defense shut out Illinois in the second half, and the No. 13 Hawkeyes beat the Fighting Illini 34-17 on Saturday to give their College Football Playoff hopes a big boost.",
-   "published": "2026-11-22T00:28:32Z",
-   "type": "Recap",
-   "url": "http://www.espn.com/ncf/recap?gameId=401858527"
+   "headline": "Column | The College Football Playoff committee cannot deny Iowa much longer.",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVUtGUjJKQlloeHMycjBrOWlMXzRtdnFPMVY2d2NadXFCZGxhajVaN0pUSkJGNGNiX0d5RjNYWWhpeFhHYUxMT05ITnk0M0JlRDY4SmpURDZxeml2bXpaR1pMWUtpNHpWT2lpTEJxSFBKbFNHLUN5RnNxYjU1SVBGeXpueHpUdkpTQm4zdHdVVDRzN1pBYW53VGxkQjJvbFgwTHRDbXo3a1ZHalNmVkE?oc=5",
+   "published": "2026-11-22T19:02:25Z",
+   "source": "The Daily Iowan"
   },
   {
-   "headline": "Iowa Hawkeyes vs. Illinois Fighting Illini: Full Highlights",
-   "description": "Iowa Hawkeyes vs. Illinois Fighting Illini: Full Highlights",
-   "published": "2026-11-21T23:06:41Z",
-   "type": "Media",
-   "url": "https://www.espn.com/video/clip/_/id/50555135/full-highlights"
+   "headline": "Where Iowa football stands in national rankings ahead of Nebraska game",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNmJtUGhhRVRGeVZ0cWVOZHpGR3daVjRDU3Z2SVhoMmQ2QTk1Z2UtMVdmWWlYODFvZzVKVVpULTJBMkgxMTNtaDVFMGlqWGJRMWgzZFMtQmhnMWFBVGd3R2c3bE5tREVHaGNuSlpFZnVrQm1SeTVnTGZWd3A4UXIwWlREdVB2R3RIUW5Rdg?oc=5",
+   "published": "2026-11-22T17:50:01Z",
+   "source": "Yahoo Sports"
   },
   {
-   "headline": "Who are the winningest college football coaches of all time?",
-   "description": "From Saban to Paterno, there are many legendary college football coaches. Who has the best career record? Check out who has the most wins now.",
-   "published": "2026-11-21T23:00:49Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/39283806/who-winningest-college-football-coaches-all"
+   "headline": "Iowa football stays put in US LBM Coaches Poll rankings after Illinois win",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZ2dwcXlkc096cXVBem9uTUpLNmFTMjBuSWdSOHBtd04tTmJEaGZSSS1jS3hkcHVDWnlpNzlDRkNnREVReUFWcDRFZzBFQmZlZDdhdDIwS2padklJbzZxUTZJWUpTRGpGc1MyR0t6aFN0Tk1PUm5mWW80SmdHTk5vVTBfMVdaQmpiSVdXRy1jeXlIUmpkbWd3TTdqbXBrelh6cndua0RTT3lWendGLWtkOFpYZ2dqY0lManZaWUY3TUNkaVlyeEQzV21PYVRBYk5SbDBmN1pzS2l5VFlfTG9YWmZneFBnUVE?oc=5",
+   "published": "2026-11-22T17:50:00Z",
+   "source": "Hawkeyes Wire"
   },
   {
-   "headline": "Top 25 betting lines: UGA big faves over Gamecocks, Vols slim favorites vs. LSU",
-   "description": "This week's odds and FPI predictions for South Carolina-Georgia, Tennessee-LSU and more.",
-   "published": "2026-11-20T15:55:41Z",
-   "type": "Story",
-   "url": "https://www.espn.com/espn/betting/story/_/id/50498153/2026-college-football-week-12-top-25-betting-lines-odds"
+   "headline": "Iowa Hawkeyes 2026 Freshmen Report",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObDZKazBBUkJlTXhfbm9ZSXRuSVFFamZLYnU0WWNLSTYzRkE4a2JuNE94Qm9Fa3d1YTFhc1dJcmpqX1ZOZmJqSFN5SDRoQzVubDFUSjRKTUUwOGJzeXdLOFF3b1VqTjYtT1NnaDJCbmNIeEhkd3FtNG9kT1VqeUFoYURXdkVJa2E0Q0xwY0s3UjFpZzdjRmhB?oc=5",
+   "published": "2026-11-22T14:07:55Z",
+   "source": "On3"
   },
   {
-   "headline": "Connelly on Week 12: Test for Tennessee; Big Ten favorites hit road",
-   "description": "Vols, Kiffin meet again and fringe CFP contenders try to stay alive on a sneaky-good Week 12 slate.",
-   "published": "2026-11-20T16:44:38Z",
-   "type": "Story",
-   "url": "https://www.espn.com/college-football/story/_/id/50532397/connelly-week-12-preview-big-ten-tennessee"
+   "headline": "Iowa Football: Big Ten Championship Game Scenarios for the Hawkeyes",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQV1B5Q3RlSmcyUUI5UU5DZ2J5aUZhVnVTa0w1OEIySldoVGRjeFZReGVoNW5NYnBjQ2dDdHRibjBjVVNXbzRBRkFyVFdxTjZWa01TZ05vYXdpSXJBU1FXeXR3djljUDhDczdSR05Jb1hJRGZPdzFWdUdlbXFIOEhnWmZxZkFGdTJDNmVDdllMOHVURW1r?oc=5",
+   "published": "2026-11-22T14:00:02Z",
+   "source": "Sports Illustrated"
   },
   {
-   "headline": "2027 NFL draft Big Board rankings: Mel Kiper's top 25 prospects, best by position",
-   "description": "Six quarterbacks and six receivers ranked in the top 25? Mel Kiper Jr. stacks the best players on the 2027 draft board as of mid-November.",
-   "published": "2026-11-19T22:42:53Z",
-   "type": "Story",
-   "url": "https://www.espn.com/nfl/draft2027/story/_/id/50182998/2027-nfl-draft-rankings-kiper-big-board-top-prospects"
+   "headline": "Iowa's Updated NCAA Stats & Rankings",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUzhtM1ZEeXp0YmVZTDZkX00yVF9oc1A1dkRfOXNheEg4SjZuUVBVOGFVQkVMLU9oNkU2dlhLNlBiSENpNm1XbU5OVWlpVUF0SVh3bThYZU9wTzJWWEpsUjJpUUcwSGZ1enNiX2o4am5PckQ1eG5xcE51YUlvTDVZTVh5TEdMdXhTdUtLRnZ5eGRHbEFqQXZmQzFhYmxibGUtUmZvU1piTQ?oc=5",
+   "published": "2026-11-22T13:59:59Z",
+   "source": "On3"
+  },
+  {
+   "headline": "Iowa Football vs. Illinois Report Card: Hawkeyes Going After 3 Letters, CFP",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVnAxNnQ0UE9mbjlETFFhcmJJelVPcmhwQU5peUswOElZTDRFY2tPaHFQajdjU29GaGxJUXlzZnlDeVdsWVNna2Z4QVJXb19Wek1xXzlFSUhCVFF1cVM3ZDFLZmloLTJVYjJaUUhVajRxUXdLaDhIUjJhc3pERGh0cHFRTlk5SUpiQUxYTmIyYVl5UQ?oc=5",
+   "published": "2026-11-22T11:59:51Z",
+   "source": "Sports Illustrated"
+  },
+  {
+   "headline": "Iowa stays in playoff hunt with 34-17 victory at Illinois",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNHAzZ292MzVwS3o4SzNFU3lldVQ5d010dUtOblBEM3FGbmJVYTNjWGNSVmkyX2NhLW5xWHRMTGxnTlpTQnBsZFRMTmd4dXgycWp1NDFNdndRRjFKblA4bnE4YVJrSVBfZGtvdHRaMWtsbXVjUjVsb0hzX0l5Z0ZTNFdLRkZxT1VYczQ3UUxNTEJBQ3N5VURUOA?oc=5",
+   "published": "2026-11-22T07:28:49Z",
+   "source": "Hawk Fanatic"
+  },
+  {
+   "headline": "How Iowa football can reach the Big Ten Championship Game",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWUxKeUV4ZUdKc1ViWTlQOXBhNDhKeUJsYkNXS1FndVR2MEtMU2VXZzdadkJvcnZ6c01KZE9kVmlHY0VFRVFRUG5IV3JTcU93OEMybWlxY2hoT3JVQ1lVRjB5WThCWG1YR0s1WEZfd0pSUElKZjdQY213SnVhUC1xbnJjMVNRdXlBa2pVNjVUX2FQd1VZNHhYV1BDMVZ4QzFVbmMzZ09pU1R0X0kydTB4VTc1c3VJVzNDazFFSS12dng1WmZFeVlLc3lDM2ROYmg5NVFKVzZEOXhrVW1sZXc?oc=5",
+   "published": "2026-11-22T06:50:45Z",
+   "source": "Hawk Central"
+  },
+  {
+   "headline": "Iowa defense slams door on Illinois in second half and keeps pick-six streak alive",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVWswZ1p6bFlaMldaNmg2ak1BMU52aXBlMjVzTktreC1kUXU3MG5QV3Q3bTF1RV9aVFlKRHpuRThJS3h4N1F2eG9VbEg0SFVqbkl6dmQ5RklaZUJCS0V2RExfRXQ1dTJYckpONEl3ZlN5Mm5QTTRBVDM5VGNET1ZheUdReWhyeFNUYkhSaGZDU1MtMkRHcFladm9Jd2I2eVJJRGNJdmlpMm5Xc0ZpYkJxOXo4OUlDOFFq?oc=5",
+   "published": "2026-11-22T06:15:11Z",
+   "source": "The Daily Iowan"
+  },
+  {
+   "headline": "Iowa’s offense constructs another long drive to help seal Saturday’s win",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOTlwZ0xjWmFaakVtQW9YczY5bWhQOWI3Z2tOeUJNZnRMaFE1RDdPQXNkc2ltM050Vml4UnRfUFVNbTkwRjF3NmwwNEZNLWt2QkFrRWM0M3dIQm5BTkpTcEdwZHBUbTl1WFBaYnNPbGJtUEZFbHFmZ2J4OVVFMnVyOUUwS29fbi01aVlYVXo2bHoyeXh0ejJRcEhNejBKMlJ4Z3FqdnEwa2E?oc=5",
+   "published": "2026-11-22T05:32:46Z",
+   "source": "The Daily Iowan"
+  },
+  {
+   "headline": "Call of the year propels Hawkeyes to victory at Illinois | Leistikow",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQamNwSXJkSGhuSkowamVQUktFSU5fZkNhUV90UjJvM0xsU0t1YVFnUUwycnBTVUtObWxNNWxXZjZrZTR4LXNjM21RdUlYcjIzV18tNENLYmJ0UUZCY1VXdDE0d0FlcDNYT0cxb0YzWDV6dG5HTHhJU1B4VHExWTZKNlphekRtQUkzVHh6UFJZYlpEZ29RWWxkME9taEdNWHBVWjN4UWRmZVhlSW9FcEtOc2ZNUG9YTTNzNngydU5meDJqWDFrSkJfbmlJejVpV1lKelBiWVg4VlZ4aHd5?oc=5",
+   "published": "2026-11-22T02:21:00Z",
+   "source": "Hawk Central"
+  },
+  {
+   "headline": "Three takeaways & three stars from Illini's 34-17 loss to No. 15 Iowa",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSmRZT0x5N0RYdTkwbFFQeDhaSmV4RHZmdEVfT0NRQlZFVTF1Qjl6SWJfU3U1dENadWpDM1E2X1h0RU9yRVZjREpXYXRQOFpRb3NtUFhPcmN3NjdyWnZ1WWdKRW9vc2xWWjhpSHpDZUhZQklfTjNmUUJSTTJpWGZpTFU2MFdPS0VLUGVwb2FoeG1Cdncxbkxqb0R3aUJKOUVBSlVwY3Bzd211SmNrYjlZVjhLZVdHUQ?oc=5",
+   "published": "2026-11-22T02:19:43Z",
+   "source": "247Sports"
+  },
+  {
+   "headline": "Grading Iowa’s 34-17 victory over Illinois",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOb3NpblBYODJxZWpXbDBRandFNmhCOGxYZm1NMDZwRzJOQmF6RFJJa2lueFJzbmpaaTBJV3F4aFZHNnVSekNGSy1iWHdGWE1TNEg2U2ZrVVBSZTJNV29qZ0RZWGNsc1Zqd1d3cHd0Q0lqSkxMbHJUQXIxV1dlTEtyV1FB?oc=5",
+   "published": "2026-11-22T02:18:06Z",
+   "source": "The Daily Iowan"
+  },
+  {
+   "headline": "Mike Hlas column: While Big Ten dominos fell Saturday, Hawkeyes gave selves hope for CFP berth and even B1G title game spot",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRjdXNkthVjFUNnQtZEo5Unl1YTV3QzQ5YjNwN2loeS1OWGdlOWJZOTFZYUNzT0YzSmZ1ZVJNcGtNQXJ5WG9oLTI0WWpWRERNWkI3S29lbkZkNVRYcmxMdExfWVc1dGd2eFV6WkJKUDhmTGVhUTN1NGZpaGp6VGtERHg4LWxjbHlaZ1RqNFIxcnVIdmN5ODBFekExMmV4UV8ta1ZROVc3MHdrcjU4NGRaNENpT0JfNjhOVzhQeXVrRzZhSS0xU3VEcV94b0pxSHczV1RLOFZMYXNmWWFBaFBPMGFaV0ZTNGQ4Vi15RE5n?oc=5",
+   "published": "2026-11-22T01:09:26Z",
+   "source": "Hawk Fanatic"
+  },
+  {
+   "headline": "FB vs. Iowa",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5BMXF1VW9tMDMyckoyQmhfRDlNSkJiN2tmUkhvN3hOVVlLalI2NGxabDdUb1FCcE5heVdHS0xaZkl5Mm1kWVhFZ2VhdUVOV1I2Rm5icnRwdE96T2IzMmdN?oc=5",
+   "published": "2026-11-22T01:01:57Z",
+   "source": "University of Illinois Athletics"
+  },
+  {
+   "headline": "Iowa's Kirk Ferentz Has Blunt Response to CFP Committee After Win Vs. Illinois",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOGF0TndNaDMtZWZ3RFJ6Um5VNXk5OVkzRkFjLU84aFBheUp2d29QTzRXaXJia0wzcVFOR1drV1l4SFVMZXN1ampvMHk1OEZ6ck1pV3dPWTJrSzdjbTRrLW1MSkVqalBsUTQ1UWI2WDBPTTFpeW1zX0tvcXZmVnRmTXF5eURXeUU1ZFlmb1lR?oc=5",
+   "published": "2026-11-22T00:44:00Z",
+   "source": "Newsweek"
+  },
+  {
+   "headline": "Social Media Reacts to Illinois Football's Loss to Iowa",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORGo4OVN1OXhjbjlBdjBwLXFZdVdiRHJuU3F6a1R6YmpCck9pMVF5aEFoLV9pTzNaTmhxVFQ4YkZtSWpEUXNuNk14NnRJUUJob0p4b19IV3lBeENMNUxLQ2VwZWRBV0Q3ejFNZXRSNFJvZ0FzVThFLU9wOVEyVDV6ZmxXS0RRWHU0VDlqR05oUXNPN3VtOG5j?oc=5",
+   "published": "2026-11-22T00:40:22Z",
+   "source": "Sports Illustrated"
   }
  ]
 }

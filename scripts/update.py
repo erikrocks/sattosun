@@ -7,6 +7,8 @@ Writes:
   data/stats.json              box-score lines for tracked players (ESPN game summaries)
   data/college/<school>.json   the school's own season: schedule, scores, box scores, season leaders, news (ESPN)
   data/weeks/<season>/<k>.json one file per finished NFL week (scores + stat lines), for the week picker
+  data/season/<school>.json    each tracked player's NFL season: game-by-game lines, totals, leaderboards
+  data/moves/<school>.json     roster moves, from comparing each day's roster with the day before
   data/status.json             when each part last refreshed, and any problems from the last run
 
 Standard library only, so it runs on a bare GitHub Actions runner.
@@ -18,8 +20,10 @@ Standard library only, so it runs on a bare GitHub Actions runner.
 Exits non-zero if any feed failed, after writing whatever it could, so the workflow run fails and
 someone gets told. A failed part keeps its previous file.
 """
-import json, os, re, sys, urllib.request
+import gzip, json, os, re, sys, urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
@@ -386,6 +390,136 @@ def archive_weeks(current, schools):
     print(f"weeks: {len(weeks)} saved ({made} new)")
 
 
+# ---------- NFL season: player game logs, totals, leaderboards ----------
+
+NFL_LEADERS = [  # (label, category, column to rank by, columns to show)
+    ("Receiving yards", "receiving", "YDS", ["REC", "YDS", "TD"]),
+    ("Rushing yards", "rushing", "YDS", ["CAR", "YDS", "TD"]),
+    ("Passing yards", "passing", "YDS", ["YDS", "TD", "INT"]),
+    ("Tackles", "defensive", "TOT", ["TOT", "SOLO", "TFL"]),
+    ("Sacks", "defensive", "SACKS", ["SACKS"]),
+    ("Passes defended", "defensive", "PD", ["PD"]),
+    ("Interceptions", "interceptions", "INT", ["INT", "TD"]),
+]
+NO_SUM = {"AVG", "QBR", "RTG", "PCT"}
+
+
+def add_stat(total, label, v):
+    """Add one box-score value into a running total. Handles "13/26" and "2-15" pairs; LONG keeps the max."""
+    v = str(v)
+    if label in NO_SUM:
+        return
+    m = re.fullmatch(r"(-?\d+(?:\.\d+)?)([/-])(-?\d+(?:\.\d+)?)", v)
+    if m and label != "LONG":
+        a, b = total.get(label, [0.0, 0.0, m.group(2)])[:2] if isinstance(total.get(label), list) else (0.0, 0.0)
+        total[label] = [a + float(m.group(1)), b + float(m.group(3)), m.group(2)]
+    elif label == "LONG":
+        total[label] = max(total.get(label, 0.0), to_num(v))
+    else:
+        try:
+            total[label] = total.get(label, 0.0) + float(v)
+        except ValueError:
+            pass
+
+
+def show_total(v):
+    return f"{fmt_num(v[0])}{v[2]}{fmt_num(v[1])}" if isinstance(v, list) else fmt_num(v)
+
+
+def update_season(week, schools):
+    """Build each school's season file from the saved weeks plus the week in progress. Local files only."""
+    season = week.get("season")
+    folder = os.path.join(ROOT, f"data/weeks/{season}")
+    weeks = []
+    for name in os.listdir(folder) if os.path.isdir(folder) else []:
+        d = read_json(f"data/weeks/{season}/{name}") if name.endswith(".json") else None
+        if d and d.get("key"):
+            weeks.append(d)
+    cur_key = f'{STYPE_NUM.get(week.get("seasonType"), 2)}-{week.get("week")}'
+    if not any(w["key"] == cur_key for w in weeks) and STYPE_NUM.get(week.get("seasonType"), 2) >= 2:
+        st = read_json("data/stats.json", {}) or {}
+        label = f'Week {week.get("week")}' if week.get("seasonType") == "regular" else POST_LABELS.get(week.get("week"), "Playoffs")
+        weeks.append({**week, "key": cur_key, "label": label, "stats": st.get("games", {}) if st.get("week") == week.get("week") else {}})
+    weeks.sort(key=lambda w: tuple(int(n) for n in w["key"].split("-")))
+
+    for key in schools:
+        roster = {norm_name(p["name"]): p for p in (read_json(f"data/players/{key}.json", {}) or {}).get("players", [])}
+        players = {}
+        for w in weeks:
+            games = {g["id"]: g for g in w.get("games", [])}
+            for gid, gs in (w.get("stats") or {}).items():
+                g = games.get(gid)
+                if not g or g["state"] == "pre":
+                    continue
+                for k, e in (gs.get("players") or {}).items():
+                    if k not in roster or not e.get("cats"):
+                        continue
+                    mine = "home" if g["home"]["abbr"] == e["team"] else "away"
+                    us, them = g[mine], g["away" if mine == "home" else "home"]
+                    res = ""
+                    if g["state"] == "post" and us["score"] is not None and them["score"] is not None:
+                        res = f'{"W" if us["score"] > them["score"] else "L" if us["score"] < them["score"] else "T"} {us["score"]}-{them["score"]}'
+                    pl = players.setdefault(k, {"name": roster[k]["name"], "games": [], "totals": {}})
+                    pl["games"].append({"key": w["key"], "label": w["label"], "team": e["team"], "opp": them["abbr"],
+                                        "at": mine == "away", "result": res, "live": g["state"] == "in", "cats": e["cats"]})
+                    for cat, row in e["cats"].items():
+                        t = pl["totals"].setdefault(cat, {})
+                        for l, v in row.items():
+                            add_stat(t, l, v)
+        for pl in players.values():
+            pl["gp"] = len(pl["games"])
+            pl["totals"] = {c: {l: show_total(v) for l, v in t.items()} for c, t in pl["totals"].items()}
+        leaders = []
+        for label, cat, by, show in NFL_LEADERS:
+            rows = [(k, pl) for k, pl in players.items() if to_num(pl["totals"].get(cat, {}).get(by, 0)) > 0]
+            rows.sort(key=lambda r: -to_num(r[1]["totals"][cat][by]))
+            if rows:
+                leaders.append({"label": label, "by": by, "players": [
+                    {"key": k, "name": pl["name"], "team": roster[k]["team"], "value": pl["totals"][cat][by],
+                     "line": " · ".join(f'{pl["totals"][cat].get(l, "0")} {l}' for l in show)} for k, pl in rows[:5]]})
+        write_json(f"data/season/{key}.json", {"school": key, "season": season, "updated": iso(now_utc()),
+                                               "through": weeks[-1]["label"] if weeks else None, "players": players, "leaders": leaders})
+        print(f"season {key}: {len(players)} players with stats, {len(leaders)} leaderboards")
+
+
+# ---------- roster moves ----------
+
+def record_moves(key, old, new):
+    """Compare yesterday's roster with today's and add what changed to data/moves/<school>.json."""
+    if not old or not old.get("players") or str(old.get("source", "")).startswith("Snapshot"):
+        return
+    before = {norm_name(p["name"]): p for p in old["players"]}
+    after = {norm_name(p["name"]): p for p in new["players"]}
+    moves = []
+    add = lambda p, kind, text: moves.append({"date": iso(now_utc())[:10], "name": p["name"], "team": p["team"], "pos": p.get("pos"),
+                                              "type": kind, "text": text})
+    for k, p in after.items():
+        o = before.get(k)
+        if not o:
+            add(p, "added", f'Joined {p["team"]}' + (f' ({p["status"].lower()})' if p["status"] != "Active" else ""))
+        elif o["team"] != p["team"]:
+            add(p, "team", f'{o["team"]} → {p["team"]}' + (f' ({p["status"].lower()})' if p["status"] != "Active" else ""))
+        elif o["status"] != p["status"]:
+            a, b = o["status"], p["status"]
+            text = ("Placed on the reserve list" if b == "Reserve" else "Activated from the reserve list" if a == "Reserve" and b == "Active"
+                    else "Promoted from the practice squad" if a == "Practice Squad" and b == "Active"
+                    else "Moved to the practice squad" if b == "Practice Squad" else f"{a} → {b}")
+            add(p, "status", text)
+    for k, o in before.items():
+        if k not in after:
+            add(o, "removed", f'No longer on the {o["team"]} roster')
+    if len(moves) > 12:                       # that many in a day is a feed glitch, not news
+        problem(f"{len(moves)} roster changes for {key} in one refresh; not recorded as moves, check the feeds")
+        return
+    if moves:
+        rel = f"data/moves/{key}.json"
+        log = (read_json(rel, {}) or {}).get("moves", [])
+        write_json(rel, {"school": key, "updated": iso(now_utc()), "moves": (moves + log)[:150]})
+        print(f"moves {key}: {len(moves)} new")
+    elif not read_json(f"data/moves/{key}.json"):
+        write_json(f"data/moves/{key}.json", {"school": key, "updated": iso(now_utc()), "since": iso(now_utc())[:10], "moves": []})
+
+
 # ---------- college (the school's own games) ----------
 
 LEADER_CATS = [  # (label, box category, column to rank by, columns to show)
@@ -432,26 +566,41 @@ def college_game(ev, team_id):
     state = st.get("state", "pre")
     b = comp.get("broadcasts") or []
     network = ((b[0].get("media") or {}).get("shortName") or "") if b else ""
-    side = lambda c: {"abbr": c["team"].get("abbreviation"), "name": c["team"].get("location") or c["team"].get("displayName"),
+    side = lambda c: {"id": str(c["team"].get("id")), "abbr": c["team"].get("abbreviation"), "name": c["team"].get("location") or c["team"].get("displayName"),
                       "rank": rank_of(c), "score": score_of(c) if state != "pre" else None}
     return {"id": ev["id"], "kickoff": ev["date"], "state": state,
             "detail": st.get("shortDetail", "") if state != "pre" else "", "network": network,
             "where": "neutral" if comp.get("neutralSite") else us.get("homeAway", "home"),
+            "homeAway": us.get("homeAway", "home"),
             "us": side(us), "opp": side(opp),
             "win": us.get("winner") if state == "post" else None}
 
 
 def college_box(summary, team_id):
-    """Our team's side of the box score: {category: {"labels": [...], "rows": [[name, v1, v2, ...], ...]}}."""
-    cats = {}
+    """Box score for one game. "cats" is our side, "opp" the other team's:
+    {category: {"labels": [...], "rows": [[name, v1, v2, ...], ...]}}. Plus the line score and scoring plays."""
+    sides = {True: {}, False: {}}
     for tp in summary.get("boxscore", {}).get("players", []):
-        if str(tp.get("team", {}).get("id")) != str(team_id):
-            continue
+        cats = sides[str(tp.get("team", {}).get("id")) == str(team_id)]
         for cat in tp.get("statistics", []):
             rows = [[a.get("athlete", {}).get("displayName", "")] + list(a.get("stats", [])) for a in cat.get("athletes", [])]
             if rows:
                 cats[cat.get("name", "other")] = {"labels": cat.get("labels", []), "rows": rows}
-    return cats
+    out = {"cats": sides[True], "opp": sides[False], "lines": {}, "scoring": []}
+    comps = ((summary.get("header") or {}).get("competitions") or [{}])[0].get("competitors", [])
+    us_home = True
+    for c in comps:
+        mine = str(c.get("id")) == str(team_id)
+        if mine:
+            us_home = c.get("homeAway") == "home"
+        out["lines"]["us" if mine else "opp"] = [l.get("displayValue") for l in c.get("linescores", [])]
+    for sp in summary.get("scoringPlays", []):
+        h, a = sp.get("homeScore"), sp.get("awayScore")
+        out["scoring"].append({"q": (sp.get("period") or {}).get("number"), "clock": (sp.get("clock") or {}).get("displayValue"),
+                               "us": str((sp.get("team") or {}).get("id")) == str(team_id),
+                               "type": (sp.get("type") or {}).get("abbreviation"), "text": (sp.get("text") or "").strip(),
+                               "score": [h, a] if us_home else [a, h]})
+    return out
 
 
 def season_leaders(boxes):
@@ -475,6 +624,87 @@ def season_leaders(boxes):
             out.append({"label": label, "players": [
                 {"name": n, "value": fmt_num(t[key]), "line": " · ".join(f"{fmt_num(t.get(l, 0))} {l}" for l in show)} for n, t in top]})
     return out
+
+
+OTHER_SPORTS = re.compile(r"basketball|hoops|wrestl|volleyball|baseball|softball|gymnast|soccer|track and field|golf|tennis|"
+                          r"swim|field hockey|rowing|cross country|women's|\bwbb\b|\bmbb\b", re.I)
+
+
+def fetch_feed(url, name):
+    """Headlines from an RSS or Atom feed: [{headline, url, published, source}]."""
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; iahawks-news/1.0)", "Accept-Encoding": "gzip"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        raw = r.read()
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    root = ET.fromstring(raw)
+    strip = lambda tag: tag.rsplit("}", 1)[-1]
+    out = []
+    for el in root.iter():
+        if strip(el.tag) not in ("item", "entry"):
+            continue
+        f = {}
+        for ch in el:
+            t = strip(ch.tag)
+            if t == "link":
+                if ch.get("href") and ch.get("rel", "alternate") == "alternate":
+                    f["url"] = ch.get("href")
+                elif (ch.text or "").strip():
+                    f.setdefault("url", ch.text.strip())
+            elif t in ("title", "pubDate", "published", "updated", "source") and (ch.text or "").strip():
+                f.setdefault(t, ch.text.strip())
+        when = f.get("pubDate") or f.get("published") or f.get("updated")
+        if not (f.get("title") and f.get("url") and when):
+            continue
+        try:
+            dt = parsedate_to_datetime(when) if "," in when else parse_time(when)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+        except Exception:
+            continue
+        title, source = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", f["title"])), f.get("source") or name
+        if f.get("source") and title.endswith(" - " + f["source"]):      # Google News puts "Headline - Outlet" in the title
+            title = title[: -len(" - " + f["source"])]
+        out.append({"headline": title, "url": f["url"], "published": iso(dt.astimezone(timezone.utc)), "source": source})
+    return out
+
+
+def gather_news(key, school, team_id):
+    """Mix ESPN's team feed with the school's own outlets; keep what's about this team's football, newest first."""
+    about = re.compile(school.get("newsMatch") or re.escape(school["name"]), re.I)
+    items, ok = [], 0
+    try:
+        for a in get_json(f"{COLLEGE}/news?team={team_id}&limit=15").get("articles", []):
+            url = ((a.get("links") or {}).get("web") or {}).get("href")
+            if a.get("headline") and url and a.get("published"):
+                items.append({"headline": a["headline"], "url": url, "published": a["published"], "source": "ESPN",
+                              "_text": f'{a["headline"]} {a.get("description") or ""}'})
+        ok += 1
+    except Exception as e:
+        print(f"warning: ESPN news for {key} failed: {e}", file=sys.stderr)
+    for feed in school.get("newsFeeds", []):
+        try:
+            got = fetch_feed(feed["url"], feed["name"])
+            if feed.get("must"):                 # an all-sports feed: keep only headlines that say they're football
+                got = [g for g in got if re.search(feed["must"], g["headline"], re.I)]
+            items += got
+            ok += 1
+        except Exception as e:
+            print(f'warning: news feed {feed["name"]} failed: {e}', file=sys.stderr)
+    if not ok:
+        problem(f"every news source for {key} failed")
+        return []
+    cutoff, seen, per_source, out = now_utc() - timedelta(days=10), set(), {}, []
+    for it in sorted(items, key=lambda x: x["published"], reverse=True):
+        text = it.pop("_text", it["headline"])
+        fp = re.sub(r"[^a-z0-9]", "", it["headline"].lower())[:50]
+        if (not about.search(text) or OTHER_SPORTS.search(it["headline"]) or fp in seen
+                or parse_time(it["published"]) < cutoff or per_source.get(it["source"], 0) >= 4):
+            continue
+        seen.add(fp)
+        per_source[it["source"]] = per_source.get(it["source"], 0) + 1
+        out.append(it)
+    return out[:24]
 
 
 def update_college(key, school, full):
@@ -503,11 +733,11 @@ def update_college(key, school, full):
         if g["state"] == "pre":
             continue
         prev = old_box.get(g["id"])
-        if prev and prev.get("final") and prev.get("cats"):
+        if prev and prev.get("final") and prev.get("cats") and "opp" in prev:
             box[g["id"]] = prev
             continue
         try:
-            box[g["id"]] = {"final": g["state"] == "post", "cats": college_box(get_json(f"{COLLEGE}/summary?event={g['id']}"), team_id)}
+            box[g["id"]] = {"final": g["state"] == "post", **college_box(get_json(f"{COLLEGE}/summary?event={g['id']}"), team_id)}
         except Exception as e:
             print(f"warning: college box for game {g['id']} failed: {e}", file=sys.stderr)
             failed += 1
@@ -518,13 +748,9 @@ def update_college(key, school, full):
 
     news = old.get("news", [])
     if full or not news:
-        try:
-            arts = get_json(f"{COLLEGE}/news?team={team_id}&limit=12").get("articles", [])
-            news = [{"headline": a.get("headline"), "description": a.get("description"), "published": a.get("published"),
-                     "type": a.get("type"), "url": ((a.get("links") or {}).get("web") or {}).get("href")}
-                    for a in arts if a.get("headline") and ((a.get("links") or {}).get("web") or {}).get("href")]
-        except Exception as e:
-            print(f"warning: college news for {key} failed: {e}", file=sys.stderr)
+        fresh = gather_news(key, school, team_id)
+        if fresh:
+            news = fresh
 
     record = next((i.get("summary") for i in (team.get("record") or {}).get("items", []) if i.get("type") == "total"), None)
     ranked = [g["us"]["rank"] for g in games if g["state"] != "post"] or [g["us"]["rank"] for g in games[-1:]]
@@ -581,6 +807,8 @@ def main():
                         problem(f"only {len(data['players'])} NFL players found for {key}; kept the previous file")
                         ok = False
                         continue
+                    if players:                  # only when both sources answered, so an outage isn't logged as moves
+                        record_moves(key, read_json(f"data/players/{key}.json"), data)
                     write_json(f"data/players/{key}.json", data)
                     print(f'{key}: {len(data["players"])} players')
                 if ok:
@@ -598,6 +826,10 @@ def main():
                     archive_weeks(week, schools)
                 except Exception as e:
                     problem(f"saving finished weeks failed: {e}")
+            try:
+                update_season(week, schools)
+            except Exception as e:
+                problem(f"building season stats failed: {e}")
 
     for key, school in schools.items():
         if not auto or key in college_live:
