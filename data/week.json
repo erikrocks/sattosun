@@ -1,0 +1,212 @@
+{
+ "season": 2026,
+ "week": 11,
+ "seasonType": "regular",
+ "updated": "2026-11-23T04:09:27Z",
+ "source": "ESPN scoreboard",
+ "games": [
+  {
+   "id": "401873077",
+   "kickoff": "2026-11-23T01:20Z",
+   "state": "in",
+   "detail": "8:16 - 4th",
+   "network": "NBC",
+   "away": {
+    "abbr": "MIN",
+    "score": 10
+   },
+   "home": {
+    "abbr": "SF",
+    "score": 35
+   }
+  },
+  {
+   "id": "401873070",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "MIA",
+    "score": 9
+   },
+   "home": {
+    "abbr": "BUF",
+    "score": 26
+   }
+  },
+  {
+   "id": "401873071",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "NO",
+    "score": 13
+   },
+   "home": {
+    "abbr": "CHI",
+    "score": 21
+   }
+  },
+  {
+   "id": "401873073",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "TEN",
+    "score": 30
+   },
+   "home": {
+    "abbr": "DAL",
+    "score": 51
+   }
+  },
+  {
+   "id": "401873072",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "TB",
+    "score": 21
+   },
+   "home": {
+    "abbr": "DET",
+    "score": 31
+   }
+  },
+  {
+   "id": "401873067",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "ARI",
+    "score": 7
+   },
+   "home": {
+    "abbr": "KC",
+    "score": 34
+   }
+  },
+  {
+   "id": "401873076",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "PIT",
+    "score": 16
+   },
+   "home": {
+    "abbr": "PHI",
+    "score": 19
+   }
+  },
+  {
+   "id": "401873068",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "BAL",
+    "score": 33
+   },
+   "home": {
+    "abbr": "CAR",
+    "score": 35
+   }
+  },
+  {
+   "id": "401873074",
+   "kickoff": "2026-11-22T21:05Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "away": {
+    "abbr": "NYJ",
+    "score": 27
+   },
+   "home": {
+    "abbr": "LAC",
+    "score": 24
+   }
+  },
+  {
+   "id": "401873075",
+   "kickoff": "2026-11-22T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "LV",
+    "score": 24
+   },
+   "home": {
+    "abbr": "DEN",
+    "score": 38
+   }
+  },
+  {
+   "id": "401873069",
+   "kickoff": "2026-11-22T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "away": {
+    "abbr": "JAX",
+    "score": 18
+   },
+   "home": {
+    "abbr": "NYG",
+    "score": 23
+   }
+  },
+  {
+   "id": "401873066",
+   "kickoff": "2026-11-20T01:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Prime Video",
+   "away": {
+    "abbr": "IND",
+    "score": 3
+   },
+   "home": {
+    "abbr": "HOU",
+    "score": 26
+   }
+  },
+  {
+   "id": "401873078",
+   "kickoff": "2026-11-24T01:15Z",
+   "state": "pre",
+   "detail": "",
+   "network": "ESPN",
+   "away": {
+    "abbr": "CIN",
+    "score": 0
+   },
+   "home": {
+    "abbr": "WAS",
+    "score": 0
+   }
+  }
+ ],
+ "byes": [
+  "ATL",
+  "CLE",
+  "GB",
+  "LAR",
+  "NE",
+  "SEA"
+ ]
+}

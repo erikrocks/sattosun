@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<title>Hawkeyes in the NFL</title>
+<meta name="description" content="Every former Hawkeye in this week's NFL games: live scores, stat lines and roster status.">
+<meta property="og:title" content="Hawkeyes in the NFL">
+<meta property="og:description" content="Every former Hawkeye in this week's NFL games: live scores, stat lines and roster status.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#FFCD00; --accent-ink:#000; --bg:#0A0A0A; --card:#151515; --line:#2A2A2A;
+    --text:#F2F2F2; --muted:#9A9A9A; --dim:#6B6B6B; --live:#FF4D4D;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.4;
+    -webkit-font-smoothing:antialiased}
+  button{font:inherit;color:inherit}
+  .wrap{max-width:640px;margin:0 auto;padding:0 14px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--accent)}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px 10px}
+  .eyebrow{font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  h1{margin:4px 0 0;font:800 28px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em}
+  .week{flex:none;background:var(--accent);color:var(--accent-ink);border-radius:999px;
+    font:800 15px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;padding:8px 12px;letter-spacing:.04em;white-space:nowrap}
+  select.school{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:14px}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 12px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 10px 9px}
+  .stat b{display:block;font:800 30px/1 "Barlow Condensed",sans-serif;color:var(--accent)}
+  .stat span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.2}
+
+  /* Controls */
+  .search{position:relative;margin-bottom:10px}
+  .search input{accent-color:var(--accent);width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);
+    border-radius:12px;padding:12px 14px 12px 40px;font-size:16px;outline:none}
+  .search input:focus{border-color:var(--accent)}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.6}
+  .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:6px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;
+    font-size:14px;font-weight:600;color:var(--muted);cursor:pointer}
+  .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .chip .n{opacity:.7;margin-left:4px;font-weight:500}
+
+  /* Game cards */
+  .list{display:flex;flex-direction:column;gap:12px;padding:8px 0 20px}
+  .game{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .game.live{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+  .gtop{display:flex;justify-content:space-between;align-items:center;padding:10px 14px 0;font-size:12px;
+    font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .gtop .lv{color:var(--live);display:inline-flex;align-items:center;gap:6px}
+  .gtop .lv::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--live);animation:pulse 1.4s infinite}
+  @keyframes pulse{50%{opacity:.25}}
+  .count{color:var(--accent)}
+  .teams{padding:8px 14px 10px}
+  .trow{display:flex;align-items:center;gap:10px;padding:5px 0}
+  .dot{width:10px;height:10px;border-radius:50%;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+  .tname{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tname b{font:700 20px/1 "Barlow Condensed",sans-serif;letter-spacing:.02em;margin-right:6px}
+  .tname span{color:var(--muted);font-size:14px}
+  .score{font:800 24px/1 "Barlow Condensed",sans-serif;min-width:34px;text-align:right}
+  .score.lose{color:var(--dim)}
+  .players{border-top:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .pteam{padding:9px 14px 2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .p{display:flex;align-items:center;gap:10px;padding:7px 14px}
+  .pos{flex:none;width:40px;text-align:center;font:700 13px/1 "Barlow Condensed",sans-serif;letter-spacing:.04em;
+    border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:4px 0}
+  .pname{font-weight:600;font-size:15px}
+  .pname .num{color:var(--dim);font-weight:500;margin-left:4px;font-size:13px}
+  .tag{flex:none;font-size:11px;font-weight:700;border-radius:6px;padding:3px 7px;background:#262626;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.04em}
+  .tag.inj{background:rgba(255,77,77,.15);color:#FF8A8A}
+  .p.out .pname,.p.out .pos{opacity:.45}
+  .pmain{flex:1;min-width:0}
+  .pmain .pname{display:block}
+  .sl{display:block;font-size:13px;color:var(--accent);opacity:.9;margin-top:2px}
+  .sl.quiet{color:var(--dim)}
+  .roster-h{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+  .roster-h em{font-style:normal;font-weight:600;letter-spacing:.02em;text-transform:none;color:var(--muted)}
+  .sync{display:inline-flex;align-items:center;gap:6px}
+  .sync.on::before{content:"";width:7px;height:7px;border-radius:50%;background:#3ddc84;animation:pulse 2s infinite}
+  .p{cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .p:active{background:rgba(255,255,255,.03)}
+  .chev{flex:none;width:16px;height:16px;opacity:.45;transition:transform .15s}
+  .p[aria-expanded="true"] .chev{transform:rotate(180deg);opacity:.8}
+  .detail{padding:2px 14px 14px 64px}
+  .detail .msg{font-size:13px;color:var(--muted);padding:4px 0}
+  .bx{margin:8px 0 0}
+  .bx h4{margin:0 0 4px;font:700 11px/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .bx .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .bx table{border-collapse:collapse;font-size:13px;min-width:100%}
+  .bx th{font-weight:600;color:var(--muted);text-align:center;padding:4px 8px;white-space:nowrap;border-bottom:1px solid var(--line);font-size:11px}
+  .bx td{text-align:center;padding:6px 8px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .links{display:flex;gap:14px;margin-top:10px;font-size:13px}
+  .links a{color:var(--accent);text-decoration:none;font-weight:600}
+  .warn{background:rgba(255,205,0,.08);border:1px solid rgba(255,205,0,.35);color:var(--text);border-radius:12px;padding:10px 12px;font-size:13px;margin:4px 0 8px}
+  mark{background:var(--accent);color:var(--accent-ink);border-radius:3px;padding:0 2px}
+
+  .section-h{margin:18px 2px 8px;font:800 18px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .none{background:transparent;border:1px dashed var(--line);border-radius:var(--radius);padding:12px 14px;color:var(--muted);font-size:14px}
+  .empty{text-align:center;color:var(--muted);padding:30px 10px}
+  footer{color:var(--dim);font-size:12px;padding:6px 2px 40px;line-height:1.6}
+  footer a{color:var(--muted)}
+  .err{background:#2a1515;border:1px solid #5a2a2a;color:#ffb3b3;border-radius:var(--radius);padding:14px;margin-top:14px}
+  @media (min-width:560px){ h1{font-size:34px} .stat b{font-size:34px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div>
+      <div class="eyebrow" id="eyebrow">NFL Alumni Tracker</div>
+      <h1 id="title">Hawkeyes in the NFL</h1>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+      <div class="week" id="week">Week —</div>
+      <select class="school" id="school" aria-label="School" hidden></select>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+  <div class="search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Find a player" autocomplete="off">
+  </div>
+  <div class="chips" id="chips" role="toolbar" aria-label="Filter games"></div>
+  <div id="notice"></div>
+  <div id="content"></div>
+  <footer id="footer"></footer>
+</main>
+
+<script>
+const TEAMS = {
+  ARI:["Arizona","Cardinals","#97233F"], ATL:["Atlanta","Falcons","#A71930"], BAL:["Baltimore","Ravens","#241773"],
+  BUF:["Buffalo","Bills","#00338D"], CAR:["Carolina","Panthers","#0085CA"], CHI:["Chicago","Bears","#0B162A"],
+  CIN:["Cincinnati","Bengals","#FB4F14"], CLE:["Cleveland","Browns","#FF3C00"], DAL:["Dallas","Cowboys","#003594"],
+  DEN:["Denver","Broncos","#FB4F14"], DET:["Detroit","Lions","#0076B6"], GB:["Green Bay","Packers","#203731"],
+  HOU:["Houston","Texans","#03202F"], IND:["Indianapolis","Colts","#002C5F"], JAX:["Jacksonville","Jaguars","#006778"],
+  KC:["Kansas City","Chiefs","#E31837"], LV:["Las Vegas","Raiders","#A5ACAF"], LAC:["LA","Chargers","#0080C6"],
+  LAR:["LA","Rams","#003594"], MIA:["Miami","Dolphins","#008E97"], MIN:["Minnesota","Vikings","#4F2683"],
+  NE:["New England","Patriots","#002244"], NO:["New Orleans","Saints","#D3BC8D"], NYG:["New York","Giants","#0B2265"],
+  NYJ:["New York","Jets","#125740"], PHI:["Philadelphia","Eagles","#004C54"], PIT:["Pittsburgh","Steelers","#FFB612"],
+  SF:["San Francisco","49ers","#AA0000"], SEA:["Seattle","Seahawks","#69BE28"], TB:["Tampa Bay","Buccaneers","#D50A0A"],
+  TEN:["Tennessee","Titans","#4B92DB"], WAS:["Washington","Commanders","#5A1414"]
+};
+const ALIAS = {WSH:"WAS", JAC:"JAX", LA:"LAR", ARZ:"ARI", OAK:"LV", SD:"LAC", STL:"LAR"};
+const ORDER = {in:0, pre:1, post:2};
+const OUT = /reserve|injured|ir\b|pup|suspend|nfi|practice|inactive/i;
+const ESPN = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
+const LIVE_BEFORE = 20*60e3, LIVE_AFTER = 5*3600e3;
+
+const norm = a => ALIAS[(a||"").toUpperCase()] || (a||"").toUpperCase();
+// Same rule as scripts/update.py: "T.J. Hockenson" == "TJ Hockenson", suffixes dropped.
+const normName = n => (n||"").toLowerCase().replace(/-/g," ").replace(/[^a-z ]/g,"")
+  .replace(/\b(jr|sr|ii|iii|iv|v)\b/g,"").split(/\s+/).filter(Boolean).join(" ");
+
+const state = { schools:null, schoolKey:null, week:null, stats:{}, players:[], filter:null, q:"",
+                direct:false, directTried:false, lastSync:null, open:new Set(), box:{} };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const school = () => state.schools.schools[state.schoolKey];
+
+async function getJSON(path, bust=true){
+  const url = bust ? path + (path.includes("?") ? "&" : "?") + "t=" + Math.floor(Date.now()/60000) : path;
+  const r = await fetch(url, {cache:"no-store"});
+  if(!r.ok) throw new Error(path + " → " + r.status);
+  return r.json();
+}
+
+/* ---------- stat lines ---------- */
+const num = v => { const n = parseFloat(String(v).split("/")[0]); return isNaN(n) ? 0 : n; };
+function pick(o, ...labels){ for(const l of labels){ for(const k in o){ if(k.toLowerCase() === l.toLowerCase()) return o[k]; } } return undefined; }
+function fmtCats(cats){
+  const out = [];
+  const add = (cond, text) => { if(cond) out.push(text); };
+  const c = k => cats[k] || null;
+  let x;
+  if((x = c("passing"))){ const ca = pick(x,"C/ATT"), y = pick(x,"YDS"), td = pick(x,"TD"), i = pick(x,"INT");
+    add(ca, `${ca} · ${y} yds${num(td) ? ` · ${td} TD` : ""}${num(i) ? ` · ${i} INT` : ""}`); }
+  if((x = c("rushing"))){ const n = pick(x,"CAR"), y = pick(x,"YDS"), td = pick(x,"TD");
+    add(num(n), `${n} car · ${y} yds${num(td) ? ` · ${td} TD` : ""}`); }
+  if((x = c("receiving"))){ const n = pick(x,"REC"), y = pick(x,"YDS"), td = pick(x,"TD"), t = pick(x,"TGTS");
+    add(num(n) || num(t), `${n} rec${t !== undefined ? `/${t} tgt` : ""} · ${y} yds${num(td) ? ` · ${td} TD` : ""}`); }
+  if((x = c("defensive"))){ const parts = [];
+    const t = pick(x,"TOT"), sk = pick(x,"SACKS"), tfl = pick(x,"TFL"), pd = pick(x,"PD"), qh = pick(x,"QB HTS"), td = pick(x,"TD");
+    if(num(t)) parts.push(`${t} tkl`); if(num(sk)) parts.push(`${sk} sack${num(sk) === 1 ? "" : "s"}`);
+    if(num(tfl)) parts.push(`${tfl} TFL`); if(num(pd)) parts.push(`${pd} PD`); if(num(qh)) parts.push(`${qh} QB hit${num(qh) === 1 ? "" : "s"}`);
+    if(num(td)) parts.push(`${td} TD`);
+    add(parts.length, parts.join(" · ")); }
+  if((x = c("interceptions"))){ const i = pick(x,"INT"), td = pick(x,"TD"); add(num(i), `${i} INT${num(td) ? " (pick-six!)" : ""}`); }
+  if((x = c("fumbles"))){ const l = pick(x,"LOST"); add(num(l), `${l} fumble lost`); }
+  if((x = c("kicking"))){ const fg = pick(x,"FG"), xp = pick(x,"XP"), lg = pick(x,"LONG");
+    add(fg || xp, [fg && `FG ${fg}`, num(lg) ? `long ${lg}` : "", xp && `XP ${xp}`].filter(Boolean).join(" · ")); }
+  if((x = c("punting"))){ const n = pick(x,"NO"), a = pick(x,"AVG"), i = pick(x,"In 20");
+    add(num(n), `${n} punt${num(n) === 1 ? "" : "s"} · ${a} avg${num(i) ? ` · ${i} inside 20` : ""}`); }
+  if((x = c("kickReturns"))){ const n = pick(x,"NO"), y = pick(x,"YDS"); add(num(n), `${n} KR · ${y} yds`); }
+  if((x = c("puntReturns"))){ const n = pick(x,"NO"), y = pick(x,"YDS"); add(num(n), `${n} PR · ${y} yds`); }
+  return out.join("  ·  ");
+}
+function statLine(p, g){
+  if(!g || g.state === "pre") return "";
+  const gs = boxFor(g);
+  if(!gs) return "";
+  const e = gs.players && gs.players[normName(p.name)];
+  const line = e ? fmtCats(e.cats || {}) : "";
+  if(line) return `<span class="sl">${esc(line)}</span>`;
+  if(isOut(p)) return "";
+  return `<span class="sl quiet">${/^(OT|OG|G|T|C|OL|LS)$/.test(p.pos) ? "No box-score stats for linemen" : "No stats yet"}</span>`;
+}
+
+/* ---------- direct ESPN (works on your own domain; blocked in the Claude preview) ---------- */
+function parseScoreboard(sb){
+  return (sb.events || []).map(ev => {
+    const comp = ev.competitions[0], sides = {};
+    for(const c of comp.competitors){
+      sides[c.homeAway] = {abbr: norm(c.team.abbreviation), score: c.score === "" || c.score == null ? null : +c.score};
+    }
+    const st = (ev.status || {}).type || {};
+    const b = (comp.broadcasts || [])[0];
+    return {id: ev.id, kickoff: ev.date, state: st.state || "pre", detail: st.state === "pre" ? "" : (st.shortDetail || ""),
+            network: b && b.names ? b.names[0] : "", away: sides.away, home: sides.home};
+  });
+}
+function parseSummary(sum, tracked){
+  const found = {};
+  for(const tp of ((sum.boxscore || {}).players || [])){
+    const team = norm((tp.team || {}).abbreviation);
+    for(const cat of (tp.statistics || [])){
+      const labels = cat.labels || [];
+      for(const a of (cat.athletes || [])){
+        const k = normName((a.athlete || {}).displayName);
+        if(!tracked.has(k)) continue;
+        const e = found[k] || (found[k] = {team, id:(a.athlete || {}).id, cats:{}});
+        e.cats[cat.name || "other"] = Object.fromEntries(labels.map((l,i) => [l, (a.stats || [])[i]]));
+      }
+    }
+  }
+  return found;
+}
+function liveWindow(){
+  const now = Date.now();
+  return ((state.week || {}).games || []).some(g => g.state !== "post" &&
+    now >= new Date(g.kickoff) - LIVE_BEFORE && now <= +new Date(g.kickoff) + LIVE_AFTER);
+}
+async function syncDirect(){
+  if(state.directTried && !state.direct) return false;
+  state.directTried = true;
+  try{
+    const sb = await getJSON(`${ESPN}/scoreboard`, false);
+    const fresh = parseScoreboard(sb);
+    const wk = sb.week && sb.week.number;
+    if(wk && wk !== state.week.week) return false;          // ESPN rolled to a new week; leave it to the daily refresh
+    const byId = Object.fromEntries(fresh.map(g => [g.id, g]));
+    state.week.games = state.week.games.map(g => byId[g.id] ? {...g, ...byId[g.id]} : g);
+    const tracked = new Set(state.players.map(p => normName(p.name)));
+    const teams = new Set(state.players.map(p => p.team));
+    await Promise.all(state.week.games.filter(g => g.state === "in" && (teams.has(norm(g.away.abbr)) || teams.has(norm(g.home.abbr))))
+      .map(async g => {
+        try{ state.stats[g.id] = {final:false, players: parseSummary(await getJSON(`${ESPN}/summary?event=${g.id}`, false), tracked)}; }catch(e){}
+      }));
+    state.direct = true; state.lastSync = new Date();
+    return true;
+  }catch(e){ state.direct = false; return false; }
+}
+async function syncOwnFiles(){
+  try{
+    const [w, st] = await Promise.all([getJSON("data/week.json"), getJSON("data/stats.json").catch(() => null)]);
+    if(w.week === state.week.week || !state.direct){ state.week = w; if(st) state.stats = st.games || {}; }
+  }catch(e){}
+}
+let timer = null;
+function schedule(){
+  clearTimeout(timer);
+  if(document.hidden) return;
+  const live = liveWindow();
+  timer = setTimeout(async () => {
+    if(live){ if(!(await syncDirect())) await syncOwnFiles(); render(); }
+    schedule();
+  }, live ? (state.direct ? 45e3 : 120e3) : 10*60e3);
+}
+document.addEventListener("visibilitychange", async () => {
+  if(document.hidden) return clearTimeout(timer);
+  if(liveWindow()){ if(!(await syncDirect())) await syncOwnFiles(); render(); }
+  schedule();
+});
+
+/* ---------- rendering ---------- */
+function applyTheme(s){
+  const t = s.theme || {}, root = document.documentElement.style;
+  const map = {accent:"--accent", accentInk:"--accent-ink", bg:"--bg", card:"--card", line:"--line"};
+  for(const k in map) if(t[k]) root.setProperty(map[k], t[k]);
+  if(t.bg) document.querySelector('meta[name=theme-color]').content = t.bg;
+  $("title").textContent = `${s.nickname} in the NFL`;
+  document.title = `${s.nickname} in the NFL`;
+  $("q").placeholder = `Find a ${s.nickname.replace(/s$/,"")}`;
+}
+function pickSchool(){
+  const h = location.hash.replace("#","").toLowerCase();
+  return state.schools.schools[h] ? h : state.schools.default;
+}
+async function loadSchool(){
+  state.schoolKey = pickSchool();
+  applyTheme(school());
+  $("school").value = state.schoolKey;
+  const pdata = await getJSON(`data/players/${state.schoolKey}.json`);
+  state.players = pdata.players.map(p => ({...p, team: norm(p.team)}));
+  state.playersUpdated = pdata.updated;
+  render();
+}
+
+function isOut(p){ return OUT.test(p.status || ""); }
+const fmtKick = iso => new Date(iso).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"});
+const fmtTime = d => d ? new Date(d).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}) : "—";
+const plural = (n, w) => `${n} ${n === 1 ? w.replace(/s$/,"") : w}`;
+
+function playersFor(team){
+  return state.players.filter(p => p.team === team).sort((a,b) => isOut(a) - isOut(b) || a.name.localeCompare(b.name));
+}
+const matchesQ = p => !state.q || p.name.toLowerCase().includes(state.q);
+function hl(name){
+  const i = state.q ? name.toLowerCase().indexOf(state.q) : -1;
+  if(i < 0) return esc(name);
+  return esc(name.slice(0,i)) + "<mark>" + esc(name.slice(i, i+state.q.length)) + "</mark>" + esc(name.slice(i+state.q.length));
+}
+/* ---------- tap-to-expand box score (fetched on demand) ---------- */
+const CAT_NAMES = {passing:"Passing", rushing:"Rushing", receiving:"Receiving", defensive:"Defense", interceptions:"Interceptions",
+  fumbles:"Fumbles", kicking:"Kicking", punting:"Punting", kickReturns:"Kick returns", puntReturns:"Punt returns"};
+const CAT_ORDER = Object.keys(CAT_NAMES);
+function boxFor(g){
+  // Freshest available: on-demand ESPN fetch, else the site's own stats.json
+  const b = state.box[g.id];
+  if(b && b.players) return b;
+  return state.stats[g.id] ? {players: state.stats[g.id].players, from:"file"} : null;
+}
+async function loadBox(g){
+  const b = state.box[g.id];
+  const fresh = b && (b.final || Date.now() - b.at < 45e3);
+  if(fresh || (b && b.loading)) return;
+  state.box[g.id] = {...(b || {}), loading:true};
+  try{
+    const sum = await getJSON(`${ESPN}/summary?event=${g.id}`, false);
+    const tracked = new Set(state.players.map(p => normName(p.name)));
+    state.box[g.id] = {players: parseSummary(sum, tracked), at: Date.now(), final: g.state === "post", from:"espn"};
+  }catch(e){
+    state.box[g.id] = {...(b || {}), loading:false, failed:true, at: Date.now()};
+  }
+  render();
+}
+function profileLinks(p, entry){
+  const id = (entry && entry.id) || p.espn_id;
+  const espn = id ? `https://www.espn.com/nfl/player/_/id/${encodeURIComponent(id)}`
+                  : `https://www.espn.com/search/_/q/${encodeURIComponent(p.name)}`;
+  return `<div class="links"><a href="${espn}" target="_blank" rel="noopener">ESPN profile ↗</a></div>`;
+}
+function detailHTML(p, g){
+  const facts = [p.college && `College: ${p.college}`, p.status !== "Active" && p.status, p.injury && `Injury: ${p.injury}`].filter(Boolean);
+  const factLine = facts.length ? `<div class="msg">${esc(facts.join(" · "))}</div>` : "";
+  if(!g) return `${factLine}<div class="msg">On a bye this week.</div>${profileLinks(p)}`;
+  if(g.state === "pre") return `${factLine}<div class="msg">Box score appears once the game kicks off (${esc(fmtKick(g.kickoff))}).</div>${profileLinks(p)}`;
+  const b = boxFor(g), live = state.box[g.id];
+  const entry = b && b.players ? b.players[normName(p.name)] : null;
+  let body;
+  if(entry && Object.keys(entry.cats || {}).length){
+    const cats = Object.keys(entry.cats).sort((a,b) => (CAT_ORDER.indexOf(a)+99) % 99 - (CAT_ORDER.indexOf(b)+99) % 99);
+    body = cats.map(c => {
+      const row = entry.cats[c], labels = Object.keys(row);
+      return `<div class="bx"><h4>${esc(CAT_NAMES[c] || c)}</h4><div class="scroll"><table>
+        <tr>${labels.map(l => `<th>${esc(l)}</th>`).join("")}</tr>
+        <tr>${labels.map(l => `<td>${esc(row[l])}</td>`).join("")}</tr></table></div></div>`;
+    }).join("");
+  }else if(live && live.loading && !b){
+    body = `<div class="msg">Loading box score…</div>`;
+  }else if(b){
+    body = /^(OT|OG|G|T|C|OL|LS)$/.test(p.pos) ? "" : `<div class="msg">${isOut(p) ? "Not playing." : "No stats recorded in this game yet."}</div>`;
+  }else{
+    body = `<div class="msg">Box score isn't available yet. It'll show up after the next data refresh.</div>`;
+  }
+  return factLine + body + profileLinks(p, entry);
+}
+function toggle(el){
+  const k = el.dataset.k, gid = el.dataset.g;
+  if(state.open.has(k)) state.open.delete(k); else state.open.add(k);
+  const g = gid && state.week.games.find(x => String(x.id) === gid);
+  if(state.open.has(k) && g && g.state !== "pre") loadBox(g);
+  render();
+}
+
+function playerRow(p, g){
+  const tags = [];
+  if(p.injury) tags.push(`<span class="tag inj">${esc(({Questionable:"Q",Doubtful:"D"})[p.injury] || p.injury)}</span>`);
+  if(p.status && p.status !== "Active") tags.push(`<span class="tag">${esc(p.status === "Practice Squad" ? "Practice sq." : p.status)}</span>`);
+  const key = normName(p.name), open = state.open.has(key);
+  return `<div class="p ${isOut(p) ? "out" : ""}" role="button" tabindex="0" aria-expanded="${open}" data-k="${esc(key)}" data-g="${g ? esc(g.id) : ""}">
+    <span class="pos">${esc(p.pos || "—")}</span>
+    <span class="pmain"><span class="pname">${hl(p.name)}${p.num != null ? `<span class="num">#${esc(p.num)}</span>` : ""}</span>${statLine(p, g)}</span>
+    ${tags.join("")}
+    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+  </div>${open ? `<div class="detail">${detailHTML(p, g)}</div>` : ""}`;
+}
+function teamRow(side, other, g){
+  const t = TEAMS[side.abbr] || [side.abbr, "", "#666"];
+  const showScore = g.state !== "pre" && side.score != null;
+  const lose = g.state === "post" && side.score < other.score;
+  return `<div class="trow"><span class="dot" style="background:${t[2]}"></span>
+    <span class="tname"><b>${esc(side.abbr)}</b><span>${esc(t[1])}</span></span>
+    ${showScore ? `<span class="score ${lose ? "lose" : ""}">${esc(side.score)}</span>` : ""}</div>`;
+}
+function statusText(g){
+  if(g.state === "in") return `<span class="lv">Live · ${esc(g.detail)}</span>`;
+  if(g.state === "post") return `<span>${esc(g.detail || "Final")}</span>`;
+  if(Date.now() > new Date(g.kickoff)) return `<span>Kicked off · updating</span>`;
+  return `<span>${esc(fmtKick(g.kickoff))}${g.network ? " · " + esc(g.network) : ""}</span>`;
+}
+function gameCard(g){
+  const away = playersFor(g.away.abbr).filter(matchesQ), home = playersFor(g.home.abbr).filter(matchesQ);
+  const group = (abbr, list) => list.length ? `<div class="pteam">${esc(abbr)} · ${esc((TEAMS[abbr]||[])[1]||"")}</div>${list.map(p => playerRow(p, g)).join("")}` : "";
+  return `<article class="game ${g.state === "in" ? "live" : ""}">
+    <div class="gtop">${statusText(g)}<span class="count">${esc(plural(away.length + home.length, school().short))}</span></div>
+    <div class="teams">${teamRow(g.away, g.home, g)}${teamRow(g.home, g.away, g)}</div>
+    <div class="players">${group(g.away.abbr, away)}${group(g.home.abbr, home)}</div>
+  </article>`;
+}
+function rosterView(games){
+  const gameOf = {};
+  for(const g of games){ gameOf[g.away.abbr] = g; gameOf[g.home.abbr] = g; }
+  const teams = [...new Set(state.players.map(p => p.team))].sort((a,b) => (TEAMS[a]||[a])[1].localeCompare((TEAMS[b]||[b])[1]));
+  const blocks = teams.map(t => {
+    const list = playersFor(t).filter(matchesQ);
+    if(!list.length) return "";
+    const g = gameOf[t];
+    let when = "Bye";
+    if(g){ const opp = g.home.abbr === t ? `vs ${g.away.abbr}` : `@ ${g.home.abbr}`;
+      when = g.state === "pre" ? `${opp} · ${fmtKick(g.kickoff)}` : `${opp} · ${g.state === "in" ? "Live" : "Final"}`; }
+    if(!games.length) when = "";
+    return `<div class="pteam roster-h"><span>${esc(t)} · ${esc((TEAMS[t]||[])[1]||"")}</span><em>${esc(when)}</em></div>${list.map(p => playerRow(p, g)).join("")}`;
+  }).join("");
+  return blocks ? `<div class="list"><div class="game"><div class="players" style="border-top:0">${blocks}</div></div></div>`
+                : `<div class="empty">No ${esc(school().nickname)} match “${esc(state.q)}”.</div>`;
+}
+
+function render(){
+  const w = state.week, s = school();
+  const games = (w.games || []).map(g => ({...g, away:{...g.away, abbr:norm(g.away.abbr)}, home:{...g.home, abbr:norm(g.home.abbr)}}))
+    .sort((a,b) => ORDER[a.state] - ORDER[b.state] || new Date(a.kickoff) - new Date(b.kickoff));
+  const offseason = !games.length;
+  $("week").textContent = offseason ? "Offseason" : w.seasonType === "post" ? "Playoffs" : w.seasonType === "pre" ? "Preseason" : `Week ${w.week}`;
+  const byes = (w.byes || []).map(norm);
+  const playing = new Set(games.flatMap(g => [g.away.abbr, g.home.abbr]));
+  const liveCount = games.filter(g => g.state === "in").length;
+  const toPlay = games.filter(g => g.state === "pre").length;
+
+  $("stats").innerHTML = `
+    <div class="stat"><b>${state.players.length}</b><span>${esc(s.nickname)} on NFL rosters</span></div>
+    <div class="stat"><b>${offseason ? new Set(state.players.map(p=>p.team)).size : state.players.filter(p => playing.has(p.team) && !isOut(p)).length}</b>
+      <span>${offseason ? "NFL teams with one" : "Active in this week's games"}</span></div>
+    <div class="stat"><b>${offseason ? "—" : liveCount || toPlay}</b><span>${offseason ? "No games this week" : liveCount ? "Games live now" : "Games still to play"}</span></div>`;
+
+  const counts = {all: games.length, live: liveCount, pre: toPlay, post: games.filter(g => g.state === "post").length,
+                  bye: byes.length, roster: state.players.length};
+  const defs = [["all","Games"],["live","Live"],["pre","Upcoming"],["post","Final"],["bye","Bye week"],["roster","All players"]]
+    .filter(([k]) => k === "roster" || (!offseason && (k === "all" || counts[k])));
+  if(!state.filter || !defs.some(([k]) => k === state.filter)) state.filter = offseason ? "roster" : (liveCount ? "all" : "all");
+  $("chips").innerHTML = defs.map(([k,l]) => `<button class="chip" data-f="${k}" aria-pressed="${state.filter===k}">${l}<span class="n">${counts[k]}</span></button>`).join("");
+
+  // stale / delayed notice
+  const updated = state.direct ? state.lastSync : new Date(w.updated);
+  const stale = liveCount && !state.direct && Date.now() - new Date(w.updated) > 40*60e3;
+  $("notice").innerHTML = stale ? `<div class="warn">Scores last updated ${esc(fmtTime(w.updated))}. They may be a few minutes behind while games are live.</div>` : "";
+
+  const has = g => playersFor(g.away.abbr).length + playersFor(g.home.abbr).length > 0;
+  const f = state.filter;
+  let html = "";
+  if(f === "roster") html = rosterView(games);
+  else if(f !== "bye"){
+    const shown = games.filter(g => f === "all" || g.state === f);
+    const withP = shown.filter(g => has(g) && (!state.q || [...playersFor(g.away.abbr), ...playersFor(g.home.abbr)].some(matchesQ)));
+    const without = shown.filter(g => !has(g));
+    html += withP.length ? `<div class="list">${withP.map(gameCard).join("")}</div>`
+                         : `<div class="empty">No ${esc(s.nickname)} match${state.q ? ` “${esc(state.q)}”` : ""} here.</div>`;
+    if(without.length && !state.q)
+      html += `<div class="section-h">No ${esc(s.nickname)}</div><div class="none">${without.map(g => `${esc(g.away.abbr)} @ ${esc(g.home.abbr)}`).join(" · ")}</div>`;
+  }
+  if((f === "all" || f === "bye") && byes.length){
+    const byeP = byes.flatMap(t => playersFor(t)).filter(matchesQ);
+    if(byeP.length || !state.q){
+      html += `<div class="section-h">On a bye</div>`;
+      html += byeP.length
+        ? `<div class="game"><div class="players" style="border-top:0">${byes.map(t => {
+            const l = playersFor(t).filter(matchesQ);
+            return l.length ? `<div class="pteam">${esc(t)} · ${esc((TEAMS[t]||[])[1]||"")}</div>${l.map(p => playerRow(p)).join("")}` : "";
+          }).join("")}</div></div>`
+        : `<div class="none">Byes: ${byes.join(", ")}. No ${esc(s.nickname)} on those teams.</div>`;
+    }
+  }
+  $("content").innerHTML = html;
+
+  $("footer").innerHTML = `<span class="sync ${state.direct ? "on" : ""}">${state.direct ? `Live · synced ${esc(fmtTime(state.lastSync))}` : `Scores updated ${esc(fmtTime(updated))}`}</span>
+    · Rosters updated ${esc(fmtTime(state.playersUpdated))}.<br>
+    “College” is the last school a player attended. Reserve, inactive and practice-squad players are dimmed.<br>
+    Data: <a href="https://sleeper.com" target="_blank" rel="noopener">Sleeper</a> rosters, ESPN scores and box scores. Not affiliated with the NFL or any school.`;
+}
+
+$("content").addEventListener("click", e => {
+  if(e.target.closest("a")) return;
+  const el = e.target.closest(".p[data-k]"); if(el) toggle(el);
+});
+$("content").addEventListener("keydown", e => {
+  const el = e.target.closest(".p[data-k]");
+  if(el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); toggle(el); }
+});
+$("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; render(); });
+$("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+$("school").addEventListener("change", e => { location.hash = e.target.value; });
+window.addEventListener("hashchange", () => loadSchool().catch(showErr));
+function showErr(e){ $("content").innerHTML = `<div class="err">Couldn't load data. ${esc(e.message)}</div>`; }
+
+(async function init(){
+  try{
+    const [schools, week, stats] = await Promise.all([getJSON("schools.json"), getJSON("data/week.json"), getJSON("data/stats.json").catch(() => null)]);
+    state.schools = schools; state.week = week; state.stats = (stats && stats.week === week.week && stats.games) || {};
+    const keys = Object.keys(schools.schools);
+    if(keys.length > 1){
+      const sel = $("school");
+      sel.innerHTML = keys.map(k => `<option value="${k}">${esc(schools.schools[k].name)}</option>`).join("");
+      sel.hidden = false;
+    }
+    await loadSchool();
+    if(liveWindow() && await syncDirect()) render();
+    schedule();
+  }catch(e){ showErr(e); }
+})();
+</script>
+</body>
+</html>

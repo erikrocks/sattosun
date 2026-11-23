@@ -1,0 +1,27 @@
+{
+  "default": "iowa",
+  "schools": {
+    "iowa": {
+      "name": "Iowa",
+      "nickname": "Hawkeyes",
+      "short": "Hawks",
+      "colleges": [
+        "Iowa"
+      ],
+      "theme": {
+        "accent": "#FFCD00",
+        "accentInk": "#000000",
+        "bg": "#0A0A0A",
+        "card": "#151515",
+        "line": "#2A2A2A"
+      },
+      "includeNames": [],
+      "excludeNames": []
+    }
+  },
+  "_help": {
+    "colleges": "College names exactly as Sleeper spells them (case-insensitive).",
+    "includeNames": "Players to add even if their listed college is different, e.g. someone who played at this school then transferred out.",
+    "excludeNames": "Players to drop, e.g. a transfer-in you don't count."
+  }
+}

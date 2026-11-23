@@ -1,0 +1,427 @@
+{
+ "school": "iowa",
+ "updated": "2026-11-23T04:09:38Z",
+ "source": "Sleeper API + ESPN rosters",
+ "players": [
+  {
+   "name": "Casey Kreiter",
+   "team": "ARI",
+   "pos": "LS",
+   "num": 59,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "17304"
+  },
+  {
+   "name": "Karson Sharar",
+   "team": "ARI",
+   "pos": "LB",
+   "num": 43,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4709695"
+  },
+  {
+   "name": "Jay Higgins IV",
+   "team": "BAL",
+   "pos": "LB",
+   "num": 49,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4565350"
+  },
+  {
+   "name": "Amani Hooker",
+   "team": "BUF",
+   "pos": "DB",
+   "num": 22,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036134"
+  },
+  {
+   "name": "Geno Stone",
+   "team": "BUF",
+   "pos": "DB",
+   "num": 25,
+   "status": "Practice Squad",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4240575"
+  },
+  {
+   "name": "Hayden Large",
+   "team": "CHI",
+   "pos": "TE",
+   "num": 43,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "5150662"
+  },
+  {
+   "name": "Logan Jones",
+   "team": "CHI",
+   "pos": "C",
+   "num": 54,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4686907"
+  },
+  {
+   "name": "Tory Taylor",
+   "team": "CHI",
+   "pos": "P",
+   "num": 19,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4686889"
+  },
+  {
+   "name": "Erick All Jr.",
+   "team": "CIN",
+   "pos": "TE",
+   "num": 83,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4427834"
+  },
+  {
+   "name": "Tyler Goodson",
+   "team": "DAL",
+   "pos": "RB",
+   "num": 32,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4429676"
+  },
+  {
+   "name": "Riley Moss",
+   "team": "DEN",
+   "pos": "DB",
+   "num": 21,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4382401"
+  },
+  {
+   "name": "Jack Campbell",
+   "team": "DET",
+   "pos": "LB",
+   "num": 46,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4569465"
+  },
+  {
+   "name": "Sam LaPorta",
+   "team": "DET",
+   "pos": "TE",
+   "num": 87,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4430027"
+  },
+  {
+   "name": "Kaleb Johnson",
+   "team": "GB",
+   "pos": "RB",
+   "num": 26,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4819231"
+  },
+  {
+   "name": "Kristian Welch",
+   "team": "GB",
+   "pos": "LB",
+   "num": 54,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036153"
+  },
+  {
+   "name": "Lukas Van Ness",
+   "team": "GB",
+   "pos": "DL",
+   "num": 90,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4686906"
+  },
+  {
+   "name": "Nick Niemann",
+   "team": "GB",
+   "pos": "LB",
+   "num": 31,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036141"
+  },
+  {
+   "name": "Kaevon Merriweather",
+   "team": "JAX",
+   "pos": "DB",
+   "num": 26,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4360502"
+  },
+  {
+   "name": "Xavier Nwankpa",
+   "team": "KC",
+   "pos": "DB",
+   "num": 29,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4685491"
+  },
+  {
+   "name": "Alaric Jackson",
+   "team": "LAR",
+   "pos": "OL",
+   "num": 77,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036135"
+  },
+  {
+   "name": "Tyler Linderbaum",
+   "team": "LV",
+   "pos": "OL",
+   "num": 65,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4360499"
+  },
+  {
+   "name": "Max Llewellyn",
+   "team": "MIA",
+   "pos": "DE",
+   "num": 57,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4683101"
+  },
+  {
+   "name": "T.J. Hockenson",
+   "team": "MIN",
+   "pos": "TE",
+   "num": 87,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036133"
+  },
+  {
+   "name": "Noah Fant",
+   "team": "NO",
+   "pos": "TE",
+   "num": 87,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036131"
+  },
+  {
+   "name": "TJ Hall Jr.",
+   "team": "NO",
+   "pos": "CB",
+   "num": 34,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4873075"
+  },
+  {
+   "name": "Chauncey Golston",
+   "team": "NYG",
+   "pos": "DE",
+   "num": 57,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4036132"
+  },
+  {
+   "name": "Dane Belton",
+   "team": "NYJ",
+   "pos": "DB",
+   "num": 6,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4426686"
+  },
+  {
+   "name": "Jack Heflin",
+   "team": "NYJ",
+   "pos": "DT",
+   "num": 96,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4039485"
+  },
+  {
+   "name": "A.J. Epenesa",
+   "team": "PHI",
+   "pos": "DE",
+   "num": 57,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4240585"
+  },
+  {
+   "name": "Cooper DeJean",
+   "team": "PHI",
+   "pos": "DB",
+   "num": 33,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4682618"
+  },
+  {
+   "name": "Gennings Dunker",
+   "team": "PIT",
+   "pos": "OT",
+   "num": 73,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4431258"
+  },
+  {
+   "name": "Kaden Wetjen",
+   "team": "PIT",
+   "pos": "WR",
+   "num": 10,
+   "status": "Active",
+   "injury": "Out",
+   "college": "Iowa",
+   "espn_id": "5081338"
+  },
+  {
+   "name": "Logan Lee",
+   "team": "PIT",
+   "pos": "DL",
+   "num": 91,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4569474"
+  },
+  {
+   "name": "Sebastian Castro",
+   "team": "PIT",
+   "pos": "DB",
+   "num": 49,
+   "status": "Practice Squad",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4426882"
+  },
+  {
+   "name": "Yahya Black",
+   "team": "PIT",
+   "pos": "DT",
+   "num": 94,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4430947"
+  },
+  {
+   "name": "Beau Stephens",
+   "team": "SEA",
+   "pos": "G",
+   "num": 70,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4592823"
+  },
+  {
+   "name": "Mason Richman",
+   "team": "SEA",
+   "pos": "OL",
+   "num": 78,
+   "status": "Reserve",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4432525"
+  },
+  {
+   "name": "Connor Colby",
+   "team": "SF",
+   "pos": "OL",
+   "num": 75,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4431523"
+  },
+  {
+   "name": "George Kittle",
+   "team": "SF",
+   "pos": "TE",
+   "num": 85,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "3040151"
+  },
+  {
+   "name": "Anthony Nelson",
+   "team": "TB",
+   "pos": "LB",
+   "num": 98,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "3894856"
+  },
+  {
+   "name": "Tristan Wirfs",
+   "team": "TB",
+   "pos": "T",
+   "num": 78,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4240589"
+  },
+  {
+   "name": "Drew Stevens",
+   "team": "WAS",
+   "pos": "K",
+   "num": 19,
+   "status": "Active",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "5081335"
+  }
+ ]
+}
