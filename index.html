@@ -503,6 +503,14 @@ async function loadSchool(){
 }
 
 // Past weeks: status tags aren't known, and a player sits with the team he actually played for that week.
+// "Iowa, last season 2016 · Drafted 2017, round 5, pick 146 (SF)"
+function collegeLine(p){
+  if(!p.college && !p.entered) return "";
+  const parts = [`${p.college || school().name}${p.lastCollege ? `, last season ${p.lastCollege}` : ""}`];
+  if(p.draft) parts.push(`Drafted ${p.draft.year}, round ${p.draft.round}, pick ${p.draft.pick}${p.draft.team ? ` (${p.draft.team})` : ""}`);
+  else if(p.entered) parts.push(`Undrafted, entered the NFL in ${p.entered}`);
+  return parts.join(" · ");
+}
 function isOut(p){ return !state.past && (OUT.test(p.status || "") || /^out$/i.test(p.injury || "")); }
 const teamOf = p => (state.past && state.pastTeam[normName(p.name)]) || p.team;
 async function showWeek(key){
@@ -601,7 +609,7 @@ function profileLinks(p, entry){
   return `<div class="links">${hasSeason ? `<button class="linkbtn" data-player="${esc(normName(p.name))}">Season stats ›</button>` : ""}<a href="${espn}" target="_blank" rel="noopener">ESPN profile ↗</a></div>`;
 }
 function detailHTML(p, g){
-  const facts = [p.college && `College: ${p.college}`, !state.past && p.status !== "Active" && p.status, !state.past && p.injury && `Injury: ${p.injury}`].filter(Boolean);
+  const facts = [collegeLine(p), !state.past && p.status !== "Active" && p.status, !state.past && p.injury && `Injury: ${p.injury}`].filter(Boolean);
   const factLine = headshot(p.espn_id) + (facts.length ? `<div class="msg">${esc(facts.join(" · "))}</div>` : "");
   if(!g) return `${factLine}<div class="msg">On a bye ${state.past ? "that" : "this"} week.</div>${profileLinks(p)}`;
   if(g.state === "pre") return `${factLine}<div class="msg">Box score appears once the game kicks off (${esc(fmtKick(g.kickoff))}).</div>${profileLinks(p)}`;
@@ -748,6 +756,7 @@ function renderSheet(){
       <div><h2>${esc(p.name)}</h2><p>${esc([p.pos, p.team && (TEAMS[p.team] ? TEAMS[p.team].slice(0,2).join(" ") : p.team), p.num != null && "#" + p.num].filter(Boolean).join(" · "))}</p></div>
       <button class="close" id="sheetClose">Close</button></div></div>
     <div class="wrap body">
+      ${collegeLine(p) ? `<p class="tagline" style="margin-top:14px">${esc(collegeLine(p))}</p>` : ""}
       <div class="section-h">${esc(state.season.season)} season · ${esc(plural(sp.gp, "games"))} with a stat</div>
       <div class="game"><div class="card-pad">${totals || `<div class="msg">No stats recorded this season.</div>`}</div></div>
       <div class="section-h">Game by game</div>

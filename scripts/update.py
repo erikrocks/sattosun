@@ -31,6 +31,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event={}"
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
+ATHLETE = "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/{}"
 ROSTER = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/{}/roster"
 ESPN_ABBR = {"WAS": "WSH"}            # our abbreviation -> ESPN's, where they differ
 COLLEGE = "https://site.api.espn.com/apis/site/v2/sports/football/college-football"
@@ -198,6 +199,7 @@ def fetch_rosters():
                         "pos": (a.get("position") or {}).get("abbreviation"),
                         "num": a.get("jersey"),
                         "injuries": [i.get("status") or "" for i in a.get("injuries", [])],
+                        "exp": (a.get("experience") or {}).get("years"), "debut": a.get("debutYear"),
                     }
             if len(team) >= 40:              # a short list means a bad response, not a real roster
                 rosters[t] = team
@@ -236,6 +238,7 @@ def reconcile(data, school, rosters):
             print(f'dropped {p["name"]} ({p["team"]}): not on ESPN roster')
             continue
         p["espn_id"] = e["id"] or p.get("espn_id")
+        p["_exp"], p["_debut"] = e.get("exp"), e.get("debut")
         status = espn_status(e)
         if status and p["status"] != "Reserve":
             p["status"] = status
@@ -250,7 +253,7 @@ def reconcile(data, school, rosters):
                              "num": int(e["num"]) if (e["num"] or "").isdigit() else None,
                              "status": espn_status(e) or "Active",
                              "injury": next((i for i in e["injuries"] if i in ("Questionable", "Doubtful", "Out")), None),
-                             "college": e["college"], "espn_id": e["id"]})
+                             "college": e["college"], "espn_id": e["id"], "_exp": e.get("exp"), "_debut": e.get("debut")})
     kept.sort(key=lambda x: (x["team"], x["name"]))
     data["players"] = kept
     data["source"] = "Sleeper API + ESPN rosters"
@@ -281,9 +284,42 @@ def build_players(all_players, school_key, school):
             "injury": None if status == "Reserve" else (p.get("injury_status") or None),  # Q, D, Out ...
             "college": p.get("college"),
             "espn_id": p.get("espn_id"),
+            "_rookie": (p.get("metadata") or {}).get("rookie_year"),
         })
     out.sort(key=lambda x: (x["team"], x["name"]))
     return {"school": school_key, "updated": iso(now_utc()), "source": "Sleeper API", "players": out}
+
+
+def add_draft_info(data, old):
+    """When each player came into the NFL, and so his last college season.
+    Drafted players: the draft year (ESPN). Undrafted: Sleeper's rookie year, which matches the draft year for
+    every drafted player we track. Draft details never change, so ESPN is asked once per player."""
+    known = {str(p.get("espn_id")): p for p in (old or {}).get("players", []) if p.get("espn_id") and p.get("draftChecked")}
+    looked_up = 0
+    for p in data["players"]:
+        rookie = p.pop("_rookie", None)
+        p.pop("_exp", None), p.pop("_debut", None)
+        prev = known.get(str(p.get("espn_id")))
+        if prev:
+            p["draft"], p["draftChecked"] = prev.get("draft"), True
+        elif p.get("espn_id"):
+            try:
+                text = (get_json(ATHLETE.format(p["espn_id"])).get("athlete") or {}).get("displayDraft") or ""
+                looked_up += 1
+                m = re.match(r"(\d{4}): Rd (\d+), Pk (\d+)(?: \((\w+)\))?", text)
+                p["draft"] = {"year": int(m.group(1)), "round": int(m.group(2)), "pick": int(m.group(3)),
+                              "team": norm(m.group(4)) if m.group(4) else None} if m else None
+                p["draftChecked"] = True
+            except Exception as e:
+                print(f'warning: draft lookup for {p["name"]} failed: {e}', file=sys.stderr)   # tried again next refresh
+        entered = (p.get("draft") or {}).get("year") or (int(rookie) if str(rookie or "").isdigit() else None)
+        if not entered and prev:
+            entered = prev.get("entered")                 # Sleeper was down this run: keep what we had
+        if entered:
+            p["entered"], p["lastCollege"] = entered, entered - 1
+    if looked_up:
+        print(f"draft info: looked up {looked_up} players")
+    return data
 
 
 # ---------- stats ----------
@@ -866,6 +902,7 @@ def main():
                 ok = True
                 for key, school in schools.items():
                     data = reconcile(build_players(players, key, school), school, rosters)
+                    data = add_draft_info(data, read_json(f"data/players/{key}.json"))
                     if len(data["players"]) < 3:   # guard against a bad feed wiping a school's list
                         problem(f"only {len(data['players'])} NFL players found for {key}; kept the previous file")
                         ok = False

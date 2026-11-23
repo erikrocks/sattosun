@@ -1,6 +1,6 @@
 {
  "school": "iowa",
- "updated": "2026-11-23T05:14:41Z",
+ "updated": "2026-11-23T14:12:24Z",
  "source": "Sleeper API + ESPN rosters",
  "players": [
   {
@@ -11,7 +11,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "17304"
+   "espn_id": "17304",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2014,
+   "lastCollege": 2013
   },
   {
    "name": "Karson Sharar",
@@ -21,7 +25,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4709695"
+   "espn_id": "4709695",
+   "draft": {
+    "year": 2026,
+    "round": 6,
+    "pick": 183,
+    "team": "ARI"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Jay Higgins IV",
@@ -31,7 +44,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4565350"
+   "espn_id": "4565350",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "Amani Hooker",
@@ -41,7 +58,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036134"
+   "espn_id": "4036134",
+   "draft": {
+    "year": 2019,
+    "round": 4,
+    "pick": 116,
+    "team": "TEN"
+   },
+   "draftChecked": true,
+   "entered": 2019,
+   "lastCollege": 2018
   },
   {
    "name": "Geno Stone",
@@ -51,7 +77,16 @@
    "status": "Practice Squad",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4240575"
+   "espn_id": "4240575",
+   "draft": {
+    "year": 2020,
+    "round": 7,
+    "pick": 219,
+    "team": "BAL"
+   },
+   "draftChecked": true,
+   "entered": 2020,
+   "lastCollege": 2019
   },
   {
    "name": "Hayden Large",
@@ -61,7 +96,11 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "5150662"
+   "espn_id": "5150662",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Logan Jones",
@@ -71,7 +110,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4686907"
+   "espn_id": "4686907",
+   "draft": {
+    "year": 2026,
+    "round": 2,
+    "pick": 57,
+    "team": "CHI"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Tory Taylor",
@@ -81,7 +129,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4686889"
+   "espn_id": "4686889",
+   "draft": {
+    "year": 2024,
+    "round": 4,
+    "pick": 122,
+    "team": "CHI"
+   },
+   "draftChecked": true,
+   "entered": 2024,
+   "lastCollege": 2023
   },
   {
    "name": "Erick All Jr.",
@@ -91,7 +148,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4427834"
+   "espn_id": "4427834",
+   "draft": {
+    "year": 2024,
+    "round": 4,
+    "pick": 115,
+    "team": "CIN"
+   },
+   "draftChecked": true,
+   "entered": 2024,
+   "lastCollege": 2023
   },
   {
    "name": "Tyler Goodson",
@@ -101,7 +167,11 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4429676"
+   "espn_id": "4429676",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2022,
+   "lastCollege": 2021
   },
   {
    "name": "Riley Moss",
@@ -111,7 +181,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4382401"
+   "espn_id": "4382401",
+   "draft": {
+    "year": 2023,
+    "round": 3,
+    "pick": 83,
+    "team": "DEN"
+   },
+   "draftChecked": true,
+   "entered": 2023,
+   "lastCollege": 2022
   },
   {
    "name": "Jack Campbell",
@@ -121,7 +200,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4569465"
+   "espn_id": "4569465",
+   "draft": {
+    "year": 2023,
+    "round": 1,
+    "pick": 18,
+    "team": "DET"
+   },
+   "draftChecked": true,
+   "entered": 2023,
+   "lastCollege": 2022
   },
   {
    "name": "Sam LaPorta",
@@ -131,7 +219,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4430027"
+   "espn_id": "4430027",
+   "draft": {
+    "year": 2023,
+    "round": 2,
+    "pick": 34,
+    "team": "DET"
+   },
+   "draftChecked": true,
+   "entered": 2023,
+   "lastCollege": 2022
   },
   {
    "name": "Kaleb Johnson",
@@ -141,7 +238,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4819231"
+   "espn_id": "4819231",
+   "draft": {
+    "year": 2025,
+    "round": 3,
+    "pick": 83,
+    "team": "PIT"
+   },
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "Kristian Welch",
@@ -151,7 +257,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036153"
+   "espn_id": "4036153",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2020,
+   "lastCollege": 2019
   },
   {
    "name": "Lukas Van Ness",
@@ -161,7 +271,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4686906"
+   "espn_id": "4686906",
+   "draft": {
+    "year": 2023,
+    "round": 1,
+    "pick": 13,
+    "team": "GB"
+   },
+   "draftChecked": true,
+   "entered": 2023,
+   "lastCollege": 2022
   },
   {
    "name": "Nick Niemann",
@@ -171,7 +290,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036141"
+   "espn_id": "4036141",
+   "draft": {
+    "year": 2021,
+    "round": 6,
+    "pick": 185,
+    "team": "LAC"
+   },
+   "draftChecked": true,
+   "entered": 2021,
+   "lastCollege": 2020
   },
   {
    "name": "Kaevon Merriweather",
@@ -181,7 +309,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4360502"
+   "espn_id": "4360502",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2023,
+   "lastCollege": 2022
   },
   {
    "name": "Xavier Nwankpa",
@@ -191,7 +323,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4685491"
+   "espn_id": "4685491",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Alaric Jackson",
@@ -201,7 +337,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036135"
+   "espn_id": "4036135",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2021,
+   "lastCollege": 2020
   },
   {
    "name": "Tyler Linderbaum",
@@ -211,7 +351,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4360499"
+   "espn_id": "4360499",
+   "draft": {
+    "year": 2022,
+    "round": 1,
+    "pick": 25,
+    "team": "BAL"
+   },
+   "draftChecked": true,
+   "entered": 2022,
+   "lastCollege": 2021
   },
   {
    "name": "Max Llewellyn",
@@ -221,7 +370,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4683101"
+   "espn_id": "4683101",
+   "draft": {
+    "year": 2026,
+    "round": 7,
+    "pick": 238,
+    "team": "MIA"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "T.J. Hockenson",
@@ -231,7 +389,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036133"
+   "espn_id": "4036133",
+   "draft": {
+    "year": 2019,
+    "round": 1,
+    "pick": 8,
+    "team": "DET"
+   },
+   "draftChecked": true,
+   "entered": 2019,
+   "lastCollege": 2018
   },
   {
    "name": "Noah Fant",
@@ -241,7 +408,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036131"
+   "espn_id": "4036131",
+   "draft": {
+    "year": 2019,
+    "round": 1,
+    "pick": 20,
+    "team": "DEN"
+   },
+   "draftChecked": true,
+   "entered": 2019,
+   "lastCollege": 2018
   },
   {
    "name": "TJ Hall Jr.",
@@ -251,7 +427,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4873075"
+   "espn_id": "4873075",
+   "draft": {
+    "year": 2026,
+    "round": 7,
+    "pick": 219,
+    "team": "NO"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Chauncey Golston",
@@ -261,7 +446,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4036132"
+   "espn_id": "4036132",
+   "draft": {
+    "year": 2021,
+    "round": 3,
+    "pick": 84,
+    "team": "DAL"
+   },
+   "draftChecked": true,
+   "entered": 2021,
+   "lastCollege": 2020
   },
   {
    "name": "Dane Belton",
@@ -271,7 +465,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4426686"
+   "espn_id": "4426686",
+   "draft": {
+    "year": 2022,
+    "round": 4,
+    "pick": 114,
+    "team": "NYG"
+   },
+   "draftChecked": true,
+   "entered": 2022,
+   "lastCollege": 2021
   },
   {
    "name": "Jack Heflin",
@@ -281,7 +484,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4039485"
+   "espn_id": "4039485",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2021,
+   "lastCollege": 2020
   },
   {
    "name": "A.J. Epenesa",
@@ -291,7 +498,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4240585"
+   "espn_id": "4240585",
+   "draft": {
+    "year": 2020,
+    "round": 2,
+    "pick": 54,
+    "team": "BUF"
+   },
+   "draftChecked": true,
+   "entered": 2020,
+   "lastCollege": 2019
   },
   {
    "name": "Cooper DeJean",
@@ -301,7 +517,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4682618"
+   "espn_id": "4682618",
+   "draft": {
+    "year": 2024,
+    "round": 2,
+    "pick": 40,
+    "team": "PHI"
+   },
+   "draftChecked": true,
+   "entered": 2024,
+   "lastCollege": 2023
   },
   {
    "name": "Gennings Dunker",
@@ -311,7 +536,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4431258"
+   "espn_id": "4431258",
+   "draft": {
+    "year": 2026,
+    "round": 3,
+    "pick": 96,
+    "team": "PIT"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Kaden Wetjen",
@@ -321,7 +555,16 @@
    "status": "Active",
    "injury": "Out",
    "college": "Iowa",
-   "espn_id": "5081338"
+   "espn_id": "5081338",
+   "draft": {
+    "year": 2026,
+    "round": 4,
+    "pick": 121,
+    "team": "PIT"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Logan Lee",
@@ -331,7 +574,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4569474"
+   "espn_id": "4569474",
+   "draft": {
+    "year": 2024,
+    "round": 6,
+    "pick": 178,
+    "team": "PIT"
+   },
+   "draftChecked": true,
+   "entered": 2024,
+   "lastCollege": 2023
   },
   {
    "name": "Sebastian Castro",
@@ -341,7 +593,11 @@
    "status": "Practice Squad",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4426882"
+   "espn_id": "4426882",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "Yahya Black",
@@ -351,7 +607,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4430947"
+   "espn_id": "4430947",
+   "draft": {
+    "year": 2025,
+    "round": 5,
+    "pick": 164,
+    "team": "PIT"
+   },
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "Beau Stephens",
@@ -361,7 +626,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4592823"
+   "espn_id": "4592823",
+   "draft": {
+    "year": 2026,
+    "round": 5,
+    "pick": 148,
+    "team": "SEA"
+   },
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   },
   {
    "name": "Mason Richman",
@@ -371,7 +645,16 @@
    "status": "Reserve",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4432525"
+   "espn_id": "4432525",
+   "draft": {
+    "year": 2025,
+    "round": 7,
+    "pick": 234,
+    "team": "SEA"
+   },
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "Connor Colby",
@@ -381,7 +664,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4431523"
+   "espn_id": "4431523",
+   "draft": {
+    "year": 2025,
+    "round": 7,
+    "pick": 249,
+    "team": "SF"
+   },
+   "draftChecked": true,
+   "entered": 2025,
+   "lastCollege": 2024
   },
   {
    "name": "George Kittle",
@@ -391,7 +683,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "3040151"
+   "espn_id": "3040151",
+   "draft": {
+    "year": 2017,
+    "round": 5,
+    "pick": 146,
+    "team": "SF"
+   },
+   "draftChecked": true,
+   "entered": 2017,
+   "lastCollege": 2016
   },
   {
    "name": "Anthony Nelson",
@@ -401,7 +702,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "3894856"
+   "espn_id": "3894856",
+   "draft": {
+    "year": 2019,
+    "round": 4,
+    "pick": 107,
+    "team": "TB"
+   },
+   "draftChecked": true,
+   "entered": 2019,
+   "lastCollege": 2018
   },
   {
    "name": "Tristan Wirfs",
@@ -411,7 +721,16 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "4240589"
+   "espn_id": "4240589",
+   "draft": {
+    "year": 2020,
+    "round": 1,
+    "pick": 13,
+    "team": "TB"
+   },
+   "draftChecked": true,
+   "entered": 2020,
+   "lastCollege": 2019
   },
   {
    "name": "Drew Stevens",
@@ -421,7 +740,11 @@
    "status": "Active",
    "injury": null,
    "college": "Iowa",
-   "espn_id": "5081335"
+   "espn_id": "5081335",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2026,
+   "lastCollege": 2025
   }
  ]
 }
