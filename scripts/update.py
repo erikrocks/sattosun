@@ -15,6 +15,7 @@ Standard library only, so it runs on a bare GitHub Actions runner.
 
   python scripts/update.py           full refresh: scores, rosters, stats
   python scripts/update.py --college the school's own season only (rankings, record, schedule, news); the evening run
+  python scripts/update.py --test-alert   fail on purpose, to check that failure notifications arrive
   python scripts/update.py --auto    only if a game is live or about to start: scores + stats
                                      (cheap no-op otherwise, so it can run every 15 minutes)
 
@@ -819,6 +820,12 @@ def update_college(key, school, full):
 # ---------- main ----------
 
 def main():
+    if "--test-alert" in sys.argv:           # prove the alerting works: record a fake problem and fail, touching nothing else
+        status = read_json("data/status.json", {}) or {}
+        status["problems"] = ["Test alert: this failure was triggered on purpose to check that notifications arrive. Nothing is wrong."]
+        write_json("data/status.json", status)
+        print("test alert: failing on purpose", file=sys.stderr)
+        sys.exit(1)
     auto = "--auto" in sys.argv
     college_only = "--college" in sys.argv
     with open(os.path.join(ROOT, "schools.json")) as f:

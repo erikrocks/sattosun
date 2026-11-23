@@ -7,7 +7,12 @@ on:
     - cron: "40 16 * * 0"     # Sunday ~10:40am CT: rosters again for final injury tags
     - cron: "0 3 * * *"       # nightly ~9pm CT (10pm in summer): college only, for evening rankings, record and news
     - cron: "*/15 * * * *"    # every 15 min: scores + stats, but only when an NFL or college game is live or about to start
-  workflow_dispatch: {}       # "Run workflow" button = full refresh
+  workflow_dispatch:          # "Run workflow" button = full refresh
+    inputs:
+      test_alert:
+        description: "Fail on purpose to test the failure alert (run a normal refresh afterwards to clear it)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,6 +38,7 @@ jobs:
       - name: Refresh data
         id: refresh
         run: |
+          if [ "${{ inputs.test_alert }}" = "true" ]; then echo "mode=test" >> "$GITHUB_OUTPUT"; python scripts/update.py --test-alert; fi
           case "${{ github.event.schedule }}" in
             "*/15 * * * *") echo "mode=auto" >> "$GITHUB_OUTPUT"; python scripts/update.py --auto ;;   # cheap no-op outside game windows
             "0 3 * * *")    echo "mode=college" >> "$GITHUB_OUTPUT"; python scripts/update.py --college ;;      # rankings, record, schedule, news

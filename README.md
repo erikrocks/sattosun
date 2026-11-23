@@ -46,6 +46,8 @@ Nothing here needs babysitting, and it tells you when it needs attention:
 - **The site is down or stale** (stuck Pages deploy, domain problem, schedule not running): the daily watchdog reads the live site and opens a `site-stale` issue.
 - Only one issue of each kind is open at a time, and each closes itself when the next full refresh or check passes.
 
+To test the alert: Actions → Update data → Run workflow, tick "Fail on purpose". An issue should open and an email should arrive; then run it again without the tick to clear it.
+
 To get these on your phone, install the GitHub app and leave notifications on for this repo. Email goes to the address on your GitHub account (Settings → Notifications; keep "Actions: failed workflows" on).
 
 ## Other things to know
