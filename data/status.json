@@ -3,5 +3,7 @@
  "rosters": "2026-11-23T05:12:11Z",
  "college": "2026-11-23T05:12:14Z",
  "lastRun": "2026-11-23T05:12:14Z",
- "problems": []
+ "problems": [
+  "Test alert: this failure was triggered on purpose to check that notifications arrive. Nothing is wrong."
+ ]
 }
