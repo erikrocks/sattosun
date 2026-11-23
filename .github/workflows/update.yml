@@ -5,6 +5,7 @@ on:
     # Times are UTC (Central is UTC-6 in winter, UTC-5 in summer).
     - cron: "17 11 * * *"     # daily ~5am CT: full refresh (scores, rosters, stats, college)
     - cron: "40 16 * * 0"     # Sunday ~10:40am CT: rosters again for final injury tags
+    - cron: "0 3 * * *"       # nightly ~9pm CT (10pm in summer): college only, for evening rankings, record and news
     - cron: "*/15 * * * *"    # every 15 min: scores + stats, but only when an NFL or college game is live or about to start
   workflow_dispatch: {}       # "Run workflow" button = full refresh
 
@@ -34,6 +35,7 @@ jobs:
         run: |
           case "${{ github.event.schedule }}" in
             "*/15 * * * *") echo "mode=auto" >> "$GITHUB_OUTPUT"; python scripts/update.py --auto ;;   # cheap no-op outside game windows
+            "0 3 * * *")    echo "mode=college" >> "$GITHUB_OUTPUT"; python scripts/update.py --college ;;      # rankings, record, schedule, news
             *)              echo "mode=full" >> "$GITHUB_OUTPUT"; python scripts/update.py ;;          # full refresh (also manual runs)
           esac
       - name: Commit if changed

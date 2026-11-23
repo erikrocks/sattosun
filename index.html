@@ -787,6 +787,13 @@ function scheduleRow(g){
     <span class="pmain"><span class="pname">${g.where === "away" ? "@ " : "vs "}${ncaaLogo(g.opp.id, "sm")}${rk(g.opp)}${esc(g.opp.name || g.opp.abbr)}</span>${sub ? `<span class="psub">${esc(sub)}</span>` : ""}</span>
     ${res}${played ? CHEV : ""}</div>${open ? `<div class="detail wide">${fullBox(state.college.box[g.id], g, key)}</div>` : ""}`;
 }
+// "CFP ranking · AP #13": the first poll is the headline number, the rest follow.
+function rankLabel(t){
+  const polls = t.polls || [];
+  if(!polls.length) return t.rank ? "National ranking" : "Not ranked";
+  const [first, ...rest] = polls;
+  return `${esc(first.poll)} ${first.rank ? "ranking" : "(unranked)"}` + rest.map(p => `<br>${esc(p.poll)} ${p.rank ? "#" + esc(p.rank) : "unranked"}`).join("");
+}
 function renderSaturday(){
   const c = state.college, s = school(), t = c.team || {}, games = c.games || [];
   $("week").textContent = t.record || "—";
@@ -796,7 +803,7 @@ function renderSaturday(){
   const [place, conf] = (t.standing || "").split(" in ");
   let html = `<div class="stats">
     <div class="stat"><b>${esc(t.record || "—")}</b><span>Record</span></div>
-    <div class="stat"><b>${t.rank ? "#" + esc(t.rank) : "NR"}</b><span>${t.rank ? "National ranking" : "Not ranked"}</span></div>
+    <div class="stat"><b>${t.rank ? "#" + esc(t.rank) : "NR"}</b><span>${rankLabel(t)}</span></div>
     <div class="stat"><b>${esc(place || "—")}</b><span>${conf ? "in the " + esc(conf) : "Conference"}</span></div></div>`;
   const sec = (h, g) => g ? `<div class="section-h">${h}</div>${collegeCard(g)}` : "";
   const lastFresh = last && Date.now() - new Date(last.kickoff) < 40*3600e3;
@@ -818,6 +825,7 @@ function renderSaturday(){
   $("saturday").innerHTML = html;
 
   $("footer").innerHTML = `<span class="sync ${state.collegeSync ? "on" : ""}">${state.collegeSync ? `Live · synced ${esc(fmtTime(state.collegeSync))}` : `Updated ${esc(fmtTime(c.updated))}`}</span><br>
+    ${(c.team.polls || []).map(p => `${esc(p.name)}${p.week ? ", " + esc(p.week) : ""}, updated ${esc(fmtDay(p.asOf))}`).join(" · ")}${(c.team.polls || []).length ? ".<br>" : ""}
     Season leaders are added up from each game's box score, so they can differ slightly from official totals.<br>
     Scores and stats: ESPN. Headlines link to the outlets that wrote them.<br>${FOOT}`;
 }

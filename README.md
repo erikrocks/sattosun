@@ -23,7 +23,7 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `data/status.json` | When each part last refreshed, and any problems from the last run |
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
-| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. Every 15 min it also checks for live NFL or college games and updates scores and stats when any are on, any day of the week |
+| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. A college-only refresh each night around 9pm Central picks up evening rankings, record and news. Every 15 min it also checks for live NFL or college games and updates scores and stats when any are on, any day of the week |
 | `scripts/check.py`, `.github/workflows/watchdog.yml` | Daily check that the live site is up and serving fresh data |
 
 ## Setup (about 5 minutes)
@@ -50,6 +50,7 @@ To get these on your phone, install the GitHub app and leave notifications on fo
 
 ## Other things to know
 
+- **Rankings:** the Saturday tile leads with the playoff committee's ranking once it exists for the season, with the AP poll beside it; before the committee starts, the AP poll leads. Both come from ESPN's rankings feed.
 - **News sources** are listed per school in `schools.json` (`newsFeeds`). Headlines must match `newsMatch` and not mention another sport; a feed with `must` only keeps headlines matching that pattern. A feed that fails is skipped; the run only fails if every source fails.
 - **Logos and headshots** load from ESPN's image servers; nothing is stored here. If one is missing the page hides it.
 - **Visitor counts** use Cloudflare Web Analytics (no cookies). See them in the Cloudflare dashboard under Analytics → Web analytics → iahawks.com.

@@ -14,6 +14,7 @@ Writes:
 Standard library only, so it runs on a bare GitHub Actions runner.
 
   python scripts/update.py           full refresh: scores, rosters, stats
+  python scripts/update.py --college the school's own season only (rankings, record, schedule, news); the evening run
   python scripts/update.py --auto    only if a game is live or about to start: scores + stats
                                      (cheap no-op otherwise, so it can run every 15 minutes)
 
@@ -707,6 +708,27 @@ def gather_news(key, school, team_id):
     return out[:24]
 
 
+POLLS = [("CFP", "cfp", "?polls=21"), ("AP", "ap", "?polls=1")]   # playoff committee first: it's the one that decides the bracket
+
+
+def poll_ranks(team_id):
+    """Where the team sits in each current poll: [{"poll": "CFP", "name": ..., "rank": 15 or None, "asOf": ...}]."""
+    out = []
+    for label, kind, query in POLLS:
+        try:
+            poll = next((p for p in get_json(f"{COLLEGE}/rankings{query}").get("rankings", []) if p.get("type") == kind), None)
+        except Exception as e:
+            print(f"warning: {label} rankings failed: {e}", file=sys.stderr)
+            continue
+        stamp = poll and (poll.get("lastUpdated") or poll.get("date"))
+        if not stamp or now_utc() - parse_time(stamp) > timedelta(days=45):   # none yet this season, or last season's
+            continue
+        rank = next((r.get("current") for r in poll.get("ranks", []) if str(r.get("team", {}).get("id")) == str(team_id)), None)
+        out.append({"poll": label, "name": poll.get("name"), "rank": rank, "asOf": stamp,
+                    "week": (poll.get("occurrence") or {}).get("displayValue")})
+    return out
+
+
 def update_college(key, school, full):
     team_id = school.get("espnTeamId")
     if not team_id:
@@ -754,10 +776,12 @@ def update_college(key, school, full):
 
     record = next((i.get("summary") for i in (team.get("record") or {}).get("items", []) if i.get("type") == "total"), None)
     ranked = [g["us"]["rank"] for g in games if g["state"] != "post"] or [g["us"]["rank"] for g in games[-1:]]
+    polls = poll_ranks(team_id) if full else (old.get("team") or {}).get("polls", [])
     write_json(rel, {
         "school": key, "season": season, "updated": iso(now_utc()), "source": "ESPN college football",
         "team": {"id": str(team_id), "name": team.get("displayName"), "abbr": team.get("abbreviation"),
-                 "record": record, "standing": team.get("standingSummary"), "rank": ranked[0] if ranked else None},
+                 "record": record, "standing": team.get("standingSummary"),
+                 "rank": polls[0]["rank"] if polls else (ranked[0] if ranked else None), "polls": polls},
         "games": games, "box": box, "leaders": season_leaders(box), "news": news,
     })
     print(f"college {key}: {len(games)} games, {len(box)} box scores, {len(news)} news items")
@@ -767,6 +791,7 @@ def update_college(key, school, full):
 
 def main():
     auto = "--auto" in sys.argv
+    college_only = "--college" in sys.argv
     with open(os.path.join(ROOT, "schools.json")) as f:
         schools = json.load(f)["schools"]
 
@@ -780,7 +805,9 @@ def main():
     status = read_json("data/status.json", {}) or {}
     stamp = lambda part: status.__setitem__(part, iso(now_utc()))
 
-    if not auto or nfl_live:
+    if college_only:
+        pass
+    elif not auto or nfl_live:
         week = None
         try:
             week = build_week(get_json(SCOREBOARD))
