@@ -2,9 +2,39 @@
  "season": 2026,
  "week": 11,
  "seasonType": "regular",
- "updated": "2026-11-23T05:08:50Z",
+ "updated": "2026-11-23T05:10:21Z",
  "source": "ESPN scoreboard",
  "games": [
+  {
+   "id": "401873078",
+   "kickoff": "2026-11-24T01:15Z",
+   "state": "pre",
+   "detail": "",
+   "network": "ESPN",
+   "away": {
+    "abbr": "CIN",
+    "score": 0
+   },
+   "home": {
+    "abbr": "WAS",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873066",
+   "kickoff": "2026-11-20T01:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Prime Video",
+   "away": {
+    "abbr": "IND",
+    "score": 3
+   },
+   "home": {
+    "abbr": "HOU",
+    "score": 26
+   }
+  },
   {
    "id": "401873070",
    "kickoff": "2026-11-22T18:00Z",
@@ -168,36 +198,6 @@
    "home": {
     "abbr": "SF",
     "score": 35
-   }
-  },
-  {
-   "id": "401873066",
-   "kickoff": "2026-11-20T01:15Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Prime Video",
-   "away": {
-    "abbr": "IND",
-    "score": 3
-   },
-   "home": {
-    "abbr": "HOU",
-    "score": 26
-   }
-  },
-  {
-   "id": "401873078",
-   "kickoff": "2026-11-24T01:15Z",
-   "state": "pre",
-   "detail": "",
-   "network": "ESPN",
-   "away": {
-    "abbr": "CIN",
-    "score": 0
-   },
-   "home": {
-    "abbr": "WAS",
-    "score": 0
    }
   }
  ],
