@@ -60,6 +60,7 @@ To get these on your phone, install the GitHub app and leave notifications on fo
 - **Visitor counts** use Cloudflare Web Analytics (no cookies). See them in the Cloudflare dashboard under Analytics → Web analytics → iahawks.com.
 - **The site name and tagline** are in `schools.json` under `site`.
 - **The share image** `og.png` is a 1200×630 screenshot; regenerate it if the name or tagline changes.
+- **The mark** is Iowa's outline (`icons/iowa.svg`, from public-domain U.S. Census Bureau TIGER data) with "IA" on it. It is the app icon, favicon, header mark and share image. It deliberately uses no University of Iowa marks.
 
 ## Adding a school
 

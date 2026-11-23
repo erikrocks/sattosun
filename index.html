@@ -17,7 +17,9 @@
 <link rel="canonical" href="https://iahawks.com/">
 <meta property="og:description" content="Iowa football on Saturday, every former Hawkeye in the NFL on Sunday: live scores, stat lines, news and roster status.">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/iowa.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -40,6 +42,7 @@
   /* Header */
   header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--accent)}
   .hdr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px 10px}
+  .mark{flex:none;width:46px;height:30px}
   .eyebrow{font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
   h1{margin:4px 0 0;font:800 28px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em}
   .week{flex:none;background:var(--accent);color:var(--accent-ink);border-radius:999px;
@@ -221,7 +224,8 @@
 <body>
 <header>
   <div class="wrap hdr">
-    <div>
+    <img class="mark" src="icons/iowa.svg" alt="" width="46" height="30">
+    <div style="flex:1;min-width:0">
       <h1 id="title">IA Hawks</h1>
       <div class="eyebrow" id="eyebrow" style="margin-top:5px">Hawkeyes in the NFL</div>
     </div>
