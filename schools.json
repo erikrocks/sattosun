@@ -16,12 +16,14 @@
         "line": "#2A2A2A"
       },
       "includeNames": [],
-      "excludeNames": []
+      "excludeNames": [],
+      "espnTeamId": "2294"
     }
   },
   "_help": {
     "colleges": "College names exactly as Sleeper spells them (case-insensitive).",
     "includeNames": "Players to add even if their listed college is different, e.g. someone who played at this school then transferred out.",
-    "excludeNames": "Players to drop, e.g. a transfer-in you don't count."
+    "excludeNames": "Players to drop, e.g. a transfer-in you don't count.",
+    "espnTeamId": "ESPN's college-football team id (the number in the team's ESPN URL). Powers the Saturday tab."
   }
 }

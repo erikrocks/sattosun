@@ -5,12 +5,17 @@ Writes:
   data/week.json               this week's NFL games and scores (ESPN scoreboard)
   data/players/<school>.json   every NFL player from that school (Sleeper, checked against ESPN team rosters)
   data/stats.json              box-score lines for tracked players (ESPN game summaries)
+  data/college/<school>.json   the school's own season: schedule, scores, box scores, season leaders, news (ESPN)
+  data/status.json             when each part last refreshed, and any problems from the last run
 
 Standard library only, so it runs on a bare GitHub Actions runner.
 
   python scripts/update.py           full refresh: scores, rosters, stats
   python scripts/update.py --auto    only if a game is live or about to start: scores + stats
                                      (cheap no-op otherwise, so it can run every 15 minutes)
+
+Exits non-zero if any feed failed, after writing whatever it could, so the workflow run fails and
+someone gets told. A failed part keeps its previous file.
 """
 import json, os, re, sys, urllib.request
 from datetime import datetime, timedelta, timezone
@@ -21,6 +26,15 @@ SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?ev
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
 ROSTER = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/{}/roster"
 ESPN_ABBR = {"WAS": "WSH"}            # our abbreviation -> ESPN's, where they differ
+COLLEGE = "https://site.api.espn.com/apis/site/v2/sports/football/college-football"
+PROBLEMS = []                         # anything that should fail the run; reported at the end
+
+
+def problem(msg):
+    PROBLEMS.append(msg)
+    print(f"ERROR: {msg}", file=sys.stderr)
+
+
 RESERVE_TAGS = {"ir", "pup", "nfi"}   # Sleeper injury tags that mean a reserve list, not a game-day tag
 
 TEAMS = ["ARI","ATL","BAL","BUF","CAR","CHI","CIN","CLE","DAL","DEN","DET","GB","HOU","IND","JAX","KC",
@@ -116,8 +130,9 @@ def build_week(sb):
     }
 
 
-def in_live_window(week, now):
-    for g in (week or {}).get("games", []):
+def in_live_window(data, now):
+    """True if any game in a week.json or college file is live or about to start."""
+    for g in (data or {}).get("games", []):
         if g.get("state") == "post":
             continue
         k = parse_time(g["kickoff"])
@@ -162,6 +177,8 @@ def fetch_rosters():
                 rosters[t] = team
         except Exception as e:
             print(f"warning: ESPN roster for {t} failed: {e}", file=sys.stderr)
+    if len(rosters) < len(TEAMS) - 3:        # a team or two can blip; more than that is a broken feed
+        problem(f"ESPN rosters: only {len(rosters)} of {len(TEAMS)} teams loaded")
     return rosters
 
 
@@ -205,7 +222,8 @@ def reconcile(data, school, rosters):
                 print(f'added {e["name"]} ({t}): on ESPN roster, not in Sleeper')
                 kept.append({"name": e["name"], "team": t, "pos": e["pos"] or "—",
                              "num": int(e["num"]) if (e["num"] or "").isdigit() else None,
-                             "status": espn_status(e) or "Active", "injury": None,
+                             "status": espn_status(e) or "Active",
+                             "injury": next((i for i in e["injuries"] if i in ("Questionable", "Doubtful", "Out")), None),
                              "college": e["college"], "espn_id": e["id"]})
     kept.sort(key=lambda x: (x["team"], x["name"]))
     data["players"] = kept
@@ -269,6 +287,7 @@ def update_stats(week, schools):
     old = read_json("data/stats.json", {}) or {}
     old_games = old.get("games", {}) if old.get("week") == week.get("week") else {}
     games = {}
+    failed = 0
     for g in week["games"]:
         if g["state"] == "pre":
             continue
@@ -285,11 +304,166 @@ def update_stats(week, schools):
                               "players": parse_summary(get_json(SUMMARY.format(g["id"])), tracked)}
         except Exception as e:                           # one bad game shouldn't sink the run
             print(f"warning: stats for game {g['id']} failed: {e}", file=sys.stderr)
+            failed += 1
             if prev:
                 games[g["id"]] = prev
+    if failed > 2:
+        problem(f"ESPN box scores: {failed} games failed")
     write_json("data/stats.json", {"season": week["season"], "week": week["week"],
                                    "updated": iso(now_utc()), "source": "ESPN game summaries", "games": games})
     print(f"stats: {len(games)} games")
+
+
+
+# ---------- college (the school's own games) ----------
+
+LEADER_CATS = [  # (label, box category, column to rank by, columns to show)
+    ("Passing", "passing", "YDS", ["YDS", "TD", "INT"]),
+    ("Rushing", "rushing", "YDS", ["CAR", "YDS", "TD"]),
+    ("Receiving", "receiving", "YDS", ["REC", "YDS", "TD"]),
+    ("Tackles", "defensive", "TOT", ["TOT", "TFL", "SACKS"]),
+    ("Sacks", "defensive", "SACKS", ["SACKS"]),
+    ("Interceptions", "interceptions", "INT", ["INT", "TD"]),
+]
+
+
+def to_num(v):
+    try:
+        return float(str(v).split("/")[0])
+    except ValueError:
+        return 0.0
+
+
+def fmt_num(n):
+    return str(int(n)) if float(n).is_integer() else f"{n:.1f}"
+
+
+def score_of(c):
+    s = c.get("score")
+    if isinstance(s, dict):
+        s = s.get("displayValue") if s.get("displayValue") not in (None, "") else s.get("value")
+    try:
+        return int(float(s))
+    except (TypeError, ValueError):
+        return None
+
+
+def rank_of(c):
+    r = (c.get("curatedRank") or {}).get("current") or c.get("rank")
+    return r if isinstance(r, int) and 0 < r <= 25 else None
+
+
+def college_game(ev, team_id):
+    comp = ev["competitions"][0]
+    us = next(c for c in comp["competitors"] if str(c["team"]["id"]) == str(team_id))
+    opp = next(c for c in comp["competitors"] if c is not us)
+    st = (comp.get("status") or ev.get("status") or {}).get("type", {})
+    state = st.get("state", "pre")
+    b = comp.get("broadcasts") or []
+    network = ((b[0].get("media") or {}).get("shortName") or "") if b else ""
+    side = lambda c: {"abbr": c["team"].get("abbreviation"), "name": c["team"].get("location") or c["team"].get("displayName"),
+                      "rank": rank_of(c), "score": score_of(c) if state != "pre" else None}
+    return {"id": ev["id"], "kickoff": ev["date"], "state": state,
+            "detail": st.get("shortDetail", "") if state != "pre" else "", "network": network,
+            "where": "neutral" if comp.get("neutralSite") else us.get("homeAway", "home"),
+            "us": side(us), "opp": side(opp),
+            "win": us.get("winner") if state == "post" else None}
+
+
+def college_box(summary, team_id):
+    """Our team's side of the box score: {category: {"labels": [...], "rows": [[name, v1, v2, ...], ...]}}."""
+    cats = {}
+    for tp in summary.get("boxscore", {}).get("players", []):
+        if str(tp.get("team", {}).get("id")) != str(team_id):
+            continue
+        for cat in tp.get("statistics", []):
+            rows = [[a.get("athlete", {}).get("displayName", "")] + list(a.get("stats", [])) for a in cat.get("athletes", [])]
+            if rows:
+                cats[cat.get("name", "other")] = {"labels": cat.get("labels", []), "rows": rows}
+    return cats
+
+
+def season_leaders(boxes):
+    """Top three per category, added up from every box score we hold."""
+    out = []
+    for label, cat, key, show in LEADER_CATS:
+        totals = {}
+        for b in boxes.values():
+            c = (b.get("cats") or {}).get(cat)
+            if not c:
+                continue
+            for row in c["rows"]:
+                if row[0].strip().lower() in ("", "team"):
+                    continue
+                t = totals.setdefault(row[0], {})
+                for l, v in zip(c["labels"], row[1:]):
+                    if l in show:
+                        t[l] = t.get(l, 0.0) + to_num(v)
+        top = sorted((t for t in totals.items() if t[1].get(key, 0) > 0), key=lambda t: -t[1][key])[:3]
+        if top:
+            out.append({"label": label, "players": [
+                {"name": n, "value": fmt_num(t[key]), "line": " · ".join(f"{fmt_num(t.get(l, 0))} {l}" for l in show)} for n, t in top]})
+    return out
+
+
+def update_college(key, school, full):
+    team_id = school.get("espnTeamId")
+    if not team_id:
+        return
+    rel = f"data/college/{key}.json"
+    old = read_json(rel, {}) or {}
+    try:
+        team = get_json(f"{COLLEGE}/teams/{team_id}")["team"]
+        sched = get_json(f"{COLLEGE}/teams/{team_id}/schedule")
+        events = list(sched.get("events", []))
+        try:                                             # bowl / playoff games live under a separate season type
+            post = get_json(f"{COLLEGE}/teams/{team_id}/schedule?seasontype=3")
+            events += [e for e in post.get("events", []) if e["id"] not in {x["id"] for x in events}]
+        except Exception:
+            pass
+        games = sorted((college_game(e, team_id) for e in events), key=lambda g: g["kickoff"])
+    except Exception as e:
+        problem(f"college schedule for {key} failed: {e}")
+        return
+    season = (sched.get("season") or {}).get("year")
+    old_box = old.get("box", {}) if old.get("season") == season else {}
+    box, failed = {}, 0
+    for g in games:
+        if g["state"] == "pre":
+            continue
+        prev = old_box.get(g["id"])
+        if prev and prev.get("final") and prev.get("cats"):
+            box[g["id"]] = prev
+            continue
+        try:
+            box[g["id"]] = {"final": g["state"] == "post", "cats": college_box(get_json(f"{COLLEGE}/summary?event={g['id']}"), team_id)}
+        except Exception as e:
+            print(f"warning: college box for game {g['id']} failed: {e}", file=sys.stderr)
+            failed += 1
+            if prev:
+                box[g["id"]] = prev
+    if failed > 2:
+        problem(f"college box scores for {key}: {failed} games failed")
+
+    news = old.get("news", [])
+    if full or not news:
+        try:
+            arts = get_json(f"{COLLEGE}/news?team={team_id}&limit=12").get("articles", [])
+            news = [{"headline": a.get("headline"), "description": a.get("description"), "published": a.get("published"),
+                     "type": a.get("type"), "url": ((a.get("links") or {}).get("web") or {}).get("href")}
+                    for a in arts if a.get("headline") and ((a.get("links") or {}).get("web") or {}).get("href")]
+        except Exception as e:
+            print(f"warning: college news for {key} failed: {e}", file=sys.stderr)
+
+    record = next((i.get("summary") for i in (team.get("record") or {}).get("items", []) if i.get("type") == "total"), None)
+    ranked = [g["us"]["rank"] for g in games if g["state"] != "post"] or [g["us"]["rank"] for g in games[-1:]]
+    write_json(rel, {
+        "school": key, "season": season, "updated": iso(now_utc()), "source": "ESPN college football",
+        "team": {"id": str(team_id), "name": team.get("displayName"), "abbr": team.get("abbreviation"),
+                 "record": record, "standing": team.get("standingSummary"), "rank": ranked[0] if ranked else None},
+        "games": games, "box": box, "leaders": season_leaders(box), "news": news,
+    })
+    print(f"college {key}: {len(games)} games, {len(box)} box scores, {len(news)} news items")
 
 
 # ---------- main ----------
@@ -299,26 +473,69 @@ def main():
     with open(os.path.join(ROOT, "schools.json")) as f:
         schools = json.load(f)["schools"]
 
-    if auto and not in_live_window(read_json("data/week.json"), now_utc()):
+    now = now_utc()
+    nfl_live = in_live_window(read_json("data/week.json"), now)
+    college_live = {k for k in schools if in_live_window(read_json(f"data/college/{k}.json"), now)}
+    if auto and not nfl_live and not college_live:
         print("no game live or about to start; nothing to do")
         return
 
-    week = build_week(get_json(SCOREBOARD))
-    write_json("data/week.json", week)
-    print(f'week {week["week"]}: {len(week["games"])} games')
+    status = read_json("data/status.json", {}) or {}
+    stamp = lambda part: status.__setitem__(part, iso(now_utc()))
 
-    if not auto:
-        players = get_json(SLEEPER_PLAYERS)
-        rosters = fetch_rosters()
-        for key, school in schools.items():
-            data = reconcile(build_players(players, key, school), school, rosters)
-            if len(data["players"]) < 3:   # guard against a bad feed wiping a school's list
-                print(f"warning: only {len(data['players'])} players for {key}; keeping previous file", file=sys.stderr)
-                continue
-            write_json(f"data/players/{key}.json", data)
-            print(f'{key}: {len(data["players"])} players')
+    if not auto or nfl_live:
+        week = None
+        try:
+            week = build_week(get_json(SCOREBOARD))
+            write_json("data/week.json", week)
+            print(f'week {week["week"]}: {len(week["games"])} games')
+            stamp("scores")
+        except Exception as e:
+            problem(f"NFL scoreboard failed: {e}")
 
-    update_stats(week, schools)
+        if not auto:
+            try:
+                try:
+                    players = get_json(SLEEPER_PLAYERS)
+                    if not isinstance(players, dict) or len(players) < 1000:
+                        raise ValueError("response doesn't look like the player list")
+                except Exception as e:           # carry on from ESPN rosters alone, but say so
+                    problem(f"Sleeper player list failed ({e}); rosters built from ESPN only, without Sleeper's injury tags")
+                    players = {}
+                rosters = fetch_rosters()
+                ok = True
+                for key, school in schools.items():
+                    data = reconcile(build_players(players, key, school), school, rosters)
+                    if len(data["players"]) < 3:   # guard against a bad feed wiping a school's list
+                        problem(f"only {len(data['players'])} NFL players found for {key}; kept the previous file")
+                        ok = False
+                        continue
+                    write_json(f"data/players/{key}.json", data)
+                    print(f'{key}: {len(data["players"])} players')
+                if ok:
+                    stamp("rosters")
+            except Exception as e:
+                problem(f"roster refresh failed: {e}")
+
+        if week:
+            try:
+                update_stats(week, schools)
+            except Exception as e:
+                problem(f"NFL box scores failed: {e}")
+
+    for key, school in schools.items():
+        if not auto or key in college_live:
+            before = len(PROBLEMS)
+            update_college(key, school, full=not auto)
+            if len(PROBLEMS) == before and school.get("espnTeamId"):
+                stamp("college")
+
+    status["lastRun"] = iso(now_utc())
+    status["problems"] = PROBLEMS
+    write_json("data/status.json", status)
+    if PROBLEMS:
+        print(f"{len(PROBLEMS)} problem(s); failing the run so it gets noticed", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

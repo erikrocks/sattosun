@@ -1,0 +1,51 @@
+name: Watchdog
+
+# Checks the public site itself once a day: is it up, and is the data it serves fresh?
+# Catches what the update workflow can't see about itself: a stuck Pages deploy, a broken
+# domain, or the update schedule quietly not running.
+
+on:
+  schedule:
+    - cron: "45 14 * * *"     # daily ~8:45am CT, a few hours after the full refresh
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  SITE_URL: https://iahawks.com
+  ALERT_LABEL: site-stale
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the live site
+        run: python scripts/check.py "$SITE_URL" | tee check.log
+      - name: Open an issue if the site is stale or down
+        if: failure()
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[0].number')
+          if [ -n "$open" ]; then echo "Issue #$open is already open"; exit 0; fi
+          gh issue create --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --assignee "$GITHUB_REPOSITORY_OWNER" \
+            --title "$SITE_URL is stale or down $(date -u +%Y-%m-%d)" \
+            --body "The daily check of the live site found problems:
+
+          $(sed 's/^PROBLEM: /- /' check.log 2>/dev/null || echo '- See the run log.')
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          This issue closes itself the next time the check passes."
+      - name: Close the issue once the check passes
+        if: success()
+        run: |
+          for n in $(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --repo "$GITHUB_REPOSITORY" --comment "The live site check passed: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          done

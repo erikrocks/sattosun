@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0A0A0A">
-<title>Hawkeyes in the NFL</title>
-<meta name="description" content="Every former Hawkeye in this week's NFL games: live scores, stat lines and roster status.">
-<meta property="og:title" content="Hawkeyes in the NFL">
-<meta property="og:description" content="Every former Hawkeye in this week's NFL games: live scores, stat lines and roster status.">
+<title>Hawkeyes on Saturday and Sunday</title>
+<meta name="description" content="Iowa football on Saturday, every former Hawkeye in the NFL on Sunday: live scores, stat lines, news and roster status.">
+<meta property="og:title" content="Hawkeyes on Saturday and Sunday">
+<meta property="og:description" content="Iowa football on Saturday, every former Hawkeye in the NFL on Sunday: live scores, stat lines, news and roster status.">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -118,6 +118,37 @@
   footer a{color:var(--muted)}
   .err{background:#2a1515;border:1px solid #5a2a2a;color:#ffb3b3;border-radius:var(--radius);padding:14px;margin-top:14px}
   @media (min-width:560px){ h1{font-size:34px} .stat b{font-size:34px} }
+
+  /* Bottom tabs */
+  body.tabs{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--line);
+    padding-bottom:env(safe-area-inset-bottom)}
+  .tabbar .wrap{display:grid;grid-template-columns:1fr 1fr;padding:0}
+  .tab{background:none;border:0;border-top:3px solid transparent;margin-top:-1px;padding:10px 0 9px;cursor:pointer;
+    display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--dim);-webkit-tap-highlight-color:transparent;
+    font:800 19px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.06em}
+  .tab small{font:600 10px/1 Inter,sans-serif;letter-spacing:.1em}
+  .tab[aria-selected="true"]{color:var(--accent);border-top-color:var(--accent)}
+  .tab .lv{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--live);margin-left:6px;vertical-align:middle;animation:pulse 1.4s infinite}
+  .tab .lv[hidden]{display:none}
+
+  /* Saturday */
+  .rk{font:700 12px/1 Inter,sans-serif;color:var(--muted);margin-right:5px;vertical-align:middle}
+  .p.static{cursor:default}
+  .p.static:active{background:none}
+  .pos.cat{font-size:11px;border-color:var(--line);color:var(--muted)}
+  .pos.date{width:48px;border:0;color:var(--muted);font-size:14px;line-height:1.15;padding:0}
+  .psub{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  .tag.win{background:rgba(61,220,132,.14);color:#6fe3a5}
+  .tag.loss{background:rgba(255,77,77,.15);color:#FF8A8A}
+  .tag.res{font-size:13px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+  .detail.wide{padding-left:14px}
+  .bx td:first-child,.bx th:first-child{text-align:left;padding-left:0;font-weight:600}
+  .more{font-size:13px;font-weight:600;color:var(--accent)}
+  a.news{display:block;padding:11px 14px;color:var(--text);text-decoration:none;border-top:1px solid var(--line)}
+  a.news:first-child{border-top:0}
+  a.news b{display:block;font-weight:600;font-size:15px;line-height:1.3}
+  a.news span{display:block;margin-top:4px;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 </style>
 </head>
 <body>
@@ -135,6 +166,8 @@
 </header>
 
 <main class="wrap">
+ <section id="saturday" hidden></section>
+ <section id="sunday">
   <div class="stats" id="stats"></div>
   <div class="search">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -143,8 +176,15 @@
   <div class="chips" id="chips" role="toolbar" aria-label="Filter games"></div>
   <div id="notice"></div>
   <div id="content"></div>
+ </section>
   <footer id="footer"></footer>
 </main>
+<nav class="tabbar" id="tabbar" hidden>
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-tab="saturday" aria-selected="false"><span>Saturday<i class="lv" id="satLive" hidden></i></span><small>College</small></button>
+    <button class="tab" role="tab" data-tab="sunday" aria-selected="true"><span>Sunday<i class="lv" id="sunLive" hidden></i></span><small>NFL</small></button>
+  </div>
+</nav>
 
 <script>
 const TEAMS = {
@@ -164,6 +204,7 @@ const ALIAS = {WSH:"WAS", JAC:"JAX", LA:"LAR", ARZ:"ARI", OAK:"LV", SD:"LAC", ST
 const ORDER = {in:0, pre:1, post:2};
 const OUT = /reserve|injured|ir\b|pup|suspend|nfi|practice|inactive/i;
 const ESPN = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
+const ESPNC = "https://site.api.espn.com/apis/site/v2/sports/football/college-football";
 const LIVE_BEFORE = 20*60e3, LIVE_AFTER = 5*3600e3;
 
 const norm = a => ALIAS[(a||"").toUpperCase()] || (a||"").toUpperCase();
@@ -172,7 +213,8 @@ const normName = n => (n||"").toLowerCase().replace(/-/g," ").replace(/[^a-z ]/g
   .replace(/\b(jr|sr|ii|iii|iv|v)\b/g,"").split(/\s+/).filter(Boolean).join(" ");
 
 const state = { schools:null, schoolKey:null, week:null, stats:{}, players:[], filter:null, q:"",
-                direct:false, directTried:false, lastSync:null, open:new Set(), box:{} };
+                direct:false, directTried:false, lastSync:null, open:new Set(), box:{},
+                tab:"sunday", college:null, collegeSync:null, copen:new Set() };
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const school = () => state.schools.schools[state.schoolKey];
@@ -222,7 +264,7 @@ function statLine(p, g){
   const line = e ? fmtCats(e.cats || {}) : "";
   if(line) return `<span class="sl">${esc(line)}</span>`;
   if(isOut(p)) return "";
-  return `<span class="sl quiet">${/^(OT|OG|G|T|C|OL|LS)$/.test(p.pos) ? "No box-score stats for linemen" : "No stats yet"}</span>`;
+  return `<span class="sl quiet">${/^(OT|OG|G|T|C|OL|LS)$/.test(p.pos) ? "No box-score stats for linemen" : g.state === "post" ? "No stats recorded" : "No stats yet"}</span>`;
 }
 
 /* ---------- direct ESPN (works on your own domain; blocked in the Claude preview) ---------- */
@@ -289,15 +331,20 @@ let timer = null;
 function schedule(){
   clearTimeout(timer);
   if(document.hidden) return;
-  const live = liveWindow();
+  const live = liveWindow(), clive = !!collegeLive();
   timer = setTimeout(async () => {
-    if(live){ if(!(await syncDirect())) await syncOwnFiles(); render(); }
+    if(live){ if(!(await syncDirect())) await syncOwnFiles(); }
+    if(clive) await syncCollege();
+    if(live || clive) render();
     schedule();
-  }, live ? (state.direct ? 45e3 : 120e3) : 10*60e3);
+  }, live || clive ? (clive || state.direct ? 45e3 : 120e3) : 10*60e3);
 }
 document.addEventListener("visibilitychange", async () => {
   if(document.hidden) return clearTimeout(timer);
-  if(liveWindow()){ if(!(await syncDirect())) await syncOwnFiles(); render(); }
+  const live = liveWindow(), clive = !!collegeLive();
+  if(live){ if(!(await syncDirect())) await syncOwnFiles(); }
+  if(clive) await syncCollege();
+  if(live || clive) render();
   schedule();
 });
 
@@ -307,13 +354,19 @@ function applyTheme(s){
   const map = {accent:"--accent", accentInk:"--accent-ink", bg:"--bg", card:"--card", line:"--line"};
   for(const k in map) if(t[k]) root.setProperty(map[k], t[k]);
   if(t.bg) document.querySelector('meta[name=theme-color]').content = t.bg;
-  $("title").textContent = `${s.nickname} in the NFL`;
-  document.title = `${s.nickname} in the NFL`;
   $("q").placeholder = `Find a ${s.nickname.replace(/s$/,"")}`;
 }
-function pickSchool(){
-  const h = location.hash.replace("#","").toLowerCase();
-  return state.schools.schools[h] ? h : state.schools.default;
+// Hash is "#iowa", "#saturday" or "#iowa/saturday".
+function hashParts(){
+  const parts = location.hash.replace("#","").toLowerCase().split("/").filter(Boolean);
+  return {school: parts.find(p => state.schools.schools[p]), tab: parts.find(p => p === "saturday" || p === "sunday")};
+}
+function pickSchool(){ return hashParts().school || state.schools.default; }
+function defaultTab(){
+  if(!state.college) return "sunday";
+  const today = new Date().toDateString();
+  const gameToday = (state.college.games || []).some(g => new Date(g.kickoff).toDateString() === today);
+  return collegeLive() || gameToday || (new Date().getDay() === 6 && !liveWindow()) ? "saturday" : "sunday";
 }
 async function loadSchool(){
   state.schoolKey = pickSchool();
@@ -322,6 +375,8 @@ async function loadSchool(){
   const pdata = await getJSON(`data/players/${state.schoolKey}.json`);
   state.players = pdata.players.map(p => ({...p, team: norm(p.team)}));
   state.playersUpdated = pdata.updated;
+  state.college = school().espnTeamId ? await getJSON(`data/college/${state.schoolKey}.json`).catch(() => null) : null;
+  state.tab = hashParts().tab || defaultTab();
   render();
 }
 
@@ -456,6 +511,161 @@ function rosterView(games){
 }
 
 function render(){
+  const s = school(), sat = state.tab === "saturday" && !!state.college;
+  document.body.classList.toggle("tabs", !!state.college);
+  $("tabbar").hidden = !state.college;
+  $("saturday").hidden = !sat; $("sunday").hidden = sat;
+  for(const b of document.querySelectorAll(".tab")) b.setAttribute("aria-selected", String(b.dataset.tab === (sat ? "saturday" : "sunday")));
+  $("satLive").hidden = !((state.college || {}).games || []).some(g => g.state === "in");
+  $("sunLive").hidden = !(state.week.games || []).some(g => g.state === "in");
+  renderSunday();
+  const title = sat ? `${s.nickname} on Saturday` : `${s.nickname} in the NFL`;
+  $("title").textContent = title; document.title = title;
+  $("eyebrow").textContent = sat ? `${s.name} football${state.college.season ? " · " + state.college.season : ""}` : "NFL Alumni Tracker";
+  if(sat) renderSaturday();
+}
+
+/* ---------- Saturday: the school's own games ---------- */
+const CAT_TAG = {passing:"Pass", rushing:"Rush", receiving:"Rec", defensive:"Def", interceptions:"Int", kicking:"Kick",
+  punting:"Punt", kickReturns:"KR", puntReturns:"PR", fumbles:"Fum"};
+function collegeLive(){
+  const now = Date.now();
+  return ((state.college || {}).games || []).find(g => g.state !== "post" &&
+    now >= new Date(g.kickoff) - LIVE_BEFORE && now <= +new Date(g.kickoff) + LIVE_AFTER);
+}
+function parseCollegeBox(sum, teamId){
+  const cats = {};
+  for(const tp of ((sum.boxscore || {}).players || [])){
+    if(String((tp.team || {}).id) !== String(teamId)) continue;
+    for(const cat of (tp.statistics || [])){
+      const rows = (cat.athletes || []).map(a => [(a.athlete || {}).displayName || "", ...(a.stats || [])]);
+      if(rows.length) cats[cat.name || "other"] = {labels: cat.labels || [], rows};
+    }
+  }
+  return cats;
+}
+async function syncCollege(){
+  const g = collegeLive();
+  if(!g) return false;
+  try{
+    const sum = await getJSON(`${ESPNC}/summary?event=${g.id}`, false);
+    const comp = sum.header.competitions[0], st = (comp.status || {}).type || {}, tid = String(state.college.team.id);
+    g.state = st.state || g.state;
+    g.detail = g.state === "pre" ? "" : (st.shortDetail || "");
+    for(const c of comp.competitors){
+      const mine = String(c.id) === tid, side = mine ? g.us : g.opp;
+      if(g.state !== "pre" && c.score != null && c.score !== "") side.score = +c.score;
+      if(mine && g.state === "post") g.win = !!c.winner;
+    }
+    if(g.state !== "pre") state.college.box[g.id] = {final: g.state === "post", cats: parseCollegeBox(sum, tid)};
+    state.collegeSync = new Date();
+    return true;
+  }catch(e){
+    try{ state.college = await getJSON(`data/college/${state.schoolKey}.json`); }catch(_){}
+    state.collegeSync = null;
+    return false;
+  }
+}
+const oneCat = (cat, c, row) => ({[cat]: Object.fromEntries(c.labels.map((l,i) => [l, row[i+1]]))});
+function topPerformers(box){
+  const out = [], cats = (box && box.cats) || {};
+  const take = (cat, n, by) => {
+    const c = cats[cat]; if(!c) return;
+    const i = c.labels.indexOf(by) + 1;
+    for(const r of [...c.rows].sort((a,b) => num(b[i]) - num(a[i])).slice(0, n)){
+      const line = fmtCats(oneCat(cat, c, r));
+      if(line) out.push({tag: CAT_TAG[cat], name: r[0], line});
+    }
+  };
+  take("passing",1,"YDS"); take("rushing",2,"YDS"); take("receiving",2,"YDS"); take("defensive",2,"TOT");
+  take("interceptions",2,"INT"); take("kicking",1,"PTS");
+  return out;
+}
+function fullBox(box){
+  const cats = (box && box.cats) || {};
+  const names = Object.keys(cats).sort((a,b) => (CAT_ORDER.indexOf(a)+99) % 99 - (CAT_ORDER.indexOf(b)+99) % 99);
+  if(!names.length) return `<div class="msg">No box score for this game yet.</div>`;
+  return names.map(c => `<div class="bx"><h4>${esc(CAT_NAMES[c] || c)}</h4><div class="scroll"><table>
+    <tr><th></th>${cats[c].labels.map(l => `<th>${esc(l)}</th>`).join("")}</tr>
+    ${cats[c].rows.map(r => `<tr>${r.map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</table></div></div>`).join("");
+}
+const LEADER_TAG = {Passing:"Pass", Rushing:"Rush", Receiving:"Rec", Tackles:"Tkl", Sacks:"Sack", Interceptions:"Int"};
+const leaderLine = l => l.replace(/\b(YDS|CAR|REC|SACKS)\b/g, m => m.toLowerCase()).replace(/\bTOT\b/g, "tkl");
+const fmtDay = iso => new Date(iso).toLocaleDateString([], {month:"short", day:"numeric"});
+const rk = side => side.rank ? `<span class="rk">#${esc(side.rank)}</span>` : "";
+const CHEV = `<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>`;
+function collegeStatus(g){
+  if(g.state === "in") return `<span class="lv">Live · ${esc(g.detail)}</span>`;
+  if(g.state === "post") return `<span>${esc(g.detail || "Final")} · ${esc(fmtDay(g.kickoff))}</span>`;
+  if(Date.now() > new Date(g.kickoff)) return `<span>Kicked off · updating</span>`;
+  return `<span>${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}</span>`;
+}
+function collegeCard(g){
+  const box = state.college.box[g.id], key = "f:" + g.id, open = state.copen.has(key);
+  const row = (side, other, mine) => `<div class="trow"><span class="dot" style="background:${mine ? "var(--accent)" : "#555"}"></span>
+    <span class="tname">${rk(side)}<b>${esc(side.abbr)}</b><span>${esc(side.name || "")}</span></span>
+    ${g.state !== "pre" && side.score != null ? `<span class="score ${g.state === "post" && side.score < other.score ? "lose" : ""}">${esc(side.score)}</span>` : ""}</div>`;
+  const usRow = row(g.us, g.opp, true), oppRow = row(g.opp, g.us, false);
+  const tops = topPerformers(box);
+  const place = g.where === "home" ? "Home" : g.where === "away" ? "Away" : "Neutral site";
+  return `<article class="game ${g.state === "in" ? "live" : ""}">
+    <div class="gtop">${collegeStatus(g)}<span class="count">${esc(place)}</span></div>
+    <div class="teams">${g.where === "home" ? oppRow + usRow : usRow + oppRow}</div>
+    ${g.state === "pre" ? "" : `<div class="players">
+      ${tops.map(t => `<div class="p static"><span class="pos cat">${esc(t.tag)}</span><span class="pmain"><span class="pname">${esc(t.name)}</span><span class="sl">${esc(t.line)}</span></span></div>`).join("")}
+      <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="${esc(key)}"><span class="pmain more">Full ${esc(state.college.team.abbr || "")} box score</span>${CHEV}</div>
+      ${open ? `<div class="detail wide">${fullBox(box)}</div>` : ""}</div>`}
+  </article>`;
+}
+function scheduleRow(g){
+  const key = "s:" + g.id, open = state.copen.has(key), played = g.state !== "pre";
+  const [mon, day] = fmtDay(g.kickoff).split(" ");
+  const res = g.state === "post" ? `<span class="tag res ${g.win ? "win" : "loss"}">${g.win ? "W" : "L"} ${esc(g.us.score)}-${esc(g.opp.score)}</span>`
+            : g.state === "in" ? `<span class="tag res inj">${esc(g.us.score)}-${esc(g.opp.score)}</span>` : "";
+  const sub = g.state === "pre" ? `${new Date(g.kickoff).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"})}${g.network ? " · " + g.network : ""}`
+            : g.state === "in" ? `Live · ${g.detail}` : "";
+  return `<div class="p ${played ? "" : "static"}" ${played ? `role="button" tabindex="0" aria-expanded="${open}" data-cg="${esc(key)}"` : ""}>
+    <span class="pos date">${esc(mon)}<br>${esc(day || "")}</span>
+    <span class="pmain"><span class="pname">${g.where === "away" ? "@ " : "vs "}${rk(g.opp)}${esc(g.opp.name || g.opp.abbr)}</span>${sub ? `<span class="psub">${esc(sub)}</span>` : ""}</span>
+    ${res}${played ? CHEV : ""}</div>${open ? `<div class="detail wide">${fullBox(state.college.box[g.id])}</div>` : ""}`;
+}
+function renderSaturday(){
+  const c = state.college, s = school(), t = c.team || {}, games = c.games || [];
+  $("week").textContent = t.record || "—";
+  const live = games.find(g => g.state === "in");
+  const next = games.find(g => g.state === "pre");
+  const last = [...games].reverse().find(g => g.state === "post");
+  const [place, conf] = (t.standing || "").split(" in ");
+  let html = `<div class="stats">
+    <div class="stat"><b>${esc(t.record || "—")}</b><span>Record</span></div>
+    <div class="stat"><b>${t.rank ? "#" + esc(t.rank) : "NR"}</b><span>${t.rank ? "National ranking" : "Not ranked"}</span></div>
+    <div class="stat"><b>${esc(place || "—")}</b><span>${conf ? "in the " + esc(conf) : "Conference"}</span></div></div>`;
+  const sec = (h, g) => g ? `<div class="section-h">${h}</div>${collegeCard(g)}` : "";
+  const lastFresh = last && Date.now() - new Date(last.kickoff) < 40*3600e3;
+  if(live) html += sec("Live now", live) + sec("Last game", last);
+  else if(lastFresh) html += sec("Last game", last) + sec("Next up", next);
+  else html += sec("Next up", next) + sec("Last game", last);
+
+  if((c.leaders || []).length) html += `<div class="section-h">Season leaders</div><div class="game"><div class="players" style="border-top:0">${
+    c.leaders.map(l => { const [a, ...rest] = l.players;
+      return `<div class="p static"><span class="pos cat">${esc(LEADER_TAG[l.label] || l.label.slice(0,4))}</span><span class="pmain">
+        <span class="pname">${esc(a.name)}</span><span class="sl">${esc(leaderLine(a.line))}</span>
+        ${rest.length ? `<span class="psub">${rest.map(r => `${esc(r.name)} ${esc(r.value)}`).join(" · ")}</span>` : ""}</span></div>`; }).join("")}</div></div>`;
+
+  if(games.length) html += `<div class="section-h">Schedule</div><div class="game"><div class="players" style="border-top:0">${games.map(scheduleRow).join("")}</div></div>`;
+
+  const about = a => new RegExp(`${s.name}|${s.nickname.replace(/s$/,"")}`, "i").test(`${a.headline} ${a.description || ""}`);
+  const news = [...(c.news || [])].sort((a,b) => about(b) - about(a) || new Date(b.published) - new Date(a.published)).slice(0, 8);
+  if(news.length) html += `<div class="section-h">News</div><div class="game">${news.map(a =>
+    `<a class="news" href="${esc(a.url)}" target="_blank" rel="noopener"><b>${esc(a.headline)}</b><span>${esc(a.type === "HeadlineNews" ? "News" : a.type || "Story")} · ${esc(fmtDay(a.published))}</span></a>`).join("")}</div>`;
+  $("saturday").innerHTML = html;
+
+  $("footer").innerHTML = `<span class="sync ${state.collegeSync ? "on" : ""}">${state.collegeSync ? `Live · synced ${esc(fmtTime(state.collegeSync))}` : `Updated ${esc(fmtTime(c.updated))}`}</span><br>
+    Season leaders are added up from each game's box score, so they can differ slightly from official totals.<br>
+    Data and news: ESPN. Not affiliated with the NFL or any school.`;
+}
+
+function renderSunday(){
   const w = state.week, s = school();
   const games = (w.games || []).map(g => ({...g, away:{...g.away, abbr:norm(g.away.abbr)}, home:{...g.home, abbr:norm(g.home.abbr)}}))
     .sort((a,b) => ORDER[a.state] - ORDER[b.state] || new Date(a.kickoff) - new Date(b.kickoff));
@@ -525,6 +735,19 @@ $("content").addEventListener("keydown", e => {
   const el = e.target.closest(".p[data-k]");
   if(el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); toggle(el); }
 });
+function toggleCollege(el){ const k = el.dataset.cg; if(state.copen.has(k)) state.copen.delete(k); else state.copen.add(k); render(); }
+$("saturday").addEventListener("click", e => { if(e.target.closest("a")) return; const el = e.target.closest("[data-cg]"); if(el) toggleCollege(el); });
+$("saturday").addEventListener("keydown", e => {
+  const el = e.target.closest("[data-cg]");
+  if(el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); toggleCollege(el); }
+});
+$("tabbar").addEventListener("click", e => {
+  const b = e.target.closest(".tab"); if(!b || b.dataset.tab === state.tab) return;
+  state.tab = b.dataset.tab;
+  const sch = hashParts().school;
+  history.replaceState(null, "", "#" + (sch ? sch + "/" : "") + state.tab);
+  render(); window.scrollTo(0, 0);
+});
 $("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; render(); });
 $("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
 $("school").addEventListener("change", e => { location.hash = e.target.value; });
@@ -543,6 +766,7 @@ function showErr(e){ $("content").innerHTML = `<div class="err">Couldn't load da
     }
     await loadSchool();
     if(liveWindow() && await syncDirect()) render();
+    if(collegeLive() && await syncCollege()) render();
     schedule();
   }catch(e){ showErr(e); }
 })();

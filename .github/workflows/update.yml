@@ -3,17 +3,22 @@ name: Update data
 on:
   schedule:
     # Times are UTC (Central is UTC-6 in winter, UTC-5 in summer).
-    - cron: "17 11 * * *"     # daily ~5am CT: full refresh (scores, rosters, stats)
+    - cron: "17 11 * * *"     # daily ~5am CT: full refresh (scores, rosters, stats, college)
     - cron: "40 16 * * 0"     # Sunday ~10:40am CT: rosters again for final injury tags
-    - cron: "*/15 * * * *"    # every 15 min: scores + stats, but only when a game is live or about to start
+    - cron: "*/15 * * * *"    # every 15 min: scores + stats, but only when an NFL or college game is live or about to start
   workflow_dispatch: {}       # "Run workflow" button = full refresh
 
 permissions:
   contents: write
+  issues: write               # to open an issue (which emails the owner) when a refresh fails
 
 concurrency:
   group: update-data
   cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  ALERT_LABEL: data-failure
 
 jobs:
   update:
@@ -25,12 +30,14 @@ jobs:
         with:
           python-version: "3.12"
       - name: Refresh data
+        id: refresh
         run: |
           case "${{ github.event.schedule }}" in
-            "*/15 * * * *") python scripts/update.py --auto ;;   # cheap no-op outside game windows
-            *)              python scripts/update.py ;;          # full refresh (also manual runs)
+            "*/15 * * * *") echo "mode=auto" >> "$GITHUB_OUTPUT"; python scripts/update.py --auto ;;   # cheap no-op outside game windows
+            *)              echo "mode=full" >> "$GITHUB_OUTPUT"; python scripts/update.py ;;          # full refresh (also manual runs)
           esac
       - name: Commit if changed
+        if: always()            # a failed refresh still writes what it could, plus data/status.json
         run: |
           git config user.name "data-bot"
           git config user.email "data-bot@users.noreply.github.com"
@@ -39,3 +46,25 @@ jobs:
           git commit -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --quiet
           git push
+      - name: Open an issue if the refresh failed
+        if: failure()
+        run: |
+          # One open issue at a time, so a feed that's down during a game doesn't send an email every 15 minutes.
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[0].number')
+          if [ -n "$open" ]; then echo "Issue #$open is already open"; exit 0; fi
+          problems=$(python -c "import json; print('\n'.join('- ' + p for p in json.load(open('data/status.json')).get('problems', [])) or '- The update script crashed before it could record a reason. See the run log.')" 2>/dev/null || echo "- See the run log.")
+          gh issue create --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --assignee "$GITHUB_REPOSITORY_OWNER" \
+            --title "Data refresh failed $(date -u +%Y-%m-%d)" \
+            --body "The scheduled data refresh failed, so part of the site may be out of date.
+
+          $problems
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          This issue closes itself after the next full refresh that succeeds."
+      - name: Close the issue once a full refresh succeeds
+        if: success() && steps.refresh.outputs.mode == 'full'
+        run: |
+          for n in $(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --repo "$GITHUB_REPOSITORY" --comment "A full refresh succeeded: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          done

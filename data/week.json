@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 11,
  "seasonType": "regular",
- "updated": "2026-11-23T04:10:50Z",
+ "updated": "2026-11-23T04:20:57Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873077",
    "kickoff": "2026-11-23T01:20Z",
    "state": "in",
-   "detail": "6:48 - 4th",
+   "detail": "2:00 - 4th",
    "network": "NBC",
    "away": {
     "abbr": "MIN",

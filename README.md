@@ -1,6 +1,8 @@
-# NFL Alumni Tracker
+# Hawkeyes on Saturday and Sunday
 
-A phone-first page showing every former college player (Iowa Hawkeyes to start) in this week's NFL games, with live scores, byes and roster status.
+A phone-first site with two tabs at the bottom. **Saturday** is the school's own season (Iowa to start): record, ranking, last and next game, season leaders, schedule with box scores, and news. **Sunday** is every former player in this week's NFL games, with live scores, stat lines, byes and roster status.
+
+Live at https://iahawks.com.
 
 It's a static site. A GitHub Action refreshes the JSON files in `data/` on a schedule and commits them, then GitHub Pages serves the new data.
 
@@ -13,9 +15,12 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `data/week.json` | This week's games and scores (from the ESPN scoreboard) |
 | `data/players/<school>.json` | That school's NFL players (Sleeper API, checked against ESPN team rosters) |
 | `data/stats.json` | Box-score lines for tracked players (ESPN game summaries) |
+| `data/college/<school>.json` | The school's own season for the Saturday tab: schedule, scores, box scores, season leaders, news (ESPN) |
+| `data/status.json` | When each part last refreshed, and any problems from the last run |
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
-| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. Every 15 min it also checks for live games and updates scores and stats when any are on, any day of the week |
+| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. Every 15 min it also checks for live NFL or college games and updates scores and stats when any are on, any day of the week |
+| `scripts/check.py`, `.github/workflows/watchdog.yml` | Daily check that the live site is up and serving fresh data |
 
 ## Setup (about 5 minutes)
 
@@ -23,6 +28,17 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 2. **Settings → Pages**: Source = "Deploy from a branch", branch `main`, folder `/ (root)`.
 3. **Actions tab**: enable workflows, open "Update data" and click **Run workflow** once. That swaps the preview snapshot for live data.
 4. Custom domain: `iahawks.com` (apex A/AAAA records to GitHub Pages, `www` CNAME to `erikrocks.github.io`), set under Settings → Pages. `hawks.eriksheridan.com` redirects to it.
+
+## When something breaks
+
+Nothing here needs babysitting, and it tells you when it needs attention:
+
+- **A feed fails** (ESPN scoreboard, Sleeper, ESPN rosters, college schedule): the update run still writes everything it could, keeps the previous file for the part that failed, then fails. That opens a GitHub issue labelled `data-failure`, assigned to the repo owner, listing what broke. GitHub emails you for the issue and for the failed run.
+- **Sleeper is down:** rosters are rebuilt from ESPN alone (no Sleeper injury tags) and the run is still flagged.
+- **The site is down or stale** (stuck Pages deploy, domain problem, schedule not running): the daily watchdog reads the live site and opens a `site-stale` issue.
+- Only one issue of each kind is open at a time, and each closes itself when the next full refresh or check passes.
+
+To get these on your phone, install the GitHub app and leave notifications on for this repo. Email goes to the address on your GitHub account (Settings → Notifications; keep "Actions: failed workflows" on).
 
 ## Adding a school
 
@@ -38,7 +54,7 @@ Add an entry to `schools.json`:
 }
 ```
 
-`colleges` must match Sleeper's college string exactly (case-insensitive). Add more than one if a school appears under several names. Use `includeNames` for players who played there but finished at another school, and `excludeNames` to leave someone out. Commit, then run the workflow. A school picker appears once there's more than one school, and each school gets its own link: `/#iowa`, `/#iowa-state`.
+Add `"espnTeamId"` (the number in the team's ESPN college-football URL; Iowa is 2294) to get the Saturday tab; without it the school is NFL-only and the tab bar is hidden. `colleges` must match Sleeper's college string exactly (case-insensitive). Add more than one if a school appears under several names. Use `includeNames` for players who played there but finished at another school, and `excludeNames` to leave someone out. Commit, then run the workflow. A school picker appears once there's more than one school, and each school gets its own link: `/#iowa`, `/#iowa-state`. Tabs link too: `/#saturday`, `/#sunday`, `/#iowa/saturday`.
 
 ## Running locally
 

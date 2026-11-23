@@ -1,0 +1,5826 @@
+{
+ "school": "iowa",
+ "season": 2026,
+ "updated": "2026-11-23T04:21:05Z",
+ "source": "ESPN college football",
+ "team": {
+  "id": "2294",
+  "name": "Iowa Hawkeyes",
+  "abbr": "IOWA",
+  "record": "9-2",
+  "standing": "2nd in Big Ten",
+  "rank": 15
+ },
+ "games": [
+  {
+   "id": "401858426",
+   "kickoff": "2026-09-05T20:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "BTN",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 22,
+    "score": 40
+   },
+   "opp": {
+    "abbr": "NIU",
+    "name": "Northern Illinois",
+    "rank": null,
+    "score": 0
+   },
+   "win": true
+  },
+  {
+   "id": "401856788",
+   "kickoff": "2026-09-12T23:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NBC",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 21,
+    "score": 16
+   },
+   "opp": {
+    "abbr": "ISU",
+    "name": "Iowa State",
+    "rank": null,
+    "score": 13
+   },
+   "win": true
+  },
+  {
+   "id": "401858471",
+   "kickoff": "2026-09-19T20:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "FS1",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 18,
+    "score": 55
+   },
+   "opp": {
+    "abbr": "UNI",
+    "name": "Northern Iowa",
+    "rank": null,
+    "score": 0
+   },
+   "win": true
+  },
+  {
+   "id": "401858463",
+   "kickoff": "2026-09-26T19:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "where": "away",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 17,
+    "score": 20
+   },
+   "opp": {
+    "abbr": "MICH",
+    "name": "Michigan",
+    "rank": 18,
+    "score": 19
+   },
+   "win": true
+  },
+  {
+   "id": "401858473",
+   "kickoff": "2026-10-03T19:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 14,
+    "score": 14
+   },
+   "opp": {
+    "abbr": "OSU",
+    "name": "Ohio State",
+    "rank": 5,
+    "score": 31
+   },
+   "win": false
+  },
+  {
+   "id": "401858487",
+   "kickoff": "2026-10-10T01:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "where": "away",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 20,
+    "score": 41
+   },
+   "opp": {
+    "abbr": "WASH",
+    "name": "Washington",
+    "rank": null,
+    "score": 24
+   },
+   "win": true
+  },
+  {
+   "id": "401858497",
+   "kickoff": "2026-10-24T19:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "FS1",
+   "where": "away",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 15,
+    "score": 10
+   },
+   "opp": {
+    "abbr": "MINN",
+    "name": "Minnesota",
+    "rank": null,
+    "score": 13
+   },
+   "win": false
+  },
+  {
+   "id": "401858502",
+   "kickoff": "2026-10-31T16:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": null,
+    "score": 30
+   },
+   "opp": {
+    "abbr": "WIS",
+    "name": "Wisconsin",
+    "rank": 25,
+    "score": 0
+   },
+   "win": true
+  },
+  {
+   "id": "401858513",
+   "kickoff": "2026-11-08T00:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "where": "away",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 19,
+    "score": 24
+   },
+   "opp": {
+    "abbr": "NU",
+    "name": "Northwestern",
+    "rank": null,
+    "score": 10
+   },
+   "win": true
+  },
+  {
+   "id": "401858519",
+   "kickoff": "2026-11-15T00:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NBC",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 15,
+    "score": 28
+   },
+   "opp": {
+    "abbr": "PUR",
+    "name": "Purdue",
+    "rank": null,
+    "score": 7
+   },
+   "win": true
+  },
+  {
+   "id": "401858527",
+   "kickoff": "2026-11-21T19:30Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "BTN",
+   "where": "away",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 15,
+    "score": 34
+   },
+   "opp": {
+    "abbr": "ILL",
+    "name": "Illinois",
+    "rank": null,
+    "score": 17
+   },
+   "win": true
+  },
+  {
+   "id": "401858536",
+   "kickoff": "2026-11-27T17:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "CBS",
+   "where": "home",
+   "us": {
+    "abbr": "IOWA",
+    "name": "Iowa",
+    "rank": 15,
+    "score": null
+   },
+   "opp": {
+    "abbr": "NEB",
+    "name": "Nebraska",
+    "rank": null,
+    "score": null
+   },
+   "win": null
+  }
+ ],
+ "box": {
+  "401858426": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "12/20",
+       "129",
+       "6.5",
+       "1",
+       "0",
+       "53.0"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "7/16",
+       "76",
+       "4.8",
+       "1",
+       "1",
+       "4.3"
+      ],
+      [
+       "Jimmy Sullivan",
+       "2/4",
+       "13",
+       "3.3",
+       "0",
+       "0",
+       "9.7"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kamari Moulton",
+       "11",
+       "183",
+       "16.6",
+       "2",
+       "50"
+      ],
+      [
+       "Braeden Jackson",
+       "3",
+       "30",
+       "10.0",
+       "0",
+       "27"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "1",
+       "16",
+       "16.0",
+       "0",
+       "16"
+      ],
+      [
+       "Jimmy Sullivan",
+       "1",
+       "15",
+       "15.0",
+       "0",
+       "15"
+      ],
+      [
+       "Hank Brown",
+       "2",
+       "12",
+       "6.0",
+       "0",
+       "10"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "10",
+       "10.0",
+       "0",
+       "10"
+      ],
+      [
+       "Xavier Williams",
+       "6",
+       "8",
+       "1.3",
+       "0",
+       "6"
+      ],
+      [
+       "Nathan McNeil",
+       "7",
+       "8",
+       "1.1",
+       "0",
+       "5"
+      ],
+      [
+       "O'Lontae Dean",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "4",
+       "5",
+       "1.3",
+       "0",
+       "3"
+      ],
+      [
+       "Brevin Doll",
+       "1",
+       "-3",
+       "-3.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "7",
+       "84",
+       "12.0",
+       "1",
+       "24"
+      ],
+      [
+       "DJ Vonnahme",
+       "4",
+       "42",
+       "10.5",
+       "0",
+       "16"
+      ],
+      [
+       "Reece Vander Zee",
+       "2",
+       "32",
+       "16.0",
+       "0",
+       "16"
+      ],
+      [
+       "Jarriett Buie",
+       "2",
+       "22",
+       "11.0",
+       "0",
+       "13"
+      ],
+      [
+       "Addison Ostrenga",
+       "3",
+       "20",
+       "6.7",
+       "0",
+       "11"
+      ],
+      [
+       "Xavier Williams",
+       "2",
+       "12",
+       "6.0",
+       "1",
+       "8"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Ty Hudkins",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cam Buffington",
+       "6",
+       "4",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Julian Manson",
+       "4",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "4",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "4",
+       "1",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "4",
+       "1",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ty Hudkins",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brice Stevenson",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "2",
+       "1",
+       "1.5",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Devan Kennedy",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Nolan DeLong",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Burke Gautcher",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "2",
+       "1",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Chima Chineke",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Alex Mota",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Weisskopf",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Carson Cooney",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Billy Weivoda",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "1",
+       "0",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "0",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Emmanuel Olagbaju",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Marcello Vitti",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Evan James",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Deshaun Lee",
+       "1",
+       "17",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "3",
+       "108",
+       "36.0",
+       "77",
+       "1"
+      ],
+      [
+       "Reece Vander Zee",
+       "2",
+       "16",
+       "8.0",
+       "15",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "2/3",
+       "67.0",
+       "45",
+       "4/5",
+       "10"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "3",
+       "131",
+       "43.7",
+       "1",
+       "2",
+       "49"
+      ]
+     ]
+    }
+   }
+  },
+  "401856788": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "21/30",
+       "191",
+       "6.4",
+       "0",
+       "0",
+       "30.7"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kamari Moulton",
+       "15",
+       "57",
+       "3.8",
+       "0",
+       "7"
+      ],
+      [
+       "Hank Brown",
+       "8",
+       "22",
+       "2.8",
+       "1",
+       "9"
+      ],
+      [
+       "Nathan McNeil",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "7"
+      ],
+      [
+       "Xavier Williams",
+       "3",
+       "3",
+       "1.0",
+       "0",
+       "3"
+      ],
+      [
+       "DJ Vonnahme",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "8",
+       "95",
+       "11.9",
+       "0",
+       "56"
+      ],
+      [
+       "Reece Vander Zee",
+       "3",
+       "32",
+       "10.7",
+       "0",
+       "13"
+      ],
+      [
+       "Kamari Moulton",
+       "6",
+       "31",
+       "5.2",
+       "0",
+       "9"
+      ],
+      [
+       "DJ Vonnahme",
+       "2",
+       "25",
+       "12.5",
+       "0",
+       "13"
+      ],
+      [
+       "Thomas Meyer",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ],
+      [
+       "Evan James",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cam Buffington",
+       "15",
+       "9",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "5",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "5",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "4",
+       "3",
+       "0",
+       "2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "3",
+       "2",
+       "0",
+       "0",
+       "3",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "3",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "3",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Reece Vander Zee",
+       "2",
+       "23",
+       "11.5",
+       "12",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "3/3",
+       "100.0",
+       "45",
+       "1/1",
+       "10"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "6",
+       "264",
+       "44.0",
+       "0",
+       "4",
+       "51"
+      ]
+     ]
+    }
+   }
+  },
+  "401858471": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "12/12",
+       "153",
+       "12.8",
+       "2",
+       "0",
+       "97.0"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "6/11",
+       "65",
+       "5.9",
+       "0",
+       "0",
+       "10.4"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Xavier Williams",
+       "6",
+       "151",
+       "25.2",
+       "3",
+       "48"
+      ],
+      [
+       "Braeden Jackson",
+       "11",
+       "125",
+       "11.4",
+       "1",
+       "62"
+      ],
+      [
+       "Nathan McNeil",
+       "12",
+       "111",
+       "9.3",
+       "2",
+       "25"
+      ],
+      [
+       "O'Lontae Dean",
+       "10",
+       "38",
+       "3.8",
+       "0",
+       "10"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "8",
+       "8.0",
+       "0",
+       "8"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "1",
+       "-11",
+       "-11.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Nathan McNeil",
+       "3",
+       "37",
+       "12.3",
+       "0",
+       "19"
+      ],
+      [
+       "Evan James",
+       "3",
+       "35",
+       "11.7",
+       "0",
+       "18"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "24",
+       "24.0",
+       "1",
+       "24"
+      ],
+      [
+       "Jarriett Buie",
+       "2",
+       "24",
+       "12.0",
+       "0",
+       "12"
+      ],
+      [
+       "Mason Woods",
+       "2",
+       "22",
+       "11.0",
+       "0",
+       "17"
+      ],
+      [
+       "Tony Diaz",
+       "2",
+       "22",
+       "11.0",
+       "0",
+       "19"
+      ],
+      [
+       "Xavier Williams",
+       "2",
+       "16",
+       "8.0",
+       "0",
+       "12"
+      ],
+      [
+       "Addison Ostrenga",
+       "1",
+       "14",
+       "14.0",
+       "1",
+       "14"
+      ],
+      [
+       "Reece Vander Zee",
+       "1",
+       "13",
+       "13.0",
+       "0",
+       "13"
+      ],
+      [
+       "Dayton Howard",
+       "1",
+       "11",
+       "11.0",
+       "0",
+       "11"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cam Buffington",
+       "6",
+       "4",
+       "0",
+       "2",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "3",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "3",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Nolan DeLong",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Julian Manson",
+       "3",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Jack Janda",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tyler Brown",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "David Fason",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "2",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Burke Gautcher",
+       "2",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Weisskopf",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Chima Chineke",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ty Hudkins",
+       "1",
+       "1",
+       "0",
+       "0",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cody Haddad",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Eli Robbins",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "0",
+       "0.5",
+       "0.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Devan Kennedy",
+       "1",
+       "0",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jack Laughlin",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brice Stevenson",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jacob Wallace",
+       "1",
+       "3",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "1",
+       "2",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "4",
+       "40",
+       "10.0",
+       "12",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "0/0",
+       "0.0",
+       "0",
+       "7/8",
+       "7"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "4",
+       "178",
+       "44.5",
+       "0",
+       "3",
+       "58"
+      ]
+     ]
+    }
+   }
+  },
+  "401858463": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "21/35",
+       "227",
+       "6.5",
+       "2",
+       "0",
+       "84.4"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kamari Moulton",
+       "13",
+       "44",
+       "3.4",
+       "0",
+       "8"
+      ],
+      [
+       "Braeden Jackson",
+       "4",
+       "13",
+       "3.3",
+       "0",
+       "5"
+      ],
+      [
+       "Xavier Williams",
+       "4",
+       "5",
+       "1.3",
+       "0",
+       "4"
+      ],
+      [
+       "Hank Brown",
+       "3",
+       "-4",
+       "-1.3",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Reece Vander Zee",
+       "5",
+       "66",
+       "13.2",
+       "2",
+       "16"
+      ],
+      [
+       "Tony Diaz",
+       "3",
+       "46",
+       "15.3",
+       "0",
+       "32"
+      ],
+      [
+       "DJ Vonnahme",
+       "4",
+       "44",
+       "11.0",
+       "0",
+       "21"
+      ],
+      [
+       "Addison Ostrenga",
+       "3",
+       "36",
+       "12.0",
+       "0",
+       "29"
+      ],
+      [
+       "Evan James",
+       "2",
+       "14",
+       "7.0",
+       "0",
+       "11"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "13",
+       "13.0",
+       "0",
+       "13"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Kamari Moulton",
+       "2",
+       "2",
+       "1.0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Zach Lutmer",
+       "12",
+       "7",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "11",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "10",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tyler Brown",
+       "9",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "8",
+       "5",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "5",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "3",
+       "3",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "3",
+       "2",
+       "0",
+       "0",
+       "3",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ike Speltz",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Braeden Jackson",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Deshaun Lee",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "2",
+       "119",
+       "59.5",
+       "99",
+       "1"
+      ],
+      [
+       "Xavier Williams",
+       "1",
+       "30",
+       "30.0",
+       "30",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "1",
+       "1.0",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "0/1",
+       "0.0",
+       "0",
+       "2/2",
+       "2"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "6",
+       "254",
+       "42.3",
+       "1",
+       "3",
+       "46"
+      ]
+     ]
+    }
+   }
+  },
+  "401858473": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "12/27",
+       "132",
+       "4.9",
+       "0",
+       "1",
+       "21.1"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "5/5",
+       "67",
+       "13.4",
+       "0",
+       "0",
+       "92.0"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kamari Moulton",
+       "11",
+       "27",
+       "2.5",
+       "0",
+       "8"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "4",
+       "16",
+       "4.0",
+       "0",
+       "11"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "8",
+       "8.0",
+       "0",
+       "8"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "2",
+       "2.0",
+       "1",
+       "2"
+      ],
+      [
+       "Hank Brown",
+       "4",
+       "-14",
+       "-3.5",
+       "0",
+       "7"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "DJ Vonnahme",
+       "6",
+       "64",
+       "10.7",
+       "0",
+       "18"
+      ],
+      [
+       "Tony Diaz",
+       "5",
+       "59",
+       "11.8",
+       "0",
+       "25"
+      ],
+      [
+       "Reece Vander Zee",
+       "2",
+       "35",
+       "17.5",
+       "0",
+       "18"
+      ],
+      [
+       "Jarriett Buie",
+       "1",
+       "17",
+       "17.0",
+       "0",
+       "17"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "12",
+       "12.0",
+       "0",
+       "12"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "7",
+       "7.0",
+       "0",
+       "7"
+      ],
+      [
+       "Thomas Meyer",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jayden Montgomery",
+       "11",
+       "4",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "11",
+       "4",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "7",
+       "6",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "6",
+       "6",
+       "0",
+       "0",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "6",
+       "0",
+       "0",
+       "0",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "5",
+       "4",
+       "1",
+       "2.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "5",
+       "1",
+       "1",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "4",
+       "4",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Ty Hudkins",
+       "4",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brice Stevenson",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "3",
+       "3.0",
+       "3",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "2/2",
+       "100.0",
+       "48",
+       "0/0",
+       "6"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "4",
+       "167",
+       "41.8",
+       "0",
+       "2",
+       "50"
+      ]
+     ]
+    }
+   }
+  },
+  "401858487": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Jeremy Hecklinski",
+       "14/19",
+       "202",
+       "10.6",
+       "3",
+       "0",
+       "90.7"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Kamari Moulton",
+       "26",
+       "208",
+       "8.0",
+       "2",
+       "56"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "10",
+       "42",
+       "4.2",
+       "0",
+       "13"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "10",
+       "10.0",
+       "0",
+       "10"
+      ],
+      [
+       "Xavier Williams",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Reece Vander Zee",
+       "3",
+       "69",
+       "23.0",
+       "1",
+       "31"
+      ],
+      [
+       "DJ Vonnahme",
+       "2",
+       "44",
+       "22.0",
+       "2",
+       "24"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "33",
+       "33.0",
+       "0",
+       "33"
+      ],
+      [
+       "Tony Diaz",
+       "3",
+       "23",
+       "7.7",
+       "0",
+       "13"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "15",
+       "15.0",
+       "0",
+       "15"
+      ],
+      [
+       "Thomas Meyer",
+       "1",
+       "9",
+       "9.0",
+       "0",
+       "9"
+      ],
+      [
+       "Evan James",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
+      ],
+      [
+       "Addison Ostrenga",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ],
+      [
+       "Kamari Moulton",
+       "1",
+       "-2",
+       "-2.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Xavier Styles",
+       "9",
+       "8",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "8",
+       "6",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "8",
+       "6",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "6",
+       "4",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "4",
+       "4",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "2",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "2",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Weisskopf",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "2",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Nolan DeLong",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brevin Doll",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "17",
+       "17.0",
+       "17",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "3",
+       "24",
+       "8.0",
+       "30",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "2/2",
+       "100.0",
+       "51",
+       "5/5",
+       "11"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "4",
+       "168",
+       "42.0",
+       "0",
+       "3",
+       "53"
+      ]
+     ]
+    }
+   }
+  },
+  "401858497": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "11/21",
+       "136",
+       "6.5",
+       "1",
+       "2",
+       "14.8"
+      ],
+      [
+       "Jeremy Hecklinski",
+       "9/16",
+       "62",
+       "3.9",
+       "0",
+       "1",
+       "19.6"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "L.J. Phillips Jr.",
+       "7",
+       "25",
+       "3.6",
+       "0",
+       "12"
+      ],
+      [
+       "Kamari Moulton",
+       "10",
+       "22",
+       "2.2",
+       "0",
+       "8"
+      ],
+      [
+       "Xavier Williams",
+       "5",
+       "17",
+       "3.4",
+       "0",
+       "8"
+      ],
+      [
+       "Tony Diaz",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "5"
+      ],
+      [
+       "Braeden Jackson",
+       "2",
+       "7",
+       "3.5",
+       "0",
+       "5"
+      ],
+      [
+       "Hank Brown",
+       "3",
+       "6",
+       "2.0",
+       "0",
+       "13"
+      ],
+      [
+       "Cam Buffington",
+       "1",
+       "4",
+       "4.0",
+       "0",
+       "4"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Reece Vander Zee",
+       "4",
+       "69",
+       "17.3",
+       "1",
+       "37"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "57",
+       "57.0",
+       "0",
+       "57"
+      ],
+      [
+       "DJ Vonnahme",
+       "6",
+       "31",
+       "5.2",
+       "0",
+       "8"
+      ],
+      [
+       "Addison Ostrenga",
+       "2",
+       "15",
+       "7.5",
+       "0",
+       "11"
+      ],
+      [
+       "Braeden Jackson",
+       "2",
+       "13",
+       "6.5",
+       "0",
+       "12"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "8",
+       "8.0",
+       "0",
+       "8"
+      ],
+      [
+       "Nathan McNeil",
+       "2",
+       "3",
+       "1.5",
+       "0",
+       "3"
+      ],
+      [
+       "Thomas Meyer",
+       "2",
+       "2",
+       "1.0",
+       "0",
+       "2"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Hank Brown",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Nathan McNeil",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Zach Lutmer",
+       "11",
+       "4",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "10",
+       "8",
+       "0",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "8",
+       "5",
+       "0",
+       "3",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "5",
+       "3",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "4",
+       "2",
+       "0",
+       "0.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "2",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "3",
+       "2",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "3",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "2",
+       "1",
+       "0",
+       "0",
+       "2",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Weisskopf",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Deshaun Lee",
+       "1",
+       "28",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "5",
+       "45",
+       "9.0",
+       "16",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "1/1",
+       "100.0",
+       "32",
+       "1/1",
+       "4"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "6",
+       "279",
+       "46.5",
+       "1",
+       "3",
+       "60"
+      ],
+      [
+       " Team",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    }
+   }
+  },
+  "401858502": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "20/24",
+       "222",
+       "9.3",
+       "2",
+       "0",
+       "96.8"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Xavier Williams",
+       "20",
+       "78",
+       "3.9",
+       "0",
+       "13"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "9",
+       "27",
+       "3.0",
+       "0",
+       "7"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "20",
+       "20.0",
+       "0",
+       "20"
+      ],
+      [
+       "Hank Brown",
+       "4",
+       "11",
+       "2.8",
+       "0",
+       "15"
+      ],
+      [
+       "DJ Vonnahme",
+       "2",
+       "10",
+       "5.0",
+       "1",
+       "8"
+      ],
+      [
+       "Braeden Jackson",
+       "2",
+       "1",
+       "0.5",
+       "0",
+       "1"
+      ],
+      [
+       "Evan James",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ],
+      [
+       " Team",
+       "3",
+       "-7",
+       "-2.3",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "4",
+       "75",
+       "18.8",
+       "1",
+       "45"
+      ],
+      [
+       "DJ Vonnahme",
+       "5",
+       "54",
+       "10.8",
+       "1",
+       "45"
+      ],
+      [
+       "Reece Vander Zee",
+       "5",
+       "51",
+       "10.2",
+       "0",
+       "16"
+      ],
+      [
+       "Xavier Williams",
+       "2",
+       "23",
+       "11.5",
+       "0",
+       "23"
+      ],
+      [
+       "Dayton Howard",
+       "1",
+       "17",
+       "17.0",
+       "0",
+       "17"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "2",
+       "8",
+       "4.0",
+       "0",
+       "5"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "-6",
+       "-6.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Xavier Williams",
+       "2",
+       "1",
+       "0"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "0",
+       "0",
+       "1"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cam Buffington",
+       "8",
+       "3",
+       "1",
+       "1.5",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "6",
+       "2",
+       "0.5",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "3",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "3",
+       "2",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "2",
+       "0",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brice Stevenson",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Devan Kennedy",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Carson Cooney",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jacob Wallace",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "20",
+       "20.0",
+       "20",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "4",
+       "51",
+       "12.8",
+       "18",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "3/3",
+       "100.0",
+       "54",
+       "3/3",
+       "12"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "3",
+       "132",
+       "44.0",
+       "1",
+       "1",
+       "44"
+      ]
+     ]
+    }
+   }
+  },
+  "401858513": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "16/21",
+       "126",
+       "6.0",
+       "1",
+       "1",
+       "84.3"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "L.J. Phillips Jr.",
+       "21",
+       "128",
+       "6.1",
+       "0",
+       "45"
+      ],
+      [
+       "Hank Brown",
+       "3",
+       "18",
+       "6.0",
+       "1",
+       "21"
+      ],
+      [
+       "Braeden Jackson",
+       "2",
+       "15",
+       "7.5",
+       "0",
+       "13"
+      ],
+      [
+       "Xavier Williams",
+       "2",
+       "7",
+       "3.5",
+       "0",
+       "4"
+      ],
+      [
+       "Nathan McNeil",
+       "1",
+       "3",
+       "3.0",
+       "0",
+       "3"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       " Team",
+       "3",
+       "-3",
+       "-1.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "2",
+       "43",
+       "21.5",
+       "1",
+       "24"
+      ],
+      [
+       "Reece Vander Zee",
+       "3",
+       "36",
+       "12.0",
+       "0",
+       "13"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "2",
+       "14",
+       "7.0",
+       "0",
+       "7"
+      ],
+      [
+       "Thomas Meyer",
+       "1",
+       "11",
+       "11.0",
+       "0",
+       "11"
+      ],
+      [
+       "DJ Vonnahme",
+       "3",
+       "10",
+       "3.3",
+       "0",
+       "8"
+      ],
+      [
+       "Addison Ostrenga",
+       "2",
+       "9",
+       "4.5",
+       "0",
+       "6"
+      ],
+      [
+       "Xavier Williams",
+       "1",
+       "7",
+       "7.0",
+       "0",
+       "7"
+      ],
+      [
+       "Braeden Jackson",
+       "2",
+       "-4",
+       "-2.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cam Buffington",
+       "12",
+       "8",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "9",
+       "6",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "6",
+       "5",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "6",
+       "4",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "6",
+       "3",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "5",
+       "3",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "4",
+       "3",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "4",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "4",
+       "2",
+       "0",
+       "0",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "3",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "3",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "1",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "2",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "2",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Darion Jones",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Weisskopf",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "DJ Vonnahme",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Braeden Jackson",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "96",
+       "96.0",
+       "96",
+       "1"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "1",
+       "1.0",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "1/1",
+       "100.0",
+       "52",
+       "3/3",
+       "6"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "3",
+       "121",
+       "40.3",
+       "0",
+       "1",
+       "43"
+      ]
+     ]
+    }
+   }
+  },
+  "401858519": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "20/29",
+       "188",
+       "6.5",
+       "1",
+       "0",
+       "53.7"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "L.J. Phillips Jr.",
+       "23",
+       "123",
+       "5.3",
+       "0",
+       "29"
+      ],
+      [
+       "Xavier Williams",
+       "4",
+       "55",
+       "13.8",
+       "1",
+       "48"
+      ],
+      [
+       "Hank Brown",
+       "10",
+       "32",
+       "3.2",
+       "1",
+       "13"
+      ],
+      [
+       "Tony Diaz",
+       "4",
+       "25",
+       "6.3",
+       "1",
+       "14"
+      ],
+      [
+       "Braeden Jackson",
+       "3",
+       "11",
+       "3.7",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "4",
+       "61",
+       "15.3",
+       "1",
+       "44"
+      ],
+      [
+       "Tony Diaz",
+       "5",
+       "45",
+       "9.0",
+       "0",
+       "12"
+      ],
+      [
+       "Reece Vander Zee",
+       "3",
+       "31",
+       "10.3",
+       "0",
+       "12"
+      ],
+      [
+       "DJ Vonnahme",
+       "4",
+       "29",
+       "7.3",
+       "0",
+       "13"
+      ],
+      [
+       "Evan James",
+       "2",
+       "18",
+       "9.0",
+       "0",
+       "10"
+      ],
+      [
+       "Zach Ortwerth",
+       "1",
+       "7",
+       "7.0",
+       "0",
+       "7"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "-3",
+       "-3.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Zach Lutmer",
+       "10",
+       "6",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "8",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "7",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "5",
+       "5",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Xavier Styles",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Bryce Hawthorne",
+       "2",
+       "2",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rashad Godfrey Jr.",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Alex Mota",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Joseph Anderson",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Devan Kennedy",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Brice Stevenson",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Preston Ries",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Zach Lutmer",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "12",
+       "12.0",
+       "12",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "0/3",
+       "0.0",
+       "0",
+       "4/4",
+       "4"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "1",
+       "25",
+       "25.0",
+       "0",
+       "1",
+       "25"
+      ]
+     ]
+    }
+   }
+  },
+  "401858527": {
+   "final": true,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT",
+      "QBR"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "13/26",
+       "138",
+       "5.3",
+       "0",
+       "0",
+       "73.4"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "L.J. Phillips Jr.",
+       "26",
+       "154",
+       "5.9",
+       "1",
+       "30"
+      ],
+      [
+       "Xavier Williams",
+       "14",
+       "59",
+       "4.2",
+       "1",
+       "12"
+      ],
+      [
+       "Hank Brown",
+       "8",
+       "32",
+       "4.0",
+       "1",
+       "10"
+      ],
+      [
+       "Tony Diaz",
+       "2",
+       "21",
+       "10.5",
+       "0",
+       "13"
+      ],
+      [
+       " Team",
+       "2",
+       "-3",
+       "-1.5",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Tony Diaz",
+       "4",
+       "52",
+       "13.0",
+       "0",
+       "21"
+      ],
+      [
+       "Reece Vander Zee",
+       "3",
+       "34",
+       "11.3",
+       "0",
+       "13"
+      ],
+      [
+       "DJ Vonnahme",
+       "2",
+       "18",
+       "9.0",
+       "0",
+       "10"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "16",
+       "16.0",
+       "0",
+       "16"
+      ],
+      [
+       "Thomas Meyer",
+       "2",
+       "14",
+       "7.0",
+       "0",
+       "10"
+      ],
+      [
+       "Addison Ostrenga",
+       "1",
+       "4",
+       "4.0",
+       "0",
+       "4"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Anthony Hawkins",
+       "11",
+       "5",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "7",
+       "1",
+       "0",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "5",
+       "4",
+       "0",
+       "1.5",
+       "3",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "5",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Deshaun Lee",
+       "4",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "2",
+       "2",
+       "0",
+       "0",
+       "1",
+       "0",
+       "1"
+      ],
+      [
+       "Bryce Hawthorne",
+       "2",
+       "1",
+       "0",
+       "0",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Iose Epenesa",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jacob Wallace",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Drew Campbell",
+       "1",
+       "1",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kahmari Brown",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kenneth Merrieweather",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "interceptions": {
+     "labels": [
+      "INT",
+      "YDS",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jaylen Watson",
+       "1",
+       "40",
+       "1"
+      ],
+      [
+       "Cam Buffington",
+       "1",
+       "6",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Xavier Williams",
+       "1",
+       "12",
+       "12.0",
+       "12",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "19",
+       "19.0",
+       "19",
+       "0"
+      ]
+     ]
+    },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "2/3",
+       "67.0",
+       "45",
+       "4/4",
+       "10"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "2",
+       "86",
+       "43.0",
+       "0",
+       "2",
+       "49"
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "leaders": [
+  {
+   "label": "Passing",
+   "players": [
+    {
+     "name": "Hank Brown",
+     "value": "1642",
+     "line": "1642 YDS · 10 TD · 4 INT"
+    },
+    {
+     "name": "Jeremy Hecklinski",
+     "value": "472",
+     "line": "472 YDS · 4 TD · 2 INT"
+    },
+    {
+     "name": "Jimmy Sullivan",
+     "value": "13",
+     "line": "13 YDS · 0 TD · 0 INT"
+    }
+   ]
+  },
+  {
+   "label": "Rushing",
+   "players": [
+    {
+     "name": "Kamari Moulton",
+     "value": "541",
+     "line": "86 CAR · 541 YDS · 4 TD"
+    },
+    {
+     "name": "L.J. Phillips Jr.",
+     "value": "520",
+     "line": "104 CAR · 520 YDS · 1 TD"
+    },
+    {
+     "name": "Xavier Williams",
+     "value": "386",
+     "line": "65 CAR · 386 YDS · 5 TD"
+    }
+   ]
+  },
+  {
+   "label": "Receiving",
+   "players": [
+    {
+     "name": "Tony Diaz",
+     "value": "601",
+     "line": "44 REC · 601 YDS · 3 TD"
+    },
+    {
+     "name": "Reece Vander Zee",
+     "value": "468",
+     "line": "34 REC · 468 YDS · 4 TD"
+    },
+    {
+     "name": "DJ Vonnahme",
+     "value": "361",
+     "line": "38 REC · 361 YDS · 3 TD"
+    }
+   ]
+  },
+  {
+   "label": "Tackles",
+   "players": [
+    {
+     "name": "Cam Buffington",
+     "value": "97",
+     "line": "97 TOT · 9.5 TFL · 3 SACKS"
+    },
+    {
+     "name": "Zach Lutmer",
+     "value": "67",
+     "line": "67 TOT · 1.5 TFL · 0 SACKS"
+    },
+    {
+     "name": "Jayden Montgomery",
+     "value": "67",
+     "line": "67 TOT · 9.5 TFL · 3.5 SACKS"
+    }
+   ]
+  },
+  {
+   "label": "Sacks",
+   "players": [
+    {
+     "name": "Joseph Anderson",
+     "value": "4",
+     "line": "4 SACKS"
+    },
+    {
+     "name": "Bryce Hawthorne",
+     "value": "3.5",
+     "line": "3.5 SACKS"
+    },
+    {
+     "name": "Jayden Montgomery",
+     "value": "3.5",
+     "line": "3.5 SACKS"
+    }
+   ]
+  },
+  {
+   "label": "Interceptions",
+   "players": [
+    {
+     "name": "Deshaun Lee",
+     "value": "3",
+     "line": "3 INT · 0 TD"
+    },
+    {
+     "name": "Jacob Wallace",
+     "value": "2",
+     "line": "2 INT · 0 TD"
+    },
+    {
+     "name": "Rashad Godfrey Jr.",
+     "value": "1",
+     "line": "1 INT · 0 TD"
+    }
+   ]
+  }
+ ],
+ "news": [
+  {
+   "headline": "What Week 12's unexpected results mean for Rivalry Week and beyond",
+   "description": "After another chaotic weekend, we look at the playoff and conference races on the line with one game to go.",
+   "published": "2026-11-22T23:54:19Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week"
+  },
+  {
+   "headline": "No Big Ten football teams in AP top 5 for first time since 2021",
+   "description": "A weekend of Big Ten upsets left the conference without a team in the top five of the AP Top 25 college football poll for the first time since 2021.",
+   "published": "2026-11-22T20:22:13Z",
+   "type": "HeadlineNews",
+   "url": "https://www.espn.com/college-football/story/_/id/50563638/no-big-ten-football-teams-ap-top-5-first-21"
+  },
+  {
+   "headline": "AP college football Week 12 poll reaction: What's next for Top 25",
+   "description": "A look at the AP rankings, along with a key stat and what's ahead for each team.",
+   "published": "2026-11-22T21:04:23Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/50562947/week-12-ap-college-football-poll-reaction-next-top-25"
+  },
+  {
+   "headline": "Which teams have the best odds to make the College Football Playoff?",
+   "description": "We are tracking the odds for making the CFP, earning a bye and winning it all.",
+   "published": "2026-11-22T05:08:22Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/50532919/college-football-playoff-odds-predictions"
+  },
+  {
+   "headline": "Nebraska's jab at Ohio State's 'THE' leads top Week 12 CFB trolls",
+   "description": "Nebraska deployed a simple but effective troll that poked fun at its opponent's propensity to emphasize the \"the\" in \"The Ohio State University.\"",
+   "published": "2026-11-22T04:22:49Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/50554531/nebraska-ohio-state-trolls-college-football-week-12"
+  },
+  {
+   "headline": "Betting buzz: Big Ten's odds of national champion four-peat getting slim",
+   "description": "Losses by UCLA, Indiana and Ohio State make the Big Ten's chances of winning the national championship this season a long shot.",
+   "published": "2026-11-22T13:53:04Z",
+   "type": "Story",
+   "url": "https://www.espn.com/espn/betting/story/_/id/49921234/college-football-betting-buzz-odds-updates-line-moves-spreads"
+  },
+  {
+   "headline": "No. 13 Iowa shuts out Illinois in the second half, pulls away for 34-17 win to help playoff hopes",
+   "description": "— L.J. Phillips Jr. ran for 154 yards and a touchdown, Iowa's stingy defense shut out Illinois in the second half, and the No. 13 Hawkeyes beat the Fighting Illini 34-17 on Saturday to give their College Football Playoff hopes a big boost.",
+   "published": "2026-11-22T00:28:32Z",
+   "type": "Recap",
+   "url": "http://www.espn.com/ncf/recap?gameId=401858527"
+  },
+  {
+   "headline": "Iowa Hawkeyes vs. Illinois Fighting Illini: Full Highlights",
+   "description": "Iowa Hawkeyes vs. Illinois Fighting Illini: Full Highlights",
+   "published": "2026-11-21T23:06:41Z",
+   "type": "Media",
+   "url": "https://www.espn.com/video/clip/_/id/50555135/full-highlights"
+  },
+  {
+   "headline": "Who are the winningest college football coaches of all time?",
+   "description": "From Saban to Paterno, there are many legendary college football coaches. Who has the best career record? Check out who has the most wins now.",
+   "published": "2026-11-21T23:00:49Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/39283806/who-winningest-college-football-coaches-all"
+  },
+  {
+   "headline": "Top 25 betting lines: UGA big faves over Gamecocks, Vols slim favorites vs. LSU",
+   "description": "This week's odds and FPI predictions for South Carolina-Georgia, Tennessee-LSU and more.",
+   "published": "2026-11-20T15:55:41Z",
+   "type": "Story",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50498153/2026-college-football-week-12-top-25-betting-lines-odds"
+  },
+  {
+   "headline": "Connelly on Week 12: Test for Tennessee; Big Ten favorites hit road",
+   "description": "Vols, Kiffin meet again and fringe CFP contenders try to stay alive on a sneaky-good Week 12 slate.",
+   "published": "2026-11-20T16:44:38Z",
+   "type": "Story",
+   "url": "https://www.espn.com/college-football/story/_/id/50532397/connelly-week-12-preview-big-ten-tennessee"
+  },
+  {
+   "headline": "2027 NFL draft Big Board rankings: Mel Kiper's top 25 prospects, best by position",
+   "description": "Six quarterbacks and six receivers ranked in the top 25? Mel Kiper Jr. stacks the best players on the 2027 draft board as of mid-November.",
+   "published": "2026-11-19T22:42:53Z",
+   "type": "Story",
+   "url": "https://www.espn.com/nfl/draft2027/story/_/id/50182998/2027-nfl-draft-rankings-kiper-big-board-top-prospects"
+  }
+ ]
+}
