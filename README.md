@@ -50,6 +50,7 @@ To get these on your phone, install the GitHub app and leave notifications on fo
 
 ## Other things to know
 
+- **Search** ignores punctuation and accents, matches from the start of a word, and understands teams, positions, jersey numbers, initials and one-letter typos. While searching, results cover the whole roster regardless of the selected chip.
 - **Rankings:** the Saturday tile leads with the playoff committee's ranking once it exists for the season, with the AP poll beside it; before the committee starts, the AP poll leads. Both come from ESPN's rankings feed.
 - **News sources** are listed per school in `schools.json` (`newsFeeds`). Headlines must match `newsMatch` and not mention another sport; a feed with `must` only keeps headlines matching that pattern. A feed that fails is skipped; the run only fails if every source fails.
 - **Logos and headshots** load from ESPN's image servers; nothing is stored here. If one is missing the page hides it.

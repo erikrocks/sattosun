@@ -242,7 +242,8 @@
  </section>
   <footer id="footer"></footer>
 </main>
-<div class="sheet" id="sheet" hidden></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Player season" hidden></div>
+<noscript><p style="padding:20px;color:#F2F2F2">IA Hawks needs JavaScript to load scores and stats. Please turn it on and reload.</p></noscript>
 <nav class="tabbar" id="tabbar" hidden>
   <div class="wrap" role="tablist">
     <button class="tab" role="tab" data-tab="saturday" aria-selected="false"><span>Saturday<i class="lv" id="satLive" hidden></i></span><small>College</small></button>
@@ -275,6 +276,7 @@ const IMG = "https://a.espncdn.com/combiner/i?img=";
 const nflLogo = abbr => `<img class="logo" alt="" loading="lazy" src="${IMG}/i/teamlogos/nfl/500-dark/${({WAS:"wsh"})[abbr] || abbr.toLowerCase()}.png&w=72&h=72" onerror="this.style.visibility='hidden'">`;
 const ncaaLogo = (id, cls="") => id ? `<img class="logo ${cls}" alt="" loading="lazy" src="${IMG}/i/teamlogos/ncaa/500-dark/${encodeURIComponent(id)}.png&w=72&h=72" onerror="this.style.visibility='hidden'">` : "";
 const headshot = (id, cls="head") => id ? `<img class="${cls}" alt="" loading="lazy" src="${IMG}/i/headshots/nfl/players/full/${encodeURIComponent(id)}.png&w=192&h=140" onerror="this.remove()">` : "";
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
 const norm = a => ALIAS[(a||"").toUpperCase()] || (a||"").toUpperCase();
 // Same rule as scripts/update.py: "T.J. Hockenson" == "TJ Hockenson", suffixes dropped.
 const normName = n => (n||"").toLowerCase().replace(/-/g," ").replace(/[^a-z ]/g,"")
@@ -356,7 +358,7 @@ function parseSummary(sum, tracked){
     for(const cat of (tp.statistics || [])){
       const labels = cat.labels || [];
       for(const a of (cat.athletes || [])){
-        const k = normName((a.athlete || {}).displayName);
+        const k = (state.byId || {})[String((a.athlete || {}).id)] || normName((a.athlete || {}).displayName);
         if(!tracked.has(k)) continue;
         const e = found[k] || (found[k] = {team, id:(a.athlete || {}).id, cats:{}});
         e.cats[cat.name || "other"] = Object.fromEntries(labels.map((l,i) => [l, (a.stats || [])[i]]));
@@ -425,7 +427,7 @@ function applyTheme(s){
   const map = {accent:"--accent", accentInk:"--accent-ink", bg:"--bg", card:"--card", line:"--line"};
   for(const k in map) if(t[k]) root.setProperty(map[k], t[k]);
   if(t.bg) document.querySelector('meta[name=theme-color]').content = t.bg;
-  $("q").placeholder = `Find a ${s.nickname.replace(/s$/,"")}`;
+  $("q").placeholder = `Find a ${s.nickname.replace(/s$/,"")}, team or position`;
 }
 // Hash is "#iowa", "#saturday" or "#iowa/saturday".
 function hashParts(){
@@ -445,6 +447,7 @@ async function loadSchool(){
   $("school").value = state.schoolKey;
   const pdata = await getJSON(`data/players/${state.schoolKey}.json`);
   state.players = pdata.players.map(p => ({...p, team: norm(p.team)}));
+  state.byId = Object.fromEntries(state.players.filter(p => p.espn_id).map(p => [String(p.espn_id), normName(p.name)]));
   state.playersUpdated = pdata.updated;
   [state.season, state.moves] = await Promise.all([getJSON(`data/season/${state.schoolKey}.json`).catch(() => null),
                                                  getJSON(`data/moves/${state.schoolKey}.json`).catch(() => null)]);
@@ -454,7 +457,7 @@ async function loadSchool(){
 }
 
 // Past weeks: status tags aren't known, and a player sits with the team he actually played for that week.
-function isOut(p){ return !state.past && OUT.test(p.status || ""); }
+function isOut(p){ return !state.past && (OUT.test(p.status || "") || /^out$/i.test(p.injury || "")); }
 const teamOf = p => (state.past && state.pastTeam[normName(p.name)]) || p.team;
 async function showWeek(key){
   if(key){
@@ -477,11 +480,48 @@ const plural = (n, w) => `${n} ${n === 1 ? w.replace(/s$/,"") : w}`;
 function playersFor(team){
   return state.players.filter(p => teamOf(p) === team).sort((a,b) => isOut(a) - isOut(b) || a.name.localeCompare(b.name));
 }
-const matchesQ = p => !state.q || p.name.toLowerCase().includes(state.q);
+/* Search: punctuation and accents are ignored ("tj" and "t.j." both find T.J. Hockenson and TJ Hall), words match
+   from their start (so "tj" doesn't find Wetjen), and it also understands teams, positions, jersey numbers,
+   initials ("gk") and one-letter typos in longer words. */
+const fold = s => String(s ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+const POS_WORDS = {QB:"quarterback", RB:"running back", FB:"fullback", WR:"wide receiver", TE:"tight end", K:"kicker", P:"punter", LS:"long snapper",
+  LB:"linebacker", ILB:"linebacker", OLB:"linebacker", DB:"defensive back safety cornerback corner", CB:"cornerback corner defensive back", S:"safety defensive back",
+  DL:"defensive line lineman", DE:"defensive end lineman", DT:"defensive tackle lineman", OL:"offensive line lineman", T:"tackle offensive lineman",
+  OT:"tackle offensive lineman", G:"guard offensive lineman", OG:"guard offensive lineman", C:"center offensive lineman"};
+function near(a, b){                       // true if a and b differ by at most one edit
+  if(a === b) return true;
+  if(Math.abs(a.length - b.length) > 1) return false;
+  let i = 0, j = 0, edits = 0;
+  while(i < a.length && j < b.length){
+    if(a[i] === b[j]){ i++; j++; continue; }
+    if(++edits > 1) return false;
+    if(a.length > b.length) i++; else if(b.length > a.length) j++; else { i++; j++; }
+  }
+  return edits + (a.length - i) + (b.length - j) <= 1;
+}
+const wordHit = (tok, w) => w.startsWith(tok) || (tok.length >= 5 && (near(tok, w.slice(0, tok.length)) || near(tok, w.slice(0, tok.length + 1)) || near(tok, w.slice(0, tok.length - 1))));
+function searchWords(p){
+  const t = teamOf(p), team = TEAMS[t] || [];
+  return [fold(p.name), fold(t), fold(team[0]), fold(team[1]), fold(p.pos), POS_WORDS[p.pos] || "", p.num != null ? String(p.num) : ""].join(" ").split(" ").filter(Boolean);
+}
+function matchesQ(p){
+  const qt = state.qt || [];
+  if(!qt.length) return true;
+  const words = searchWords(p), nameWords = fold(p.name).split(" ");
+  if(qt.every(tok => (tok.length === 1 ? nameWords : words).some(w => wordHit(tok, w)))) return true;   // one letter: names only
+  return qt.length === 1 && qt[0].length >= 2 && fold(p.name).split(" ").map(w => w[0]).join("").startsWith(qt[0]);   // initials
+}
 function hl(name){
-  const i = state.q ? name.toLowerCase().indexOf(state.q) : -1;
-  if(i < 0) return esc(name);
-  return esc(name.slice(0,i)) + "<mark>" + esc(name.slice(i, i+state.q.length)) + "</mark>" + esc(name.slice(i+state.q.length));
+  const qt = state.qt || [];
+  if(!qt.length) return esc(name);
+  return name.split(" ").map(word => {
+    const fw = fold(word), tok = qt.find(t => fw && wordHit(t, fw));
+    if(!tok) return esc(word);
+    let need = Math.min(tok.length, fw.length), cut = 0;          // highlight as many letters as were typed, skipping punctuation
+    while(cut < word.length && need > 0){ if(fold(word[cut])) need--; cut++; }
+    while(cut < word.length && !fold(word[cut]) && /[.']/.test(word[cut]) && fw.length <= tok.length) cut++;
+    return "<mark>" + esc(word.slice(0, cut)) + "</mark>" + esc(word.slice(cut));
+  }).join(" ");
 }
 /* ---------- tap-to-expand box score (fetched on demand) ---------- */
 const CAT_NAMES = {passing:"Passing", rushing:"Rushing", receiving:"Receiving", defensive:"Defense", interceptions:"Interceptions",
@@ -597,7 +637,7 @@ function rosterView(games){
     return `<div class="pteam roster-h"><span>${esc(t)} · ${esc((TEAMS[t]||[])[1]||"")}</span><em>${esc(when)}</em></div>${list.map(p => playerRow(p, g)).join("")}`;
   }).join("");
   return blocks ? `<div class="list"><div class="game"><div class="players" style="border-top:0">${blocks}</div></div></div>`
-                : `<div class="empty">No ${esc(school().nickname)} match “${esc(state.q)}”.</div>`;
+                : `<div class="empty">No ${esc(school().nickname)} match “${esc(state.q)}”.<br><span style="font-size:13px">Try a last name, a team (“Lions”), a position (“tight end”) or a number.</span></div>`;
 }
 
 function render(){
@@ -668,6 +708,7 @@ function renderSheet(){
       <footer>Totals are added up from each game's box score and cover games where he recorded a stat.${p.espn_id ? ` <a href="https://www.espn.com/nfl/player/_/id/${encodeURIComponent(p.espn_id)}" target="_blank" rel="noopener">ESPN profile ↗</a>` : ""}</footer>
     </div>`;
   el.scrollTop = 0;
+  $("sheetClose").focus({preventScroll:true});
 }
 
 /* ---------- Saturday: the school's own games ---------- */
@@ -805,6 +846,7 @@ function renderSaturday(){
     <div class="stat"><b>${esc(t.record || "—")}</b><span>Record</span></div>
     <div class="stat"><b>${t.rank ? "#" + esc(t.rank) : "NR"}</b><span>${rankLabel(t)}</span></div>
     <div class="stat"><b>${esc(place || "—")}</b><span>${conf ? "in the " + esc(conf) : "Conference"}</span></div></div>`;
+  if(!games.length) html += `<div class="empty">The ${esc(c.season || "")} schedule isn't out yet. Games, stats and leaders appear here once it is.</div>`;
   const sec = (h, g) => g ? `<div class="section-h">${h}</div>${collegeCard(g)}` : "";
   const lastFresh = last && Date.now() - new Date(last.kickoff) < 40*3600e3;
   if(live) html += sec("Live now", live) + sec("Last game", last);
@@ -821,7 +863,7 @@ function renderSaturday(){
 
   const news = (c.news || []).slice(0, 14);
   if(news.length) html += `<div class="section-h">${esc(s.name)} football news</div><div class="game">${news.map(a =>
-    `<a class="news" href="${esc(a.url)}" target="_blank" rel="noopener"><b>${esc(a.headline)}</b><span><i>${esc(a.source || "ESPN")}</i> · ${esc(fmtDay(a.published))}</span></a>`).join("")}</div>`;
+    `<a class="news" href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener"><b>${esc(a.headline)}</b><span><i>${esc(a.source || "ESPN")}</i> · ${esc(fmtDay(a.published))}</span></a>`).join("")}</div>`;
   $("saturday").innerHTML = html;
 
   $("footer").innerHTML = `<span class="sync ${state.collegeSync ? "on" : ""}">${state.collegeSync ? `Live · synced ${esc(fmtTime(state.collegeSync))}` : `Updated ${esc(fmtTime(c.updated))}`}</span><br>
@@ -877,8 +919,10 @@ function renderSunday(){
   const anyOut = !state.past && state.players.some(isOut);
   if(anyOut && f !== "leaders" && f !== "moves") html += `<div class="key"><i></i>Dimmed players aren't expected to play: on a reserve list, on the practice squad, or ruled out.</div>`;
   $("q").parentElement.hidden = f === "leaders" || f === "moves";
+  const hits = state.q ? state.players.filter(matchesQ).length : 0;
   if(f === "leaders") html = leadersView();
   else if(f === "moves") html = movesView();
+  else if(state.q) html = (hits ? `<div class="key">${esc(plural(hits, s.nickname))} ${hits === 1 ? "matches" : "match"} “${esc(state.q)}”</div>` : "") + rosterView(games);
   else if(f === "roster") html += rosterView(games);
   else if(f !== "bye"){
     const shown = games.filter(g => f === "all" || g.state === f);
@@ -889,7 +933,7 @@ function renderSunday(){
     if(without.length && !state.q)
       html += `<div class="section-h">No ${esc(s.nickname)}</div><div class="none">${without.map(g => `${esc(g.away.abbr)} @ ${esc(g.home.abbr)}`).join(" · ")}</div>`;
   }
-  if((f === "all" || f === "bye") && byes.length){
+  if((f === "all" || f === "bye") && byes.length && !state.q){
     const byeP = byes.flatMap(t => playersFor(t)).filter(matchesQ);
     if(byeP.length || !state.q){
       html += `<div class="section-h">On a bye</div>`;
@@ -921,6 +965,8 @@ $("content").addEventListener("click", e => {
   const el = e.target.closest(".p[data-k]"); if(el) toggle(el);
 });
 $("content").addEventListener("keydown", e => {
+  const pl = e.target.closest("[data-player]");
+  if(pl && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); return openPlayer(pl.dataset.player); }
   const el = e.target.closest(".p[data-k]");
   if(el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); toggle(el); }
 });
@@ -948,10 +994,14 @@ $("tabbar").addEventListener("click", e => {
 $("weekSel").addEventListener("change", e => showWeek(e.target.value).catch(showErr));
 $("notice").addEventListener("click", e => { if(e.target.closest("#backNow")) showWeek("").catch(showErr); });
 $("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.filter = b.dataset.f; render(); });
-$("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+$("q").addEventListener("input", e => { state.q = e.target.value.trim(); state.qt = fold(state.q).split(" ").filter(Boolean); render(); });
 $("school").addEventListener("change", e => { location.hash = e.target.value; });
 window.addEventListener("hashchange", () => loadSchool().catch(showErr));
-function showErr(e){ $("content").innerHTML = `<div class="err">Couldn't load data. ${esc(e.message)}</div>`; }
+function showErr(e){
+  $("saturday").hidden = true; $("sunday").hidden = false;
+  $("content").innerHTML = `<div class="err">Couldn't load the latest data. Check your connection and try again.<br><br>
+    <button class="close" onclick="location.reload()">Try again</button><div style="margin-top:10px;font-size:12px;opacity:.7">${esc(e && e.message || "")}</div></div>`;
+}
 
 (async function init(){
   try{

@@ -268,15 +268,21 @@ def build_players(all_players, school_key, school):
 
 # ---------- stats ----------
 
-def parse_summary(summary, tracked):
-    """Return {norm_name: {"team": abbr, "cats": {category: {label: value}}}} for tracked names."""
-    found = {}
+def parse_summary(summary, tracked, by_id=None):
+    """Return {norm_name: {"team": abbr, "cats": {category: {label: value}}}} for tracked names.
+    by_id maps ESPN athlete id -> our name for players whose id we know; those are matched on id only."""
+    found, by_id = {}, by_id or {}
+    known = set(by_id.values())
     for tp in summary.get("boxscore", {}).get("players", []):
         team = norm(tp.get("team", {}).get("abbreviation"))
         for cat in tp.get("statistics", []):
             labels = cat.get("labels", [])
             for a in cat.get("athletes", []):
-                key = norm_name(a.get("athlete", {}).get("displayName"))
+                key = by_id.get(str(a.get("athlete", {}).get("id")))
+                if not key:
+                    key = norm_name(a.get("athlete", {}).get("displayName"))
+                    if key in known:                     # we know this player's id and it isn't him
+                        continue
                 if key not in tracked:
                     continue
                 entry = found.setdefault(key, {"team": team, "id": a.get("athlete", {}).get("id"), "cats": {}})
@@ -285,10 +291,12 @@ def parse_summary(summary, tracked):
 
 
 def update_stats(week, schools):
-    tracked_by_team = {}
+    tracked_by_team, by_id = {}, {}
     for key in schools:
         for p in (read_json(f"data/players/{key}.json", {}) or {}).get("players", []):
             tracked_by_team.setdefault(p["team"], set()).add(norm_name(p["name"]))
+            if p.get("espn_id"):
+                by_id[str(p["espn_id"])] = norm_name(p["name"])
 
     old = read_json("data/stats.json", {}) or {}
     old_games = old.get("games", {}) if old.get("week") == week.get("week") else {}
@@ -307,7 +315,7 @@ def update_stats(week, schools):
             continue
         try:
             games[g["id"]] = {"final": g["state"] == "post",
-                              "players": parse_summary(get_json(SUMMARY.format(g["id"])), tracked)}
+                              "players": parse_summary(get_json(SUMMARY.format(g["id"])), tracked, by_id)}
         except Exception as e:                           # one bad game shouldn't sink the run
             print(f"warning: stats for game {g['id']} failed: {e}", file=sys.stderr)
             failed += 1
@@ -655,7 +663,7 @@ def fetch_feed(url, name):
             elif t in ("title", "pubDate", "published", "updated", "source") and (ch.text or "").strip():
                 f.setdefault(t, ch.text.strip())
         when = f.get("pubDate") or f.get("published") or f.get("updated")
-        if not (f.get("title") and f.get("url") and when):
+        if not (f.get("title") and when and re.match(r"https?://", f.get("url") or "")):
             continue
         try:
             dt = parsedate_to_datetime(when) if "," in when else parse_time(when)
@@ -677,7 +685,7 @@ def gather_news(key, school, team_id):
     try:
         for a in get_json(f"{COLLEGE}/news?team={team_id}&limit=15").get("articles", []):
             url = ((a.get("links") or {}).get("web") or {}).get("href")
-            if a.get("headline") and url and a.get("published"):
+            if a.get("headline") and a.get("published") and re.match(r"https?://", url or ""):
                 items.append({"headline": a["headline"], "url": url, "published": a["published"], "source": "ESPN",
                               "_text": f'{a["headline"]} {a.get("description") or ""}'})
         ok += 1
