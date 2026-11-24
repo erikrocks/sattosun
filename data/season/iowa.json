@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-24T01:56:01Z",
+ "updated": "2026-11-24T21:11:04Z",
  "through": "Week 11",
  "players": {
   "george kittle": {
@@ -3108,17 +3108,35 @@
        "PTS": "6"
       }
      }
+    },
+    {
+     "key": "2-11",
+     "label": "Week 11",
+     "team": "WAS",
+     "opp": "CIN",
+     "at": false,
+     "result": "W 22-20",
+     "live": false,
+     "cats": {
+      "kicking": {
+       "FG": "5/5",
+       "PCT": "100.0",
+       "LONG": "41",
+       "XP": "1/1",
+       "PTS": "16"
+      }
+     }
     }
    ],
    "totals": {
     "kicking": {
-     "FG": "17/20",
+     "FG": "22/25",
      "LONG": "57",
-     "XP": "15/18",
-     "PTS": "66"
+     "XP": "16/19",
+     "PTS": "82"
     }
    },
-   "gp": 9
+   "gp": 10
   },
   "cooper dejean": {
    "name": "Cooper DeJean",

@@ -1,6 +1,6 @@
 {
  "school": "iowa",
- "updated": "2026-11-23T22:38:31Z",
+ "updated": "2026-11-24T21:11:01Z",
  "source": "Sleeper API + ESPN rosters",
  "players": [
   {
@@ -217,7 +217,7 @@
    "pos": "TE",
    "num": 87,
    "status": "Active",
-   "injury": null,
+   "injury": "Questionable",
    "college": "Iowa",
    "espn_id": "4430027",
    "draft": {
@@ -361,25 +361,6 @@
    "draftChecked": true,
    "entered": 2022,
    "lastCollege": 2021
-  },
-  {
-   "name": "Max Llewellyn",
-   "team": "MIA",
-   "pos": "DE",
-   "num": 57,
-   "status": "Active",
-   "injury": null,
-   "college": "Iowa",
-   "espn_id": "4683101",
-   "draft": {
-    "year": 2026,
-    "round": 7,
-    "pick": 238,
-    "team": "MIA"
-   },
-   "draftChecked": true,
-   "entered": 2026,
-   "lastCollege": 2025
   },
   {
    "name": "T.J. Hockenson",

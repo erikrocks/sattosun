@@ -1,0 +1,539 @@
+{
+ "season": 2026,
+ "week": 11,
+ "seasonType": "regular",
+ "updated": "2026-11-24T21:10:51Z",
+ "source": "ESPN scoreboard",
+ "games": [
+  {
+   "id": "401873066",
+   "kickoff": "2026-11-20T01:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Prime Video",
+   "watch": [],
+   "venue": "Reliant Stadium, Houston, TX",
+   "away": {
+    "abbr": "IND",
+    "score": 3
+   },
+   "home": {
+    "abbr": "HOU",
+    "score": 26
+   }
+  },
+  {
+   "id": "401873070",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "Highmark Stadium, Orchard Park, NY",
+   "away": {
+    "abbr": "MIA",
+    "score": 9
+   },
+   "home": {
+    "abbr": "BUF",
+    "score": 26
+   }
+  },
+  {
+   "id": "401873071",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "watch": [],
+   "venue": "Soldier Field, Chicago, IL",
+   "away": {
+    "abbr": "NO",
+    "score": 13
+   },
+   "home": {
+    "abbr": "CHI",
+    "score": 21
+   }
+  },
+  {
+   "id": "401873073",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "watch": [],
+   "venue": "AT&T Stadium, Arlington, TX",
+   "away": {
+    "abbr": "TEN",
+    "score": 30
+   },
+   "home": {
+    "abbr": "DAL",
+    "score": 51
+   }
+  },
+  {
+   "id": "401873072",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "watch": [],
+   "venue": "Ford Field, Detroit, MI",
+   "away": {
+    "abbr": "TB",
+    "score": 21
+   },
+   "home": {
+    "abbr": "DET",
+    "score": 31
+   }
+  },
+  {
+   "id": "401873067",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "Arrowhead Stadium, Kansas City, MO",
+   "away": {
+    "abbr": "ARI",
+    "score": 7
+   },
+   "home": {
+    "abbr": "KC",
+    "score": 34
+   }
+  },
+  {
+   "id": "401873076",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "Lincoln Financial Field, Philadelphia, PA",
+   "away": {
+    "abbr": "PIT",
+    "score": 16
+   },
+   "home": {
+    "abbr": "PHI",
+    "score": 19
+   }
+  },
+  {
+   "id": "401873068",
+   "kickoff": "2026-11-22T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "watch": [],
+   "venue": "Bank of America Stadium, Charlotte, NC",
+   "away": {
+    "abbr": "BAL",
+    "score": 33
+   },
+   "home": {
+    "abbr": "CAR",
+    "score": 35
+   }
+  },
+  {
+   "id": "401873074",
+   "kickoff": "2026-11-22T21:05Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Fox",
+   "watch": [],
+   "venue": "SoFi Stadium, Inglewood, CA",
+   "away": {
+    "abbr": "NYJ",
+    "score": 27
+   },
+   "home": {
+    "abbr": "LAC",
+    "score": 24
+   }
+  },
+  {
+   "id": "401873075",
+   "kickoff": "2026-11-22T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "Empower Field at Mile High, Denver, CO",
+   "away": {
+    "abbr": "LV",
+    "score": 24
+   },
+   "home": {
+    "abbr": "DEN",
+    "score": 38
+   }
+  },
+  {
+   "id": "401873069",
+   "kickoff": "2026-11-22T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "MetLife Stadium, East Rutherford, NJ",
+   "away": {
+    "abbr": "JAX",
+    "score": 18
+   },
+   "home": {
+    "abbr": "NYG",
+    "score": 23
+   }
+  },
+  {
+   "id": "401873077",
+   "kickoff": "2026-11-23T01:20Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "NBC",
+   "watch": [],
+   "venue": "Estadio Banorte, Mexico City",
+   "away": {
+    "abbr": "MIN",
+    "score": 10
+   },
+   "home": {
+    "abbr": "SF",
+    "score": 35
+   }
+  },
+  {
+   "id": "401873078",
+   "kickoff": "2026-11-24T01:15Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "ESPN",
+   "watch": [],
+   "venue": "Northwest Stadium, Landover, MD",
+   "away": {
+    "abbr": "CIN",
+    "score": 20
+   },
+   "home": {
+    "abbr": "WAS",
+    "score": 22
+   }
+  }
+ ],
+ "byes": [
+  "ATL",
+  "CLE",
+  "GB",
+  "LAR",
+  "NE",
+  "SEA"
+ ],
+ "key": "2-11",
+ "label": "Week 11",
+ "complete": true,
+ "stats": {
+  "401873066": {
+   "final": true,
+   "players": {}
+  },
+  "401873070": {
+   "final": true,
+   "players": {
+    "amani hooker": {
+     "team": "BUF",
+     "id": "4036134",
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873071": {
+   "final": true,
+   "players": {
+    "noah fant": {
+     "team": "NO",
+     "id": "4036131",
+     "cats": {
+      "receiving": {
+       "REC": "2",
+       "YDS": "19",
+       "AVG": "9.5",
+       "TD": "0",
+       "LONG": "14",
+       "TGTS": "5"
+      }
+     }
+    },
+    "tory taylor": {
+     "team": "CHI",
+     "id": "4686889",
+     "cats": {
+      "punting": {
+       "NO": "3",
+       "YDS": "140",
+       "AVG": "46.7",
+       "TB": "1",
+       "In 20": "2",
+       "LONG": "56"
+      }
+     }
+    }
+   }
+  },
+  "401873073": {
+   "final": true,
+   "players": {}
+  },
+  "401873072": {
+   "final": true,
+   "players": {
+    "anthony nelson": {
+     "team": "TB",
+     "id": "3894856",
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    "sam laporta": {
+     "team": "DET",
+     "id": "4430027",
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "62",
+       "AVG": "20.7",
+       "TD": "0",
+       "LONG": "47",
+       "TGTS": "6"
+      }
+     }
+    }
+   }
+  },
+  "401873067": {
+   "final": true,
+   "players": {
+    "karson sharar": {
+     "team": "ARI",
+     "id": "4709695",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873076": {
+   "final": true,
+   "players": {
+    "yahya black": {
+     "team": "PIT",
+     "id": "4430947",
+     "cats": {
+      "defensive": {
+       "TOT": "2",
+       "SOLO": "2",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    "cooper dejean": {
+     "team": "PHI",
+     "id": "4682618",
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873068": {
+   "final": true,
+   "players": {
+    "jay higgins": {
+     "team": "BAL",
+     "id": "4565350",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873074": {
+   "final": true,
+   "players": {
+    "dane belton": {
+     "team": "NYJ",
+     "id": "4426686",
+     "cats": {
+      "defensive": {
+       "TOT": "6",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    "jack heflin": {
+     "team": "NYJ",
+     "id": "4039485",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0.5",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "1",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873075": {
+   "final": true,
+   "players": {
+    "riley moss": {
+     "team": "DEN",
+     "id": "4382401",
+     "cats": {
+      "defensive": {
+       "TOT": "4",
+       "SOLO": "3",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873069": {
+   "final": true,
+   "players": {
+    "kaevon merriweather": {
+     "team": "JAX",
+     "id": "4360502",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "1",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873077": {
+   "final": true,
+   "players": {
+    "tj hockenson": {
+     "team": "MIN",
+     "id": "4036133",
+     "cats": {
+      "receiving": {
+       "REC": "6",
+       "YDS": "55",
+       "AVG": "9.2",
+       "TD": "0",
+       "LONG": "20",
+       "TGTS": "7"
+      }
+     }
+    },
+    "george kittle": {
+     "team": "SF",
+     "id": "3040151",
+     "cats": {
+      "receiving": {
+       "REC": "3",
+       "YDS": "34",
+       "AVG": "11.3",
+       "TD": "2",
+       "LONG": "17",
+       "TGTS": "3"
+      }
+     }
+    }
+   }
+  },
+  "401873078": {
+   "final": true,
+   "players": {
+    "drew stevens": {
+     "team": "WAS",
+     "id": "5081335",
+     "cats": {
+      "kicking": {
+       "FG": "5/5",
+       "PCT": "100.0",
+       "LONG": "41",
+       "XP": "1/1",
+       "PTS": "16"
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,13 +1,9 @@
 {
  "season": 2026,
  "week": 11,
- "updated": "2026-11-24T01:56:01Z",
+ "updated": "2026-11-24T21:11:01Z",
  "source": "ESPN game summaries",
  "games": {
-  "401873078": {
-   "final": false,
-   "players": {}
-  },
   "401873070": {
    "final": true,
    "players": {
@@ -277,6 +273,24 @@
        "TD": "2",
        "LONG": "17",
        "TGTS": "3"
+      }
+     }
+    }
+   }
+  },
+  "401873078": {
+   "final": true,
+   "players": {
+    "drew stevens": {
+     "team": "WAS",
+     "id": "5081335",
+     "cats": {
+      "kicking": {
+       "FG": "5/5",
+       "PCT": "100.0",
+       "LONG": "41",
+       "XP": "1/1",
+       "PTS": "16"
       }
      }
     }

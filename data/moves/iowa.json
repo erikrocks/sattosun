@@ -1,6 +1,14 @@
 {
  "school": "iowa",
- "updated": "2026-11-23T04:49:50Z",
- "since": "2026-11-23",
- "moves": []
+ "updated": "2026-11-24T21:11:01Z",
+ "moves": [
+  {
+   "date": "2026-11-24",
+   "name": "Max Llewellyn",
+   "team": "MIA",
+   "pos": "DE",
+   "type": "removed",
+   "text": "No longer on the MIA roster"
+  }
+ ]
 }
