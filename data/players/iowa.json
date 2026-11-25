@@ -1,6 +1,6 @@
 {
  "school": "iowa",
- "updated": "2026-11-24T21:11:01Z",
+ "updated": "2026-11-25T03:55:13Z",
  "source": "Sleeper API + ESPN rosters",
  "players": [
   {
@@ -508,6 +508,20 @@
    "draftChecked": true,
    "entered": 2024,
    "lastCollege": 2023
+  },
+  {
+   "name": "Brandon Smith",
+   "team": "PIT",
+   "pos": "WR",
+   "num": 87,
+   "status": "Practice Squad",
+   "injury": null,
+   "college": "Iowa",
+   "espn_id": "4240577",
+   "draft": null,
+   "draftChecked": true,
+   "entered": 2021,
+   "lastCollege": 2020
   },
   {
    "name": "Gennings Dunker",

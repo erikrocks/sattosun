@@ -1,7 +1,15 @@
 {
  "school": "iowa",
- "updated": "2026-11-24T21:11:01Z",
+ "updated": "2026-11-25T03:55:13Z",
  "moves": [
+  {
+   "date": "2026-11-25",
+   "name": "Brandon Smith",
+   "team": "PIT",
+   "pos": "WR",
+   "type": "added",
+   "text": "Joined PIT (practice squad)"
+  },
   {
    "date": "2026-11-24",
    "name": "Max Llewellyn",
