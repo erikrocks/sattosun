@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-24T21:11:09Z",
+ "updated": "2026-11-25T03:53:55Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -9,14 +9,14 @@
   "abbr": "IOWA",
   "record": "9-2",
   "standing": "2nd in Big Ten",
-  "rank": 15,
+  "rank": 13,
   "polls": [
    {
     "poll": "CFP",
     "name": "Playoff Committee Rankings",
-    "rank": 15,
-    "asOf": "2026-11-18T05:46Z",
-    "week": "Week 12"
+    "rank": 13,
+    "asOf": "2026-11-25T04:22Z",
+    "week": "Week 13"
    },
    {
     "poll": "AP",
@@ -333,14 +333,14 @@
     "id": "2294",
     "abbr": "IOWA",
     "name": "Iowa",
-    "rank": 15,
+    "rank": 13,
     "score": null
    },
    "opp": {
     "id": "158",
     "abbr": "NEB",
     "name": "Nebraska",
-    "rank": null,
+    "rank": 25,
     "score": null
    },
    "win": null
@@ -11908,10 +11908,58 @@
  ],
  "news": [
   {
-   "headline": "Watch - Coach Ferentz Press Conference | Nov. 24",
-   "url": "https://hawkeyesports.com/news/2026/11/24/watch-coach-ferentz-press-conference-nov-24-2026",
-   "published": "2026-11-24T21:00:00Z",
+   "headline": "College Football Playoff: Iowa Ranked 13th in Latest CFP Rankings",
+   "url": "https://www.blackheartgoldpants.com/football/73029/college-football-playoff-iowa-hawkeyes-ranked-latest-cfp-rankings-big-ten-sec-bhgp",
+   "published": "2026-11-25T02:18:06Z",
+   "source": "Black Heart Gold Pants"
+  },
+  {
+   "headline": "CFP rankings: Iowa football makes jump in new release",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPb3hvQ1RsbkI1Y0tDOGx5dXF4SEdMY3dmQjg1Slp5VG02bUpFQWdVY01kMzhCUmNKMUZrbnNvMVR5NUR3WkdYN0V4dFZwbXJiNEFUdEpPVG40MmpMXzE2OU9aSXBkZHNZNzlxR2hYaXh6TG9mT1ZJUmtEQmdlS0M2cGN6WTd4akVqZkI5bTZMM0taN09DeXlOSmRJZWVVYUk?oc=5",
+   "published": "2026-11-25T01:17:00Z",
+   "source": "Yahoo Sports"
+  },
+  {
+   "headline": "INSTANT REACTION: Iowa Football→ College Football Playoff rankings / Iowa Hawkeyes LIVE Call-In Show",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPU0pvQ2EybG0xRzlmczlXX0x3WHBaek1QNHh6Uks0Wml2TXkzekZUV3hLSWxuZU9UdmdoOVFKaXVIOC1xUzlhUnFtT01oUmNMUm9EOXNzNzUwTE9NNkdGdVlIcjVxMC0tOEMxVHI1SUN4NkFPT2NzRmRxQ3FhNUw1NVZZcS1fOTBqUHRhSjh3SFBVejhId05jTkIzMmZWM0V2dHJaeHJPSl9VcXZiTnhNakVNM2JnZUd0ekd2cDdIY3NuWUdaYmpNMGFKb0xKSC1TUDM2NVZ3?oc=5",
+   "published": "2026-11-25T00:50:18Z",
+   "source": "BVM Sports"
+  },
+  {
+   "headline": "Three takeaways & three stars from Illini's 34-17 loss to No. 15 Iowa",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSmRZT0x5N0RYdTkwbFFQeDhaSmV4RHZmdEVfT0NRQlZFVTF1Qjl6SWJfU3U1dENadWpDM1E2X1h0RU9yRVZjREpXYXRQOFpRb3NtUFhPcmN3NjdyWnZ1WWdKRW9vc2xWWjhpSHpDZUhZQklfTjNmUUJSTTJpWGZpTFU2MFdPS0VLUGVwb2FoeG1Cdncxbkxqb0R3aUJKOUVBSlVwY3Bzd211SmNrYjlZVjhLZVdHUQ?oc=5",
+   "published": "2026-11-25T00:23:53Z",
+   "source": "247Sports"
+  },
+  {
+   "headline": "Iowa football head coach Kirk Ferentz on Nebraska, seniors, CFP",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOGJFaWs4bVhpQnZ4ZkZ3NmlsVGY1ZElPaTVBZGtMYmdOcUtFNjRkS0Q5QnUwTXBQUlRmNFJUT2xaUnctaHhySEdNU2FKZWFOYnhMMkR1dXlKVDZOQmVhdEVSeE9QNkdxQnFjeE85b2w1SXBkSmctS1p0d011SmRmYVJUS2h3V2RxcmZCeEpDNnI4RGxNYV9qLWgyWQ?oc=5",
+   "published": "2026-11-24T22:27:04Z",
+   "source": "Yahoo Sports"
+  },
+  {
+   "headline": "Kirk Ferentz News Conference Transcript | Nov. 24",
+   "url": "https://hawkeyesports.com/news/2026/11/24/kirk-ferentz-news-conference-transcript-11242026",
+   "published": "2026-11-24T22:15:00Z",
    "source": "Hawkeye Sports"
+  },
+  {
+   "headline": "Watch - Coach Ferentz Press Conference | Nov. 24",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOWFp2RGFzdG1rc0gtYzJfMFlMcXBmWmxmZEFRbUVIR3AtazNiRkVnVlR0dVBWOUVrbWlEUWZES2NqOHBXWFozWW1iYmVoUDlSUU5pYWlBWTJZMWZOcFVlUnltVWo0RUNEM3pGMUotVGtxNWtuS2t4clN5VmJlV3JSUVYzQmpTUGJZMWxOMTNtQk1vR1ha?oc=5",
+   "published": "2026-11-24T21:04:49Z",
+   "source": "Iowa Hawkeyes Athletics"
+  },
+  {
+   "headline": "Iowa Football Rooting Guide: CFP, Big Ten Championship Scenarios for Final Week",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQWFOcEx6aGc3OV82djVKeVpEd3phM3N4b3ZvSURWQ3M2a2VTaEJmMzhqUkVmVFRsT1had1lhM0Z0OU9jYkdEUjBlMXh4MGxnSEhUM0lSQ2x3WHNfM3dKaEhsaFlpdUg1OXJySHhHdWRFb21ZY2VvTThObGM3THVHSk1sRGVqbnNhX0FicUNNcGE0Uk5Pd0JBLWpEbTQ0QQ?oc=5",
+   "published": "2026-11-24T20:00:03Z",
+   "source": "Yahoo Sports"
+  },
+  {
+   "headline": "Biggest Defensive Question For Iowa Football vs. Nebraska: Pressure, But What Kind?",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWFI5VFRqZzd5U3pxSzIzRGdRWFhEd05WdW9ieXpyN0NwR1lxX3VlenF4Z0VMV0RwOEpTbTBYX1QtdHBuOFl5VTlvNDI0eExPUDFnNi02VkIwTUFYSW15b3RuN05vRVFKYVBEbUhNUjJfdnlIekJoQ2w5eTgweWhVRjFsWkwta29WcG5hYmpiX3EwWTh3N0wwODZzMk1HY0hyMWc?oc=5",
+   "published": "2026-11-24T18:00:03Z",
+   "source": "Yahoo Sports"
   },
   {
    "headline": "Biggest Offensive Question For Iowa Football vs. Nebraska: Sustainability",
@@ -11927,7 +11975,7 @@
   },
   {
    "headline": "Hawkeyes Welcome a Suddenly Dangerous Nebraska on Black Friday",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHNLdzJNYlFYdlNiakpyZnk2VnNWeDlJbktlbDZjYk9hWHZpcTZTaU1CYjFQUTRFcjdlMTdGTXNFNjh1X3FxS3hqOEF3c2lSclJkek5xVEN0d250SUc4OWJ3YlBPd3FPaGdUMGZabzVuN2lnQnNsVWVRNGFOWnJybFZLc0Q1ZGY1VUY2aU9mZ01nallSYjRpbk0yRkEwd2Z5dk1ObXlfT2huV2Y1bWNrNjJWRXBfMkh1UmVrdzlMLTZxQ1NFdXNKbW1acGdISjQ?oc=5",
+   "url": "https://www.blackheartgoldpants.com/football/72929/iowa-hawkeyes-nebraska-cornhuskers-black-friday-opening-line-spread-over-under-bhgp",
    "published": "2026-11-24T12:01:00Z",
    "source": "Black Heart Gold Pants"
   },
@@ -11944,12 +11992,6 @@
    "source": "Hawk Central"
   },
   {
-   "headline": "Nebraska vs. Iowa Odds: Can the Huskers Ruin Black Friday for the Hawkeyes?",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaWh6Q0RDYmJfbHRtOWVtMDcxOHFwdVQ4Q3JCb1JMLXJCQmE4Y2JpMWRuUHR0UVI1Y2VVaVpxY1I1X0hyN0FwdDVxNW9PM05ER2sxYXpEaGxSNU9jVUh2MXVzM2t3V2JzU0tWNHpOZXZlOVgzS2s5X09QVkZFYXA0OEpodkI?oc=5",
-   "published": "2026-11-24T04:35:27Z",
-   "source": "Yahoo Sports"
-  },
-  {
    "headline": "ICCSD teacher who drowned trying to save student to be honored at Iowa football game",
    "url": "https://dailyiowan.com/2026/11/23/iccsd-teacher-who-drowned-trying-to-save-student-to-be-honored-at-iowa-football-game/",
    "published": "2026-11-24T04:09:28Z",
@@ -11960,12 +12002,6 @@
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLWwzcElFTmp4Z3RxZ2s1eWJXbHJGZERZVHZlM0FBcTA4ZnBjdGxEZnN5VnBjdFJ3dHJEaGhvcEVwSF9Pc1k0bTlxTUdfbnhlLVNGaXAzUEFlTlRmMlF3ZFN6Y3pIMmxma0h6Tmt0eUdVdWlkZ3VhSk42NVFTd3NraG5LMy1HemEyemtOcXV1eW9qQ2FTcV90R3VHMWV3REJZbzZFdW8zZ1g5NERHZUF4Vg?oc=5",
    "published": "2026-11-24T01:32:00Z",
    "source": "Sports Illustrated"
-  },
-  {
-   "headline": "Big Ten Championship Scenarios: Iowa Football's Most Realistic Paths",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbUMwS3pUM0hTemFyTkNnNGtrX1ZkLWhMRmRJOXo3eFBHalRiMjR5UE9oZFJVeWhBR3htNHNmdlZvOUVYaDl3T1hxWThnY3o3WnNvQjBIT2doaWtQX1ZsUDFmU0Q3MkZ4TDEyRkIyYWhpOXVIZlRkX2Qzb05JazN5cmNmd0wybXhMNUJfNg?oc=5",
-   "published": "2026-11-23T21:00:03Z",
-   "source": "Yahoo Sports"
   },
   {
    "headline": "Hawkeyes Football Depth Chart: Week 13 Iowa vs Nebraska",
@@ -11980,12 +12016,6 @@
    "source": "Hawkeyes Wire"
   },
   {
-   "headline": "Iowa football extends defensive streak in win vs. Illinois",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORi1LS0hNanRiU1BmWlVrUkkwblFfQWk3VGtUMXVLcGhrODJhQXF6WHpNcVUxXzRzS0RxNmRYNHlFQmhSSFlGNF90REFSeWJsVXF6T0VwV2lLb0lmZGs5S0xQelZUaG5kZzh3d1lsV2ZiSnhaY1Y0YUpMaWpKOUxEWFFRZ3lIY3NmZmdBcVF2bkY?oc=5",
-   "published": "2026-11-23T19:50:33Z",
-   "source": "Yahoo Sports"
-  },
-  {
    "headline": "Nebraska, Iowa Heroes To Be Honored Friday",
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORmNGajExeWdNQlJUWUtBcUdpdEdDbzNxQmg1OGo3ZTcyMTFndGs4UUcyLWxGcklDTVJjLVJIb3RKQnU2NlBFZl9La2VlenctR1FVSlFOd3J3NDRXMnpnTG5RamRrSjk5cE5uLUhiODQxb1lUZ0dBMTdlWHFYWllRVWNPOU8tb0NPTmlDSTRFTQ?oc=5",
    "published": "2026-11-23T16:19:44Z",
@@ -11998,16 +12028,16 @@
    "source": "Black Heart Gold Pants"
   },
   {
-   "headline": "Why Iowa Football Should Be Ranked Ahead Of Oregon",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa0lRMVBtV2VqUjFJOFota3RtUks4UDIybjE2OE9aZmFET183bWZQdjNkRWNVb1d2ME9hcER4ckxtVU16R2FCbXpvNG9PUVF4SFJWVEc0dGNHdDJ1QkpPUEdmUHJHMUtQN044TTJudm5UQWJHOS1MUnZlclo3RmN1R0FiNHZmQQ?oc=5",
-   "published": "2026-11-23T12:00:41Z",
-   "source": "Yahoo Sports"
+   "headline": "Oddsmakers weigh in on Nebraska, Iowa point spread",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOM040Y3l3R3NPVlZxd09PeS1Tb0t5OS0yU215TXBhZFNFUTg2RGNDQk1IU3UzcEswVjBacTBSdG9LN0xMZXpVamp2aFV1ajROVWQxZW5WYkUtYVhiVEZLT3M2bDhUZy1xdUxCLUFtbW4wb0gwZVZHOWFBUTZDbmpQTmprTTV4XzZGbi1scW5xMkk2dDljdUF4QnJUOHRpNUo2NDE0OThQTDdsQldEeF9wN0Rpbnk2b3ExTWl0SVp6Wkdpb0NYRDdFV0xWVQ?oc=5",
+   "published": "2026-11-22T20:53:12Z",
+   "source": "247Sports"
   },
   {
-   "headline": "Charting Iowa’s Path to the Playoffs, Week 12",
-   "url": "https://www.blackheartgoldpants.com/football/72875/charting-iowas-path-to-the-playoffs-week-12",
-   "published": "2026-11-22T21:00:00Z",
-   "source": "Black Heart Gold Pants"
+   "headline": "Iowa football vs. Illinois: Best photos of Hawkeyes' 34-17 win",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMGx4SzNZel9jeGJlOWNXcC1SVGZZRjZsS2Q1YWQ0dnRtN2tzN0hIaVJRczM2ZGswR3hlMkU4UDNmYVhCZkhWNG5PWjU2dWNZSkJBTlFCSEVXdXdrcm51R1hGM1J0cmRHUFlCTE5MYTRYajFDOVBldEtES253RlZUZmRsRlBQWVNuTnZ5QTZYY1pRRThlb0ZnUnRDV25Sb0hxVTZXdFJjc1RoMTF1SUxqN2V6ak5lUDhkYnlESFFnTHlLVHc0dTVOd1VpN2l1SzlCNXh1NnJR?oc=5",
+   "published": "2026-11-22T19:40:00Z",
+   "source": "Hawkeyes Wire"
   },
   {
    "headline": "Column | The College Football Playoff committee cannot deny Iowa much longer.",
@@ -12016,40 +12046,246 @@
    "source": "The Daily Iowan"
   },
   {
-   "headline": "Oddsmakers weigh in on Nebraska, Iowa point spread",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOM040Y3l3R3NPVlZxd09PeS1Tb0t5OS0yU215TXBhZFNFUTg2RGNDQk1IU3UzcEswVjBacTBSdG9LN0xMZXpVamp2aFV1ajROVWQxZW5WYkUtYVhiVEZLT3M2bDhUZy1xdUxCLUFtbW4wb0gwZVZHOWFBUTZDbmpQTmprTTV4XzZGbi1scW5xMkk2dDljdUF4QnJUOHRpNUo2NDE0OThQTDdsQldEeF9wN0Rpbnk2b3ExTWl0SVp6Wkdpb0NYRDdFV0xWVQ?oc=5",
-   "published": "2026-11-22T18:37:00Z",
-   "source": "247Sports"
-  },
-  {
    "headline": "Nebraska could be Iowa's worst nightmare if Andy Staples' CFP bracket is right",
    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObUU3cGdRWlRPREgwcnBBMDVsQ3hwNnlJNDNOSFpySjZCYk5zS2RFT0lFSE5RdlpJVHFaaTBsenpVeDR2RnpRSE1aS1oydk55eXlrdDI3VnIzeTJwcDVuTDZpNW1GNEFXU1NTb0s2V3UyRDUwbndqRUZ3T1JsSmx0d2Z1cnppTnlVTjQwQnhHYnllYXBuYVVfR0hrRTJwV0U3OEFj?oc=5",
    "published": "2026-11-22T17:52:51Z",
    "source": "Husker Corner"
-  },
-  {
-   "headline": "Iowa football stays put in US LBM Coaches Poll rankings after Illinois win",
-   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZ2dwcXlkc096cXVBem9uTUpLNmFTMjBuSWdSOHBtd04tTmJEaGZSSS1jS3hkcHVDWnlpNzlDRkNnREVReUFWcDRFZzBFQmZlZDdhdDIwS2padklJbzZxUTZJWUpTRGpGc1MyR0t6aFN0Tk1PUm5mWW80SmdHTk5vVTBfMVdaQmpiSVdXRy1jeXlIUmpkbWd3TTdqbXBrelh6cndua0RTT3lWendGLWtkOFpYZ2dqY0lManZaWUY3TUNkaVlyeEQzV21PYVRBYk5SbDBmN1pzS2l5VFlfTG9YWmZneFBnUVE?oc=5",
-   "published": "2026-11-22T17:50:00Z",
-   "source": "Hawkeyes Wire"
-  },
-  {
-   "headline": "Iowa stays in playoff hunt with 34-17 victory at Illinois",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNHAzZ292MzVwS3o4SzNFU3lldVQ5d010dUtOblBEM3FGbmJVYTNjWGNSVmkyX2NhLW5xWHRMTGxnTlpTQnBsZFRMTmd4dXgycWp1NDFNdndRRjFKblA4bnE4YVJrSVBfZGtvdHRaMWtsbXVjUjVsb0hzX0l5Z0ZTNFdLRkZxT1VYczQ3UUxNTEJBQ3N5VURUOA?oc=5",
-   "published": "2026-11-22T07:28:49Z",
-   "source": "Hawk Fanatic"
-  },
-  {
-   "headline": "How Iowa football can reach the Big Ten Championship Game",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWUxKeUV4ZUdKc1ViWTlQOXBhNDhKeUJsYkNXS1FndVR2MEtMU2VXZzdadkJvcnZ6c01KZE9kVmlHY0VFRVFRUG5IV3JTcU93OEMybWlxY2hoT3JVQ1lVRjB5WThCWG1YR0s1WEZfd0pSUElKZjdQY213SnVhUC1xbnJjMVNRdXlBa2pVNjVUX2FQd1VZNHhYV1BDMVZ4QzFVbmMzZ09pU1R0X0kydTB4VTc1c3VJVzNDazFFSS12dng1WmZFeVlLc3lDM2ROYmg5NVFKVzZEOXhrVW1sZXc?oc=5",
-   "published": "2026-11-22T06:50:45Z",
-   "source": "Hawk Central"
-  },
-  {
-   "headline": "Iowa defense slams door on Illinois in second half and keeps pick-six streak alive",
-   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVWswZ1p6bFlaMldaNmg2ak1BMU52aXBlMjVzTktreC1kUXU3MG5QV3Q3bTF1RV9aVFlKRHpuRThJS3h4N1F2eG9VbEg0SFVqbkl6dmQ5RklaZUJCS0V2RExfRXQ1dTJYckpONEl3ZlN5Mm5QTTRBVDM5VGNET1ZheUdReWhyeFNUYkhSaGZDU1MtMkRHcFladm9Jd2I2eVJJRGNJdmlpMm5Xc0ZpYkJxOXo4OUlDOFFq?oc=5",
-   "published": "2026-11-22T06:15:11Z",
-   "source": "The Daily Iowan"
   }
- ]
+ ],
+ "rooting": {
+  "updated": "2026-11-25T03:53:51Z",
+  "summary": [
+   "If Iowa beats Nebraska, it reaches the Big Ten title game in 150 of the 256 ways the other games can finish. If it loses, it is out.",
+   "Iowa is No. 13 in the playoff ranking. A loss by a team just ahead could move it up."
+  ],
+  "games": [
+   {
+    "id": "401858536",
+    "kickoff": "2026-11-27T17:00Z",
+    "state": "pre",
+    "detail": "",
+    "network": "CBS",
+    "away": {
+     "id": "158",
+     "abbr": "NEB",
+     "name": "Nebraska",
+     "rank": 25,
+     "score": null
+    },
+    "home": {
+     "id": "2294",
+     "abbr": "IOWA",
+     "name": "Iowa",
+     "rank": 13,
+     "score": null
+    },
+    "winner": null,
+    "pick": "2294",
+    "level": "must",
+    "why": "Everything starts here. With a loss, Iowa is out of the title race.",
+    "tags": [
+     "Big Ten title game"
+    ]
+   },
+   {
+    "id": "401858541",
+    "kickoff": "2026-11-29T00:30Z",
+    "state": "pre",
+    "detail": "",
+    "network": "NBC",
+    "away": {
+     "id": "264",
+     "abbr": "WASH",
+     "name": "Washington",
+     "rank": 24,
+     "score": null
+    },
+    "home": {
+     "id": "2483",
+     "abbr": "ORE",
+     "name": "Oregon",
+     "rank": 12,
+     "score": null
+    },
+    "winner": null,
+    "pick": "264",
+    "level": "big",
+    "why": "Iowa reaches the title game in 102 of 128 combinations if Washington wins, and 48 of 128 if Oregon wins. One exception: if USC beats UCLA, Oregon winning is slightly better (48 of 64 against 38). Oregon is No. 12 in the playoff ranking, 1 spot ahead of Iowa. A loss could drop it behind.",
+    "tags": [
+     "Big Ten title game",
+     "Playoff"
+    ]
+   },
+   {
+    "id": "401858538",
+    "kickoff": "2026-11-29T00:00Z",
+    "state": "pre",
+    "detail": "",
+    "network": "FS1",
+    "away": {
+     "id": "2509",
+     "abbr": "PUR",
+     "name": "Purdue",
+     "rank": null,
+     "score": null
+    },
+    "home": {
+     "id": "84",
+     "abbr": "IU",
+     "name": "Indiana",
+     "rank": 14,
+     "score": null
+    },
+    "winner": null,
+    "pick": "2509",
+    "level": "big",
+    "why": "Iowa reaches the title game in 95 of 128 combinations if Purdue wins, and 55 of 128 if Indiana wins.",
+    "tags": [
+     "Big Ten title game"
+    ]
+   },
+   {
+    "id": "401858543",
+    "kickoff": "2026-11-28T20:30Z",
+    "state": "pre",
+    "detail": "",
+    "network": "CBS",
+    "away": {
+     "id": "30",
+     "abbr": "USC",
+     "name": "USC",
+     "rank": 15,
+     "score": null
+    },
+    "home": {
+     "id": "26",
+     "abbr": "UCLA",
+     "name": "UCLA",
+     "rank": 9,
+     "score": null
+    },
+    "winner": null,
+    "pick": null,
+    "level": "split",
+    "why": "It depends on Washington at Oregon. If Washington wins, Iowa wants UCLA here (64 of 64 combinations against 38). If Oregon wins, it wants USC. UCLA is No. 9 in the playoff ranking, 4 spots ahead of Iowa. A loss could drop it behind.",
+    "tags": [
+     "Big Ten title game",
+     "Playoff"
+    ]
+   },
+   {
+    "id": "401858544",
+    "kickoff": "2026-11-28T00:30Z",
+    "state": "pre",
+    "detail": "",
+    "network": "NBC",
+    "away": {
+     "id": "135",
+     "abbr": "MINN",
+     "name": "Minnesota",
+     "rank": null,
+     "score": null
+    },
+    "home": {
+     "id": "275",
+     "abbr": "WIS",
+     "name": "Wisconsin",
+     "rank": null,
+     "score": null
+    },
+    "winner": null,
+    "pick": "275",
+    "level": "helps",
+    "why": "Iowa reaches the title game in 86 of 128 combinations if Wisconsin wins, and 64 of 128 if Minnesota wins.",
+    "tags": [
+     "Big Ten title game"
+    ]
+   },
+   {
+    "id": "401856879",
+    "kickoff": "2026-11-27T01:00Z",
+    "state": "pre",
+    "detail": "",
+    "network": "ESPN",
+    "away": {
+     "id": "2628",
+     "abbr": "TCU",
+     "name": "TCU",
+     "rank": null,
+     "score": null
+    },
+    "home": {
+     "id": "2641",
+     "abbr": "TTU",
+     "name": "Texas Tech",
+     "rank": 11,
+     "score": null
+    },
+    "winner": null,
+    "pick": "2628",
+    "level": "helps",
+    "why": "Texas Tech is No. 11 in the playoff ranking, 2 spots ahead of Iowa. A loss could drop it behind.",
+    "tags": [
+     "Playoff"
+    ]
+   },
+   {
+    "id": "401856876",
+    "kickoff": "2026-11-28T20:30Z",
+    "state": "pre",
+    "detail": "",
+    "network": "Fox",
+    "away": {
+     "id": "2132",
+     "abbr": "CIN",
+     "name": "Cincinnati",
+     "rank": null,
+     "score": null
+    },
+    "home": {
+     "id": "252",
+     "abbr": "BYU",
+     "name": "BYU",
+     "rank": 10,
+     "score": null
+    },
+    "winner": null,
+    "pick": "2132",
+    "level": "helps",
+    "why": "BYU is No. 10 in the playoff ranking, 3 spots ahead of Iowa. A loss could drop it behind.",
+    "tags": [
+     "Playoff"
+    ]
+   },
+   {
+    "id": "401858540",
+    "kickoff": "2026-11-28T17:00Z",
+    "state": "pre",
+    "detail": "",
+    "network": "Fox",
+    "away": {
+     "id": "130",
+     "abbr": "MICH",
+     "name": "Michigan",
+     "rank": null,
+     "score": null
+    },
+    "home": {
+     "id": "194",
+     "abbr": "OSU",
+     "name": "Ohio State",
+     "rank": 21,
+     "score": null
+    },
+    "winner": null,
+    "pick": "130",
+    "level": "helps",
+    "why": "Iowa reaches the title game in 78 of 128 combinations if Michigan wins, and 72 of 128 if Ohio State wins.",
+    "tags": [
+     "Big Ten title game"
+    ]
+   }
+  ],
+  "note": "Counts treat every remaining result as equally likely, so they are not odds. They follow the conference's published tiebreaker; ties it can only settle with a ratings service or a draw count as misses."
+ }
 }
