@@ -18,6 +18,7 @@
       "includeNames": [],
       "excludeNames": [],
       "espnTeamId": "2294",
+      "conferenceGroup": 5,
       "newsMatch": "hawkeye|\\biowa\\b(?! state)|ferentz|kinnick",
       "newsFeeds": [
         {
@@ -51,6 +52,7 @@
     "includeNames": "Players to add even if their listed college is different, e.g. someone who played at this school then transferred out.",
     "excludeNames": "Players to drop, e.g. a transfer-in you don't count.",
     "espnTeamId": "ESPN's college-football team id (the number in the team's ESPN URL). Powers the Saturday tab.",
+    "conferenceGroup": "ESPN's id for the school's conference (Big Ten is 5). Turns on the late-season 'Who to root for' list.",
     "newsFeeds": "RSS or Atom feeds for the Saturday news list. Only headlines matching newsMatch (a regular expression) and not about another sport are kept."
   },
   "site": {

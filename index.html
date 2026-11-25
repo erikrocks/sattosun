@@ -207,6 +207,21 @@
   .tag.loss{background:rgba(255,77,77,.15);color:#FF8A8A}
   .tag.res{font-size:13px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
   .detail.wide{padding-left:14px}
+  .root .rsum{display:block;font-size:14px;line-height:1.45;color:var(--text)}
+  .root .rsum + .rsum{margin-top:4px;color:var(--muted)}
+  .rg{border-top:1px solid var(--line);padding:11px 14px 12px}
+  .rhead{display:flex;align-items:center;gap:8px}
+  .rpick{flex:1;min-width:0;font-size:15px;font-weight:500;color:var(--muted)}
+  .rpick b{color:var(--text);font-weight:700}
+  .rpick .rk{margin-right:3px}
+  .rg .psub{font-variant-numeric:tabular-nums}
+  .rg .psub.on{color:var(--text)}
+  .why{margin:6px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+  .why i{font-style:normal;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-right:6px}
+  .tag.must{background:var(--accent);color:var(--accent-ink)}
+  .tag.big{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+  .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--live);margin-right:6px;animation:pulse 1.4s infinite}
+  .rnote{border-top:1px solid var(--line);padding:10px 14px 11px;font-size:12px;line-height:1.45;color:var(--dim)}
   .bx td:first-child,.bx th:first-child{text-align:left;padding-left:0;font-weight:600}
   .more{font-size:13px;font-weight:600;color:var(--accent)}
   a.news{display:block;padding:11px 14px;color:var(--text);text-decoration:none;border-top:1px solid var(--line)}
@@ -450,20 +465,22 @@ let timer = null;
 function schedule(){
   clearTimeout(timer);
   if(document.hidden) return;
-  const live = liveWindow(), clive = !!collegeLive();
+  const live = liveWindow(), clive = !!collegeLive(), rlive = rootLive().length > 0;
   timer = setTimeout(async () => {
     if(live){ if(!(await syncDirect())) await syncOwnFiles(); }
     if(clive) await syncCollege();
-    if(live || clive) render();
+    if(rlive) await syncRooting();
+    if(live || clive || rlive) render();
     schedule();
-  }, live || clive ? (clive || state.direct ? 45e3 : 120e3) : 10*60e3);
+  }, live || clive || rlive ? (clive || rlive || state.direct ? 45e3 : 120e3) : 10*60e3);
 }
 document.addEventListener("visibilitychange", async () => {
   if(document.hidden) return clearTimeout(timer);
-  const live = liveWindow(), clive = !!collegeLive();
+  const live = liveWindow(), clive = !!collegeLive(), rlive = rootLive().length > 0;
   if(live){ if(!(await syncDirect())) await syncOwnFiles(); }
   if(clive) await syncCollege();
-  if(live || clive) render();
+  if(rlive) await syncRooting();
+  if(live || clive || rlive) render();
   schedule();
 });
 
@@ -855,6 +872,65 @@ function collegeStatus(g){
   if(Date.now() > new Date(g.kickoff)) return `<span>Kicked off · updating</span>`;
   return `<span>${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}</span>`;
 }
+/* Who to root for: other games that move the school's title-game and playoff chances. Written by the updater. */
+const ROOT_TAG = {must:"Must win", big:"Big", helps:"Helps", split:"Depends"};
+function rootLive(){
+  const now = Date.now();
+  return (((state.college || {}).rooting || {}).games || []).filter(g => g.state !== "post" &&
+    now >= new Date(g.kickoff) - LIVE_BEFORE && now <= +new Date(g.kickoff) + LIVE_AFTER);
+}
+async function syncRooting(){
+  if(!rootLive().length) return false;
+  if(Date.now() - (state.rootFetched || 0) > 10*60e3){     // the updater reworks the counts as games finish
+    state.rootFetched = Date.now();
+    try{
+      const fresh = (await getJSON(`data/college/${state.schoolKey}.json`)).rooting;
+      if(fresh && fresh.updated > (state.college.rooting.updated || "")) state.college.rooting = fresh;
+    }catch(e){}
+  }
+  const live = rootLive();
+  const done = await Promise.all(live.map(async g => {
+    try{
+      const ev = await getJSON(`${ESPNC}/scoreboard/${g.id}`, false), comp = ev.competitions[0];
+      const st = ((comp.status || ev.status || {}).type) || {};
+      g.state = st.state || g.state;
+      g.detail = g.state === "pre" ? "" : (st.shortDetail || "");
+      for(const c of comp.competitors){
+        const side = String(c.id) === String(g.away.id) ? g.away : g.home;
+        if(g.state !== "pre" && c.score != null && c.score !== "") side.score = +c.score;
+        if(g.state === "post" && c.winner) g.winner = String(c.id);
+      }
+      return true;
+    }catch(e){ return false; }
+  }));
+  return done.some(Boolean);
+}
+function rootingHTML(){
+  const r = state.college.rooting;
+  if(!r || !(r.games || []).length) return "";
+  const open = !state.copen.has("rootclosed"), left = r.games.filter(g => g.state !== "post").length;
+  const row = g => {
+    const pick = g.pick ? (g.pick === g.away.id ? g.away : g.home) : null, other = pick === g.away ? g.home : g.away;
+    const side = t => `${rk(t)}${esc(t.name)}`;
+    const head = pick ? `${ncaaLogo(pick.id)}<span class="rpick"><b>${side(pick)}</b> over ${side(other)}</span>`
+                      : `<span class="rpick"><b>${side(g.away)} at ${side(g.home)}</b></span>`;
+    const score = `${esc(g.away.name)} ${esc(g.away.score)}, ${esc(g.home.name)} ${esc(g.home.score)}`;
+    const when = g.state === "post" ? `Final · ${score}`
+               : g.state === "in" ? `<span class="live-dot"></span>${score} · ${esc(g.detail)}`
+               : Date.now() > new Date(g.kickoff) ? "Kicked off · updating"
+               : `${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}`;
+    const tag = g.state === "post" && pick && g.winner ? (g.winner === pick.id ? `<span class="tag win">Went Iowa's way</span>`.replace("Iowa", esc(school().name)) : `<span class="tag loss">Didn't help</span>`)
+              : `<span class="tag ${esc(g.level)}">${esc(ROOT_TAG[g.level] || "")}</span>`;
+    return `<div class="rg"><div class="rhead">${head}${tag}</div>
+      <span class="psub ${g.state === "pre" ? "" : "on"}">${when}</span>
+      <p class="why"><i>${esc((g.tags || []).join(" + "))}</i>${esc(g.why)}</p></div>`;
+  };
+  return `<div class="section-h">Who to root for</div><div class="game root">
+    <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="rootclosed"><span class="pmain">
+      ${(open ? r.summary : r.summary.slice(0, 1)).map(l => `<span class="rsum">${esc(l)}</span>`).join("")}
+      ${open ? "" : `<span class="psub">${plural(r.games.length, "games")}${left && left < r.games.length ? `, ${left} still to play` : ""} · tap to open</span>`}</span>${CHEV}</div>
+    ${open ? r.games.map(row).join("") + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(r.updated))}.</div>` : "") : ""}</div>`;
+}
 function collegeCard(g){
   const box = state.college.box[g.id], key = "f:" + g.id, open = state.copen.has(key);
   const row = (side, other, mine) => `<div class="trow">${ncaaLogo(side.id || (mine && state.college.team.id)) || `<span class="dot" style="background:${mine ? "var(--accent)" : "#555"}"></span>`}
@@ -906,9 +982,10 @@ function renderSaturday(){
   if(!games.length) html += `<div class="empty">The ${esc(c.season || "")} schedule isn't out yet. Games, stats and leaders appear here once it is.</div>`;
   const sec = (h, g) => g ? `<div class="section-h">${h}</div>${collegeCard(g)}` : "";
   const lastFresh = last && Date.now() - new Date(last.kickoff) < 40*3600e3;
-  if(live) html += sec("Live now", live) + sec("Last game", last);
-  else if(lastFresh) html += sec("Last game", last) + sec("Next up", next);
-  else html += sec("Next up", next) + sec("Last game", last);
+  const root = games.length ? rootingHTML() : "";      // sits between the two game cards
+  if(live) html += sec("Live now", live) + root + sec("Last game", last);
+  else if(lastFresh) html += sec("Last game", last) + root + sec("Next up", next);
+  else html += sec("Next up", next) + root + sec("Last game", last);
 
   if((c.leaders || []).length) html += `<div class="section-h">Season leaders</div><div class="game"><div class="players" style="border-top:0">${
     c.leaders.map(l => { const [a, ...rest] = l.players;
@@ -1033,7 +1110,12 @@ $("content").addEventListener("keydown", e => {
   const el = e.target.closest(".p[data-k]");
   if(el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); toggle(el); }
 });
-function toggleCollege(el){ const k = el.dataset.cg; if(state.copen.has(k)) state.copen.delete(k); else state.copen.add(k); render(); }
+function toggleCollege(el){
+  const k = el.dataset.cg; if(state.copen.has(k)) state.copen.delete(k); else state.copen.add(k);
+  if(k === "rootclosed") try{ localStorage.setItem("rootclosed", state.copen.has(k) ? "1" : ""); }catch(e){}
+  render();
+}
+try{ if(localStorage.getItem("rootclosed")) state.copen.add("rootclosed"); }catch(e){}
 $("saturday").addEventListener("click", e => {
   if(e.target.closest("a")) return;
   const sb = e.target.closest(".seg button");
@@ -1088,6 +1170,7 @@ function showErr(e){
     await loadSchool();
     if(liveWindow() && await syncDirect()) render();
     if(collegeLive() && await syncCollege()) render();
+    if(rootLive().length && await syncRooting()) render();
     schedule();
   }catch(e){ showErr(e); }
 })();

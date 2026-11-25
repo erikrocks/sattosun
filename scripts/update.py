@@ -843,14 +843,243 @@ def update_college(key, school, full):
     record = next((i.get("summary") for i in (team.get("record") or {}).get("items", []) if i.get("type") == "total"), None)
     ranked = [g["us"]["rank"] for g in games if g["state"] != "post"] or [g["us"]["rank"] for g in games[-1:]]
     polls = poll_ranks(team_id) if full else (old.get("team") or {}).get("polls", [])
+    try:
+        rooting = rooting_guide(school, team_id, school.get("name") or team.get("location") or "The team")
+    except Exception as e:                               # an extra, never worth losing the page over; keep the last one
+        print(f"warning: rooting guide for {key} failed: {e}", file=sys.stderr)
+        rooting = old.get("rooting")
     write_json(rel, {
         "school": key, "season": season, "updated": iso(now_utc()), "source": "ESPN college football",
         "team": {"id": str(team_id), "name": team.get("displayName"), "abbr": team.get("abbreviation"),
                  "record": record, "standing": team.get("standingSummary"),
                  "rank": polls[0]["rank"] if polls else (ranked[0] if ranked else None), "polls": polls},
-        "games": games, "box": box, "leaders": season_leaders(box), "news": news,
+        "games": games, "box": box, "leaders": season_leaders(box), "news": news, "rooting": rooting,
     })
     print(f"college {key}: {len(games)} games, {len(box)} box scores, {len(news)} news items")
+
+
+# ---------- who to root for ----------
+# Late in the season: which other results help the school reach its conference title game (every remaining
+# combination of results run through the conference tiebreaker) and climb the playoff ranking.
+
+MAX_OPEN_GAMES = 11                      # 2^11 combinations is the most we enumerate
+AHEAD_SPOTS = 4                          # playoff layer: teams this many places ahead of us
+
+
+def neutral_game(ev):
+    comp = ev["competitions"][0]
+    st = (comp.get("status") or ev.get("status") or {}).get("type", {})
+    state = st.get("state", "pre")
+    b = comp.get("broadcasts") or []
+    side = lambda c: {"id": str(c["team"].get("id")), "abbr": c["team"].get("abbreviation"),
+                      "name": c["team"].get("location") or c["team"].get("displayName"),
+                      "rank": rank_of(c), "score": score_of(c) if state != "pre" else None}
+    sides = {c.get("homeAway"): c for c in comp["competitors"]}
+    away, home = sides.get("away") or comp["competitors"][0], sides.get("home") or comp["competitors"][-1]
+    winner = next((str(c["team"]["id"]) for c in comp["competitors"] if c.get("winner")), None) if state == "post" else None
+    title_game = any("championship" in (n.get("headline") or "").lower() for n in comp.get("notes") or [])
+    return {"id": ev["id"], "kickoff": ev["date"], "state": state, "detail": st.get("shortDetail", "") if state != "pre" else "",
+            "network": ((b[0].get("media") or {}).get("shortName") or "") if b else "",
+            "away": side(away), "home": side(home), "winner": winner, "titleGame": title_game}
+
+
+def conference_finalists(results, teams):
+    """results: {frozenset((a, b)): winner}. Returns the top two as a list; an entry is a tuple when the
+    published tiebreaker can't separate teams without the ratings service or a draw."""
+    from fractions import Fraction as F
+    from itertools import combinations
+    opp, W, N = {t: [] for t in teams}, dict.fromkeys(teams, 0), dict.fromkeys(teams, 0)
+    for k, w in results.items():
+        a, b = tuple(k)
+        opp[a].append(b); opp[b].append(a); N[a] += 1; N[b] += 1; W[w] += 1
+    pct = {t: F(W[t], N[t]) if N[t] else F(0) for t in teams}
+
+    def rec(t, others):
+        others = [o for o in others if o in opp[t]]
+        return F(sum(results[frozenset((t, o))] == t for o in others), len(others)) if others else None
+
+    def steps(T):
+        pairs = [frozenset(p) for p in combinations(T, 2)]
+        if len(T) == 2:                                            # 1. head to head
+            if pairs[0] in results:
+                yield {t: int(results[pairs[0]] == t) for t in T}
+        elif all(p in results for p in pairs):
+            yield {t: rec(t, [o for o in T if o != t]) for t in T}
+        else:
+            for t in T:
+                if all(results.get(frozenset((t, o))) == t for o in T if o != t):
+                    yield {x: int(x == t) for x in T}
+        common = [o for o in teams if o not in T and all(o in opp[t] for t in T)]
+        if common:
+            yield {t: rec(t, common) for t in T}                   # 2. record against common opponents
+            for p in sorted({pct[o] for o in common}, reverse=True):   # 3. ...in order of finish, tied opponents as a group
+                yield {t: rec(t, [o for o in common if pct[o] == p]) for t in T}
+        yield {t: F(sum(W[o] for o in opp[t]), sum(N[o] for o in opp[t]) or 1) for t in T}   # 4. opponents' combined record
+
+    def order(T):
+        if len(T) <= 1:
+            return list(T)
+        for m in steps(T):
+            best = max(m.values())
+            if any(v != best for v in m.values()):                 # separated teams drop out; the rest start over
+                return order([t for t in T if m[t] == best]) + order([t for t in T if m[t] != best])
+        return [tuple(sorted(T))]
+
+    out = []
+    for p in sorted(set(pct.values()), reverse=True):
+        out += order([t for t in teams if pct[t] == p])
+        if len(out) >= 2:
+            break
+    return out[:2]
+
+
+def rooting_guide(school, team_id, nickname):
+    group = school.get("conferenceGroup")
+    if not group:
+        return None
+    from itertools import product
+    me = str(team_id)
+    now = now_utc()
+    standings = get_json(f"https://site.api.espn.com/apis/v2/sports/football/college-football/standings?group={group}")
+    conf_name = standings.get("shortName") or standings.get("abbreviation") or standings.get("name") or "conference"
+    conf_name = re.sub(r"\s+Conference$", "", conf_name)
+    members = {}
+    def walk(n):
+        for e in (n.get("standings") or {}).get("entries", []):
+            members[str(e["team"]["id"])] = e["team"].get("location") or e["team"].get("displayName")
+        for c in n.get("children", []):
+            walk(c)
+    walk(standings)
+    if me not in members:
+        return None
+    sched = {}                                                     # event id -> game, across the whole conference
+    def add_schedule(tid):
+        for ev in get_json(f"{COLLEGE}/teams/{tid}/schedule").get("events", []):
+            if ev["id"] not in sched:
+                sched[ev["id"]] = neutral_game(ev)
+    for tid in members:
+        add_schedule(tid)
+    conf_games = [g for g in sched.values() if g["away"]["id"] in members and g["home"]["id"] in members and not g["titleGame"]]
+    played = {frozenset((g["away"]["id"], g["home"]["id"])): g["winner"] for g in conf_games if g["winner"]}
+    open_games = sorted((g for g in conf_games if not g["winner"]), key=lambda g: g["kickoff"])
+    name = lambda tid, g: (g["away"] if g["away"]["id"] == tid else g["home"])["name"]
+
+    rows, lines = {}, []
+    def row(g, pick, level, why, tag, weight=0.0):
+        r = rows.get(g["id"])
+        if r:
+            r["why"] += " " + why
+            if tag not in r["tags"]:
+                r["tags"].append(tag)
+            return r
+        r = rows[g["id"]] = {**{k: g[k] for k in ("id", "kickoff", "state", "detail", "network", "away", "home", "winner")},
+                             "pick": pick, "level": level, "why": why, "tags": [tag], "weight": weight}
+        return r
+
+    # --- conference title game ---
+    if 0 < len(open_games) <= MAX_OPEN_GAMES and len(played) > len(conf_games) / 2:
+        ids = [(g["away"]["id"], g["home"]["id"]) for g in open_games]
+        outcomes = {}
+        for combo in product(*ids):
+            res = dict(played)
+            res.update({frozenset(pair): w for pair, w in zip(ids, combo)})
+            outcomes[combo] = me in conference_finalists(res, list(members))
+        mine = next((i for i, pair in enumerate(ids) if me in pair), None)
+        pool = {c: v for c, v in outcomes.items() if mine is None or c[mine] == me}   # scenarios where we win our own game
+        total, good = len(pool), sum(pool.values())
+        count = lambda i, w, cond=None: sum(v for c, v in pool.items() if c[i] == w and (cond is None or c[cond[0]] == cond[1]))
+        title = f"{conf_name} title game"
+        if mine is not None:
+            g, lose = open_games[mine], sum(v for c, v in outcomes.items() if c[mine] != me)
+            opp = name(next(t for t in ids[mine] if t != me), g)
+            if good == 0 and lose == 0:
+                lines.append(f"{nickname} can no longer reach the {title}.")
+            elif good == total and lose == total:
+                lines.append(f"{nickname} is in the {title} whatever happens this week.")
+            else:
+                lines.append(f"If {nickname} beats {opp}, it reaches the {title} in {good} of the {total} ways the other games can finish."
+                             + (f" If it loses, it is out." if lose == 0 else f" If it loses, that drops to {lose} of {total}."))
+                row(g, me, "must" if lose == 0 else "big",
+                    f"Everything starts here. With a loss, {nickname} " + ("is out of the title race." if lose == 0 else f"reaches the title game in only {lose} of {total} combinations."),
+                    title, 9)
+        else:
+            lines.append(f"{nickname} reaches the {title} in {good} of the {total} ways the remaining games can finish.")
+        if 0 < good < total:
+            for i, (a, b) in enumerate(ids):
+                if i == mine:
+                    continue
+                g, half = open_games[i], total // 2
+                ca, cb = count(i, a), count(i, b)
+                if abs(ca - cb) / half < 0.03:
+                    continue
+                pick, other, hi, lo = (a, b, ca, cb) if ca > cb else (b, a, cb, ca)
+                flip = None                                        # does the better result change with another game?
+                for j, pair in enumerate(ids):
+                    if j in (i, mine):
+                        continue
+                    for w in pair:
+                        d = count(i, other, (j, w)) - count(i, pick, (j, w))
+                        if d > 0 and (not flip or d > flip[0]):
+                            flip = (d, j, w, count(i, other, (j, w)), count(i, pick, (j, w)))
+                why = (f"{nickname} reaches the title game in {hi} of {half} combinations if {name(pick, g)} wins, and "
+                       + ("none" if lo == 0 else f"{lo} of {half}") + f" if {name(other, g)} wins.")
+                level = "big" if (hi - lo) / half >= 0.3 else "helps"
+                if flip:
+                    d, j, w, co, cp = flip
+                    quarter, hg = half // 2, open_games[j]
+                    wn = name(w, hg)
+                    ln = name(next(t for t in ids[j] if t != w), hg)
+                    if d / quarter < 0.1:
+                        pass
+                    elif d / quarter >= 0.25:
+                        level, pick = "split", None
+                        why = (f"It depends on {hg['away']['name']} at {hg['home']['name']}. If {wn} wins, {nickname} wants {name(other, g)} here "
+                               f"({co} of {quarter} combinations against {cp}). If {ln} wins, it wants {name(next(t for t in (a, b) if t != other), g)}.")
+                    else:
+                        why += f" One exception: if {wn} beats {ln}, {name(other, g)} winning is slightly better ({co} of {quarter} against {cp})."
+                row(g, pick, level, why, title, (hi - lo) / half + (2 if level == "split" else 0))
+
+    # --- playoff ranking: teams just ahead of us ---
+    try:
+        poll = next((p for p in get_json(f"{COLLEGE}/rankings?polls=21").get("rankings", []) if p.get("type") == "cfp"), None)
+    except Exception:
+        poll = None
+    stamp = poll and (poll.get("lastUpdated") or poll.get("date"))
+    if stamp and now - parse_time(stamp) < timedelta(days=10):
+        ranks = {str(r["team"]["id"]): r["current"] for r in poll.get("ranks", [])}
+        mine_rank = ranks.get(me)
+        if mine_rank and mine_rank > 4:
+            lines.append(f"{nickname} is No. {mine_rank} in the playoff ranking. A loss by a team just ahead could move it up.")
+            for tid, r in sorted(ranks.items(), key=lambda kv: -kv[1]):
+                if not (mine_rank - AHEAD_SPOTS <= r < mine_rank):
+                    continue
+                if tid not in members:
+                    try:
+                        add_schedule(tid)
+                    except Exception:
+                        continue
+                nxt = sorted((g for g in sched.values() if tid in (g["away"]["id"], g["home"]["id"]) and not g["winner"]
+                              and parse_time(g["kickoff"]) - now < timedelta(days=8)), key=lambda g: g["kickoff"])
+                if not nxt or me in (nxt[0]["away"]["id"], nxt[0]["home"]["id"]):
+                    continue
+                g = nxt[0]
+                foe = next(t for t in (g["away"]["id"], g["home"]["id"]) if t != tid)
+                gap = mine_rank - r
+                why = f"{name(tid, g)} is No. {r} in the playoff ranking, {gap} spot{'s' if gap > 1 else ''} ahead of {nickname}. A loss could drop it behind."
+                prev = rows.get(g["id"])
+                if prev and prev["pick"] == tid:
+                    why = "The playoff picture pulls the other way. " + why
+                row(g, foe, "helps", why, "Playoff", 0.2 / gap)
+
+    if not rows:
+        return None
+    order = {"must": 0, "big": 1, "split": 2, "helps": 3}
+    games = sorted(rows.values(), key=lambda r: (order[r["level"]], -r["weight"], r["kickoff"]))
+    for r in games:
+        del r["weight"]
+    return {"updated": iso(now), "summary": lines, "games": games,
+            "note": "Counts treat every remaining result as equally likely, so they are not odds. They follow the conference's published "
+                    "tiebreaker; ties it can only settle with a ratings service or a draw count as misses."}
 
 
 # ---------- main ----------
@@ -869,7 +1098,11 @@ def main():
 
     now = now_utc()
     nfl_live = in_live_window(read_json("data/week.json"), now)
-    college_live = {k for k in schools if in_live_window(read_json(f"data/college/{k}.json"), now)}
+    college_live = set()                     # the school's own game, or one in its "who to root for" list
+    for k in schools:
+        c = read_json(f"data/college/{k}.json") or {}
+        if in_live_window(c, now) or in_live_window(c.get("rooting"), now):
+            college_live.add(k)
     if auto and not nfl_live and not college_live:
         print("no game live or about to start; nothing to do")
         return
