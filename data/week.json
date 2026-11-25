@@ -1,238 +1,362 @@
 {
  "season": 2026,
- "week": 11,
+ "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-25T04:01:55Z",
+ "updated": "2026-11-25T20:28:23Z",
  "source": "ESPN scoreboard",
  "games": [
   {
-   "id": "401873066",
-   "kickoff": "2026-11-20T01:15Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Prime Video",
-   "watch": [],
-   "venue": "Reliant Stadium, Houston, TX",
+   "id": "401873079",
+   "kickoff": "2026-11-26T01:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Netflix",
+   "watch": [
+    {
+     "name": "Netflix",
+     "type": "Streaming"
+    }
+   ],
+   "venue": "SoFi Stadium, Inglewood, CA",
    "away": {
-    "abbr": "IND",
-    "score": 3
+    "abbr": "GB",
+    "score": 0
    },
    "home": {
-    "abbr": "HOU",
-    "score": 26
+    "abbr": "LAR",
+    "score": 0
    }
   },
   {
-   "id": "401873070",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
+   "id": "401873081",
+   "kickoff": "2026-11-26T18:00Z",
+   "state": "pre",
+   "detail": "",
    "network": "CBS",
-   "watch": [],
-   "venue": "Highmark Stadium, Orchard Park, NY",
-   "away": {
-    "abbr": "MIA",
-    "score": 9
-   },
-   "home": {
-    "abbr": "BUF",
-    "score": 26
-   }
-  },
-  {
-   "id": "401873071",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Fox",
-   "watch": [],
-   "venue": "Soldier Field, Chicago, IL",
-   "away": {
-    "abbr": "NO",
-    "score": 13
-   },
-   "home": {
-    "abbr": "CHI",
-    "score": 21
-   }
-  },
-  {
-   "id": "401873073",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Fox",
-   "watch": [],
-   "venue": "AT&T Stadium, Arlington, TX",
-   "away": {
-    "abbr": "TEN",
-    "score": 30
-   },
-   "home": {
-    "abbr": "DAL",
-    "score": 51
-   }
-  },
-  {
-   "id": "401873072",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Fox",
-   "watch": [],
+   "watch": [
+    {
+     "name": "CBS",
+     "type": "TV"
+    }
+   ],
    "venue": "Ford Field, Detroit, MI",
    "away": {
-    "abbr": "TB",
-    "score": 21
+    "abbr": "CHI",
+    "score": 0
    },
    "home": {
     "abbr": "DET",
-    "score": 31
+    "score": 0
    }
   },
   {
-   "id": "401873067",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "CBS",
-   "watch": [],
-   "venue": "Arrowhead Stadium, Kansas City, MO",
+   "id": "401873080",
+   "kickoff": "2026-11-26T21:30Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Fox",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "AT&T Stadium, Arlington, TX",
    "away": {
-    "abbr": "ARI",
-    "score": 7
-   },
-   "home": {
-    "abbr": "KC",
-    "score": 34
-   }
-  },
-  {
-   "id": "401873076",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "CBS",
-   "watch": [],
-   "venue": "Lincoln Financial Field, Philadelphia, PA",
-   "away": {
-    "abbr": "PIT",
-    "score": 16
-   },
-   "home": {
     "abbr": "PHI",
-    "score": 19
-   }
-  },
-  {
-   "id": "401873068",
-   "kickoff": "2026-11-22T18:00Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "Fox",
-   "watch": [],
-   "venue": "Bank of America Stadium, Charlotte, NC",
-   "away": {
-    "abbr": "BAL",
-    "score": 33
+    "score": 0
    },
    "home": {
-    "abbr": "CAR",
-    "score": 35
+    "abbr": "DAL",
+    "score": 0
    }
   },
   {
-   "id": "401873074",
-   "kickoff": "2026-11-22T21:05Z",
-   "state": "post",
-   "detail": "Final",
+   "id": "401873082",
+   "kickoff": "2026-11-27T01:20Z",
+   "state": "pre",
+   "detail": "",
+   "network": "NBC",
+   "watch": [
+    {
+     "name": "NBC",
+     "type": "TV"
+    }
+   ],
+   "venue": "Highmark Stadium, Orchard Park, NY",
+   "away": {
+    "abbr": "KC",
+    "score": 0
+   },
+   "home": {
+    "abbr": "BUF",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873083",
+   "kickoff": "2026-11-27T20:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Prime Video",
+   "watch": [
+    {
+     "name": "Prime Video",
+     "type": "Streaming"
+    }
+   ],
+   "venue": "Acrisure Stadium, Pittsburgh, PA",
+   "away": {
+    "abbr": "DEN",
+    "score": 0
+   },
+   "home": {
+    "abbr": "PIT",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873087",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "CBS",
+   "watch": [
+    {
+     "name": "CBS",
+     "type": "TV"
+    }
+   ],
+   "venue": "Paycor Stadium, Cincinnati, OH",
+   "away": {
+    "abbr": "NO",
+    "score": 0
+   },
+   "home": {
+    "abbr": "CIN",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873088",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
    "network": "Fox",
-   "watch": [],
-   "venue": "SoFi Stadium, Inglewood, CA",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "Lucas Oil Stadium, Indianapolis, IN",
+   "away": {
+    "abbr": "NYG",
+    "score": 0
+   },
+   "home": {
+    "abbr": "IND",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873089",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "CBS",
+   "watch": [
+    {
+     "name": "CBS",
+     "type": "TV"
+    }
+   ],
+   "venue": "Hard Rock Stadium, Miami Gardens, FL",
    "away": {
     "abbr": "NYJ",
-    "score": 27
+    "score": 0
+   },
+   "home": {
+    "abbr": "MIA",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873084",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Fox",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "U.S. Bank Stadium, Minneapolis, MN",
+   "away": {
+    "abbr": "ATL",
+    "score": 0
+   },
+   "home": {
+    "abbr": "MIN",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873090",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Fox",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "EverBank Stadium, Jacksonville, FL",
+   "away": {
+    "abbr": "TEN",
+    "score": 0
+   },
+   "home": {
+    "abbr": "JAX",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873085",
+   "kickoff": "2026-11-29T18:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "CBS",
+   "watch": [
+    {
+     "name": "CBS",
+     "type": "TV"
+    }
+   ],
+   "venue": "Reliant Stadium, Houston, TX",
+   "away": {
+    "abbr": "BAL",
+    "score": 0
+   },
+   "home": {
+    "abbr": "HOU",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873093",
+   "kickoff": "2026-11-29T21:05Z",
+   "state": "pre",
+   "detail": "",
+   "network": "CBS",
+   "watch": [
+    {
+     "name": "CBS",
+     "type": "TV"
+    }
+   ],
+   "venue": "SoFi Stadium, Inglewood, CA",
+   "away": {
+    "abbr": "NE",
+    "score": 0
    },
    "home": {
     "abbr": "LAC",
-    "score": 24
+    "score": 0
    }
   },
   {
-   "id": "401873075",
-   "kickoff": "2026-11-22T21:25Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "CBS",
-   "watch": [],
-   "venue": "Empower Field at Mile High, Denver, CO",
+   "id": "401873092",
+   "kickoff": "2026-11-29T21:25Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Fox",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "State Farm Stadium, Glendale, AZ",
    "away": {
-    "abbr": "LV",
-    "score": 24
+    "abbr": "WAS",
+    "score": 0
    },
    "home": {
-    "abbr": "DEN",
-    "score": 38
+    "abbr": "ARI",
+    "score": 0
    }
   },
   {
-   "id": "401873069",
-   "kickoff": "2026-11-22T21:25Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "CBS",
-   "watch": [],
-   "venue": "MetLife Stadium, East Rutherford, NJ",
+   "id": "401873091",
+   "kickoff": "2026-11-29T21:25Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Fox",
+   "watch": [
+    {
+     "name": "Fox",
+     "type": "TV"
+    }
+   ],
+   "venue": "Levi's Stadium, Santa Clara, CA",
    "away": {
-    "abbr": "JAX",
-    "score": 18
-   },
-   "home": {
-    "abbr": "NYG",
-    "score": 23
-   }
-  },
-  {
-   "id": "401873077",
-   "kickoff": "2026-11-23T01:20Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "NBC",
-   "watch": [],
-   "venue": "Estadio Banorte, Mexico City",
-   "away": {
-    "abbr": "MIN",
-    "score": 10
+    "abbr": "SEA",
+    "score": 0
    },
    "home": {
     "abbr": "SF",
-    "score": 35
+    "score": 0
    }
   },
   {
-   "id": "401873078",
-   "kickoff": "2026-11-24T01:15Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "ESPN",
-   "watch": [],
-   "venue": "Northwest Stadium, Landover, MD",
+   "id": "401873086",
+   "kickoff": "2026-11-30T01:20Z",
+   "state": "pre",
+   "detail": "",
+   "network": "NBC",
+   "watch": [
+    {
+     "name": "NBC",
+     "type": "TV"
+    }
+   ],
+   "venue": "Huntington Bank Field, Cleveland, OH",
    "away": {
-    "abbr": "CIN",
-    "score": 20
+    "abbr": "LV",
+    "score": 0
    },
    "home": {
-    "abbr": "WAS",
-    "score": 22
+    "abbr": "CLE",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873094",
+   "kickoff": "2026-12-01T01:15Z",
+   "state": "pre",
+   "detail": "",
+   "network": "ESPN",
+   "watch": [
+    {
+     "name": "ESPN",
+     "type": "TV"
+    }
+   ],
+   "venue": "Raymond James Stadium, Tampa, FL",
+   "away": {
+    "abbr": "CAR",
+    "score": 0
+   },
+   "home": {
+    "abbr": "TB",
+    "score": 0
    }
   }
  ],
- "byes": [
-  "ATL",
-  "CLE",
-  "GB",
-  "LAR",
-  "NE",
-  "SEA"
- ]
+ "byes": []
 }

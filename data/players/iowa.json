@@ -1,6 +1,6 @@
 {
  "school": "iowa",
- "updated": "2026-11-25T04:01:59Z",
+ "updated": "2026-11-25T20:28:29Z",
  "source": "Sleeper API + ESPN rosters",
  "players": [
   {
@@ -217,7 +217,7 @@
    "pos": "TE",
    "num": 87,
    "status": "Active",
-   "injury": "Questionable",
+   "injury": null,
    "college": "Iowa",
    "espn_id": "4430027",
    "draft": {
@@ -548,7 +548,7 @@
    "pos": "WR",
    "num": 10,
    "status": "Active",
-   "injury": "Out",
+   "injury": null,
    "college": "Iowa",
    "espn_id": "5081338",
    "draft": {
