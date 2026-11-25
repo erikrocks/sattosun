@@ -919,7 +919,7 @@ function rootingHTML(){
                : g.state === "in" ? `<span class="live-dot"></span>${score} · ${esc(g.detail)}`
                : Date.now() > new Date(g.kickoff) ? "Kicked off · updating"
                : `${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}`;
-    const tag = g.state === "post" && pick && g.winner ? (g.winner === pick.id ? `<span class="tag win">Went Iowa's way</span>`.replace("Iowa", esc(school().name)) : `<span class="tag loss">Didn't help</span>`)
+    const tag = g.state === "post" && pick && g.winner ? (g.winner === pick.id ? `<span class="tag win">Went ${esc(school().name)}'s way</span>` : `<span class="tag loss">Didn't help</span>`)
               : `<span class="tag ${esc(g.level)}">${esc(ROOT_TAG[g.level] || "")}</span>`;
     return `<div class="rg"><div class="rhead">${head}${tag}</div>
       <span class="psub ${g.state === "pre" ? "" : "on"}">${when}</span>

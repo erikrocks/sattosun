@@ -877,7 +877,8 @@ def neutral_game(ev):
     sides = {c.get("homeAway"): c for c in comp["competitors"]}
     away, home = sides.get("away") or comp["competitors"][0], sides.get("home") or comp["competitors"][-1]
     winner = next((str(c["team"]["id"]) for c in comp["competitors"] if c.get("winner")), None) if state == "post" else None
-    title_game = any("championship" in (n.get("headline") or "").lower() for n in comp.get("notes") or [])
+    title_game = (any("championship" in (n.get("headline") or "").lower() for n in comp.get("notes") or [])
+                  or "championship" in ((comp.get("type") or {}).get("slug") or ""))
     return {"id": ev["id"], "kickoff": ev["date"], "state": state, "detail": st.get("shortDetail", "") if state != "pre" else "",
             "network": ((b[0].get("media") or {}).get("shortName") or "") if b else "",
             "away": side(away), "home": side(home), "winner": winner, "titleGame": title_game}
@@ -954,7 +955,7 @@ def rooting_guide(school, team_id, nickname):
         return None
     sched = {}                                                     # event id -> game, across the whole conference
     def add_schedule(tid):
-        for ev in get_json(f"{COLLEGE}/teams/{tid}/schedule").get("events", []):
+        for ev in get_json(f"{COLLEGE}/teams/{tid}/schedule?seasontype=2").get("events", []):   # regular season only: no bowls
             if ev["id"] not in sched:
                 sched[ev["id"]] = neutral_game(ev)
     for tid in members:
@@ -996,12 +997,22 @@ def rooting_guide(school, team_id, nickname):
                 lines.append(f"{nickname} can no longer reach the {title}.")
             elif good == total and lose == total:
                 lines.append(f"{nickname} is in the {title} whatever happens this week.")
+            elif good == 0:
+                lines.append(f"{nickname} can no longer reach the {title}.")
+            elif good == total:
+                lines.append(f"Beat {opp} and {nickname} is in the {title}."
+                             + (" Lose and it is out." if lose == 0 else f" Lose and it is in for {lose} of the {total} ways the other games can finish."))
+                row(g, me, "must", f"A win clinches a spot in the {title}.", title, 9)
             else:
                 lines.append(f"If {nickname} beats {opp}, it reaches the {title} in {good} of the {total} ways the other games can finish."
                              + (f" If it loses, it is out." if lose == 0 else f" If it loses, that drops to {lose} of {total}."))
                 row(g, me, "must" if lose == 0 else "big",
                     f"Everything starts here. With a loss, {nickname} " + ("is out of the title race." if lose == 0 else f"reaches the title game in only {lose} of {total} combinations."),
                     title, 9)
+        elif good == 0:
+            lines.append(f"{nickname} can no longer reach the {title}.")
+        elif good == total:
+            lines.append(f"{nickname} is in the {title} whatever happens in the remaining games.")
         else:
             lines.append(f"{nickname} reaches the {title} in {good} of the {total} ways the remaining games can finish.")
         if 0 < good < total:
@@ -1031,12 +1042,19 @@ def rooting_guide(school, team_id, nickname):
                     ln = name(next(t for t in ids[j] if t != w), hg)
                     if d / quarter < 0.1:
                         pass
-                    elif d / quarter >= 0.25:
-                        level, pick = "split", None
-                        why = (f"It depends on {hg['away']['name']} at {hg['home']['name']}. If {wn} wins, {nickname} wants {name(other, g)} here "
-                               f"({co} of {quarter} combinations against {cp}). If {ln} wins, it wants {name(next(t for t in (a, b) if t != other), g)}.")
                     else:
-                        why += f" One exception: if {wn} beats {ln}, {name(other, g)} winning is slightly better ({co} of {quarter} against {cp})."
+                        first = parse_time(hg["kickoff"]) < parse_time(g["kickoff"])
+                        timing = (" That game kicks off first, so you'll know which way to lean." if first
+                                  else " That game kicks off later, so you won't know yet.")
+                        if d / quarter >= 0.25:
+                            level = "split"
+                            why = (f"It depends on {hg['away']['name']} at {hg['home']['name']}. If {wn} wins, {nickname} wants {name(other, g)} here "
+                                   f"({co} of {quarter} combinations against {cp}). If {ln} wins, it wants {name(pick, g)}.{timing}"
+                                   + ("" if first else f" Across every result, {name(pick, g)} winning is the better bet ({hi} of {half} against {lo})."))
+                            if first:
+                                pick = None
+                        else:
+                            why += f" The exception: if {wn} beats {ln}, {nickname} is better off with {name(other, g)} winning ({co} of {quarter} against {cp}).{timing}"
                 row(g, pick, level, why, title, (hi - lo) / half + (2 if level == "split" else 0))
 
     # --- playoff ranking: teams just ahead of us ---
@@ -1078,7 +1096,8 @@ def rooting_guide(school, team_id, nickname):
     for r in games:
         del r["weight"]
     return {"updated": iso(now), "summary": lines, "games": games,
-            "note": "Counts treat every remaining result as equally likely, so they are not odds. They follow the conference's published "
+            "note": ("Counts for the other games assume " + nickname + " wins its own. " if any(r["pick"] == me for r in rows.values()) else "")
+                    + "Counts treat every remaining result as equally likely, so they are not odds. They follow the conference's published "
                     "tiebreaker; ties it can only settle with a ratings service or a draw count as misses."}
 
 
