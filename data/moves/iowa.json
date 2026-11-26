@@ -1,7 +1,15 @@
 {
  "school": "iowa",
- "updated": "2026-11-25T03:55:13Z",
+ "updated": "2026-11-26T20:10:26Z",
  "moves": [
+  {
+   "date": "2026-11-26",
+   "name": "Max Llewellyn",
+   "team": "MIA",
+   "pos": "DE",
+   "type": "added",
+   "text": "Joined MIA (practice squad)"
+  },
   {
    "date": "2026-11-25",
    "name": "Brandon Smith",

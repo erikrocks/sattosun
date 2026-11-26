@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-26T17:51:35Z",
+ "updated": "2026-11-26T20:10:26Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -818,15 +818,34 @@
        "TGTS": "6"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "DET",
+     "opp": "CHI",
+     "at": false,
+     "result": "",
+     "live": true,
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "11",
+       "AVG": "11.0",
+       "TD": "1",
+       "LONG": "11",
+       "TGTS": "2"
+      }
+     }
     }
    ],
    "totals": {
     "receiving": {
-     "REC": "39",
-     "YDS": "477",
-     "TD": "3",
+     "REC": "40",
+     "YDS": "488",
+     "TD": "4",
      "LONG": "47",
-     "TGTS": "59"
+     "TGTS": "61"
     },
     "rushing": {
      "CAR": "1",
@@ -835,7 +854,7 @@
      "LONG": "2"
     }
    },
-   "gp": 10
+   "gp": 11
   },
   "jack campbell": {
    "name": "Jack Campbell",
@@ -2033,18 +2052,37 @@
        "LONG": "56"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "CHI",
+     "opp": "DET",
+     "at": true,
+     "result": "",
+     "live": true,
+     "cats": {
+      "punting": {
+       "NO": "1",
+       "YDS": "46",
+       "AVG": "46.0",
+       "TB": "0",
+       "In 20": "1",
+       "LONG": "46"
+      }
+     }
     }
    ],
    "totals": {
     "punting": {
-     "NO": "29",
-     "YDS": "1393",
+     "NO": "30",
+     "YDS": "1439",
      "TB": "3",
-     "In 20": "11",
+     "In 20": "12",
      "LONG": "65"
     }
    },
-   "gp": 9
+   "gp": 10
   },
   "lukas van ness": {
    "name": "Lukas Van Ness",
@@ -5030,8 +5068,8 @@
      "key": "sam laporta",
      "name": "Sam LaPorta",
      "team": "DET",
-     "value": "477",
-     "line": "39 REC · 477 YDS · 3 TD"
+     "value": "488",
+     "line": "40 REC · 488 YDS · 4 TD"
     },
     {
      "key": "tj hockenson",

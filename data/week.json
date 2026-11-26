@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-26T17:51:35Z",
+ "updated": "2026-11-26T20:10:20Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873081",
    "kickoff": "2026-11-26T18:00Z",
-   "state": "pre",
-   "detail": "",
+   "state": "in",
+   "detail": "10:40 - 3rd",
    "network": "CBS",
    "watch": [
     {
@@ -20,11 +20,11 @@
    "venue": "Ford Field, Detroit, MI",
    "away": {
     "abbr": "CHI",
-    "score": 0
+    "score": 17
    },
    "home": {
     "abbr": "DET",
-    "score": 0
+    "score": 19
    }
   },
   {

@@ -1,9 +1,42 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-26T17:51:35Z",
+ "updated": "2026-11-26T20:10:26Z",
  "source": "ESPN game summaries",
  "games": {
+  "401873081": {
+   "final": false,
+   "players": {
+    "tory taylor": {
+     "team": "CHI",
+     "id": "4686889",
+     "cats": {
+      "punting": {
+       "NO": "1",
+       "YDS": "46",
+       "AVG": "46.0",
+       "TB": "0",
+       "In 20": "1",
+       "LONG": "46"
+      }
+     }
+    },
+    "sam laporta": {
+     "team": "DET",
+     "id": "4430027",
+     "cats": {
+      "receiving": {
+       "REC": "1",
+       "YDS": "11",
+       "AVG": "11.0",
+       "TD": "1",
+       "LONG": "11",
+       "TGTS": "2"
+      }
+     }
+    }
+   }
+  },
   "401873079": {
    "final": true,
    "players": {
