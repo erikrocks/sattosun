@@ -2,31 +2,9 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-25T20:28:23Z",
+ "updated": "2026-11-26T17:51:35Z",
  "source": "ESPN scoreboard",
  "games": [
-  {
-   "id": "401873079",
-   "kickoff": "2026-11-26T01:00Z",
-   "state": "pre",
-   "detail": "",
-   "network": "Netflix",
-   "watch": [
-    {
-     "name": "Netflix",
-     "type": "Streaming"
-    }
-   ],
-   "venue": "SoFi Stadium, Inglewood, CA",
-   "away": {
-    "abbr": "GB",
-    "score": 0
-   },
-   "home": {
-    "abbr": "LAR",
-    "score": 0
-   }
-  },
   {
    "id": "401873081",
    "kickoff": "2026-11-26T18:00Z",
@@ -91,6 +69,23 @@
    "home": {
     "abbr": "BUF",
     "score": 0
+   }
+  },
+  {
+   "id": "401873079",
+   "kickoff": "2026-11-26T01:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Netflix",
+   "watch": [],
+   "venue": "SoFi Stadium, Inglewood, CA",
+   "away": {
+    "abbr": "GB",
+    "score": 13
+   },
+   "home": {
+    "abbr": "LAR",
+    "score": 26
    }
   },
   {

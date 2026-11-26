@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-25T20:28:29Z",
+ "updated": "2026-11-26T17:51:35Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -2248,11 +2248,31 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "GB",
+     "opp": "LAR",
+     "at": true,
+     "result": "L 13-26",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "38",
+     "TOT": "41",
      "SOLO": "23",
      "SACKS": "6",
      "TFL": "7",
@@ -2261,7 +2281,7 @@
      "TD": "0"
     }
    },
-   "gp": 10
+   "gp": 11
   },
   "kristian welch": {
    "name": "Kristian Welch",
@@ -2522,12 +2542,32 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "GB",
+     "opp": "LAR",
+     "at": true,
+     "result": "L 13-26",
+     "live": false,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "15",
-     "SOLO": "9",
+     "TOT": "16",
+     "SOLO": "10",
      "SACKS": "0",
      "TFL": "0",
      "PD": "1",
@@ -2535,7 +2575,7 @@
      "TD": "0"
     }
    },
-   "gp": 7
+   "gp": 8
   },
   "kaleb johnson": {
    "name": "Kaleb Johnson",
@@ -2701,6 +2741,32 @@
        "LONG": "9"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "GB",
+     "opp": "LAR",
+     "at": true,
+     "result": "L 13-26",
+     "live": false,
+     "cats": {
+      "rushing": {
+       "CAR": "8",
+       "YDS": "13",
+       "AVG": "1.6",
+       "TD": "0",
+       "LONG": "6"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "19",
+       "AVG": "19.0",
+       "TD": "0",
+       "LONG": "19",
+       "TGTS": "2"
+      }
+     }
     }
    ],
    "totals": {
@@ -2711,8 +2777,8 @@
      "TD": "0"
     },
     "rushing": {
-     "CAR": "52",
-     "YDS": "214",
+     "CAR": "60",
+     "YDS": "227",
      "TD": "1",
      "LONG": "34"
     },
@@ -2722,14 +2788,14 @@
      "REC": "0"
     },
     "receiving": {
-     "REC": "1",
-     "YDS": "10",
+     "REC": "2",
+     "YDS": "29",
      "TD": "0",
-     "LONG": "10",
-     "TGTS": "3"
+     "LONG": "19",
+     "TGTS": "5"
     }
    },
-   "gp": 8
+   "gp": 9
   },
   "tj hockenson": {
    "name": "T.J. Hockenson",
@@ -4998,8 +5064,8 @@
      "key": "kaleb johnson",
      "name": "Kaleb Johnson",
      "team": "GB",
-     "value": "214",
-     "line": "52 CAR · 214 YDS · 1 TD"
+     "value": "227",
+     "line": "60 CAR · 227 YDS · 1 TD"
     },
     {
      "key": "tyler goodson",
@@ -5053,8 +5119,8 @@
      "key": "lukas van ness",
      "name": "Lukas Van Ness",
      "team": "GB",
-     "value": "38",
-     "line": "38 TOT · 23 SOLO · 7 TFL"
+     "value": "41",
+     "line": "41 TOT · 23 SOLO · 7 TFL"
     }
    ]
   },

@@ -1,7 +1,64 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-25T20:28:29Z",
+ "updated": "2026-11-26T17:51:35Z",
  "source": "ESPN game summaries",
- "games": {}
+ "games": {
+  "401873079": {
+   "final": true,
+   "players": {
+    "kaleb johnson": {
+     "team": "GB",
+     "id": "4819231",
+     "cats": {
+      "rushing": {
+       "CAR": "8",
+       "YDS": "13",
+       "AVG": "1.6",
+       "TD": "0",
+       "LONG": "6"
+      },
+      "receiving": {
+       "REC": "1",
+       "YDS": "19",
+       "AVG": "19.0",
+       "TD": "0",
+       "LONG": "19",
+       "TGTS": "2"
+      }
+     }
+    },
+    "lukas van ness": {
+     "team": "GB",
+     "id": "4686906",
+     "cats": {
+      "defensive": {
+       "TOT": "3",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    },
+    "nick niemann": {
+     "team": "GB",
+     "id": "4036141",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  }
+ }
 }
