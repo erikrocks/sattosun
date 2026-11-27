@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T22:01:11Z",
+ "updated": "2026-11-27T22:11:24Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873083",
    "kickoff": "2026-11-27T20:00Z",
    "state": "in",
-   "detail": "6:08 - 3rd",
+   "detail": "1:34 - 3rd",
    "network": "Prime Video",
    "watch": [
     {

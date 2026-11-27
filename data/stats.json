@@ -1,7 +1,7 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-27T22:01:11Z",
+ "updated": "2026-11-27T22:11:24Z",
  "source": "ESPN game summaries",
  "games": {
   "401873083": {
@@ -11,9 +11,14 @@
      "team": "DEN",
      "id": "4382401",
      "cats": {
+      "fumbles": {
+       "FUM": "0",
+       "LOST": "0",
+       "REC": "1"
+      },
       "defensive": {
-       "TOT": "2",
-       "SOLO": "1",
+       "TOT": "3",
+       "SOLO": "2",
        "SACKS": "0",
        "TFL": "0",
        "PD": "1",
