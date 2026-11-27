@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T04:38:13Z",
+ "updated": "2026-11-27T04:48:20Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -316,7 +316,7 @@
   },
   {
    "id": "401858536",
-   "kickoff": "2026-11-27T17:00Z",
+   "kickoff": "2026-11-27T17:08Z",
    "state": "pre",
    "detail": "",
    "network": "CBS",
@@ -12053,7 +12053,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T04:38:13Z",
+  "updated": "2026-11-27T04:48:20Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12065,7 +12065,7 @@
     "games": [
      {
       "id": "401858536",
-      "kickoff": "2026-11-27T17:00Z",
+      "kickoff": "2026-11-27T17:08Z",
       "state": "pre",
       "detail": "",
       "network": "CBS",
@@ -12112,31 +12112,6 @@
       "pick": "264",
       "level": "big",
       "why": "No. 12 Oregon is 1 spot ahead of Iowa in the at-large line. A loss could drop it behind."
-     },
-     {
-      "id": "401856879",
-      "kickoff": "2026-11-27T01:00Z",
-      "state": "in",
-      "detail": "1:07 - 4th",
-      "network": "ESPN",
-      "away": {
-       "id": "2628",
-       "abbr": "TCU",
-       "name": "TCU",
-       "rank": null,
-       "score": null
-      },
-      "home": {
-       "id": "2641",
-       "abbr": "TTU",
-       "name": "Texas Tech",
-       "rank": 11,
-       "score": null
-      },
-      "winner": null,
-      "pick": "2628",
-      "level": "big",
-      "why": "No. 11 Texas Tech is 2 spots ahead of Iowa in the at-large line. A loss could drop it behind."
      },
      {
       "id": "401856876",
@@ -12324,7 +12299,7 @@
     "games": [
      {
       "id": "401858536",
-      "kickoff": "2026-11-27T17:00Z",
+      "kickoff": "2026-11-27T17:08Z",
       "state": "pre",
       "detail": "",
       "network": "CBS",
