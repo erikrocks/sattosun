@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T17:18:30Z",
+ "updated": "2026-11-27T17:28:36Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "11:25 - 1st",
+   "detail": "5:24 - 1st",
    "network": "CBS",
    "watch": [
     {
@@ -11797,9 +11797,9 @@
      "rows": [
       [
        "Hank Brown",
-       "1/2",
-       "9",
-       "4.5",
+       "2/3",
+       "29",
+       "9.7",
        "0",
        "0"
       ]
@@ -11815,20 +11815,12 @@
      ],
      "rows": [
       [
-       "Hank Brown",
-       "1",
-       "2",
-       "2.0",
-       "0",
-       "2"
-      ],
-      [
        "L.J. Phillips Jr.",
-       "1",
-       "2",
-       "2.0",
+       "5",
+       "35",
+       "7.0",
        "0",
-       "2"
+       "22"
       ],
       [
        "Braeden Jackson",
@@ -11837,6 +11829,14 @@
        "0.0",
        "0",
        "0"
+      ],
+      [
+       "Hank Brown",
+       "2",
+       "-2",
+       "-1.0",
+       "0",
+       "2"
       ]
      ]
     },
@@ -11849,6 +11849,14 @@
       "LONG"
      ],
      "rows": [
+      [
+       "Braeden Jackson",
+       "1",
+       "20",
+       "20.0",
+       "0",
+       "20"
+      ],
       [
        "L.J. Phillips Jr.",
        "1",
@@ -11872,6 +11880,46 @@
      "rows": [
       [
        "Jayden Montgomery",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
        "1",
        "0",
        "0",
@@ -11881,7 +11929,7 @@
        "0"
       ],
       [
-       "Cam Buffington",
+       "Will Hubert",
        "1",
        "0",
        "0",
@@ -11907,6 +11955,25 @@
        "16",
        "16.0",
        "16",
+       "0"
+      ]
+     ]
+    },
+    "puntReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Evan James",
+       "1",
+       "22",
+       "22.0",
+       "22",
        "0"
       ]
      ]
@@ -11945,9 +12012,9 @@
      "rows": [
       [
        "Anthony Colandrea",
-       "0/1",
-       "0",
-       "0.0",
+       "2/3",
+       "16",
+       "5.3",
        "0",
        "0"
       ]
@@ -11969,6 +12036,41 @@
        "5.0",
        "0",
        "5"
+      ],
+      [
+       "Isaiah Mozee",
+       "2",
+       "0",
+       "0.0",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Luke Lindenmeyer",
+       "1",
+       "11",
+       "11.0",
+       "0",
+       "11"
+      ],
+      [
+       "Carter Nelson",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
       ]
      ]
     },
@@ -11985,10 +12087,40 @@
      "rows": [
       [
        "Cameron Lenhardt",
-       "1",
+       "2",
+       "2",
+       "0",
        "1",
        "0",
        "0",
+       "0"
+      ],
+      [
+       "Danny Odem III",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dexter Foster",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dwayne McDougle III",
+       "1",
+       "1",
+       "1",
+       "1",
        "0",
        "0",
        "0"
@@ -12004,7 +12136,7 @@
        "0"
       ],
       [
-       "Dexter Foster",
+       "Donovan Jones",
        "1",
        "1",
        "0",
@@ -12014,9 +12146,29 @@
        "0"
       ],
       [
-       "Danny Odem III",
+       "Jamir Conn",
        "1",
        "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Rowdy Bauer",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Victor Evans III",
+       "1",
+       "0",
        "0",
        "0",
        "0",
@@ -12044,6 +12196,27 @@
        "0"
       ]
      ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Archie Wilson",
+       "1",
+       "44",
+       "44.0",
+       "0",
+       "0",
+       "44"
+      ]
+     ]
     }
    },
    "lines": {
@@ -12063,8 +12236,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1651",
-     "line": "1651 YDS · 10 TD · 4 INT"
+     "value": "1671",
+     "line": "1671 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -12082,14 +12255,14 @@
    "label": "Rushing",
    "players": [
     {
+     "name": "L.J. Phillips Jr.",
+     "value": "555",
+     "line": "109 CAR · 555 YDS · 1 TD"
+    },
+    {
      "name": "Kamari Moulton",
      "value": "541",
      "line": "86 CAR · 541 YDS · 4 TD"
-    },
-    {
-     "name": "L.J. Phillips Jr.",
-     "value": "522",
-     "line": "105 CAR · 522 YDS · 1 TD"
     },
     {
      "name": "Xavier Williams",
@@ -12128,8 +12301,8 @@
     },
     {
      "name": "Jayden Montgomery",
-     "value": "68",
-     "line": "68 TOT · 9.5 TFL · 3.5 SACKS"
+     "value": "69",
+     "line": "69 TOT · 9.5 TFL · 3.5 SACKS"
     },
     {
      "name": "Zach Lutmer",
@@ -12326,7 +12499,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T17:18:30Z",
+  "updated": "2026-11-27T17:28:36Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12340,7 +12513,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:37 - 1st",
+      "detail": "6:49 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -12574,7 +12747,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:37 - 1st",
+      "detail": "6:49 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
