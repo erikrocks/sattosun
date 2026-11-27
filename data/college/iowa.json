@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T03:17:19Z",
+ "updated": "2026-11-27T03:27:26Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -12053,7 +12053,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T03:17:19Z",
+  "updated": "2026-11-27T03:27:26Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12117,21 +12117,21 @@
       "id": "401856879",
       "kickoff": "2026-11-27T01:00Z",
       "state": "in",
-      "detail": "Halftime",
+      "detail": "9:38 - 3rd",
       "network": "ESPN",
       "away": {
        "id": "2628",
        "abbr": "TCU",
        "name": "TCU",
        "rank": null,
-       "score": 10
+       "score": null
       },
       "home": {
        "id": "2641",
        "abbr": "TTU",
        "name": "Texas Tech",
        "rank": 11,
-       "score": 27
+       "score": null
       },
       "winner": null,
       "pick": "2628",
