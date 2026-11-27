@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T22:51:32Z",
+ "updated": "2026-11-27T23:01:34Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -4094,8 +4094,8 @@
      "team": "DEN",
      "opp": "PIT",
      "at": true,
-     "result": "",
-     "live": true,
+     "result": "L 5-27",
+     "live": false,
      "cats": {
       "fumbles": {
        "FUM": "0",
@@ -4535,11 +4535,11 @@
      "team": "PIT",
      "opp": "DEN",
      "at": false,
-     "result": "",
-     "live": true,
+     "result": "W 27-5",
+     "live": false,
      "cats": {
       "defensive": {
-       "TOT": "3",
+       "TOT": "4",
        "SOLO": "1",
        "SACKS": "0",
        "TFL": "0",
@@ -4552,7 +4552,7 @@
    ],
    "totals": {
     "defensive": {
-     "TOT": "27",
+     "TOT": "28",
      "SOLO": "11",
      "SACKS": "1",
      "TFL": "3",

@@ -2,21 +2,16 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T22:51:32Z",
+ "updated": "2026-11-27T23:01:34Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873083",
    "kickoff": "2026-11-27T20:00Z",
-   "state": "in",
-   "detail": "2:00 - 4th",
+   "state": "post",
+   "detail": "Final",
    "network": "Prime Video",
-   "watch": [
-    {
-     "name": "Prime Video",
-     "type": "Streaming"
-    }
-   ],
+   "watch": [],
    "venue": "Acrisure Stadium, Pittsburgh, PA",
    "away": {
     "abbr": "DEN",
