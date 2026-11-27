@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T20:40:55Z",
+ "updated": "2026-11-27T20:50:58Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -4498,12 +4498,32 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "PIT",
+     "opp": "DEN",
+     "at": false,
+     "result": "",
+     "live": true,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "24",
-     "SOLO": "10",
+     "TOT": "25",
+     "SOLO": "11",
      "SACKS": "1",
      "TFL": "3",
      "PD": "1",
@@ -4511,7 +4531,7 @@
      "TD": "0"
     }
    },
-   "gp": 8
+   "gp": 9
   },
   "tyler goodson": {
    "name": "Tyler Goodson",
