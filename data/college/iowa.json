@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T17:48:51Z",
+ "updated": "2026-11-27T17:58:59Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "13:03 - 2nd",
+   "detail": "9:09 - 2nd",
    "network": "CBS",
    "watch": [
     {
@@ -11797,9 +11797,9 @@
      "rows": [
       [
        "Hank Brown",
-       "2/3",
-       "29",
-       "9.7",
+       "5/7",
+       "85",
+       "12.1",
        "0",
        "0"
       ]
@@ -11816,27 +11816,27 @@
      "rows": [
       [
        "L.J. Phillips Jr.",
-       "5",
-       "35",
-       "7.0",
+       "6",
+       "36",
+       "6.0",
        "0",
        "22"
       ],
       [
        "Hank Brown",
+       "4",
        "3",
-       "12",
-       "4.0",
+       "0.8",
        "1",
        "14"
       ],
       [
        "Braeden Jackson",
+       "2",
        "1",
+       "0.5",
        "0",
-       "0.0",
-       "0",
-       "0"
+       "1"
       ]
      ]
     },
@@ -11850,12 +11850,36 @@
      ],
      "rows": [
       [
+       "DJ Vonnahme",
+       "1",
+       "24",
+       "24.0",
+       "0",
+       "24"
+      ],
+      [
        "Braeden Jackson",
        "1",
        "20",
        "20.0",
        "0",
        "20"
+      ],
+      [
+       "Tony Diaz",
+       "1",
+       "17",
+       "17.0",
+       "0",
+       "17"
+      ],
+      [
+       "Dayton Howard",
+       "1",
+       "15",
+       "15.0",
+       "0",
+       "15"
       ],
       [
        "L.J. Phillips Jr.",
@@ -11990,6 +12014,14 @@
      ],
      "rows": [
       [
+       "Braeden Jackson",
+       "1",
+       "29",
+       "29.0",
+       "29",
+       "0"
+      ],
+      [
        "Xavier Williams",
        "1",
        "16",
@@ -12029,11 +12061,11 @@
      "rows": [
       [
        "Caden Buhr",
-       "0/0",
-       "0.0",
-       "0",
        "1/1",
-       "1"
+       "100.0",
+       "39",
+       "1/1",
+       "4"
       ]
      ]
     },
@@ -12177,8 +12209,28 @@
      ],
      "rows": [
       [
+       "Danny Odem III",
+       "4",
+       "3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dwayne McDougle III",
+       "3",
+       "3",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Cameron Lenhardt",
-       "2",
+       "3",
        "2",
        "0",
        "1",
@@ -12187,9 +12239,9 @@
        "0"
       ],
       [
-       "Danny Odem III",
+       "Donovan Jones",
        "2",
-       "2",
+       "1",
        "0",
        "0",
        "0",
@@ -12207,27 +12259,37 @@
        "0"
       ],
       [
-       "Dwayne McDougle III",
+       "Victor Evans III",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Kade Pietrzak",
        "1",
        "1",
        "1",
        "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Justyn Rhett",
+       "1",
+       "1",
+       "0",
+       "0",
        "0",
        "0",
        "0"
       ],
       [
        "Vincent Shavers Jr.",
-       "1",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Donovan Jones",
        "1",
        "1",
        "0",
@@ -12250,16 +12312,6 @@
        "Rowdy Bauer",
        "1",
        "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Victor Evans III",
-       "1",
-       "0",
        "0",
        "0",
        "0",
@@ -12332,7 +12384,7 @@
    "lines": {
     "us": [
      "7",
-     "0"
+     "3"
     ],
     "opp": [
      "0",
@@ -12361,6 +12413,17 @@
       7,
       7
      ]
+    },
+    {
+     "q": 2,
+     "clock": "9:09",
+     "us": true,
+     "type": "FG",
+     "text": "C. Buhr 39 yd FG GOOD",
+     "score": [
+      10,
+      7
+     ]
     }
    ]
   }
@@ -12371,8 +12434,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1671",
-     "line": "1671 YDS · 10 TD · 4 INT"
+     "value": "1727",
+     "line": "1727 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -12391,8 +12454,8 @@
    "players": [
     {
      "name": "L.J. Phillips Jr.",
-     "value": "555",
-     "line": "109 CAR · 555 YDS · 1 TD"
+     "value": "556",
+     "line": "110 CAR · 556 YDS · 1 TD"
     },
     {
      "name": "Kamari Moulton",
@@ -12411,8 +12474,8 @@
    "players": [
     {
      "name": "Tony Diaz",
-     "value": "601",
-     "line": "44 REC · 601 YDS · 3 TD"
+     "value": "618",
+     "line": "45 REC · 618 YDS · 3 TD"
     },
     {
      "name": "Reece Vander Zee",
@@ -12421,8 +12484,8 @@
     },
     {
      "name": "DJ Vonnahme",
-     "value": "361",
-     "line": "38 REC · 361 YDS · 3 TD"
+     "value": "385",
+     "line": "39 REC · 385 YDS · 3 TD"
     }
    ]
   },
