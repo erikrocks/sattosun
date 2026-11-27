@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T17:28:36Z",
+ "updated": "2026-11-27T17:38:44Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "5:24 - 1st",
+   "detail": "End of 1st",
    "network": "CBS",
    "watch": [
     {
@@ -11823,20 +11823,20 @@
        "22"
       ],
       [
+       "Hank Brown",
+       "3",
+       "12",
+       "4.0",
+       "1",
+       "14"
+      ],
+      [
        "Braeden Jackson",
        "1",
        "0",
        "0.0",
        "0",
        "0"
-      ],
-      [
-       "Hank Brown",
-       "2",
-       "-2",
-       "-1.0",
-       "0",
-       "2"
       ]
      ]
     },
@@ -11879,9 +11879,59 @@
      ],
      "rows": [
       [
+       "Cam Buffington",
+       "4",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jaylen Watson",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Anthony Hawkins",
+       "2",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Jayden Montgomery",
        "2",
        "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
+       "1",
+       "1",
        "0",
        "0",
        "0",
@@ -11899,7 +11949,7 @@
        "0"
       ],
       [
-       "Jaylen Watson",
+       "Kahmari Brown",
        "1",
        "1",
        "0",
@@ -11909,27 +11959,7 @@
        "0"
       ],
       [
-       "Anthony Hawkins",
-       "1",
-       "1",
-       "0",
-       "1",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Cam Buffington",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Will Hubert",
+       "Kenneth Merrieweather",
        "1",
        "0",
        "0",
@@ -11978,6 +12008,25 @@
       ]
      ]
     },
+    "kicking": {
+     "labels": [
+      "FG",
+      "PCT",
+      "LONG",
+      "XP",
+      "PTS"
+     ],
+     "rows": [
+      [
+       "Caden Buhr",
+       "0/0",
+       "0.0",
+       "0",
+       "1/1",
+       "1"
+      ]
+     ]
+    },
     "punting": {
      "labels": [
       "NO",
@@ -12012,9 +12061,9 @@
      "rows": [
       [
        "Anthony Colandrea",
-       "2/3",
-       "16",
-       "5.3",
+       "3/4",
+       "22",
+       "5.5",
        "0",
        "0"
       ]
@@ -12031,19 +12080,27 @@
      "rows": [
       [
        "Jamal Rule",
-       "1",
-       "5",
-       "5.0",
+       "4",
+       "17",
+       "4.3",
        "0",
        "5"
       ],
       [
        "Isaiah Mozee",
+       "4",
+       "6",
+       "1.5",
+       "0",
+       "3"
+      ],
+      [
+       "Anthony Colandrea",
+       "1",
        "2",
+       "2.0",
        "0",
-       "0.0",
-       "0",
-       "1"
+       "2"
       ]
      ]
     },
@@ -12063,6 +12120,14 @@
        "11.0",
        "0",
        "11"
+      ],
+      [
+       "Jamal Rule",
+       "1",
+       "6",
+       "6.0",
+       "0",
+       "6"
       ],
       [
        "Carter Nelson",
@@ -12221,13 +12286,25 @@
    },
    "lines": {
     "us": [
-     "0"
+     "7"
     ],
     "opp": [
      "0"
     ]
    },
-   "scoring": []
+   "scoring": [
+    {
+     "q": 1,
+     "clock": "4:44",
+     "us": true,
+     "type": "TD",
+     "text": "H. Brown run for 14 yds, for a TD (C. Buhr KICK)",
+     "score": [
+      7,
+      0
+     ]
+    }
+   ]
   }
  },
  "leaders": [
@@ -12296,8 +12373,8 @@
    "players": [
     {
      "name": "Cam Buffington",
-     "value": "98",
-     "line": "98 TOT · 9.5 TFL · 3 SACKS"
+     "value": "101",
+     "line": "101 TOT · 9.5 TFL · 3 SACKS"
     },
     {
      "name": "Jayden Montgomery",
@@ -12499,7 +12576,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T17:28:36Z",
+  "updated": "2026-11-27T17:38:44Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12513,7 +12590,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "6:49 - 1st",
+      "detail": "1:36 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -12747,7 +12824,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "6:49 - 1st",
+      "detail": "1:36 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
