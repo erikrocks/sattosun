@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T04:28:07Z",
+ "updated": "2026-11-27T04:38:13Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -12053,7 +12053,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T04:28:07Z",
+  "updated": "2026-11-27T04:38:13Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12117,7 +12117,7 @@
       "id": "401856879",
       "kickoff": "2026-11-27T01:00Z",
       "state": "in",
-      "detail": "2:35 - 4th",
+      "detail": "1:07 - 4th",
       "network": "ESPN",
       "away": {
        "id": "2628",
