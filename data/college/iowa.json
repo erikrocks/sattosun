@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T18:09:13Z",
+ "updated": "2026-11-27T18:19:24Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "5:09 - 2nd",
+   "detail": "2:15 - 2nd",
    "network": "CBS",
    "watch": [
     {
@@ -11797,9 +11797,9 @@
      "rows": [
       [
        "Hank Brown",
-       "5/7",
-       "85",
-       "12.1",
+       "6/9",
+       "98",
+       "10.9",
        "0",
        "0"
       ]
@@ -11816,9 +11816,9 @@
      "rows": [
       [
        "L.J. Phillips Jr.",
-       "6",
-       "36",
-       "6.0",
+       "8",
+       "39",
+       "4.9",
        "0",
        "22"
       ],
@@ -11829,6 +11829,14 @@
        "0.8",
        "1",
        "14"
+      ],
+      [
+       "Xavier Williams",
+       "1",
+       "1",
+       "1.0",
+       "0",
+       "1"
       ],
       [
        "Braeden Jackson",
@@ -11850,20 +11858,20 @@
      ],
      "rows": [
       [
+       "Braeden Jackson",
+       "2",
+       "33",
+       "16.5",
+       "0",
+       "20"
+      ],
+      [
        "DJ Vonnahme",
        "1",
        "24",
        "24.0",
        "0",
        "24"
-      ],
-      [
-       "Braeden Jackson",
-       "1",
-       "20",
-       "20.0",
-       "0",
-       "20"
       ],
       [
        "Tony Diaz",
@@ -11923,21 +11931,21 @@
        "0"
       ],
       [
-       "Will Hubert",
+       "Jayden Montgomery",
        "4",
        "1",
-       "0",
+       "1",
        "1",
        "0",
        "0",
        "0"
       ],
       [
-       "Jayden Montgomery",
+       "Will Hubert",
        "4",
+       "1",
        "0",
-       "0.5",
-       "0.5",
+       "1",
        "0",
        "0",
        "0"
@@ -11953,16 +11961,6 @@
        "0"
       ],
       [
-       "Luke Gaffney",
-       "3",
-       "1",
-       "0.5",
-       "0.5",
-       "0",
-       "1",
-       "0"
-      ],
-      [
        "Anthony Hawkins",
        "3",
        "1",
@@ -11970,6 +11968,16 @@
        "1",
        "0",
        "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "1",
        "0"
       ],
       [
@@ -12210,10 +12218,20 @@
      "rows": [
       [
        "Danny Odem III",
+       "5",
        "4",
-       "3",
        "0",
        "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cameron Lenhardt",
+       "4",
+       "2",
+       "0",
+       "1",
        "0",
        "0",
        "0"
@@ -12229,11 +12247,21 @@
        "0"
       ],
       [
-       "Cameron Lenhardt",
+       "Victor Evans III",
        "3",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Vincent Shavers Jr.",
+       "2",
        "2",
        "0",
-       "1",
+       "0",
        "0",
        "0",
        "0"
@@ -12252,16 +12280,6 @@
        "Dexter Foster",
        "2",
        "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Victor Evans III",
-       "2",
-       "0",
        "0",
        "0",
        "0",
@@ -12289,16 +12307,6 @@
        "0"
       ],
       [
-       "Vincent Shavers Jr.",
-       "1",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
        "Jamir Conn",
        "1",
        "1",
@@ -12312,6 +12320,16 @@
        "Rowdy Bauer",
        "1",
        "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Tyson Terry",
+       "1",
+       "0",
        "0",
        "0",
        "0",
@@ -12434,8 +12452,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1727",
-     "line": "1727 YDS · 10 TD · 4 INT"
+     "value": "1740",
+     "line": "1740 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -12454,8 +12472,8 @@
    "players": [
     {
      "name": "L.J. Phillips Jr.",
-     "value": "556",
-     "line": "110 CAR · 556 YDS · 1 TD"
+     "value": "559",
+     "line": "112 CAR · 559 YDS · 1 TD"
     },
     {
      "name": "Kamari Moulton",
@@ -12464,8 +12482,8 @@
     },
     {
      "name": "Xavier Williams",
-     "value": "386",
-     "line": "65 CAR · 386 YDS · 5 TD"
+     "value": "387",
+     "line": "66 CAR · 387 YDS · 5 TD"
     }
    ]
   },
@@ -12500,7 +12518,7 @@
     {
      "name": "Jayden Montgomery",
      "value": "71",
-     "line": "71 TOT · 10 TFL · 4 SACKS"
+     "line": "71 TOT · 10.5 TFL · 4.5 SACKS"
     },
     {
      "name": "Zach Lutmer",
@@ -12513,12 +12531,12 @@
    "label": "Sacks",
    "players": [
     {
-     "name": "Joseph Anderson",
-     "value": "4",
-     "line": "4 SACKS"
+     "name": "Jayden Montgomery",
+     "value": "4.5",
+     "line": "4.5 SACKS"
     },
     {
-     "name": "Jayden Montgomery",
+     "name": "Joseph Anderson",
      "value": "4",
      "line": "4 SACKS"
     },
@@ -12697,7 +12715,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T18:09:13Z",
+  "updated": "2026-11-27T18:19:24Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12711,7 +12729,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "5:36 - 2nd",
+      "detail": "2:15 - 2nd",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -12945,7 +12963,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "5:36 - 2nd",
+      "detail": "2:15 - 2nd",
       "network": "CBS",
       "away": {
        "id": "158",
