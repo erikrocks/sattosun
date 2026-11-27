@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T17:08:23Z",
+ "updated": "2026-11-27T17:18:30Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -317,8 +317,8 @@
   {
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
-   "state": "pre",
-   "detail": "",
+   "state": "in",
+   "detail": "11:25 - 1st",
    "network": "CBS",
    "watch": [
     {
@@ -11782,6 +11782,279 @@
      ]
     }
    ]
+  },
+  "401858536": {
+   "final": false,
+   "cats": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1/2",
+       "9",
+       "4.5",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
+      ],
+      [
+       "Braeden Jackson",
+       "1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "receiving": {
+     "labels": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "L.J. Phillips Jr.",
+       "1",
+       "9",
+       "9.0",
+       "0",
+       "9"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Jayden Montgomery",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Cam Buffington",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "kickReturns": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "LONG",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Xavier Williams",
+       "1",
+       "16",
+       "16.0",
+       "16",
+       "0"
+      ]
+     ]
+    },
+    "punting": {
+     "labels": [
+      "NO",
+      "YDS",
+      "AVG",
+      "TB",
+      "In 20",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Boston Everitt",
+       "1",
+       "44",
+       "44.0",
+       "0",
+       "0",
+       "44"
+      ]
+     ]
+    }
+   },
+   "opp": {
+    "passing": {
+     "labels": [
+      "C/ATT",
+      "YDS",
+      "AVG",
+      "TD",
+      "INT"
+     ],
+     "rows": [
+      [
+       "Anthony Colandrea",
+       "0/1",
+       "0",
+       "0.0",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "rushing": {
+     "labels": [
+      "CAR",
+      "YDS",
+      "AVG",
+      "TD",
+      "LONG"
+     ],
+     "rows": [
+      [
+       "Jamal Rule",
+       "1",
+       "5",
+       "5.0",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "defensive": {
+     "labels": [
+      "TOT",
+      "SOLO",
+      "SACKS",
+      "TFL",
+      "PD",
+      "QB HUR",
+      "TD"
+     ],
+     "rows": [
+      [
+       "Cameron Lenhardt",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Vincent Shavers Jr.",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dexter Foster",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Danny Odem III",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Dawson Merritt",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Derek Wacker",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ]
+     ]
+    }
+   },
+   "lines": {
+    "us": [
+     "0"
+    ],
+    "opp": [
+     "0"
+    ]
+   },
+   "scoring": []
   }
  },
  "leaders": [
@@ -11790,8 +12063,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1642",
-     "line": "1642 YDS · 10 TD · 4 INT"
+     "value": "1651",
+     "line": "1651 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -11815,8 +12088,8 @@
     },
     {
      "name": "L.J. Phillips Jr.",
-     "value": "520",
-     "line": "104 CAR · 520 YDS · 1 TD"
+     "value": "522",
+     "line": "105 CAR · 522 YDS · 1 TD"
     },
     {
      "name": "Xavier Williams",
@@ -11850,18 +12123,18 @@
    "players": [
     {
      "name": "Cam Buffington",
-     "value": "97",
-     "line": "97 TOT · 9.5 TFL · 3 SACKS"
+     "value": "98",
+     "line": "98 TOT · 9.5 TFL · 3 SACKS"
+    },
+    {
+     "name": "Jayden Montgomery",
+     "value": "68",
+     "line": "68 TOT · 9.5 TFL · 3.5 SACKS"
     },
     {
      "name": "Zach Lutmer",
      "value": "67",
      "line": "67 TOT · 1.5 TFL · 0 SACKS"
-    },
-    {
-     "name": "Jayden Montgomery",
-     "value": "67",
-     "line": "67 TOT · 9.5 TFL · 3.5 SACKS"
     }
    ]
   },
@@ -12053,7 +12326,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T17:08:23Z",
+  "updated": "2026-11-27T17:18:30Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12066,8 +12339,8 @@
      {
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
-      "state": "pre",
-      "detail": "",
+      "state": "in",
+      "detail": "13:37 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -12300,8 +12573,8 @@
      {
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
-      "state": "pre",
-      "detail": "",
+      "state": "in",
+      "detail": "13:37 - 1st",
       "network": "CBS",
       "away": {
        "id": "158",
