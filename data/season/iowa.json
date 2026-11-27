@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T22:31:28Z",
+ "updated": "2026-11-27T22:41:30Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -4544,7 +4544,7 @@
        "SACKS": "0",
        "TFL": "0",
        "PD": "0",
-       "QB HTS": "0",
+       "QB HTS": "1",
        "TD": "0"
       }
      }
@@ -4557,7 +4557,7 @@
      "SACKS": "1",
      "TFL": "3",
      "PD": "1",
-     "QB HTS": "3",
+     "QB HTS": "4",
      "TD": "0"
     }
    },
