@@ -1,7 +1,7 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-27T21:31:06Z",
+ "updated": "2026-11-27T21:41:07Z",
  "source": "ESPN game summaries",
  "games": {
   "401873083": {
@@ -27,7 +27,7 @@
      "id": "4430947",
      "cats": {
       "defensive": {
-       "TOT": "2",
+       "TOT": "3",
        "SOLO": "1",
        "SACKS": "0",
        "TFL": "0",
