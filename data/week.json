@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T03:07:08Z",
+ "updated": "2026-11-27T03:17:15Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873082",
    "kickoff": "2026-11-27T01:20Z",
    "state": "in",
-   "detail": "15:00 - 3rd",
+   "detail": "11:13 - 3rd",
    "network": "NBC",
    "watch": [
     {
@@ -20,7 +20,7 @@
    "venue": "Highmark Stadium, Orchard Park, NY",
    "away": {
     "abbr": "KC",
-    "score": 3
+    "score": 10
    },
    "home": {
     "abbr": "BUF",
