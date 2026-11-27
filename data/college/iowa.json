@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T18:59:50Z",
+ "updated": "2026-11-27T19:09:57Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "11:52 - 3rd",
+   "detail": "9:45 - 3rd",
    "network": "CBS",
    "watch": [
     {
@@ -11797,9 +11797,9 @@
      "rows": [
       [
        "Hank Brown",
-       "7/10",
-       "122",
-       "12.2",
+       "8/13",
+       "129",
+       "9.9",
        "0",
        "0"
       ]
@@ -11816,19 +11816,19 @@
      "rows": [
       [
        "L.J. Phillips Jr.",
-       "9",
-       "45",
-       "5.0",
+       "10",
+       "55",
+       "5.5",
        "0",
        "22"
       ],
       [
        "Xavier Williams",
-       "1",
-       "1",
-       "1.0",
+       "2",
+       "7",
+       "3.5",
        "0",
-       "1"
+       "6"
       ],
       [
        "Braeden Jackson",
@@ -11859,9 +11859,9 @@
      "rows": [
       [
        "Tony Diaz",
-       "2",
-       "41",
-       "20.5",
+       "3",
+       "48",
+       "16.0",
        "0",
        "24"
       ],
@@ -11911,6 +11911,12 @@
        "1",
        "0",
        "0"
+      ],
+      [
+       "Cam Buffington",
+       "0",
+       "0",
+       "1"
       ]
      ]
     },
@@ -12220,9 +12226,9 @@
       ],
       [
        "Anthony Colandrea",
-       "2",
-       "-3",
-       "-1.5",
+       "3",
+       "-9",
+       "-3.0",
        "0",
        "2"
       ]
@@ -12295,6 +12301,21 @@
       ]
      ]
     },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Anthony Colandrea",
+       "1",
+       "1",
+       "0"
+      ]
+     ]
+    },
     "defensive": {
      "labels": [
       "TOT",
@@ -12306,6 +12327,16 @@
       "TD"
      ],
      "rows": [
+      [
+       "Dwayne McDougle III",
+       "5",
+       "5",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
       [
        "Danny Odem III",
        "5",
@@ -12332,16 +12363,6 @@
        "2",
        "0",
        "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Dwayne McDougle III",
-       "3",
-       "3",
-       "1",
-       "1",
        "0",
        "0",
        "0"
@@ -12383,7 +12404,7 @@
        "1",
        "1",
        "0",
-       "0",
+       "1",
        "0"
       ],
       [
@@ -12417,6 +12438,16 @@
        "0"
       ],
       [
+       "Caleb Benning",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Jamir Conn",
        "1",
        "1",
@@ -12428,6 +12459,16 @@
       ],
       [
        "Rowdy Bauer",
+       "1",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jamal Rule",
        "1",
        "1",
        "0",
@@ -12564,8 +12605,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1764",
-     "line": "1764 YDS · 10 TD · 4 INT"
+     "value": "1771",
+     "line": "1771 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -12584,8 +12625,8 @@
    "players": [
     {
      "name": "L.J. Phillips Jr.",
-     "value": "565",
-     "line": "113 CAR · 565 YDS · 1 TD"
+     "value": "575",
+     "line": "114 CAR · 575 YDS · 1 TD"
     },
     {
      "name": "Kamari Moulton",
@@ -12594,8 +12635,8 @@
     },
     {
      "name": "Xavier Williams",
-     "value": "387",
-     "line": "66 CAR · 387 YDS · 5 TD"
+     "value": "393",
+     "line": "67 CAR · 393 YDS · 5 TD"
     }
    ]
   },
@@ -12604,8 +12645,8 @@
    "players": [
     {
      "name": "Tony Diaz",
-     "value": "642",
-     "line": "46 REC · 642 YDS · 3 TD"
+     "value": "649",
+     "line": "47 REC · 649 YDS · 3 TD"
     },
     {
      "name": "Reece Vander Zee",
@@ -12827,7 +12868,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T18:59:50Z",
+  "updated": "2026-11-27T19:09:57Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12841,7 +12882,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:02 - 3rd",
+      "detail": "9:48 - 3rd",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -13075,7 +13116,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:02 - 3rd",
+      "detail": "9:48 - 3rd",
       "network": "CBS",
       "away": {
        "id": "158",
