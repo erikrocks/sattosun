@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T04:17:55Z",
+ "updated": "2026-11-27T04:28:02Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -1464,8 +1464,8 @@
      "team": "BUF",
      "opp": "KC",
      "at": false,
-     "result": "",
-     "live": true,
+     "result": "W 13-10",
+     "live": false,
      "cats": {
       "defensive": {
        "TOT": "1",
@@ -4221,16 +4221,16 @@
      "team": "KC",
      "opp": "BUF",
      "at": true,
-     "result": "",
-     "live": true,
+     "result": "L 10-13",
+     "live": false,
      "cats": {
       "defensive": {
-       "TOT": "3",
+       "TOT": "4",
        "SOLO": "1",
-       "SACKS": "0",
+       "SACKS": "0.5",
        "TFL": "0",
        "PD": "0",
-       "QB HTS": "0",
+       "QB HTS": "1",
        "TD": "0"
       }
      }
@@ -4238,12 +4238,12 @@
    ],
    "totals": {
     "defensive": {
-     "TOT": "13",
+     "TOT": "14",
      "SOLO": "7",
-     "SACKS": "0",
+     "SACKS": "0.5",
      "TFL": "0",
      "PD": "1",
-     "QB HTS": "0",
+     "QB HTS": "1",
      "TD": "0"
     },
     "interceptions": {
@@ -5255,9 +5255,9 @@
      "line": "1 SACKS"
     },
     {
-     "key": "jack heflin",
-     "name": "Jack Heflin",
-     "team": "NYJ",
+     "key": "xavier nwankpa",
+     "name": "Xavier Nwankpa",
+     "team": "KC",
      "value": "0.5",
      "line": "0.5 SACKS"
     }
