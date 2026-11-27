@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T02:26:41Z",
+ "updated": "2026-11-27T02:36:48Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -4214,11 +4214,31 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "KC",
+     "opp": "BUF",
+     "at": true,
+     "result": "",
+     "live": true,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "0",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "10",
+     "TOT": "11",
      "SOLO": "6",
      "SACKS": "0",
      "TFL": "0",
@@ -4232,7 +4252,7 @@
      "TD": "0"
     }
    },
-   "gp": 5
+   "gp": 6
   },
   "erick all": {
    "name": "Erick All Jr.",
