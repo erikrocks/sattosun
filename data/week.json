@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T03:37:28Z",
+ "updated": "2026-11-27T03:47:35Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873082",
    "kickoff": "2026-11-27T01:20Z",
    "state": "in",
-   "detail": "15:00 - 4th",
+   "detail": "11:58 - 4th",
    "network": "NBC",
    "watch": [
     {
@@ -24,7 +24,7 @@
    },
    "home": {
     "abbr": "BUF",
-    "score": 7
+    "score": 10
    }
   },
   {
