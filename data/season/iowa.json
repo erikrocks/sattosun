@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-26T20:10:26Z",
+ "updated": "2026-11-27T01:33:50Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -825,27 +825,27 @@
      "team": "DET",
      "opp": "CHI",
      "at": false,
-     "result": "",
-     "live": true,
+     "result": "L 35-39",
+     "live": false,
      "cats": {
       "receiving": {
-       "REC": "1",
-       "YDS": "11",
+       "REC": "4",
+       "YDS": "44",
        "AVG": "11.0",
        "TD": "1",
-       "LONG": "11",
-       "TGTS": "2"
+       "LONG": "17",
+       "TGTS": "5"
       }
      }
     }
    ],
    "totals": {
     "receiving": {
-     "REC": "40",
-     "YDS": "488",
+     "REC": "43",
+     "YDS": "521",
      "TD": "4",
      "LONG": "47",
-     "TGTS": "61"
+     "TGTS": "64"
     },
     "rushing": {
      "CAR": "1",
@@ -2059,15 +2059,15 @@
      "team": "CHI",
      "opp": "DET",
      "at": true,
-     "result": "",
-     "live": true,
+     "result": "W 39-35",
+     "live": false,
      "cats": {
       "punting": {
-       "NO": "1",
-       "YDS": "46",
-       "AVG": "46.0",
+       "NO": "2",
+       "YDS": "90",
+       "AVG": "45.0",
        "TB": "0",
-       "In 20": "1",
+       "In 20": "2",
        "LONG": "46"
       }
      }
@@ -2075,10 +2075,10 @@
    ],
    "totals": {
     "punting": {
-     "NO": "30",
-     "YDS": "1439",
+     "NO": "31",
+     "YDS": "1483",
      "TB": "3",
-     "In 20": "12",
+     "In 20": "13",
      "LONG": "65"
     }
    },
@@ -3463,12 +3463,32 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "PHI",
+     "opp": "DAL",
+     "at": true,
+     "result": "",
+     "live": true,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "56",
-     "SOLO": "31",
+     "TOT": "57",
+     "SOLO": "32",
      "SACKS": "0",
      "TFL": "5",
      "PD": "6",
@@ -3487,7 +3507,7 @@
      "TD": "0"
     }
    },
-   "gp": 10
+   "gp": 11
   },
   "aj epenesa": {
    "name": "A.J. Epenesa",
@@ -5068,8 +5088,8 @@
      "key": "sam laporta",
      "name": "Sam LaPorta",
      "team": "DET",
-     "value": "488",
-     "line": "40 REC · 488 YDS · 4 TD"
+     "value": "521",
+     "line": "43 REC · 521 YDS · 4 TD"
     },
     {
      "key": "tj hockenson",
@@ -5150,8 +5170,8 @@
      "key": "cooper dejean",
      "name": "Cooper DeJean",
      "team": "PHI",
-     "value": "56",
-     "line": "56 TOT · 31 SOLO · 5 TFL"
+     "value": "57",
+     "line": "57 TOT · 32 SOLO · 5 TFL"
     },
     {
      "key": "lukas van ness",

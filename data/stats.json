@@ -1,22 +1,42 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-26T20:10:26Z",
+ "updated": "2026-11-27T01:33:49Z",
  "source": "ESPN game summaries",
  "games": {
-  "401873081": {
+  "401873080": {
    "final": false,
+   "players": {
+    "cooper dejean": {
+     "team": "PHI",
+     "id": "4682618",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
+  },
+  "401873081": {
+   "final": true,
    "players": {
     "tory taylor": {
      "team": "CHI",
      "id": "4686889",
      "cats": {
       "punting": {
-       "NO": "1",
-       "YDS": "46",
-       "AVG": "46.0",
+       "NO": "2",
+       "YDS": "90",
+       "AVG": "45.0",
        "TB": "0",
-       "In 20": "1",
+       "In 20": "2",
        "LONG": "46"
       }
      }
@@ -26,16 +46,20 @@
      "id": "4430027",
      "cats": {
       "receiving": {
-       "REC": "1",
-       "YDS": "11",
+       "REC": "4",
+       "YDS": "44",
        "AVG": "11.0",
        "TD": "1",
-       "LONG": "11",
-       "TGTS": "2"
+       "LONG": "17",
+       "TGTS": "5"
       }
      }
     }
    }
+  },
+  "401873082": {
+   "final": false,
+   "players": {}
   },
   "401873079": {
    "final": true,

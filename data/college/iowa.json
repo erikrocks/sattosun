@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-26T20:10:33Z",
+ "updated": "2026-11-27T01:33:58Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -12053,7 +12053,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-26T20:10:30Z",
+  "updated": "2026-11-27T01:33:50Z",
   "summary": [
    "If Iowa beats Nebraska, it reaches the Big Ten title game in 150 of the 256 ways the other games can finish. If it loses, it is out.",
    "Iowa is No. 13 in the playoff ranking. A loss by a team just ahead could move it up."
@@ -12204,9 +12204,9 @@
    {
     "id": "401856879",
     "kickoff": "2026-11-27T01:00Z",
-    "state": "pre",
-    "detail": "",
-    "network": "ESPN",
+    "state": "in",
+    "detail": "4:48 - 1st",
+    "network": "ESPN2",
     "away": {
      "id": "2628",
      "abbr": "TCU",

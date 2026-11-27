@@ -2,36 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-26T20:10:20Z",
+ "updated": "2026-11-27T01:33:49Z",
  "source": "ESPN scoreboard",
  "games": [
   {
-   "id": "401873081",
-   "kickoff": "2026-11-26T18:00Z",
-   "state": "in",
-   "detail": "10:40 - 3rd",
-   "network": "CBS",
-   "watch": [
-    {
-     "name": "CBS",
-     "type": "TV"
-    }
-   ],
-   "venue": "Ford Field, Detroit, MI",
-   "away": {
-    "abbr": "CHI",
-    "score": 17
-   },
-   "home": {
-    "abbr": "DET",
-    "score": 19
-   }
-  },
-  {
    "id": "401873080",
    "kickoff": "2026-11-26T21:30Z",
-   "state": "pre",
-   "detail": "",
+   "state": "in",
+   "detail": "0:02 - 4th",
    "network": "Fox",
    "watch": [
     {
@@ -42,18 +20,35 @@
    "venue": "AT&T Stadium, Arlington, TX",
    "away": {
     "abbr": "PHI",
-    "score": 0
+    "score": 39
    },
    "home": {
     "abbr": "DAL",
-    "score": 0
+    "score": 38
+   }
+  },
+  {
+   "id": "401873081",
+   "kickoff": "2026-11-26T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "CBS",
+   "watch": [],
+   "venue": "Ford Field, Detroit, MI",
+   "away": {
+    "abbr": "CHI",
+    "score": 39
+   },
+   "home": {
+    "abbr": "DET",
+    "score": 35
    }
   },
   {
    "id": "401873082",
    "kickoff": "2026-11-27T01:20Z",
-   "state": "pre",
-   "detail": "",
+   "state": "in",
+   "detail": "11:47 - 1st",
    "network": "NBC",
    "watch": [
     {
