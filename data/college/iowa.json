@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T20:10:44Z",
+ "updated": "2026-11-27T20:20:52Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -317,15 +317,10 @@
   {
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
-   "state": "in",
-   "detail": "2:07 - 4th",
+   "state": "post",
+   "detail": "Final",
    "network": "CBS",
-   "watch": [
-    {
-     "name": "CBS",
-     "type": "TV"
-    }
-   ],
+   "watch": [],
    "venue": "Kinnick Stadium, Iowa City, IA",
    "where": "home",
    "homeAway": "home",
@@ -334,16 +329,16 @@
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 13,
-    "score": null
+    "score": 31
    },
    "opp": {
     "id": "158",
     "abbr": "NEB",
     "name": "Nebraska",
     "rank": 25,
-    "score": null
+    "score": 7
    },
-   "win": null
+   "win": true
   }
  ],
  "box": {
@@ -11784,7 +11779,7 @@
    ]
   },
   "401858536": {
-   "final": false,
+   "final": true,
    "cats": {
     "passing": {
      "labels": [
@@ -11832,9 +11827,9 @@
       ],
       [
        "Xavier Williams",
-       "8",
-       "25",
-       "3.1",
+       "11",
+       "23",
+       "2.1",
        "0",
        "8"
       ],
@@ -12011,8 +12006,8 @@
       ],
       [
        "Will Hubert",
-       "4",
-       "1",
+       "5",
+       "2",
        "0",
        "1",
        "0",
@@ -12203,9 +12198,9 @@
      "rows": [
       [
        "Boston Everitt",
-       "5",
-       "219",
-       "43.8",
+       "6",
+       "247",
+       "41.2",
        "0",
        "1",
        "51"
@@ -12244,8 +12239,8 @@
      "rows": [
       [
        "Jamal Rule",
-       "17",
-       "101",
+       "18",
+       "106",
        "5.9",
        "1",
        "21"
@@ -12407,10 +12402,10 @@
      "rows": [
       [
        "Danny Odem III",
-       "9",
+       "10",
        "8",
        "0",
-       "0",
+       "0.5",
        "0",
        "0",
        "0"
@@ -12457,7 +12452,7 @@
       ],
       [
        "Victor Evans III",
-       "4",
+       "5",
        "2",
        "0",
        "0",
@@ -12506,6 +12501,16 @@
        "0"
       ],
       [
+       "Kade Pietrzak",
+       "2",
+       "1",
+       "1",
+       "1.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Tyson Terry",
        "2",
        "1",
@@ -12516,10 +12521,10 @@
        "0"
       ],
       [
-       "Kade Pietrzak",
+       "Derek Wacker",
+       "2",
        "1",
-       "1",
-       "1",
+       "0",
        "1",
        "0",
        "0",
@@ -12606,7 +12611,7 @@
        "0"
       ],
       [
-       "Dawson Merritt",
+       "Mason Goldman",
        "1",
        "0",
        "0",
@@ -12616,7 +12621,7 @@
        "0"
       ],
       [
-       "Derek Wacker",
+       "Dawson Merritt",
        "1",
        "0",
        "0",
@@ -12826,8 +12831,8 @@
     },
     {
      "name": "Xavier Williams",
-     "value": "411",
-     "line": "73 CAR · 411 YDS · 5 TD"
+     "value": "409",
+     "line": "76 CAR · 409 YDS · 5 TD"
     }
    ]
   },
@@ -13059,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T20:10:44Z",
+  "updated": "2026-11-27T20:20:52Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13069,31 +13074,6 @@
      "Otherwise it needs one of 7 at-large spots. At No. 13 in the committee's ranking it is 9th in line, so 2 of the 8 teams ahead of it need to fall behind it."
     ],
     "games": [
-     {
-      "id": "401858536",
-      "kickoff": "2026-11-27T17:08Z",
-      "state": "in",
-      "detail": "2:07 - 4th",
-      "network": "CBS",
-      "away": {
-       "id": "158",
-       "abbr": "NEB",
-       "name": "Nebraska",
-       "rank": 25,
-       "score": null
-      },
-      "home": {
-       "id": "2294",
-       "abbr": "IOWA",
-       "name": "Iowa",
-       "rank": 13,
-       "score": null
-      },
-      "winner": null,
-      "pick": "2294",
-      "level": "must",
-      "why": "Start here. A loss to Nebraska would all but end Iowa's at-large hopes and knock it out of the Big Ten race."
-     },
      {
       "id": "401858541",
       "kickoff": "2026-11-29T00:30Z",
@@ -13300,34 +13280,9 @@
    "title": {
     "label": "Big Ten title",
     "summary": [
-     "If Iowa beats Nebraska, it reaches the Big Ten title game in 117–150 of the 256 ways the other games can finish. If it loses, it is out."
+     "Iowa reaches the Big Ten title game in 117–150 of the 256 ways the remaining games can finish."
     ],
     "games": [
-     {
-      "id": "401858536",
-      "kickoff": "2026-11-27T17:08Z",
-      "state": "in",
-      "detail": "2:07 - 4th",
-      "network": "CBS",
-      "away": {
-       "id": "158",
-       "abbr": "NEB",
-       "name": "Nebraska",
-       "rank": 25,
-       "score": null
-      },
-      "home": {
-       "id": "2294",
-       "abbr": "IOWA",
-       "name": "Iowa",
-       "rank": 13,
-       "score": null
-      },
-      "winner": null,
-      "pick": "2294",
-      "level": "must",
-      "why": "Everything starts here. With a loss, Iowa is out of the title race."
-     },
      {
       "id": "401858538",
       "kickoff": "2026-11-29T00:00Z",
@@ -13454,7 +13409,7 @@
       "why": "Iowa reaches the title game in 61–78 of 128 combinations if Michigan wins, and 56–72 of 128 if Ohio State wins."
      }
     ],
-    "note": "Counts for the other games assume Iowa wins its own. Every remaining result counts as equally likely, so these are counts, not odds. They follow the Big Ten's published tiebreaker; ties it can only settle with a ratings service or a draw count as misses. Where a range is shown, the rules can be read two ways: when common opponents are themselves tied in the standings, they don't say whether to compare against those teams one at a time or as a group."
+    "note": "Every remaining result counts as equally likely, so these are counts, not odds. They follow the Big Ten's published tiebreaker; ties it can only settle with a ratings service or a draw count as misses. Where a range is shown, the rules can be read two ways: when common opponents are themselves tied in the standings, they don't say whether to compare against those teams one at a time or as a group."
    }
   }
  }
