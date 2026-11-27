@@ -922,7 +922,8 @@ function rootingHTML(){
     const side = t => `${rk(t)}${esc(t.name)}`;
     const head = pick ? `${ncaaLogo(pick.id)}<span class="rpick"><b>${side(pick)}</b> over ${side(other)}</span>`
                       : `<span class="rpick"><b>${side(g.away)} at ${side(g.home)}</b></span>`;
-    const score = `${esc(g.away.name)} ${esc(g.away.score)}, ${esc(g.home.name)} ${esc(g.home.score)}`;
+    const score = g.away.score != null && g.home.score != null
+      ? `${esc(g.away.name)} ${esc(g.away.score)}, ${esc(g.home.name)} ${esc(g.home.score)}` : "Score updating";
     const when = g.state === "post" ? `Final · ${score}`
                : g.state === "in" ? `<span class="live-dot"></span>${score} · ${esc(g.detail)}`
                : Date.now() > new Date(g.kickoff) ? "Kicked off · updating"
