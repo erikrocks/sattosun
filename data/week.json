@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T21:11:02Z",
+ "updated": "2026-11-27T21:21:04Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873083",
    "kickoff": "2026-11-27T20:00Z",
    "state": "in",
-   "detail": "2:00 - 2nd",
+   "detail": "Halftime",
    "network": "Prime Video",
    "watch": [
     {
@@ -24,7 +24,7 @@
    },
    "home": {
     "abbr": "PIT",
-    "score": 14
+    "score": 24
    }
   },
   {
