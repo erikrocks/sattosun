@@ -2,14 +2,14 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T02:23:30Z",
+ "updated": "2026-11-27T02:26:41Z",
  "source": "ESPN scoreboard",
  "games": [
   {
    "id": "401873082",
    "kickoff": "2026-11-27T01:20Z",
    "state": "in",
-   "detail": "7:46 - 2nd",
+   "detail": "6:06 - 2nd",
    "network": "NBC",
    "watch": [
     {

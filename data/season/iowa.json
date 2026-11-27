@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T02:23:37Z",
+ "updated": "2026-11-27T02:26:41Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -1457,12 +1457,32 @@
        "TD": "0"
       }
      }
+    },
+    {
+     "key": "2-12",
+     "label": "Week 12",
+     "team": "BUF",
+     "opp": "KC",
+     "at": false,
+     "result": "",
+     "live": true,
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
     }
    ],
    "totals": {
     "defensive": {
-     "TOT": "61",
-     "SOLO": "39",
+     "TOT": "62",
+     "SOLO": "40",
      "SACKS": "0",
      "TFL": "1",
      "PD": "8",
@@ -1475,7 +1495,7 @@
      "TD": "0"
     }
    },
-   "gp": 9
+   "gp": 10
   },
   "jay higgins": {
    "name": "Jay Higgins IV",
@@ -5156,8 +5176,8 @@
      "key": "amani hooker",
      "name": "Amani Hooker",
      "team": "BUF",
-     "value": "61",
-     "line": "61 TOT · 39 SOLO · 1 TFL"
+     "value": "62",
+     "line": "62 TOT · 40 SOLO · 1 TFL"
     },
     {
      "key": "jack campbell",
