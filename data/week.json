@@ -2,24 +2,46 @@
  "season": 2026,
  "week": 12,
  "seasonType": "regular",
- "updated": "2026-11-27T04:28:02Z",
+ "updated": "2026-11-27T19:40:14Z",
  "source": "ESPN scoreboard",
  "games": [
   {
-   "id": "401873082",
-   "kickoff": "2026-11-27T01:20Z",
-   "state": "post",
-   "detail": "Final",
-   "network": "NBC",
-   "watch": [],
-   "venue": "Highmark Stadium, Orchard Park, NY",
+   "id": "401873083",
+   "kickoff": "2026-11-27T20:00Z",
+   "state": "pre",
+   "detail": "",
+   "network": "Prime Video",
+   "watch": [
+    {
+     "name": "Prime Video",
+     "type": "Streaming"
+    }
+   ],
+   "venue": "Acrisure Stadium, Pittsburgh, PA",
    "away": {
-    "abbr": "KC",
-    "score": 10
+    "abbr": "DEN",
+    "score": 0
    },
    "home": {
-    "abbr": "BUF",
+    "abbr": "PIT",
+    "score": 0
+   }
+  },
+  {
+   "id": "401873079",
+   "kickoff": "2026-11-26T01:00Z",
+   "state": "post",
+   "detail": "Final",
+   "network": "Netflix",
+   "watch": [],
+   "venue": "SoFi Stadium, Inglewood, CA",
+   "away": {
+    "abbr": "GB",
     "score": 13
+   },
+   "home": {
+    "abbr": "LAR",
+    "score": 26
    }
   },
   {
@@ -57,42 +79,20 @@
    }
   },
   {
-   "id": "401873079",
-   "kickoff": "2026-11-26T01:00Z",
+   "id": "401873082",
+   "kickoff": "2026-11-27T01:20Z",
    "state": "post",
    "detail": "Final",
-   "network": "Netflix",
+   "network": "NBC",
    "watch": [],
-   "venue": "SoFi Stadium, Inglewood, CA",
+   "venue": "Highmark Stadium, Orchard Park, NY",
    "away": {
-    "abbr": "GB",
+    "abbr": "KC",
+    "score": 10
+   },
+   "home": {
+    "abbr": "BUF",
     "score": 13
-   },
-   "home": {
-    "abbr": "LAR",
-    "score": 26
-   }
-  },
-  {
-   "id": "401873083",
-   "kickoff": "2026-11-27T20:00Z",
-   "state": "pre",
-   "detail": "",
-   "network": "Prime Video",
-   "watch": [
-    {
-     "name": "Prime Video",
-     "type": "Streaming"
-    }
-   ],
-   "venue": "Acrisure Stadium, Pittsburgh, PA",
-   "away": {
-    "abbr": "DEN",
-    "score": 0
-   },
-   "home": {
-    "abbr": "PIT",
-    "score": 0
    }
   },
   {
