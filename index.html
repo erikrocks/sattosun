@@ -221,6 +221,8 @@
   .tag.must{background:var(--accent);color:var(--accent-ink)}
   .tag.big{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
   .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--live);margin-right:6px;animation:pulse 1.4s infinite}
+  .rtabs{padding:12px 14px 0}
+  .rtabs .seg{margin:0}
   .rnote{border-top:1px solid var(--line);padding:10px 14px 11px;font-size:12px;line-height:1.45;color:var(--dim)}
   .bx td:first-child,.bx th:first-child{text-align:left;padding-left:0;font-weight:600}
   .more{font-size:13px;font-weight:600;color:var(--accent)}
@@ -873,10 +875,12 @@ function collegeStatus(g){
   return `<span>${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}</span>`;
 }
 /* Who to root for: other games that move the school's title-game and playoff chances. Written by the updater. */
-const ROOT_TAG = {must:"Must win", big:"Big", helps:"Helps", split:"Depends"};
+const ROOT_TAG = {must:"Must win", big:"Big", helps:"Helps", split:"Depends", longshot:"Long shot"};
+// The guide has a view per goal (playoff, conference title); older files had a single list.
+const rootViews = r => r ? (r.views || (r.games ? {title: r} : {})) : {};
 function rootLive(){
   const now = Date.now();
-  return (((state.college || {}).rooting || {}).games || []).filter(g => g.state !== "post" &&
+  return Object.values(rootViews((state.college || {}).rooting)).flatMap(v => v.games || []).filter(g => g.state !== "post" &&
     now >= new Date(g.kickoff) - LIVE_BEFORE && now <= +new Date(g.kickoff) + LIVE_AFTER);
 }
 async function syncRooting(){
@@ -906,9 +910,13 @@ async function syncRooting(){
   return done.some(Boolean);
 }
 function rootingHTML(){
-  const r = state.college.rooting;
-  if(!r || !(r.games || []).length) return "";
-  const open = !state.copen.has("rootclosed"), left = r.games.filter(g => g.state !== "post").length;
+  const views = rootViews(state.college.rooting), keys = Object.keys(views);
+  if(!keys.length) return "";
+  const key = views[state.rootView] ? state.rootView : views[state.college.rooting.default] ? state.college.rooting.default : keys[0];
+  const r = views[key], when = state.college.rooting.updated || r.updated;
+  const open = !state.copen.has("rootclosed"), left = (r.games || []).filter(g => g.state !== "post").length;
+  const tabs = keys.length > 1 ? `<div class="rtabs"><div class="seg" role="tablist">${keys.map(k =>
+    `<button role="tab" data-rv="${esc(k)}" aria-pressed="${k === key}" aria-selected="${k === key}">${esc(views[k].label || k)}</button>`).join("")}</div></div>` : "";
   const row = g => {
     const pick = g.pick ? (g.pick === g.away.id ? g.away : g.home) : null, other = pick === g.away ? g.home : g.away;
     const side = t => `${rk(t)}${esc(t.name)}`;
@@ -923,13 +931,13 @@ function rootingHTML(){
               : `<span class="tag ${esc(g.level)}">${esc(ROOT_TAG[g.level] || "")}</span>`;
     return `<div class="rg"><div class="rhead">${head}${tag}</div>
       <span class="psub ${g.state === "pre" ? "" : "on"}">${when}</span>
-      <p class="why"><i>${esc((g.tags || []).join(" + "))}</i>${esc(g.why)}</p></div>`;
+      <p class="why">${esc(g.why)}</p></div>`;
   };
-  return `<div class="section-h">Who to root for</div><div class="game root">
+  return `<div class="section-h">Who to root for</div><div class="game root">${tabs}
     <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="rootclosed"><span class="pmain">
       ${(open ? r.summary : r.summary.slice(0, 1)).map(l => `<span class="rsum">${esc(l)}</span>`).join("")}
-      ${open ? "" : `<span class="psub">${plural(r.games.length, "games")}${left && left < r.games.length ? `, ${left} still to play` : ""} · tap to open</span>`}</span>${CHEV}</div>
-    ${open ? r.games.map(row).join("") + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(r.updated))}.</div>` : "") : ""}</div>`;
+      ${open ? "" : `<span class="psub">${plural((r.games || []).length, "games")}${left && left < r.games.length ? `, ${left} still to play` : ""} · tap to open</span>`}</span>${CHEV}</div>
+    ${open ? (r.games || []).map(row).join("") + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(when))}.</div>` : "") : ""}</div>`;
 }
 function collegeCard(g){
   const box = state.college.box[g.id], key = "f:" + g.id, open = state.copen.has(key);
@@ -1115,9 +1123,11 @@ function toggleCollege(el){
   if(k === "rootclosed") try{ localStorage.setItem("rootclosed", state.copen.has(k) ? "1" : ""); }catch(e){}
   render();
 }
-try{ if(localStorage.getItem("rootclosed")) state.copen.add("rootclosed"); }catch(e){}
+try{ if(localStorage.getItem("rootclosed")) state.copen.add("rootclosed"); state.rootView = localStorage.getItem("rootview") || null; }catch(e){}
 $("saturday").addEventListener("click", e => {
   if(e.target.closest("a")) return;
+  const rv = e.target.closest("[data-rv]");
+  if(rv){ state.rootView = rv.dataset.rv; try{ localStorage.setItem("rootview", rv.dataset.rv); }catch(_){} return render(); }
   const sb = e.target.closest(".seg button");
   if(sb){ state.boxSide[sb.parentElement.dataset.seg] = sb.dataset.side; return render(); }
   const el = e.target.closest("[data-cg]"); if(el) toggleCollege(el);

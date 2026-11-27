@@ -863,7 +863,6 @@ def update_college(key, school, full):
 # combination of results run through the conference tiebreaker) and climb the playoff ranking.
 
 MAX_OPEN_GAMES = 11                      # 2^11 combinations is the most we enumerate
-AHEAD_SPOTS = 4                          # playoff layer: teams this many places ahead of us
 
 
 def neutral_game(ev):
@@ -884,9 +883,13 @@ def neutral_game(ev):
             "away": side(away), "home": side(home), "winner": winner, "titleGame": title_game}
 
 
-def conference_finalists(results, teams):
+def conference_finalists(results, teams, group_tied=False):
     """results: {frozenset((a, b)): winner}. Returns the top two as a list; an entry is a tuple when the
-    published tiebreaker can't separate teams without the ratings service or a draw."""
+    published tiebreaker can't separate teams without the ratings service or a draw.
+
+    Follows the Big Ten's 2024 championship-game tiebreaker document step by step. One thing it leaves open: when
+    common opponents are themselves tied in the standings, whether to compare against them one at a time (in the
+    order the tiebreaker puts them) or as a group. group_tied=True takes the group reading."""
     from fractions import Fraction as F
     from itertools import combinations
     opp, W, N = {t: [] for t in teams}, dict.fromkeys(teams, 0), dict.fromkeys(teams, 0)
@@ -894,211 +897,384 @@ def conference_finalists(results, teams):
         a, b = tuple(k)
         opp[a].append(b); opp[b].append(a); N[a] += 1; N[b] += 1; W[w] += 1
     pct = {t: F(W[t], N[t]) if N[t] else F(0) for t in teams}
+    table = {}
 
     def rec(t, others):
         others = [o for o in others if o in opp[t]]
         return F(sum(results[frozenset((t, o))] == t for o in others), len(others)) if others else None
 
-    def steps(T):
+    def standings(depth):
+        """Order of finish as slots of teams. Ties are broken with this same procedure; one level down, tied
+        teams share a slot, which keeps the recursion finite."""
+        if depth not in table:
+            slots = []
+            for p in sorted(set(pct.values()), reverse=True):
+                grp = [t for t in teams if pct[t] == p]
+                if len(grp) == 1 or depth > 1 or group_tied:
+                    slots.append(grp)
+                else:
+                    slots += [list(x) if isinstance(x, tuple) else [x] for x in rank(grp, depth)]
+            table[depth] = slots
+        return table[depth]
+
+    # Steps of the published procedure, each tagged with a sortable stage so a shrunken tie can carry on
+    # "to the next step" instead of starting over.
+    def steps(T, depth):
         pairs = [frozenset(p) for p in combinations(T, 2)]
-        if len(T) == 2:                                            # 1. head to head
+        if len(T) == 2:                                            # A.1/A.2, B.1: head to head
             if pairs[0] in results:
-                yield {t: int(results[pairs[0]] == t) for t in T}
+                yield (0,), {t: int(results[pairs[0]] == t) for t in T}
         elif all(p in results for p in pairs):
-            yield {t: rec(t, [o for o in T if o != t]) for t in T}
-        else:
+            yield (0,), {t: rec(t, [o for o in T if o != t]) for t in T}
+        else:                                                      # B.1(a): one team beat all the others
             for t in T:
                 if all(results.get(frozenset((t, o))) == t for o in T if o != t):
-                    yield {x: int(x == t) for x in T}
+                    yield (0,), {x: int(x == t) for x in T}
         common = [o for o in teams if o not in T and all(o in opp[t] for t in T)]
         if common:
-            yield {t: rec(t, common) for t in T}                   # 2. record against common opponents
-            for p in sorted({pct[o] for o in common}, reverse=True):   # 3. ...in order of finish, tied opponents as a group
-                yield {t: rec(t, [o for o in common if pct[o] == p]) for t in T}
-        yield {t: F(sum(W[o] for o in opp[t]), sum(N[o] for o in opp[t]) or 1) for t in T}   # 4. opponents' combined record
+            yield (1,), {t: rec(t, common) for t in T}             # A.3, B.2: all common opponents
+            for i, slot in enumerate(standings(depth + 1)):        # A.4, B.3: one common opponent at a time, in order of finish
+                these = [o for o in slot if o in common]
+                if these:
+                    yield (2, i), {t: rec(t, these) for t in T}
+        yield (3,), {t: F(sum(W[o] for o in opp[t]), sum(N[o] for o in opp[t]) or 1) for t in T}   # A.5, B.4
 
-    def order(T):
+    def rank(T, depth=0, after=None):
+        """Rank tied teams. A clear No. 1 is selected and the rest revert to the beginning; two teams level at the
+        top go to the two-team procedure; three or more still level move on to the next step together."""
         if len(T) <= 1:
             return list(T)
-        for m in steps(T):
+        for stage, m in steps(T, depth):
+            if after is not None and stage <= after:
+                continue
             best = max(m.values())
-            if any(v != best for v in m.values()):                 # separated teams drop out; the rest start over
-                return order([t for t in T if m[t] == best]) + order([t for t in T if m[t] != best])
-        return [tuple(sorted(T))]
+            top, rest = [t for t in T if m[t] == best], [t for t in T if m[t] != best]
+            if not rest:
+                continue
+            if len(T) == 2 or len(top) == 1:
+                return top + rank(rest, depth)
+            if len(top) == 2:
+                return rank(top, depth) + rank(rest, depth)
+            return rank(top, depth, stage) + rank(rest, depth)
+        return [tuple(sorted(T))]                                  # needs the ratings service or a draw
 
     out = []
     for p in sorted(set(pct.values()), reverse=True):
-        out += order([t for t in teams if pct[t] == p])
+        out += rank([t for t in teams if pct[t] == p])
         if len(out) >= 2:
             break
     return out[:2]
 
 
-def rooting_guide(school, team_id, nickname):
-    group = school.get("conferenceGroup")
-    if not group:
-        return None
-    from itertools import product
-    me = str(team_id)
-    now = now_utc()
-    standings = get_json(f"https://site.api.espn.com/apis/v2/sports/football/college-football/standings?group={group}")
-    conf_name = standings.get("shortName") or standings.get("abbreviation") or standings.get("name") or "conference"
-    conf_name = re.sub(r"\s+Conference$", "", conf_name)
+STANDINGS = "https://site.api.espn.com/apis/v2/sports/football/college-football/standings?group={}"
+P4_GROUPS = {"1": "ACC", "4": "Big 12", "5": "Big Ten", "8": "SEC"}   # their champions get automatic playoff bids
+NOTRE_DAME = "87"
+PLAYOFF_FIELD = 12                         # 4 power-conference champions + best of the rest + 7 more by ranking
+
+
+def conference_members(group):
+    st = get_json(STANDINGS.format(group))
+    name = re.sub(r"\s+Conference$", "", st.get("shortName") or st.get("abbreviation") or st.get("name") or "conference")
     members = {}
     def walk(n):
         for e in (n.get("standings") or {}).get("entries", []):
             members[str(e["team"]["id"])] = e["team"].get("location") or e["team"].get("displayName")
         for c in n.get("children", []):
             walk(c)
-    walk(standings)
+    walk(st)
+    return name, members
+
+
+def span(c):
+    """A count under the two readings of the tiebreaker: '102' when they agree, '85–102' when they don't."""
+    a, b = c
+    return str(a) if a == b else f"{min(a, b)}–{max(a, b)}"
+
+
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+ROW_KEYS = ("id", "kickoff", "state", "detail", "network", "away", "home", "winner")
+LEVELS = {"must": 0, "big": 1, "split": 2, "helps": 3, "longshot": 4}
+
+
+def finish_rows(rows):
+    out = sorted(rows.values(), key=lambda r: (LEVELS[r["level"]], -r.pop("weight", 0), r["kickoff"]))
+    return out
+
+
+def title_view(me, nickname, conf_name, members, sched):
+    """Every remaining combination of conference results, run through the tiebreaker under both readings."""
+    from itertools import product
+    conf_games = [g for g in sched.values() if g["away"]["id"] in members and g["home"]["id"] in members and not g["titleGame"]]
+    played = {frozenset((g["away"]["id"], g["home"]["id"])): g["winner"] for g in conf_games if g["winner"]}
+    open_games = sorted((g for g in conf_games if not g["winner"]), key=lambda g: g["kickoff"])
+    if not (0 < len(open_games) <= MAX_OPEN_GAMES and len(played) > len(conf_games) / 2):
+        return None, None
+    name = lambda tid, g: (g["away"] if g["away"]["id"] == tid else g["home"])["name"]
+    ids = [(g["away"]["id"], g["home"]["id"]) for g in open_games]
+    teams = list(members)
+    outcomes = {}
+    for combo in product(*ids):
+        res = dict(played)
+        res.update({frozenset(pair): w for pair, w in zip(ids, combo)})
+        outcomes[combo] = (conference_finalists(res, teams, group_tied=True), conference_finalists(res, teams))
+    mine = next((i for i, pair in enumerate(ids) if me in pair), None)
+    pool = {c: o for c, o in outcomes.items() if mine is None or c[mine] == me}   # we win our own game
+    total, half = len(pool), len(pool) // 2
+
+    def count(cond, src=pool):
+        a = b = 0
+        for c, (fa, fb) in src.items():
+            if cond(c):
+                a += me in fa; b += me in fb
+        return a, b
+
+    good = count(lambda c: True)
+    lose = count(lambda c: c[mine] != me, outcomes) if mine is not None else (0, 0)
+    title, lines, rows, ranged = f"{conf_name} title game", [], {}, good[0] != good[1]
+
+    def row(g, pick, level, why, weight):
+        rows[g["id"]] = {**{k: g[k] for k in ROW_KEYS}, "pick": pick, "level": level, "why": why, "weight": weight}
+
+    if mine is not None:
+        g = open_games[mine]
+        opp = name(next(t for t in ids[mine] if t != me), g)
+        if good == (0, 0):
+            lines.append(f"{nickname} can no longer reach the {title}.")
+        elif good == (total, total) and lose == (total, total):
+            lines.append(f"{nickname} is in the {title} whatever happens this week.")
+        elif good == (total, total):
+            lines.append(f"Beat {opp} and {nickname} is in the {title}."
+                         + (" Lose and it is out." if lose == (0, 0) else f" Lose and it is in for {span(lose)} of the {total} ways the other games can finish."))
+            row(g, me, "must", f"A win clinches a spot in the {title}.", 9)
+        else:
+            lines.append(f"If {nickname} beats {opp}, it reaches the {title} in {span(good)} of the {total} ways the other games can finish."
+                         + (" If it loses, it is out." if lose == (0, 0) else f" If it loses, that drops to {span(lose)} of {total}."))
+            row(g, me, "must" if lose == (0, 0) else "big",
+                f"Everything starts here. With a loss, {nickname} " + ("is out of the title race." if lose == (0, 0) else f"reaches the title game in only {span(lose)} of {total} combinations."), 9)
+    elif good == (0, 0):
+        lines.append(f"{nickname} can no longer reach the {title}.")
+    elif good == (total, total):
+        lines.append(f"{nickname} is in the {title} whatever happens in the remaining games.")
+    else:
+        lines.append(f"{nickname} reaches the {title} in {span(good)} of the {total} ways the remaining games can finish.")
+
+    if 0 < sum(good) < 2 * total:
+        for i, (a, b) in enumerate(ids):
+            if i == mine:
+                continue
+            g = open_games[i]
+            ca, cb = count(lambda c: c[i] == a), count(lambda c: c[i] == b)
+            if abs(sum(ca) - sum(cb)) / total < 0.03:
+                continue
+            pick, other, cp, co = (a, b, ca, cb) if sum(ca) > sum(cb) else (b, a, cb, ca)
+            ranged = ranged or cp[0] != cp[1] or co[0] != co[1]
+            flip = None                                            # does the better result change with another game?
+            for j, pair in enumerate(ids):
+                if j in (i, mine):
+                    continue
+                for w in pair:
+                    o_ = count(lambda c: c[i] == other and c[j] == w)
+                    p_ = count(lambda c: c[i] == pick and c[j] == w)
+                    d = sum(o_) - sum(p_)
+                    if d > 0 and (not flip or d > flip[0]):
+                        flip = (d, j, w, o_, p_)
+            why = (f"{nickname} reaches the title game in {span(cp)} of {half} combinations if {name(pick, g)} wins, and "
+                   + ("none" if co == (0, 0) else f"{span(co)} of {half}") + f" if {name(other, g)} wins.")
+            level = "big" if (sum(cp) - sum(co)) / total >= 0.3 else "helps"
+            if flip:
+                d, j, w, o_, p_ = flip
+                quarter, hg = half // 2, open_games[j]
+                wn, ln = name(w, hg), name(next(t for t in ids[j] if t != w), hg)
+                if d / half >= 0.1:
+                    ranged = ranged or o_[0] != o_[1] or p_[0] != p_[1]
+                    first = parse_time(hg["kickoff"]) < parse_time(g["kickoff"])
+                    timing = (" That game kicks off first, so you'll know which way to lean." if first
+                              else " That game kicks off later, so you won't know yet.")
+                    if d / half >= 0.25:
+                        level = "split"
+                        why = (f"It depends on {hg['away']['name']} at {hg['home']['name']}. If {wn} wins, {nickname} wants {name(other, g)} here "
+                               f"({span(o_)} of {quarter} combinations against {span(p_)}). If {ln} wins, it wants {name(pick, g)}.{timing}"
+                               + ("" if first else f" Across every result, {name(pick, g)} winning is the better bet ({span(cp)} of {half} against {span(co)})."))
+                        if first:
+                            pick = None
+                    else:
+                        why += f" The exception: if {wn} beats {ln}, {nickname} is better off with {name(other, g)} winning ({span(o_)} of {quarter} against {span(p_)}).{timing}"
+            row(g, pick, level, why, (sum(cp) - sum(co)) / total + (2 if level == "split" else 0))
+
+    note = (f"Counts for the other games assume {nickname} wins its own. " if mine is not None and sum(good) else "") + \
+        "Every remaining result counts as equally likely, so these are counts, not odds. They follow the Big Ten's published tiebreaker; " \
+        "ties it can only settle with a ratings service or a draw count as misses."
+    if ranged:
+        note += (" Where a range is shown, the rules can be read two ways: when common opponents are themselves tied in the standings, "
+                 "they don't say whether to compare against those teams one at a time or as a group.")
+
+    def reach(t):
+        """How often team t can still be a finalist if it wins / loses its open game: (wins, losses, per side)."""
+        i = next((k for k, pair in enumerate(ids) if t in pair), None)
+        hit = lambda f: any(t == x or (isinstance(x, tuple) and t in x) for x in f)
+        if i is None:
+            return None
+        src = outcomes if t == me or mine is None else pool
+        w = sum(1 for c, (fa, fb) in src.items() if c[i] == t and (hit(fa) or hit(fb)))
+        l = sum(1 for c, (fa, fb) in src.items() if c[i] != t and (hit(fa) or hit(fb)))
+        return w, l, len(src) // 2, open_games[i]
+
+    view = {"label": f"{conf_name} title", "summary": lines, "games": finish_rows(rows), "note": note}
+    return view, reach
+
+
+def playoff_view(me, nickname, conf_name, group, members, sched, add_schedule, reach):
+    """Where the school stands for the 12-team playoff on the latest committee ranking."""
+    now = now_utc()
+    try:
+        poll = next((p for p in get_json(f"{COLLEGE}/rankings?polls=21").get("rankings", []) if p.get("type") == "cfp"), None)
+    except Exception:
+        return None
+    stamp = poll and (poll.get("lastUpdated") or poll.get("date"))
+    if not stamp or now - parse_time(stamp) > timedelta(days=10):
+        return None
+    ranked = sorted(((r["current"], str(r["team"]["id"]), r["team"].get("location") or r["team"].get("displayName"))
+                     for r in poll.get("ranks", [])))
+    rank_of, label = {t: r for r, t, _ in ranked}, {t: n for _, t, n in ranked}
+    my_rank = rank_of.get(me)
+    conf_of = {}
+    for g, cname in P4_GROUPS.items():
+        mem = members if g == str(group) else conference_members(g)[1]
+        for t in mem:
+            conf_of[t] = cname
+    champ = {}                                                     # projected: each power conference's top-ranked team
+    for r, t, _ in ranked:
+        if conf_of.get(t) and conf_of[t] not in champ:
+            champ[conf_of[t]] = t
+    best_rest = next((t for r, t, _ in ranked if t not in conf_of and t != NOTRE_DAME), None)
+    autos = set(champ.values()) | ({best_rest} if best_rest else set())
+    spots = PLAYOFF_FIELD - len(P4_GROUPS) - 1
+    others = [t for r, t, _ in ranked if t not in autos]
+    if NOTRE_DAME in others and rank_of[NOTRE_DAME] <= PLAYOFF_FIELD and others.index(NOTRE_DAME) >= spots:
+        spots -= 1                                                 # Notre Dame's own top-12 guarantee takes a spot
+    lines, rows = [f"Win the {conf_name} title and {nickname} is in: the ACC, Big Ten, Big 12 and SEC champions get automatic bids."], {}
+    ahead = []
+    if not my_rank:
+        lines.append(f"{nickname} isn't in the committee's top 25, so the title is its only realistic way in.")
+    elif me in autos:
+        lines.append(f"{nickname} is the top-ranked {conf_name} team at No. {my_rank}, so it holds the projected automatic bid for now.")
+    else:
+        ahead = others[:others.index(me)]
+        pos = len(ahead) + 1
+        if pos <= spots:
+            lines.append(f"Otherwise it needs one of {spots} at-large spots. At No. {my_rank} in the committee's ranking it is "
+                         f"{ordinal(pos)} in line, so it would be in today.")
+        else:
+            need = pos - spots
+            lines.append(f"Otherwise it needs one of {spots} at-large spots. At No. {my_rank} in the committee's ranking it is "
+                         f"{ordinal(pos)} in line, so {need} of the {len(ahead)} teams ahead of it {'needs' if need == 1 else 'need'} to fall behind it.")
+
+    for t in set(ahead) | autos | {me}:
+        try:
+            add_schedule(t)
+        except Exception as e:
+            print(f"warning: schedule for team {t} failed: {e}", file=sys.stderr)
+
+    def nxt(t):
+        games = sorted((g for g in sched.values() if t in (g["away"]["id"], g["home"]["id"]) and not g["winner"]
+                        and parse_time(g["kickoff"]) - now < timedelta(days=8)), key=lambda g: g["kickoff"])
+        return games[0] if games else None
+
+    def row(g, pick, level, why, weight):
+        r = rows.get(g["id"])
+        if r:                                                      # a second reason for the same result
+            r["why"] += " " + why
+            if LEVELS[level] < LEVELS[r["level"]]:
+                r["level"] = level
+            return
+        rows[g["id"]] = {**{k: g[k] for k in ROW_KEYS}, "pick": pick, "level": level, "why": why, "weight": weight}
+
+    mine = nxt(me)
+    if mine:
+        opp = next(s for s in (mine["away"], mine["home"]) if s["id"] != me)["name"]
+        row(mine, me, "must", f"Start here. A loss to {opp} would all but end {nickname}'s at-large hopes"
+                              + (f" and knock it out of the {conf_name} race." if reach and reach(me) and not reach(me)[1] else "."), 9)
+    # Teams ahead of us in the at-large line: a loss could drop them behind.
+    for t in ahead:
+        g = nxt(t)
+        if not g or me in (g["away"]["id"], g["home"]["id"]):
+            continue
+        foe = next(s for s in (g["away"], g["home"]) if s["id"] != t)
+        if foe["id"] in ahead or foe["id"] in autos:
+            continue                                               # both ahead of us: whoever loses, the line is the same length
+        gap = my_rank - rank_of[t]
+        level = "big" if gap <= 3 else "helps" if gap <= 6 else "longshot"
+        why = (f"No. {rank_of[t]} {label[t]} is {gap} spot{'s' if gap > 1 else ''} ahead of {nickname} in the at-large line. "
+               + ("A loss could drop it behind." if gap <= 6 else "A loss might not drop it far enough, but it would help."))
+        row(g, foe["id"], level, why, 1 / gap)
+    # Teams behind us that could still take an automatic bid away from a team ahead of us.
+    proj = {c: t for c, t in champ.items()}
+    for g in list(sched.values()):
+        if not g["titleGame"] or g["winner"] or parse_time(g["kickoff"]) - now > timedelta(days=8):
+            continue
+        a, h = g["away"]["id"], g["home"]["id"]
+        if me in (a, h) or not (conf_of.get(a) and conf_of.get(a) == conf_of.get(h)):
+            continue
+        hi_, lo_ = sorted((a, h), key=lambda t: rank_of.get(t, 99))
+        ahead_of_us = lambda t: t in rank_of and (my_rank is None or rank_of[t] < my_rank)
+        if ahead_of_us(hi_) and not ahead_of_us(lo_):              # an upset would add a team to the line ahead of us
+            row(g, hi_, "big", f"If {label.get(lo_) or name_of(g, lo_)} wins, it takes the {conf_of[a]} automatic bid from behind {nickname}, "
+                               f"and {label[hi_]} joins the at-large line ahead of it.", 2)
+    if reach and my_rank and me not in autos:
+        top = proj.get(P4_GROUPS.get(str(group)))
+        for t in members:
+            if t == me or rank_of.get(t, 99) < my_rank:
+                continue
+            info = reach(t)
+            if not info or not info[0] or top is None:
+                continue
+            w, l, n, g = info
+            foe = next(s for s in (g["away"], g["home"]) if s["id"] != t)
+            if l or w / n < 0.03:
+                continue                                           # gets there either way, or almost never
+            row(g, foe["id"], "helps", f"{members[t]} is ranked behind {nickname}, but if it beats {foe['name']} it reaches the {conf_name} title game "
+                                       f"in up to {w} of {n} combinations (none if it loses). Winning that game would give it the automatic bid "
+                                       f"and put {label[top]} in the at-large line ahead of {nickname}.", 0.5)
+    note = ("Based on this week's committee ranking, which is redone every Tuesday, so a loss by a team ahead doesn't guarantee it "
+            "drops behind. The field is 12: the ACC, Big Ten, Big 12 and SEC champions, the highest-ranked team from the other "
+            "conferences, and the next seven in the ranking. The projected champion of each conference here is simply its "
+            "highest-ranked team.")
+    return {"label": "Playoff", "summary": lines, "games": finish_rows(rows), "note": note}
+
+
+def name_of(g, t):
+    return (g["away"] if g["away"]["id"] == t else g["home"])["name"]
+
+
+def rooting_guide(school, team_id, nickname):
+    group = school.get("conferenceGroup")
+    if not group:
+        return None
+    me = str(team_id)
+    conf_name, members = conference_members(group)
     if me not in members:
         return None
     sched = {}                                                     # event id -> game, across the whole conference
+
     def add_schedule(tid):
         for ev in get_json(f"{COLLEGE}/teams/{tid}/schedule?seasontype=2").get("events", []):   # regular season only: no bowls
             if ev["id"] not in sched:
                 sched[ev["id"]] = neutral_game(ev)
     for tid in members:
         add_schedule(tid)
-    conf_games = [g for g in sched.values() if g["away"]["id"] in members and g["home"]["id"] in members and not g["titleGame"]]
-    played = {frozenset((g["away"]["id"], g["home"]["id"])): g["winner"] for g in conf_games if g["winner"]}
-    open_games = sorted((g for g in conf_games if not g["winner"]), key=lambda g: g["kickoff"])
-    name = lambda tid, g: (g["away"] if g["away"]["id"] == tid else g["home"])["name"]
-
-    rows, lines = {}, []
-    def row(g, pick, level, why, tag, weight=0.0):
-        r = rows.get(g["id"])
-        if r:
-            r["why"] += " " + why
-            if tag not in r["tags"]:
-                r["tags"].append(tag)
-            return r
-        r = rows[g["id"]] = {**{k: g[k] for k in ("id", "kickoff", "state", "detail", "network", "away", "home", "winner")},
-                             "pick": pick, "level": level, "why": why, "tags": [tag], "weight": weight}
-        return r
-
-    # --- conference title game ---
-    if 0 < len(open_games) <= MAX_OPEN_GAMES and len(played) > len(conf_games) / 2:
-        ids = [(g["away"]["id"], g["home"]["id"]) for g in open_games]
-        outcomes = {}
-        for combo in product(*ids):
-            res = dict(played)
-            res.update({frozenset(pair): w for pair, w in zip(ids, combo)})
-            outcomes[combo] = me in conference_finalists(res, list(members))
-        mine = next((i for i, pair in enumerate(ids) if me in pair), None)
-        pool = {c: v for c, v in outcomes.items() if mine is None or c[mine] == me}   # scenarios where we win our own game
-        total, good = len(pool), sum(pool.values())
-        count = lambda i, w, cond=None: sum(v for c, v in pool.items() if c[i] == w and (cond is None or c[cond[0]] == cond[1]))
-        title = f"{conf_name} title game"
-        if mine is not None:
-            g, lose = open_games[mine], sum(v for c, v in outcomes.items() if c[mine] != me)
-            opp = name(next(t for t in ids[mine] if t != me), g)
-            if good == 0 and lose == 0:
-                lines.append(f"{nickname} can no longer reach the {title}.")
-            elif good == total and lose == total:
-                lines.append(f"{nickname} is in the {title} whatever happens this week.")
-            elif good == 0:
-                lines.append(f"{nickname} can no longer reach the {title}.")
-            elif good == total:
-                lines.append(f"Beat {opp} and {nickname} is in the {title}."
-                             + (" Lose and it is out." if lose == 0 else f" Lose and it is in for {lose} of the {total} ways the other games can finish."))
-                row(g, me, "must", f"A win clinches a spot in the {title}.", title, 9)
-            else:
-                lines.append(f"If {nickname} beats {opp}, it reaches the {title} in {good} of the {total} ways the other games can finish."
-                             + (f" If it loses, it is out." if lose == 0 else f" If it loses, that drops to {lose} of {total}."))
-                row(g, me, "must" if lose == 0 else "big",
-                    f"Everything starts here. With a loss, {nickname} " + ("is out of the title race." if lose == 0 else f"reaches the title game in only {lose} of {total} combinations."),
-                    title, 9)
-        elif good == 0:
-            lines.append(f"{nickname} can no longer reach the {title}.")
-        elif good == total:
-            lines.append(f"{nickname} is in the {title} whatever happens in the remaining games.")
-        else:
-            lines.append(f"{nickname} reaches the {title} in {good} of the {total} ways the remaining games can finish.")
-        if 0 < good < total:
-            for i, (a, b) in enumerate(ids):
-                if i == mine:
-                    continue
-                g, half = open_games[i], total // 2
-                ca, cb = count(i, a), count(i, b)
-                if abs(ca - cb) / half < 0.03:
-                    continue
-                pick, other, hi, lo = (a, b, ca, cb) if ca > cb else (b, a, cb, ca)
-                flip = None                                        # does the better result change with another game?
-                for j, pair in enumerate(ids):
-                    if j in (i, mine):
-                        continue
-                    for w in pair:
-                        d = count(i, other, (j, w)) - count(i, pick, (j, w))
-                        if d > 0 and (not flip or d > flip[0]):
-                            flip = (d, j, w, count(i, other, (j, w)), count(i, pick, (j, w)))
-                why = (f"{nickname} reaches the title game in {hi} of {half} combinations if {name(pick, g)} wins, and "
-                       + ("none" if lo == 0 else f"{lo} of {half}") + f" if {name(other, g)} wins.")
-                level = "big" if (hi - lo) / half >= 0.3 else "helps"
-                if flip:
-                    d, j, w, co, cp = flip
-                    quarter, hg = half // 2, open_games[j]
-                    wn = name(w, hg)
-                    ln = name(next(t for t in ids[j] if t != w), hg)
-                    if d / quarter < 0.1:
-                        pass
-                    else:
-                        first = parse_time(hg["kickoff"]) < parse_time(g["kickoff"])
-                        timing = (" That game kicks off first, so you'll know which way to lean." if first
-                                  else " That game kicks off later, so you won't know yet.")
-                        if d / quarter >= 0.25:
-                            level = "split"
-                            why = (f"It depends on {hg['away']['name']} at {hg['home']['name']}. If {wn} wins, {nickname} wants {name(other, g)} here "
-                                   f"({co} of {quarter} combinations against {cp}). If {ln} wins, it wants {name(pick, g)}.{timing}"
-                                   + ("" if first else f" Across every result, {name(pick, g)} winning is the better bet ({hi} of {half} against {lo})."))
-                            if first:
-                                pick = None
-                        else:
-                            why += f" The exception: if {wn} beats {ln}, {nickname} is better off with {name(other, g)} winning ({co} of {quarter} against {cp}).{timing}"
-                row(g, pick, level, why, title, (hi - lo) / half + (2 if level == "split" else 0))
-
-    # --- playoff ranking: teams just ahead of us ---
+    title, reach = title_view(me, nickname, conf_name, members, sched)
     try:
-        poll = next((p for p in get_json(f"{COLLEGE}/rankings?polls=21").get("rankings", []) if p.get("type") == "cfp"), None)
-    except Exception:
-        poll = None
-    stamp = poll and (poll.get("lastUpdated") or poll.get("date"))
-    if stamp and now - parse_time(stamp) < timedelta(days=10):
-        ranks = {str(r["team"]["id"]): r["current"] for r in poll.get("ranks", [])}
-        mine_rank = ranks.get(me)
-        if mine_rank and mine_rank > 4:
-            lines.append(f"{nickname} is No. {mine_rank} in the playoff ranking. A loss by a team just ahead could move it up.")
-            for tid, r in sorted(ranks.items(), key=lambda kv: -kv[1]):
-                if not (mine_rank - AHEAD_SPOTS <= r < mine_rank):
-                    continue
-                if tid not in members:
-                    try:
-                        add_schedule(tid)
-                    except Exception:
-                        continue
-                nxt = sorted((g for g in sched.values() if tid in (g["away"]["id"], g["home"]["id"]) and not g["winner"]
-                              and parse_time(g["kickoff"]) - now < timedelta(days=8)), key=lambda g: g["kickoff"])
-                if not nxt or me in (nxt[0]["away"]["id"], nxt[0]["home"]["id"]):
-                    continue
-                g = nxt[0]
-                foe = next(t for t in (g["away"]["id"], g["home"]["id"]) if t != tid)
-                gap = mine_rank - r
-                why = f"{name(tid, g)} is No. {r} in the playoff ranking, {gap} spot{'s' if gap > 1 else ''} ahead of {nickname}. A loss could drop it behind."
-                prev = rows.get(g["id"])
-                if prev and prev["pick"] == tid:
-                    why = "The playoff picture pulls the other way. " + why
-                row(g, foe, "helps", why, "Playoff", 0.2 / gap)
-
-    if not rows:
+        playoff = playoff_view(me, nickname, conf_name, group, members, sched, add_schedule, reach)
+    except Exception as e:
+        print(f"warning: playoff view failed: {e}", file=sys.stderr)
+        playoff = None
+    views = {k: v for k, v in (("playoff", playoff), ("title", title)) if v and (v["games"] or v["summary"])}
+    if not views:
         return None
-    order = {"must": 0, "big": 1, "split": 2, "helps": 3}
-    games = sorted(rows.values(), key=lambda r: (order[r["level"]], -r["weight"], r["kickoff"]))
-    for r in games:
-        del r["weight"]
-    return {"updated": iso(now), "summary": lines, "games": games,
-            "note": ("Counts for the other games assume " + nickname + " wins its own. " if any(r["pick"] == me for r in rows.values()) else "")
-                    + "Counts treat every remaining result as equally likely, so they are not odds. They follow the conference's published "
-                    "tiebreaker; ties it can only settle with a ratings service or a draw count as misses."}
+    return {"updated": iso(now_utc()), "default": "playoff" if "playoff" in views else "title", "views": views}
 
 
 # ---------- main ----------
@@ -1120,7 +1296,8 @@ def main():
     college_live = set()                     # the school's own game, or one in its "who to root for" list
     for k in schools:
         c = read_json(f"data/college/{k}.json") or {}
-        if in_live_window(c, now) or in_live_window(c.get("rooting"), now):
+        rooting_games = [g for v in ((c.get("rooting") or {}).get("views") or {}).values() for g in v.get("games", [])]
+        if in_live_window(c, now) or in_live_window({"games": rooting_games}, now):
             college_live.add(k)
     if auto and not nfl_live and not college_live:
         print("no game live or about to start; nothing to do")
