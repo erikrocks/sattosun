@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T18:49:43Z",
+ "updated": "2026-11-27T18:59:50Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "Halftime",
+   "detail": "11:52 - 3rd",
    "network": "CBS",
    "watch": [
     {
@@ -334,14 +334,14 @@
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 13,
-    "score": 10
+    "score": null
    },
    "opp": {
     "id": "158",
     "abbr": "NEB",
     "name": "Nebraska",
     "rank": 25,
-    "score": 7
+    "score": null
    },
    "win": null
   }
@@ -11927,10 +11927,20 @@
      "rows": [
       [
        "Cam Buffington",
-       "6",
-       "2",
+       "11",
+       "4",
        "0",
        "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "7",
+       "3",
+       "1",
+       "1",
        "0",
        "0",
        "0"
@@ -11942,16 +11952,6 @@
        "0",
        "0",
        "1",
-       "0",
-       "0"
-      ],
-      [
-       "Jayden Montgomery",
-       "5",
-       "2",
-       "1",
-       "1",
-       "0",
        "0",
        "0"
       ],
@@ -11996,6 +11996,16 @@
        "0"
       ],
       [
+       "Deshaun Lee",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Landyn Van Kekerix",
        "1",
        "1",
@@ -12016,7 +12026,7 @@
        "0"
       ],
       [
-       "Deshaun Lee",
+       "Kenneth Merrieweather",
        "1",
        "0",
        "0",
@@ -12026,7 +12036,7 @@
        "0"
       ],
       [
-       "Kenneth Merrieweather",
+       "Jacob Wallace",
        "1",
        "0",
        "0",
@@ -12151,9 +12161,9 @@
      "rows": [
       [
        "Anthony Colandrea",
-       "11/16",
-       "88",
-       "5.5",
+       "13/18",
+       "121",
+       "6.7",
        "0",
        "1"
       ]
@@ -12170,9 +12180,9 @@
      "rows": [
       [
        "Jamal Rule",
-       "9",
-       "57",
-       "6.3",
+       "11",
+       "67",
+       "6.1",
        "1",
        "21"
       ],
@@ -12183,6 +12193,22 @@
        "1.5",
        "0",
        "3"
+      ],
+      [
+       "Mekhi Nelson",
+       "1",
+       "4",
+       "4.0",
+       "0",
+       "4"
+      ],
+      [
+       "Jacory Barney Jr.",
+       "1",
+       "2",
+       "2.0",
+       "0",
+       "2"
       ],
       [
        " Team",
@@ -12213,11 +12239,19 @@
      "rows": [
       [
        "Luke Lindenmeyer",
-       "4",
-       "42",
-       "10.5",
+       "5",
+       "53",
+       "10.6",
        "0",
        "13"
+      ],
+      [
+       "Carter Nelson",
+       "2",
+       "27",
+       "13.5",
+       "0",
+       "22"
       ],
       [
        "Quinn Clark",
@@ -12245,14 +12279,6 @@
       ],
       [
        "Nyziah Hunter",
-       "1",
-       "5",
-       "5.0",
-       "0",
-       "5"
-      ],
-      [
-       "Carter Nelson",
        "1",
        "5",
        "5.0",
@@ -12486,11 +12512,13 @@
    "lines": {
     "us": [
      "7",
-     "3"
+     "3",
+     "0"
     ],
     "opp": [
      "0",
-     "7"
+     "7",
+     "0"
     ]
    },
    "scoring": [
@@ -12596,13 +12624,13 @@
    "players": [
     {
      "name": "Cam Buffington",
-     "value": "103",
-     "line": "103 TOT · 9.5 TFL · 3 SACKS"
+     "value": "108",
+     "line": "108 TOT · 9.5 TFL · 3 SACKS"
     },
     {
      "name": "Jayden Montgomery",
-     "value": "72",
-     "line": "72 TOT · 10.5 TFL · 4.5 SACKS"
+     "value": "74",
+     "line": "74 TOT · 10.5 TFL · 4.5 SACKS"
     },
     {
      "name": "Zach Lutmer",
@@ -12799,7 +12827,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T18:49:43Z",
+  "updated": "2026-11-27T18:59:50Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12813,21 +12841,21 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "Halftime",
+      "detail": "13:02 - 3rd",
       "network": "CBS",
       "away": {
        "id": "158",
        "abbr": "NEB",
        "name": "Nebraska",
        "rank": 25,
-       "score": 7
+       "score": null
       },
       "home": {
        "id": "2294",
        "abbr": "IOWA",
        "name": "Iowa",
        "rank": 13,
-       "score": 10
+       "score": null
       },
       "winner": null,
       "pick": "2294",
@@ -13047,21 +13075,21 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "Halftime",
+      "detail": "13:02 - 3rd",
       "network": "CBS",
       "away": {
        "id": "158",
        "abbr": "NEB",
        "name": "Nebraska",
        "rank": 25,
-       "score": 7
+       "score": null
       },
       "home": {
        "id": "2294",
        "abbr": "IOWA",
        "name": "Iowa",
        "rank": 13,
-       "score": 10
+       "score": null
       },
       "winner": null,
       "pick": "2294",
