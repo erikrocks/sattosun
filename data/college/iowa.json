@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T17:58:59Z",
+ "updated": "2026-11-27T18:09:13Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "9:09 - 2nd",
+   "detail": "5:09 - 2nd",
    "network": "CBS",
    "watch": [
     {
@@ -11904,8 +11904,8 @@
      "rows": [
       [
        "Cam Buffington",
-       "4",
-       "1",
+       "6",
+       "2",
        "0",
        "0",
        "0",
@@ -11914,12 +11914,52 @@
       ],
       [
        "Jaylen Watson",
+       "4",
        "3",
-       "2",
        "0",
        "0",
        "1",
        "0",
+       "0"
+      ],
+      [
+       "Will Hubert",
+       "4",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Jayden Montgomery",
+       "4",
+       "0",
+       "0.5",
+       "0.5",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Zach Lutmer",
+       "3",
+       "2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Luke Gaffney",
+       "3",
+       "1",
+       "0.5",
+       "0.5",
+       "0",
+       "1",
        "0"
       ],
       [
@@ -11933,47 +11973,7 @@
        "0"
       ],
       [
-       "Jayden Montgomery",
-       "3",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Zach Lutmer",
-       "2",
-       "2",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Will Hubert",
-       "2",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
        "Landyn Van Kekerix",
-       "1",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Luke Gaffney",
        "1",
        "1",
        "0",
@@ -12103,9 +12103,9 @@
      "rows": [
       [
        "Anthony Colandrea",
-       "6/8",
-       "45",
-       "5.6",
+       "8/12",
+       "62",
+       "5.2",
        "0",
        "0"
       ]
@@ -12122,9 +12122,9 @@
      "rows": [
       [
        "Jamal Rule",
-       "5",
-       "38",
-       "7.6",
+       "8",
+       "51",
+       "6.4",
        "1",
        "21"
       ],
@@ -12138,9 +12138,9 @@
       ],
       [
        "Anthony Colandrea",
-       "1",
        "2",
-       "2.0",
+       "-3",
+       "-1.5",
        "0",
        "2"
       ]
@@ -12157,19 +12157,19 @@
      "rows": [
       [
        "Luke Lindenmeyer",
-       "2",
-       "24",
-       "12.0",
+       "3",
+       "30",
+       "10.0",
        "0",
        "13"
       ],
       [
        "Quinn Clark",
-       "1",
-       "7",
-       "7.0",
+       "2",
+       "18",
+       "9.0",
        "0",
-       "7"
+       "11"
       ],
       [
        "Jamal Rule",
@@ -12371,12 +12371,12 @@
      "rows": [
       [
        "Archie Wilson",
+       "2",
+       "91",
+       "45.5",
+       "0",
        "1",
-       "44",
-       "44.0",
-       "0",
-       "0",
-       "44"
+       "47"
       ]
      ]
     }
@@ -12494,18 +12494,18 @@
    "players": [
     {
      "name": "Cam Buffington",
-     "value": "101",
-     "line": "101 TOT · 9.5 TFL · 3 SACKS"
+     "value": "103",
+     "line": "103 TOT · 9.5 TFL · 3 SACKS"
     },
     {
      "name": "Jayden Montgomery",
-     "value": "70",
-     "line": "70 TOT · 9.5 TFL · 3.5 SACKS"
+     "value": "71",
+     "line": "71 TOT · 10 TFL · 4 SACKS"
     },
     {
      "name": "Zach Lutmer",
-     "value": "69",
-     "line": "69 TOT · 1.5 TFL · 0 SACKS"
+     "value": "70",
+     "line": "70 TOT · 1.5 TFL · 0 SACKS"
     }
    ]
   },
@@ -12518,12 +12518,12 @@
      "line": "4 SACKS"
     },
     {
-     "name": "Bryce Hawthorne",
-     "value": "3.5",
-     "line": "3.5 SACKS"
+     "name": "Jayden Montgomery",
+     "value": "4",
+     "line": "4 SACKS"
     },
     {
-     "name": "Jayden Montgomery",
+     "name": "Bryce Hawthorne",
      "value": "3.5",
      "line": "3.5 SACKS"
     }
@@ -12697,7 +12697,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T17:48:51Z",
+  "updated": "2026-11-27T18:09:13Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12711,7 +12711,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:37 - 2nd",
+      "detail": "5:36 - 2nd",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -12945,7 +12945,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "13:37 - 2nd",
+      "detail": "5:36 - 2nd",
       "network": "CBS",
       "away": {
        "id": "158",
