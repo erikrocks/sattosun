@@ -1,28 +1,12 @@
 {
  "season": 2026,
  "week": 12,
- "updated": "2026-11-27T01:33:49Z",
+ "updated": "2026-11-27T02:23:37Z",
  "source": "ESPN game summaries",
  "games": {
-  "401873080": {
+  "401873082": {
    "final": false,
-   "players": {
-    "cooper dejean": {
-     "team": "PHI",
-     "id": "4682618",
-     "cats": {
-      "defensive": {
-       "TOT": "1",
-       "SOLO": "1",
-       "SACKS": "0",
-       "TFL": "0",
-       "PD": "0",
-       "QB HTS": "0",
-       "TD": "0"
-      }
-     }
-    }
-   }
+   "players": {}
   },
   "401873081": {
    "final": true,
@@ -57,9 +41,25 @@
     }
    }
   },
-  "401873082": {
-   "final": false,
-   "players": {}
+  "401873080": {
+   "final": true,
+   "players": {
+    "cooper dejean": {
+     "team": "PHI",
+     "id": "4682618",
+     "cats": {
+      "defensive": {
+       "TOT": "1",
+       "SOLO": "1",
+       "SACKS": "0",
+       "TFL": "0",
+       "PD": "0",
+       "QB HTS": "0",
+       "TD": "0"
+      }
+     }
+    }
+   }
   },
   "401873079": {
    "final": true,

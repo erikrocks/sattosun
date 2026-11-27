@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T01:33:50Z",
+ "updated": "2026-11-27T02:23:37Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -3470,8 +3470,8 @@
      "team": "PHI",
      "opp": "DAL",
      "at": true,
-     "result": "",
-     "live": true,
+     "result": "W 39-38",
+     "live": false,
      "cats": {
       "defensive": {
        "TOT": "1",
