@@ -2,11 +2,10 @@ name: Update data
 
 on:
   schedule:
-    # Times are UTC (Central is UTC-6 in winter, UTC-5 in summer).
+    # Times are UTC (Central is UTC-6 in winter, UTC-5 in summer). Refreshes during games: see gameday.yml.
     - cron: "17 11 * * *"     # daily ~5am CT: full refresh (scores, rosters, stats, college)
     - cron: "40 16 * * 0"     # Sunday ~10:40am CT: rosters again for final injury tags
     - cron: "0 3 * * *"       # nightly ~9pm CT (10pm in summer): college only, for evening rankings, record and news
-    - cron: "*/15 * * * *"    # every 15 min: scores + stats, but only when an NFL or college game is live or about to start
   workflow_dispatch:          # "Run workflow" button = full refresh
     inputs:
       test_alert:
@@ -40,7 +39,6 @@ jobs:
         run: |
           if [ "${{ inputs.test_alert }}" = "true" ]; then echo "mode=test" >> "$GITHUB_OUTPUT"; python scripts/update.py --test-alert; fi
           case "${{ github.event.schedule }}" in
-            "*/15 * * * *") echo "mode=auto" >> "$GITHUB_OUTPUT"; python scripts/update.py --auto ;;   # cheap no-op outside game windows
             "0 3 * * *")    echo "mode=college" >> "$GITHUB_OUTPUT"; python scripts/update.py --college ;;      # rankings, record, schedule, news
             *)              echo "mode=full" >> "$GITHUB_OUTPUT"; python scripts/update.py ;;          # full refresh (also manual runs)
           esac
@@ -52,12 +50,13 @@ jobs:
           git add data
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase --quiet
-          git push
+          # The "Game day" workflow may have pushed meanwhile; on a clash this run's fresh data wins.
+          for i in 1 2 3; do git pull --rebase -X theirs --quiet && git push && exit 0; sleep 15; done
+          exit 1
       - name: Open an issue if the refresh failed
         if: failure()
         run: |
-          # One open issue at a time, so a feed that's down during a game doesn't send an email every 15 minutes.
+          # One open issue at a time, so a feed that's down doesn't send an email on every run.
           open=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[0].number')
           if [ -n "$open" ]; then echo "Issue #$open is already open"; exit 0; fi
           problems=$(python -c "import json; print('\n'.join('- ' + p for p in json.load(open('data/status.json')).get('problems', [])) or '- The update script crashed before it could record a reason. See the run log.')" 2>/dev/null || echo "- See the run log.")

@@ -1,0 +1,58 @@
+name: Game day
+
+# Keeps scores, stats and "Who to root for" fresh while games are on.
+# GitHub starts frequent schedules late and skips most of them, so each run that does land stays up
+# (scripts/gameday.py): it refreshes every 10 minutes while a tracked game is on, waits for a kickoff
+# up to 6 hours away, and hands over to a fresh run before the 6-hour job limit.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"    # starting points only; most are skipped by GitHub, and that's fine
+  workflow_dispatch:          # also how a run hands over to the next one
+
+permissions:
+  contents: write
+  issues: write               # failure alert, same as the "Update data" workflow
+  actions: write              # to start the next run
+
+concurrency:
+  group: gameday              # one loop at a time; separate from "Update data" so neither blocks the other
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  ALERT_LABEL: data-failure
+
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh while games are on
+        id: loop
+        run: |
+          git config user.name "data-bot"
+          git config user.email "data-bot@users.noreply.github.com"
+          python scripts/gameday.py
+      - name: Hand over to a fresh run
+        if: always() && steps.loop.outputs.continue == 'true'
+        run: gh workflow run gameday.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
+      - name: Open an issue if a refresh failed
+        if: failure()
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --state open --json number --jq '.[0].number')
+          if [ -n "$open" ]; then echo "Issue #$open is already open"; exit 0; fi
+          problems=$(python -c "import json; print('\n'.join('- ' + p for p in json.load(open('data/status.json')).get('problems', [])) or '- The update script crashed before it could record a reason. See the run log.')" 2>/dev/null || echo "- See the run log.")
+          gh issue create --repo "$GITHUB_REPOSITORY" --label "$ALERT_LABEL" --assignee "$GITHUB_REPOSITORY_OWNER" \
+            --title "Game-day refresh failed $(date -u +%Y-%m-%d)" \
+            --body "A refresh during a game failed, so live data on the site may be behind.
+
+          $problems
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          This issue closes itself after the next full refresh that succeeds."

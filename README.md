@@ -23,7 +23,8 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `data/status.json` | When each part last refreshed, and any problems from the last run |
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
-| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. A college-only refresh each night around 9pm Central picks up evening rankings, record and news. Every 15 min it also checks for live NFL or college games and updates scores and stats when any are on, any day of the week |
+| `.github/workflows/update.yml` | Full refresh daily and Sunday morning. A college-only refresh each night around 9pm Central picks up evening rankings, record and news. |
+| `.github/workflows/gameday.yml` + `scripts/gameday.py` | Refreshes during games. GitHub starts frequent schedules late and skips most of them (an every-15-minutes schedule lands a few times a day), so each run that lands stays up: every 10 minutes while an NFL game, the school's game or a "Who to root for" game is on, waiting up to 6 hours for the next kickoff, and handing over to a fresh run before GitHub's 6-hour job limit. It has its own concurrency group, so it never blocks the daily and nightly refreshes |
 | `scripts/check.py`, `.github/workflows/watchdog.yml` | Daily check that the live site is up and serving fresh data |
 
 ## Setup (about 5 minutes)
@@ -91,7 +92,7 @@ python -m http.server 8000        # then open http://localhost:8000
 ## How fresh is it?
 
 - **On your own domain:** while a game is on, the page calls ESPN directly every 45 seconds, so scores and stat lines are close to live. The footer shows a green "Live" dot when that's working.
-- **Fallback:** if the browser can't reach ESPN, the page re-reads its own data files every 2 minutes. Those come from the GitHub Action, which runs every 15 minutes (GitHub sometimes runs scheduled jobs late).
+- **Fallback:** if the browser can't reach ESPN, the page re-reads its own data files every 2 minutes. Those come from the "Game day" workflow, which refreshes them every 10 minutes while games are on.
 - **Claude preview:** outside calls are blocked there, so the preview only shows the snapshot.
 
 ## Notes
