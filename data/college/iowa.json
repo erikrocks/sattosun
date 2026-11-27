@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T19:50:29Z",
+ "updated": "2026-11-27T19:56:38Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "9:22 - 4th",
+   "detail": "7:42 - 4th",
    "network": "CBS",
    "watch": [
     {
@@ -11831,18 +11831,18 @@
        "14"
       ],
       [
-       "Braeden Jackson",
+       "Xavier Williams",
        "4",
-       "9",
-       "2.3",
+       "10",
+       "2.5",
        "0",
        "6"
       ],
       [
-       "Xavier Williams",
-       "3",
-       "8",
-       "2.7",
+       "Braeden Jackson",
+       "4",
+       "9",
+       "2.3",
        "0",
        "6"
       ]
@@ -11981,7 +11981,7 @@
       ],
       [
        "Anthony Hawkins",
-       "7",
+       "8",
        "3",
        "0",
        "1",
@@ -12031,12 +12031,22 @@
       ],
       [
        "Luke Gaffney",
+       "3",
+       "2",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "Landyn Van Kekerix",
        "2",
        "1",
        "0",
        "0",
-       "0",
        "1",
+       "0",
        "0"
       ],
       [
@@ -12056,16 +12066,6 @@
        "0",
        "0",
        "0",
-       "0",
-       "0"
-      ],
-      [
-       "Landyn Van Kekerix",
-       "1",
-       "1",
-       "0",
-       "0",
-       "1",
        "0",
        "0"
       ],
@@ -12100,7 +12100,7 @@
        "0"
       ],
       [
-       "Iose Epenesa",
+       "Joseph Anderson",
        "0",
        "0",
        "0",
@@ -12225,9 +12225,9 @@
      "rows": [
       [
        "Anthony Colandrea",
-       "16/25",
-       "137",
-       "5.5",
+       "18/27",
+       "151",
+       "5.6",
        "0",
        "1"
       ]
@@ -12284,9 +12284,9 @@
       ],
       [
        "Anthony Colandrea",
-       "5",
-       "-7",
-       "-1.4",
+       "6",
+       "-12",
+       "-2.0",
        "0",
        "3"
       ]
@@ -12303,9 +12303,9 @@
      "rows": [
       [
        "Luke Lindenmeyer",
-       "5",
-       "53",
-       "10.6",
+       "6",
+       "63",
+       "10.5",
        "0",
        "13"
       ],
@@ -12342,6 +12342,14 @@
        "5"
       ],
       [
+       "Isaiah Mozee",
+       "2",
+       "7",
+       "3.5",
+       "0",
+       "4"
+      ],
+      [
        "Jamal Rule",
        "1",
        "6",
@@ -12356,14 +12364,6 @@
        "4.0",
        "0",
        "4"
-      ],
-      [
-       "Isaiah Mozee",
-       "1",
-       "3",
-       "3.0",
-       "0",
-       "3"
       ]
      ]
     },
@@ -12486,6 +12486,16 @@
        "0"
       ],
       [
+       "Tyson Terry",
+       "2",
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
        "Dexter Foster",
        "2",
        "1",
@@ -12579,16 +12589,6 @@
        "Jamal Rule",
        "1",
        "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "Tyson Terry",
-       "1",
-       "0",
        "0",
        "0",
        "0",
@@ -12786,8 +12786,8 @@
     },
     {
      "name": "Xavier Williams",
-     "value": "394",
-     "line": "68 CAR · 394 YDS · 5 TD"
+     "value": "396",
+     "line": "69 CAR · 396 YDS · 5 TD"
     }
    ]
   },
@@ -12845,9 +12845,9 @@
      "line": "4 SACKS"
     },
     {
-     "name": "Bryce Hawthorne",
-     "value": "3.5",
-     "line": "3.5 SACKS"
+     "name": "Luke Gaffney",
+     "value": "4",
+     "line": "4 SACKS"
     }
    ]
   },
@@ -12874,10 +12874,100 @@
  ],
  "news": [
   {
+   "headline": "See the top moments from Iowa football vs Nebraska in Big Ten game",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZElFdDBQNEVOSHVhd2hPN0g2ME0xWTYtUkRkQ3VfS0JrYVNqejRhMFQtREM5SWxDWTc2UEttY0JxM0pWYTlzNmxSeGJGazFaOS1ESUd2LVRBUlBhdTllR3U3YmE0NmlObmFzMzlDTTFHeGhHdW10aW04cXEyZkpDZk9qd0NLX0dZNG9UTWxJNFRocGNPRlZJV2VjRWQ2dDUweExXU01GOGlCQWdfSlM5ck1NWHktZmJMMDU3ejZ1cFJ2cGIzQndNVHRxU3VsMnNhaEYwN25rLUpYUQ?oc=5",
+   "published": "2026-11-27T18:58:00Z",
+   "source": "Hawk Central"
+  },
+  {
+   "headline": "HUSKER Halftime Check-In: The Fight Is On, Can We Finish Again?: Iowa 10 NEBRASKA 7",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPckV6aFU0VzlFTWhSVXRaRVljb0I0NWZLNlpmOG13MlpTcDlhazg3LUdVMjZyUS1LLVpwMnVLTWpGQm5qaWxvRE9YekpCSVpIWmU5WV9vV0tyQ05PZzlPN2lDeW5JSlVxT3EzRTFFT0N6MFpTbm5kWjlGcHNwZHNONE56djE2eHY5X3pGd3pDUjJWSjdocm5TRmRaT2xrNjhLYXc?oc=5",
+   "published": "2026-11-27T18:51:01Z",
+   "source": "Yahoo Sports"
+  },
+  {
+   "headline": "How Iowa football can reach Big Ten Championship Game in Indianapolis",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQaTJHRnk1bEhDTGVIMnFwbWpIR0FKamxaN01fU080NG9fVzlVT1lGdHhQeURDUWlHeG5yaTZhTmFOU2NuZU1OaVhpZ2FZXzUxdU5aZWdxX0IwTHByZ2Y3aG50M2hQbWxsaU9rN1BEUXpwcGduV3NHYzRMczRBbDBuWVdxRDRzdzRoVEduVFNhNjVxTUQzS3AwRHpUQWFfZ2lzSmR6NHdFT0pqTnFFOWVtUXdCdnliSThELW9scEhsRWwtN1hma2hvUDByNDV3M05OVVVGVFFzNEFMREpSNHc?oc=5",
+   "published": "2026-11-27T18:22:00Z",
+   "source": "Hawk Central"
+  },
+  {
+   "headline": "Know Thy Husker Foe: A breakdown of the Iowa Hawkeyes",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPc09hQXowR0lTbGVyWm84a0J4UWJ5emNrQlhaY1pXRDNlMGZmVUU5NFBJUWVnZGtDZmZZd1RXcGdmbUkzS3pKRW41ZlhVcU1PTWkxdHR4X1Jwd1ZGc19uemoxejljNF9GUEVIcGhmYXo0LWdtUUNkNU9VbGJKN0tlVndCWUJENmFBQm5oQ1JuRGVkV1NwRmVuTGZRaXppOHlfRTF5SjJ5YmZCdw?oc=5",
+   "published": "2026-11-27T17:04:49Z",
+   "source": "247Sports"
+  },
+  {
+   "headline": "Iowa Hawkeyes vs Nebraska Cornhuskers Fan Discussion",
+   "url": "https://www.blackheartgoldpants.com/iowa-hawkeyes-game-discussions/72935/iowa-hawkeyes-vs-nebraska-cornhuskers-fan-discussion-game-thread-bhgp",
+   "published": "2026-11-27T16:00:00Z",
+   "source": "Black Heart Gold Pants"
+  },
+  {
+   "headline": "IOWA - NEBRASKA POSTGAME with Coach Don Patterson & Chuck Long / Iowa Football / Iowa Hawkeyes",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdm1FSV9UV3JIMTRsZW9vR2JSRThYTDE3bGpsdGd6WnUtWEo1Y082ZnJJeEhyVDJRLU5HTDF0cUFKMkhWM25JNGk4N3dzZXN0a09LSGZIS0luaG85VWI0UG1Sd3RBVGlPc2RDUlB3S0dvbGNYZVQ2dmFyTE8wZjJkTjZnTEV6OC1JcTk3a3VOWml5Y3laUktxbzEtQWYzM1NzX2dqd0RTOE5oZjJra1g1akNGTlUxZ3hsWmhLMQ?oc=5",
+   "published": "2026-11-27T14:55:24Z",
+   "source": "BVM Sports"
+  },
+  {
+   "headline": "Iowa football vs. Nebraska: Live score updates, highlights, analysis",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeExPXy1LaHJvWm9rUXEwSjVZNW1BbnduRC04dUMzZm0wZzRjcmwxVTRVdE40alBDNG1KcU1aczlQb1pPY01uV0F4c3JmLU02ZDNtMXROVTNXTzlJbjZwVHZaVm10MzlDcXg3cWxmN1ZuWGlwZGFUVmJIWlFiRHpQUUIyWEhxNGwwbkwycERaY05OVUlvOVZSempLc2k?oc=5",
+   "published": "2026-11-27T14:50:15Z",
+   "source": "Yahoo Sports"
+  },
+  {
+   "headline": "Kirk Ferentz putting an emphasis on containing Anthony Colandrea",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQVdqWEN5bVVwdXRJZEZDNDdDVGh4RTZnclVzSC1Yb2VDLTQyZU4yQWhpbG1YVmIyaGxuZW00Q2VPLVl2TlZGNklsYUFxMU1DSjJPSWVnbjBLMVZYUGljYWo4NDNoT3BDdjJxemJIRVJhZTUzUjFRZGp4V0g5cldnaG5id25SeUNhVmxYeUNBSXhfQmxaMFFBNk1FM0JxU3JBcENqTVZaZkhvdw?oc=5",
+   "published": "2026-11-27T14:41:25Z",
+   "source": "Stay Alive In Power 5"
+  },
+  {
+   "headline": "How to watch Iowa vs. Nebraska football for free today in rivalry showdown",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT3JkUzd2RTZJNW5HSEc3REFBRk9ZMFVWdnd4Y1JoSTUxM0hXSkNyeUpBRmh3ZHRVOTRTNW52a1ZpREJmeHRXS3VzZWhMRk05WXNHRXhXOWdEeUNrdThDZC0xR3NmQXhxbzYwRGM4M0RELVpyZUtiS2J4WWU5QUMzV2ZiaFU3alg4QXY0NU8xeXRpbzFRMkhzcmpxaWp1a0gxV1RoY09nYmZyY2ljd3d4RA?oc=5",
+   "published": "2026-11-27T14:11:00Z",
+   "source": "MLive.com"
+  },
+  {
+   "headline": "Final odds and predictions for Iowa vs. Nebraska in the battle for the Heroes Trophy",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObllpWHZMcUw2SGFGaXBHb1ZSTUt3OXRxWTFzT2UtTFdiY2Q5RW1pSmN5alhKeGZjR3VyQkNBX3NvcndUdEpDNjBfNXo4d1dQZHBza1pXWm5BbHdzalEyM0tScFZTTFk3SDVWNkNkRjlqeTBrMEV0dFBxOEhJcmlNdG1wdW1HOUljZnA3RU1UYUdEbEt2OHpwTVhQbEp4Vmw0dHNQbUhnWHhpek1YTWZLUHVxOHpKc190OUZ2Mg?oc=5",
+   "published": "2026-11-27T14:00:02Z",
+   "source": "Dear Old Gold"
+  },
+  {
+   "headline": "Nebraska Cornhuskers look to pull another upset as Iowa Hawkeyes eye college football playoff path",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQYkpVOGdtbU9LQTlaWVZlREtvSFJqQnhWdTFTTjJCRkl0aUg1NlhmVTlUVVB0anJaNWY4R3lkM1g3Zm9SOGhHc3lBdUxmZDA2SUhXRHNqa29KNnJLaVk0Rmx5UHdkV1FnSmJzYzBsTW9KTWRESzJNMWYtUHlvSHcwUVlVcFBpbkhYUG1TT3pyYThLcncwSVNOdVRuRnZ0WGlxTy1vQlV1d1d5WmFNWFhyeDdWSnhQaGhWVGIw?oc=5",
+   "published": "2026-11-27T13:40:05Z",
+   "source": "Fox News"
+  },
+  {
+   "headline": "Iowa vs. Nebraska odds, prediction, time: Rivalry Week Friday picks from proven model",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWEtYZ09HS21ZYUs4ZmEwNndIQVZOREJvSlZNMUVuMFNUc1dyZDJiTkNGMk1UOWtHZnljYk5UbGRLMV9tN2dGSEpyRGJOaXg4VGRzTVVzOEJWQm9RN3dYUzcyTDVxcWs1UUF5VUI0T0QxZy1LSU1lZkpPei1MWG1YdGlRbHZrRTV1NEJrNHBjcTRZN2Itc1I4Ymp1Zm4wMUdZZTM1cWViZnFxUzRQMHBnY0NDbTVYOFN4cTEwSUREVQ?oc=5",
+   "published": "2026-11-27T13:23:49Z",
+   "source": "CBS Sports"
+  },
+  {
+   "headline": "How to Watch the Iowa Hawkeyes vs Nebraska Cornhuskers",
+   "url": "https://www.blackheartgoldpants.com/football/72934/how-to-watch-iowa-hawkeyes-vs-nebraska-cornhuskers-tv-channel-game-line-spread-bhgp",
+   "published": "2026-11-27T12:01:00Z",
+   "source": "Black Heart Gold Pants"
+  },
+  {
+   "headline": "Iowa vs. Nebraska Forecast: Black Friday Beauty For Hawkeyes and Cornhuskers",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQS1hpaWx2Tk5JRllQSml0M3M3ZkdFLU9YLVdyLWVHZG1vOHRHaGJlb3hMbHNHSUVibVhsNjBrT1NySkVuaVo0SVczcm01QndNRTlIMDNQSTY3b1NoWW9KR01uOUtnUDR5MmN2OW1hUnpKa3NMbkxCLTJZTi12THYtOGd5aE0wVFRSaFYySw?oc=5",
+   "published": "2026-11-27T11:30:00Z",
+   "source": "Sports Illustrated"
+  },
+  {
    "headline": "Iowa football vs. Nebraska betting odds, prediction",
    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPaV83UkZQa0IyN0hSV1AtVUF1cWhfV0RKT0NndFUycnBtWHJZOGxxcmtuMzV0RWpHam5rZnFkNF9sYk1SV1p2SnZZWGVuY0xBTXduZHlKNHkySDNCMEFCNnpwaklSZTJIVnA0ZF9KbXR0YU5CLXBId2ZaZlhOQjJVRXZGZ3g4R2lBcnZuMnpnOFhPZmk1WFVGR1RMMzR0dHhweDc2OWhnemxlOEcwRnQtdzlXVjlFY1ZuUmo2RldnaG5feV80U09DMFFFRm9qNnJDWkVQaW9xbVFmMEhiazhj?oc=5",
    "published": "2026-11-27T11:16:00Z",
    "source": "Hawkeyes Wire"
+  },
+  {
+   "headline": "Game Preview: Nebraska at Iowa",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNUJUNW43TkVSM1lpemtRNjFJamdNWWhkR09FWS1wSndCNEIwd2ZSeEdqYVk5R3dxTHZZc0FoN1BmX0R0OTVjamVFVlozT21wekJnR3FJUlVZaWJmaGs4QlpWSFk4Z1pEM0t1QnlOaVl0MDlfYUg1dm0tcTJ1QTNHWVd6QzFHekIyUHpoTXlEWWEwdGswUUNWWnNjc3BEQQ?oc=5",
+   "published": "2026-11-27T11:01:54Z",
+   "source": "On3"
   },
   {
    "headline": "What time does Iowa play Nebraska today? TV channel, how to watch",
@@ -12886,16 +12976,16 @@
    "source": "Yahoo Sports"
   },
   {
-   "headline": "How to Watch Iowa Football vs Nebraska: Time, TV Channel, Streaming",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNc1QwbXoyMUFoNkJ1bnpnR19lbDhyamlMa3dKdlgxdGdhUDlEc2M2NTgtX0lSVVQ0NHdMVktGTUpNZUN0UjgtR0g2VU8zQUNnTXBWQkhyZ2JyZ1pHeWkwYi10MEtEbUhDWW4tNDZHN2JGekFDblYtUmVXMWNaaldWUVVnYWF3czBvN2NZSVkweEVsWGtwaGNQbG1fYmxiUQ?oc=5",
-   "published": "2026-11-27T10:00:00Z",
-   "source": "Sports Illustrated"
+   "headline": "Iowa vs. Nebraska: Hawkeyes' Keys to Victory in a Program-Defining Moment",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVV93WWFuaTJrdGVjOHd0MXVBWEo0dWw4Sk9ZSEVDUDA5RHZzR21HTnFOSmxvQnJHaVViWEdKQVppZzRwNEFHOXMwX0hyNEYzUmp3aTJCb3UtRnJtRXduN2ZqTU1jZDJ4RlRRUUtlQWhoOXBzZjI3SW1RR3I3VFc1MXBSWmZoMVpBSGpMbFhxN1VBeDJUeXM5OWJ3NDU?oc=5",
+   "published": "2026-11-27T10:45:00Z",
+   "source": "Yahoo Sports"
   },
   {
-   "headline": "Expert score prediction: Nebraska vs. Iowa",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZXRmOHo3dGNkVmhpT0NKZmI3djhVNWZWajF4M1B2bnRrbkFHNGk5LTg1Y0xQNjJCVHV0OUVYZmVfcjBIWFJPdm9KVWMzamN4WXBQc0NZRmJrR3VESE8zMm01czUxT1k4ZmlwZ1BWME9vckNVYUV4aWlrM2F2UFhRZ2NHVjJiY1VGUnIzdG81bEYxOXlUT2l6SUs4UllESzlidlZJ?oc=5",
-   "published": "2026-11-27T06:01:00Z",
-   "source": "Yahoo Sports"
+   "headline": "How to Watch Iowa Football vs Nebraska: Time, TV Channel, Streaming",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZ0VzZWpBNTBaQTl5OHk3Rk5PX2RXdnhsa05JTG9BcmsyMHhkWi1oZEJ4RXlYeExfRHhGYzFqVFdHREp2WHhHRFZMbmQ5LVlGckVScE54d045bEV4aXZQZE1RQ1ROTFpOa1lWNFczRmVQS19JY0JIUmx3SGN1SnlTS0VnYk9pQQ?oc=5",
+   "published": "2026-11-27T10:00:01Z",
+   "source": "Yahoo"
   },
   {
    "headline": "Iowa Hawkeyes Football Recruiting: Weekend Preview",
@@ -12910,116 +13000,26 @@
    "source": "Black Heart Gold Pants"
   },
   {
-   "headline": "#25 NEBRASKA (7-4) vs. #13 Iowa (9-2) – It’s Time.: HOW TO WATCH/LISTEN",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNc0xZN3pDaV8tR3ZMN25lZGs0WmpDNXZhck04RC1SRE9Eam9ZbkVGVks3UVpYdWtDM2FHRnk4UTA2VzUyMFNNNlMyc3lSWF9BbTFLWjdyOGEzQmo5SFQ1c1FEODRXU1JkRmE2cHA4c3ZKRFlzc3NzQWtxNnQzTzFIbWY4el9hcWQteEszUQ?oc=5",
-   "published": "2026-11-26T20:54:35Z",
-   "source": "Yahoo Sports"
-  },
-  {
    "headline": "The Pants Predicts: Iowa vs Nebraska",
    "url": "https://www.blackheartgoldpants.com/football/72921/iowa-hawkeyes-nebraska-cornhuskers-game-predictions-line-spread-over-under-bhgp",
    "published": "2026-11-26T18:31:00Z",
    "source": "Black Heart Gold Pants"
   },
   {
-   "headline": "Iowa football OL Kade Pieper named Outland Trophy finalist",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMDZBNUd5V2dIMU9WMXNvbXd1dVFaVnkzOTAyQUVaaVJRUk9UQVJKOF9UM3NHOUxLNkdiN3BPdXlEVVdRM2YxbWFvcHYzeG91ZS15VnlRNHhaalg1Q1NnY3JtY3djdUJ1NmNEc1pLOU9jd2tjYmlZMUl0a2N2MlFoZmYtSkw0NWtia0pqUTdmMkRGeDNxbHlsVUN3?oc=5",
-   "published": "2026-11-26T18:01:12Z",
-   "source": "Yahoo Sports"
+   "headline": "Iowa Football, Kirk Ferentz Reflect on One Unforgettable Memory of a Former Hawkeye Star",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVDBoWDdNZVBhSHV5SUM2clU1WGFIaG5DQXAzWDVydzNNbi1yWkl2R1RZV1NpNjhUY2FIR3dzUkxZNUI2UFh4MzBPRjUyZl96NmcwZmc3QjhxeG1PdlBrbWNvVVJGRlhodzg0OExHeEZYM0R1SGpzVTlRYjlUZzkxdUNkbnpxTDMtQTEtNDFtY29hWEd4bUFKT0VwdDFZRHRBbnBv?oc=5",
+   "published": "2026-11-26T18:00:01Z",
+   "source": "Sports Illustrated"
   },
   {
    "headline": "College Football Playoff Rankings Stir Controversy Between Oregon Ducks, Iowa Hawkeyes",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMW9CdVhBcExqbElINFdvUVZxam52WFBFQW90MjAzdzRDcWNwUXFZTWpGTzZXLWJmRFJGakstdF94MTVXQ1FIQjhaaE1fNWNzZHFyZndhOGNZMVNuc3VKbzgxLWFMX19jLVN2UVFCaFRwR09GbWlMX2lOcHVXX2ZZLUZPUXJmbmN3VVpKQXljWWl5bHlqa2FlYk1MMHQ1a3RxZU92dTZZdUktUmNrTjVId01ZRldOdw?oc=5",
    "published": "2026-11-26T17:20:28Z",
    "source": "Sports Illustrated"
-  },
-  {
-   "headline": "Happy Hawkeye Thanksgiving",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQ1VibXJJV2FteGx0VFB1amhkMnF2Y2dUZzB6b3BKRkFMRFluVXgteUFVVUlxVFVFMkx0bFBBVlZqYlhKM19oT0RKZy03dThGVThIMEd4a0REOU03RFdCUjVUTzNGLXI3aUVvZ2kxSWJzR01OQ3V0eHh5emNHd1RtUUJ4anEwYmtrZXFPN3dOa2VGUTZmYzBfZU15VTc3Zm5TeEdxZmxSZmVQRTN0VURzMDN3QlZ3OVhfSUhETDc4djVUZmNLVGc?oc=5",
-   "published": "2026-11-26T16:31:00Z",
-   "source": "Black Heart Gold Pants"
-  },
-  {
-   "headline": "Iowa Football's CFP Reality Is Simple: Beat Nebraska, and Kirk Ferentz Isn't Blinking",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVGg0aWVXdGE1aHNiOVBEV09hdDZCRVd4eDlGWFNDZE1pREJoTjhvOERBVFF3ZEIyM0NRb3YteTZZc0hodjZyRFdGazZvcm92OGFDU3J5QWxIT0hyT3Mwa1lBZHRxUWJKanBJcnN4R1VHMFBLVTRjT0J6X1A4WUpkYURGU2t6QndmdzRuSmxmcnFxM3RLVXRVc0YwQQ?oc=5",
-   "published": "2026-11-26T12:00:03Z",
-   "source": "Sports Illustrated"
-  },
-  {
-   "headline": "Iowa Hawkeyes Football: Nebraska Cornhuskers Game Preview",
-   "url": "https://www.blackheartgoldpants.com/football/73125/iowa-hawkeyes-football-nebraska-cornhuskers-game-preview",
-   "published": "2026-11-26T12:00:00Z",
-   "source": "Black Heart Gold Pants"
-  },
-  {
-   "headline": "How to Watch No. 25 Nebraska Football vs. No. 13 Iowa with Preview, Breakdown, TV Channel",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQVHVQR0sydUs0dWJSeGhCRzFqcF9icUNzUWFfbzItX1pKSE85S2lsLUdYemx1TW5FWl96U0RLdDhjMmNuZTktT3pzb2ZKSVgyR0J5azh4T0prVFUyZ3MwcjF5cEwzZVhOQjBjOF9GTnJZaWppU0JPQnVDcWVrWG5uM2c4M08tNGE0X1BmNVZnMThsX2hGc3hwbXRULUhRMlA0X285Z3llY0dFZWpVUmNxcVYwX2ltVzFJMG1KNzJJaV9xX1d4RHFmcFBIb085Mjg?oc=5",
-   "published": "2026-11-26T12:00:00Z",
-   "source": "Sports Illustrated"
-  },
-  {
-   "headline": "2026 Iowa Football – Illinois Cinematic Recap",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPb2xzb3RQWWpBSGc3Q1hDNFNrdVNIYUdwcjN3TDhsY0NBenQxY1VYSXpTcjdRRUVsVnNYcWpqUGdhNjBDWnRhaElMYlljVGoyN0sxRlJ0V0VZQzNBOUN4aGNqWHhvb2FnVFprUTAzN014bE9BSTk2RkxCMHRsTVF4ZEpkQUpZX1N5Ty1NRzdn?oc=5",
-   "published": "2026-11-26T02:49:51Z",
-   "source": "Iowa Hawkeyes Athletics"
-  },
-  {
-   "headline": "Football | Hawk Talk with Kirk Ferentz | 11.25.2026",
-   "url": "https://hawkeyesports.com/news/2026/11/25/football-hawk-talk-with-kirk-ferentz-11252026",
-   "published": "2026-11-26T00:30:00Z",
-   "source": "Hawkeye Sports"
-  },
-  {
-   "headline": "Tony Diaz gave an injury update that Hawkeyes fans will love to hear",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMF8wT0VFXzduVnJ2cEk1M19FVlk1d240dWI4czJyUmtYczJHRkNNN2FGVVJmajNOcVM1Tng5LTltWWdJNHRMcUZZM1JYZ1pscTVYcVY5Q2pQdXlVRUM2SDd1M0dROEZXQ2hKYlFlRE81SDNaU2pqamJJS3VfNnAtSFU3cFdzOFd2SDRhQlpTLVV1RUNhSXRHdzMyeHc4aVQ3VnpxV3N3V0s?oc=5",
-   "published": "2026-11-26T00:00:00Z",
-   "source": "Dear Old Gold"
-  },
-  {
-   "headline": "No. 13 Iowa Looking to Run over Nebraska Football to Keep Slim Playoff Hopes Alive",
-   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ0F0RW1qNkNoYzBXZ0tEUEQ4SlNRSXVhUVZSbEJhcE9PZktodGZQVG4xV2JwSE5kQmpabWVMSDc5YVl3SWpUZjFUdzMtWGNmbXNOLXAwTjMxVU5DdEFfR0N0dTRHMHBUYjdOUVRzS1l4a0tYeUJYTXNobl9QVkJHV2V0czY2dVItd2gxU0E4enFhdHQ2dDRxOFZ1cDE0ZWUyOGU1RFZsdWtsTFhOWF81RHhhRkZOay1paVJvczJMYWNxYm5nQzNHZg?oc=5",
-   "published": "2026-11-25T22:16:34Z",
-   "source": "Hurrdat Sports"
-  },
-  {
-   "headline": "Husker football scouting report: Iowa",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRE9kRzFjbFdCdTZwejg4ajNTRXd5MHR4eTR5Wl8tODJ4N1hTTnNBWEV6ZmZrZXZJQmJJYlM1eGZuMWE0MGU4dnVWRkNNSnV5bmhFaTgwcU5lM212LUczYnFlelVYVVJORExneXFLLTc0ZDRTVjNzTVU1V1RWaTJXWUUtdm5XbEk4YW9mVzk3SlNoNWh4clRGYU1GUXBtc3BtUzFrdFVSeDVuNldWU2hWeEZ4eWF0V0E0a1YxR0xnVTVfZw?oc=5",
-   "published": "2026-11-25T21:55:00Z",
-   "source": "The Daily Nebraskan"
-  },
-  {
-   "headline": "Iowa football notebook | Hawkeyes dialed in on rival Nebraska",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbkxMU0tkaGJGZTl0dWVjZGlLM2JiRzh1UzFVRDh5WVNNbzRwaXBlVExxVklmVTZYcXZFQmo3Q0t6bHJ4eE01RTJZeXpIOUhuUHg0aHlrYTRVVG5Ud2pBLVNiMWIxaC0yUmFLa0JNTGpXdmlXQzMzeFNOd1pody1iQ2FxaXBoSUdRQUFzOTZwcUpXb0pJYzBGTExR?oc=5",
-   "published": "2026-11-25T18:28:31Z",
-   "source": "The Daily Iowan"
-  },
-  {
-   "headline": "How to watch Nebraska vs. No. 13 Iowa: TV channel and streaming options for November 27",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSk9UaGFsamZ1MU9OeC1RT2ZJWFFwaHpWZVMxNFZqajNQR29rT3BtQ1NnaXRZdE5pQW5DUTJLVFYwcHE2eHpCWUd0MEZPcEFucmctMnJhZXZLZnFUSUtYbThYNVUyQl9UMklzMWdFSU1Oa01reWdaN0lpSnV5RnNKeUNmUE9ITHlJOEk0YjBFMFBrSE15SXZSVk1KNG8?oc=5",
-   "published": "2026-11-25T17:14:00Z",
-   "source": "The New York Times"
-  },
-  {
-   "headline": "Best bets for Rivalry Week: Breaking down Michigan-OSU, Iowa-Nebraska and more",
-   "url": "https://www.espn.com/espn/betting/story/_/id/50583508/college-football-betting-week-13-rivalry-week",
-   "published": "2026-11-25T15:40:07Z",
-   "source": "ESPN"
-  },
-  {
-   "headline": "Latest CFP rankings give Iowa multiple playoff options | Leistikow",
-   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxORE1QelJYNjdOMDBBdERINHBwNDAyY1hTcXdsUW1fUmg1aEhHNTE1cFN6VlU1TlZVSDA3UTh5d2RsdjYxVTJiaEJ6M2RyejdoY2Rya3JvN21CN3VpdmdZakJlWnhna1FBQ1FUcE9BeTRocGJaQlpZai1CZEZHa3BkY05MLXNEbG4tQkN3cE9kZmlyV1dCSFFuN1JvVXJIOWM2M3I5TE55Vm95M3N3MVNzcC1NSlQ5aHF5bXc2ZEFoeVZHZWZ5T3I5cmc2TnlGakwtTHVZdVBqYlpLTDVRMVZLZA?oc=5",
-   "published": "2026-11-25T02:00:00Z",
-   "source": "Hawk Central"
-  },
-  {
-   "headline": "INSTANT REACTION: Iowa Football→ College Football Playoff rankings / Iowa Hawkeyes LIVE Call-In Show",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPU0pvQ2EybG0xRzlmczlXX0x3WHBaek1QNHh6Uks0Wml2TXkzekZUV3hLSWxuZU9UdmdoOVFKaXVIOC1xUzlhUnFtT01oUmNMUm9EOXNzNzUwTE9NNkdGdVlIcjVxMC0tOEMxVHI1SUN4NkFPT2NzRmRxQ3FhNUw1NVZZcS1fOTBqUHRhSjh3SFBVejhId05jTkIzMmZWM0V2dHJaeHJPSl9VcXZiTnhNakVNM2JnZUd0ekd2cDdIY3NuWUdaYmpNMGFKb0xKSC1TUDM2NVZ3?oc=5",
-   "published": "2026-11-25T00:50:18Z",
-   "source": "BVM Sports"
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T19:50:29Z",
+  "updated": "2026-11-27T19:56:38Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13033,7 +13033,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "9:22 - 4th",
+      "detail": "7:50 - 4th",
       "network": "CBS",
       "away": {
        "id": "158",
@@ -13267,7 +13267,7 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "9:22 - 4th",
+      "detail": "7:50 - 4th",
       "network": "CBS",
       "away": {
        "id": "158",
