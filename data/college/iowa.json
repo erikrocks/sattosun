@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T18:29:30Z",
+ "updated": "2026-11-27T18:39:36Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -318,7 +318,7 @@
    "id": "401858536",
    "kickoff": "2026-11-27T17:08Z",
    "state": "in",
-   "detail": "0:38 - 2nd",
+   "detail": "Halftime",
    "network": "CBS",
    "watch": [
     {
@@ -334,14 +334,14 @@
     "abbr": "IOWA",
     "name": "Iowa",
     "rank": 13,
-    "score": null
+    "score": 10
    },
    "opp": {
     "id": "158",
     "abbr": "NEB",
     "name": "Nebraska",
     "rank": 25,
-    "score": null
+    "score": 7
    },
    "win": null
   }
@@ -11798,8 +11798,8 @@
       [
        "Hank Brown",
        "7/10",
-       "98",
-       "9.8",
+       "122",
+       "12.2",
        "0",
        "0"
       ]
@@ -11816,19 +11816,11 @@
      "rows": [
       [
        "L.J. Phillips Jr.",
-       "8",
-       "39",
-       "4.9",
+       "9",
+       "45",
+       "5.0",
        "0",
        "22"
-      ],
-      [
-       "Hank Brown",
-       "4",
-       "3",
-       "0.8",
-       "1",
-       "14"
       ],
       [
        "Xavier Williams",
@@ -11845,6 +11837,14 @@
        "0.5",
        "0",
        "1"
+      ],
+      [
+       "Hank Brown",
+       "6",
+       "-7",
+       "-1.2",
+       "1",
+       "14"
       ]
      ]
     },
@@ -11857,6 +11857,14 @@
       "LONG"
      ],
      "rows": [
+      [
+       "Tony Diaz",
+       "2",
+       "41",
+       "20.5",
+       "0",
+       "24"
+      ],
       [
        "Braeden Jackson",
        "2",
@@ -11874,14 +11882,6 @@
        "24"
       ],
       [
-       "Tony Diaz",
-       "1",
-       "17",
-       "17.0",
-       "0",
-       "17"
-      ],
-      [
        "Dayton Howard",
        "1",
        "15",
@@ -11896,6 +11896,21 @@
        "9.0",
        "0",
        "9"
+      ]
+     ]
+    },
+    "fumbles": {
+     "labels": [
+      "FUM",
+      "LOST",
+      "REC"
+     ],
+     "rows": [
+      [
+       "Hank Brown",
+       "1",
+       "0",
+       "0"
       ]
      ]
     },
@@ -12032,7 +12047,7 @@
       [
        "Jaylen Watson",
        "1",
-       "1",
+       "0",
        "0"
       ]
      ]
@@ -12114,9 +12129,9 @@
      "rows": [
       [
        "Boston Everitt",
-       "2",
-       "88",
-       "44.0",
+       "3",
+       "131",
+       "43.7",
        "0",
        "0",
        "44"
@@ -12168,6 +12183,14 @@
        "1.5",
        "0",
        "3"
+      ],
+      [
+       " Team",
+       "1",
+       "-1",
+       "-1.0",
+       "0",
+       "0"
       ],
       [
        "Anthony Colandrea",
@@ -12269,10 +12292,20 @@
       ],
       [
        "Cameron Lenhardt",
+       "5",
+       "3",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Victor Evans III",
        "4",
        "2",
        "0",
-       "1",
+       "0",
        "0",
        "0",
        "0"
@@ -12288,21 +12321,11 @@
        "0"
       ],
       [
-       "Victor Evans III",
-       "3",
-       "1",
-       "0",
-       "0",
-       "0",
-       "0",
-       "0"
-      ],
-      [
        "Vincent Shavers Jr.",
-       "2",
-       "2",
+       "3",
+       "3",
        "0",
-       "0",
+       "1",
        "0",
        "0",
        "0"
@@ -12323,6 +12346,16 @@
        "1",
        "0",
        "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Williams Nwaneri",
+       "1",
+       "1",
+       "1",
+       "1",
        "0",
        "0",
        "0"
@@ -12503,8 +12536,8 @@
    "players": [
     {
      "name": "Hank Brown",
-     "value": "1740",
-     "line": "1740 YDS · 10 TD · 4 INT"
+     "value": "1764",
+     "line": "1764 YDS · 10 TD · 4 INT"
     },
     {
      "name": "Jeremy Hecklinski",
@@ -12523,8 +12556,8 @@
    "players": [
     {
      "name": "L.J. Phillips Jr.",
-     "value": "559",
-     "line": "112 CAR · 559 YDS · 1 TD"
+     "value": "565",
+     "line": "113 CAR · 565 YDS · 1 TD"
     },
     {
      "name": "Kamari Moulton",
@@ -12543,8 +12576,8 @@
    "players": [
     {
      "name": "Tony Diaz",
-     "value": "618",
-     "line": "45 REC · 618 YDS · 3 TD"
+     "value": "642",
+     "line": "46 REC · 642 YDS · 3 TD"
     },
     {
      "name": "Reece Vander Zee",
@@ -12766,7 +12799,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T18:29:30Z",
+  "updated": "2026-11-27T18:39:36Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -12780,21 +12813,21 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "1:59 - 2nd",
+      "detail": "Halftime",
       "network": "CBS",
       "away": {
        "id": "158",
        "abbr": "NEB",
        "name": "Nebraska",
        "rank": 25,
-       "score": null
+       "score": 7
       },
       "home": {
        "id": "2294",
        "abbr": "IOWA",
        "name": "Iowa",
        "rank": 13,
-       "score": null
+       "score": 10
       },
       "winner": null,
       "pick": "2294",
@@ -13014,21 +13047,21 @@
       "id": "401858536",
       "kickoff": "2026-11-27T17:08Z",
       "state": "in",
-      "detail": "1:59 - 2nd",
+      "detail": "Halftime",
       "network": "CBS",
       "away": {
        "id": "158",
        "abbr": "NEB",
        "name": "Nebraska",
        "rank": 25,
-       "score": null
+       "score": 7
       },
       "home": {
        "id": "2294",
        "abbr": "IOWA",
        "name": "Iowa",
        "rank": 13,
-       "score": null
+       "score": 10
       },
       "winner": null,
       "pick": "2294",
