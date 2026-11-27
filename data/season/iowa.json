@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T02:46:55Z",
+ "updated": "2026-11-27T02:57:01Z",
  "through": "Week 12",
  "players": {
   "george kittle": {
@@ -4225,7 +4225,7 @@
      "live": true,
      "cats": {
       "defensive": {
-       "TOT": "1",
+       "TOT": "2",
        "SOLO": "0",
        "SACKS": "0",
        "TFL": "0",
@@ -4238,7 +4238,7 @@
    ],
    "totals": {
     "defensive": {
-     "TOT": "11",
+     "TOT": "12",
      "SOLO": "6",
      "SACKS": "0",
      "TFL": "0",
