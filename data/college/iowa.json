@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-28T16:50:25Z",
+ "updated": "2026-11-28T17:00:39Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -13064,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-28T16:50:25Z",
+  "updated": "2026-11-28T17:00:39Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13099,8 +13099,8 @@
       "why": "No. 10 BYU is 3 spots ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "2132": 0.6433,
-       "252": 0.4165
+       "2132": 0.639,
+       "252": 0.4166
       }
      },
      {
@@ -13128,8 +13128,8 @@
       "why": "No. 12 Oregon is 1 spot ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "264": 0.6316,
-       "2483": 0.4078
+       "264": 0.6243,
+       "2483": 0.4076
       }
      },
      {
@@ -13157,8 +13157,8 @@
       "why": "No. 8 Wake Forest is 5 spots ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "150": 0.5773,
-       "154": 0.4206
+       "150": 0.582,
+       "154": 0.4199
       }
      },
      {
@@ -13186,8 +13186,8 @@
       "why": "Indiana is ranked behind Iowa, but a win over Purdue could put it in the Big Ten title game. Winning that would give it the automatic bid and put UCLA in the at-large line ahead of Iowa.",
       "level": "big",
       "chance": {
-       "2509": 0.5852,
-       "84": 0.4359
+       "2509": 0.5659,
+       "84": 0.437
       }
      },
      {
@@ -13215,8 +13215,8 @@
       "why": "",
       "level": "big",
       "chance": {
-       "30": 0.4883,
-       "26": 0.3741
+       "30": 0.4872,
+       "26": 0.3747
       }
      },
      {
@@ -13244,8 +13244,8 @@
       "why": "No. 6 Alabama is 7 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
       "level": "big",
       "chance": {
-       "2": 0.53,
-       "333": 0.4298
+       "2": 0.5273,
+       "333": 0.43
       }
      },
      {
@@ -13273,8 +13273,8 @@
       "why": "",
       "level": "big",
       "chance": {
-       "103": 0.5398,
-       "2390": 0.4404
+       "103": 0.5283,
+       "2390": 0.4406
       }
      },
      {
@@ -13302,75 +13302,75 @@
       "why": "No. 5 Tennessee is 8 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
       "level": "helps",
       "chance": {
-       "2633": 0.4412,
-       "238": 0.4716
+       "2633": 0.4389,
+       "238": 0.4799
       }
      },
      {
-      "id": "401856873",
-      "kickoff": "2026-11-29T02:00Z",
+      "id": "401858539",
+      "kickoff": "2026-11-28T20:30Z",
       "state": "pre",
       "detail": "",
       "network": "",
       "away": {
-       "id": "9",
-       "abbr": "ASU",
-       "name": "Arizona State",
+       "id": "213",
+       "abbr": "PSU",
+       "name": "Penn State",
        "rank": null,
        "score": null
       },
       "home": {
-       "id": "12",
-       "abbr": "ARIZ",
-       "name": "Arizona",
-       "rank": 16,
+       "id": "120",
+       "abbr": "MD",
+       "name": "Maryland",
+       "rank": null,
        "score": null
       },
       "winner": null,
-      "pick": "9",
+      "pick": "213",
       "why": "",
       "level": "longshot",
       "chance": {
-       "9": 0.4578,
-       "12": 0.443
+       "213": 0.4498,
+       "120": 0.4388
       }
      },
      {
-      "id": "401858540",
-      "kickoff": "2026-11-28T17:00Z",
+      "id": "401856760",
+      "kickoff": "2026-11-28T20:30Z",
       "state": "pre",
       "detail": "",
       "network": "",
       "away": {
-       "id": "130",
-       "abbr": "MICH",
-       "name": "Michigan",
+       "id": "59",
+       "abbr": "GT",
+       "name": "Georgia Tech",
        "rank": null,
        "score": null
       },
       "home": {
-       "id": "194",
-       "abbr": "OSU",
-       "name": "Ohio State",
-       "rank": 21,
+       "id": "61",
+       "abbr": "UGA",
+       "name": "Georgia",
+       "rank": 1,
        "score": null
       },
       "winner": null,
-      "pick": "130",
+      "pick": "61",
       "why": "",
       "level": "longshot",
       "chance": {
-       "130": 0.4579,
-       "194": 0.4439
+       "59": 0.4363,
+       "61": 0.4471
       }
      }
     ],
     "note": "Chances come from playing out the rest of the season 20,000 times. This week's games use the betting line ESPN shows (its matchup predictor where there's none, its live win probability once a game starts). The Big Ten title game comes from the conference tiebreaker and is played out with ESPN's FPI ratings; other conference champions come from FPI's title odds. The committee is modeled loosely from its latest ranking: a loss costs a team about 6 spots (3 or 4 against a ranked team), a title-game loss 1 or 2, plus some random reshuffling. Treat it as an estimate, not a prediction of the committee. The field is 12: the ACC, Big Ten, Big 12 and SEC champions, the highest-ranked team from the other conferences, and the next seven in the ranking.",
-    "pct": 0.4471
+    "pct": 0.4466
    },
    "title": {
     "label": "Big Ten title",
-    "pct": 0.6187,
+    "pct": 0.6182,
     "summary": [
      "Iowa gets there in 87 of the 128 ways the remaining Big Ten games can finish, or 62% once each way is weighted by the odds of its games."
     ],
@@ -13400,8 +13400,8 @@
       "level": "split",
       "why": "It depends on Washington at Oregon. If Washington wins, Iowa wants UCLA here (100% against 27%). If Oregon wins, it wants USC. That game kicks off later, so you won't know yet. Until then, USC winning is the better bet.",
       "chance": {
-       "30": 0.8701,
-       "26": 0.1777
+       "30": 0.8664,
+       "26": 0.1827
       }
      },
      {
@@ -13458,8 +13458,8 @@
       "level": "helps",
       "why": "",
       "chance": {
-       "130": 0.6954,
-       "194": 0.5967
+       "130": 0.6971,
+       "194": 0.5955
       }
      },
      {
@@ -13487,8 +13487,8 @@
       "level": "helps",
       "why": "",
       "chance": {
-       "2509": 0.7014,
-       "84": 0.6121
+       "2509": 0.7033,
+       "84": 0.6114
       }
      }
     ],
