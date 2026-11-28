@@ -1,13 +1,13 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-27T20:20:52Z",
+ "updated": "2026-11-28T00:10:08Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
   "name": "Iowa Hawkeyes",
   "abbr": "IOWA",
-  "record": "9-2",
+  "record": "10-2",
   "standing": "2nd in Big Ten",
   "rank": 13,
   "polls": [
@@ -13064,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-27T20:20:52Z",
+  "updated": "2026-11-28T00:10:08Z",
   "default": "playoff",
   "views": {
    "playoff": {
