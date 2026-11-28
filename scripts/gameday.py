@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import update as U
 
 EVERY = 10 * 60                     # seconds between refreshes while a game is on (Pages builds are capped per hour)
-LOOKAHEAD = timedelta(hours=6)      # wait for a kickoff this close rather than exit
+LOOKAHEAD = timedelta(hours=14)     # wait for a kickoff this close rather than exit (bridges a night; public repo, so free)
 BUDGET = 5 * 3600 + 30 * 60         # GitHub stops a job at 6 hours; hand over before that
 
 

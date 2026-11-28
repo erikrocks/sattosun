@@ -24,7 +24,7 @@ It's a static site. A GitHub Action refreshes the JSON files in `data/` on a sch
 | `manifest.json`, `icons/` | Lets the site be added to your phone's home screen like an app |
 | `scripts/update.py` | Refreshes the data files. Python standard library only |
 | `.github/workflows/update.yml` | Full refresh daily and Sunday morning. A college-only refresh each night around 9pm Central picks up evening rankings, record and news. |
-| `.github/workflows/gameday.yml` + `scripts/gameday.py` | Refreshes during games. GitHub starts frequent schedules late and skips most of them (an every-15-minutes schedule lands a few times a day), so each run that lands stays up: every 10 minutes while an NFL game, the school's game or a "Who to root for" game is on, waiting up to 6 hours for the next kickoff, and handing over to a fresh run before GitHub's 6-hour job limit. It has its own concurrency group, so it never blocks the daily and nightly refreshes |
+| `.github/workflows/gameday.yml` + `scripts/gameday.py` | Refreshes during games. GitHub starts frequent schedules late and skips most of them (an every-15-minutes schedule lands a few times a day), so each run that lands stays up: every 10 minutes while an NFL game, the school's game or a "Who to root for" game is on, waiting up to 14 hours for the next kickoff (so it bridges a night), and handing over to a fresh run before GitHub's 6-hour job limit. It has its own concurrency group, so it never blocks the daily and nightly refreshes |
 | `scripts/check.py`, `.github/workflows/watchdog.yml` | Daily check that the live site is up and serving fresh data |
 
 ## Setup (about 5 minutes)
