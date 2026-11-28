@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-28T02:22:57Z",
+ "updated": "2026-11-28T02:33:10Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -13064,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-28T02:22:57Z",
+  "updated": "2026-11-28T02:33:10Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13362,21 +13362,21 @@
       "id": "401858544",
       "kickoff": "2026-11-28T00:30Z",
       "state": "in",
-      "detail": "Halftime",
+      "detail": "13:33 - 3rd",
       "network": "NBC",
       "away": {
        "id": "135",
        "abbr": "MINN",
        "name": "Minnesota",
        "rank": null,
-       "score": 3
+       "score": null
       },
       "home": {
        "id": "275",
        "abbr": "WIS",
        "name": "Wisconsin",
        "rank": null,
-       "score": 21
+       "score": null
       },
       "winner": null,
       "pick": "275",
