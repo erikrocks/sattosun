@@ -940,22 +940,34 @@ function rootingHTML(){
       ${open ? "" : `<span class="psub">${plural((r.games || []).length, "games")}${left && left < r.games.length ? `, ${left} still to play` : ""} · tap to open</span>`}</span>${CHEV}</div>
     ${open ? (r.games || []).map(row).join("") + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(when))}.</div>` : "") : ""}</div>`;
 }
+// "Brown 173 pass yds · Phillips Jr. 76 rush yds · Vonnahme 61 rec yds": the leader of each, by last name.
+function statPreview(tops){
+  const kinds = {Pass:"pass", Rush:"rush", Rec:"rec"}, seen = new Set();
+  return tops.filter(t => kinds[t.tag] && !seen.has(t.tag) && seen.add(t.tag)).map(t => {
+    const yds = (String(t.line).match(/(-?\d+) yds/) || [])[1];
+    const parts = String(t.name).split(" "), last = parts.slice(/^(jr|sr|ii|iii|iv)\.?$/i.test(parts.at(-1)) ? -2 : -1).join(" ");
+    return yds != null ? `${last} ${yds} ${kinds[t.tag]} yds` : null;
+  }).filter(Boolean).join(" · ");
+}
 function collegeCard(g){
   const box = state.college.box[g.id], key = "f:" + g.id, open = state.copen.has(key);
   const row = (side, other, mine) => `<div class="trow">${ncaaLogo(side.id || (mine && state.college.team.id)) || `<span class="dot" style="background:${mine ? "var(--accent)" : "#555"}"></span>`}
     <span class="tname">${rk(side)}<b>${esc(side.abbr)}</b><span>${esc(side.name || "")}</span></span>
     ${g.state !== "pre" && side.score != null ? `<span class="score ${g.state === "post" && side.score < other.score ? "lose" : ""}">${esc(side.score)}</span>` : ""}</div>`;
   const usRow = row(g.us, g.opp, true), oppRow = row(g.opp, g.us, false);
-  const tops = topPerformers(box);
+  const tops = topPerformers(box), abbr = state.college.team.abbr || "";
+  const skey = "ps:" + g.id, sopen = state.copen.has(skey);     // player stats start folded; the preview shows the leaders
   const place = g.where === "home" ? "Home" : g.where === "away" ? "Away" : "Neutral site";
   return `<article class="game ${g.state === "in" ? "live" : ""}">
     <div class="gtop">${collegeStatus(g)}<span class="count">${esc(place)}</span></div>
     <div class="teams">${g.where === "home" ? oppRow + usRow : usRow + oppRow}</div>
     ${watchHTML(g, "college")}
     ${g.state === "pre" ? "" : `<div class="players">
-      ${tops.map(t => `<div class="p static"><span class="pos cat">${esc(t.tag)}</span><span class="pmain"><span class="pname">${esc(t.name)}</span><span class="sl">${esc(t.line)}</span></span></div>`).join("")}
-      <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="${esc(key)}"><span class="pmain more">Full ${esc(state.college.team.abbr || "")} box score</span>${CHEV}</div>
-      ${open ? `<div class="detail wide">${fullBox(box, g, key)}</div>` : ""}</div>`}
+      <div class="p" role="button" tabindex="0" aria-expanded="${sopen}" data-cg="${esc(skey)}"><span class="pmain"><span class="pname">${esc(abbr)} player stats</span>
+        <span class="psub">${esc(statPreview(tops) || (g.state === "in" ? "Updating as the game goes" : "Box score"))}</span></span>${CHEV}</div>
+      ${sopen ? tops.map(t => `<div class="p static"><span class="pos cat">${esc(t.tag)}</span><span class="pmain"><span class="pname">${esc(t.name)}</span><span class="sl">${esc(t.line)}</span></span></div>`).join("")
+        + `<div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="${esc(key)}"><span class="pmain more">Full ${esc(abbr)} box score</span>${CHEV}</div>
+      ${open ? `<div class="detail wide">${fullBox(box, g, key)}</div>` : ""}` : ""}</div>`}
   </article>`;
 }
 function scheduleRow(g){
