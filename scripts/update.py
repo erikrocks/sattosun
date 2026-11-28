@@ -890,7 +890,8 @@ def conference_finalists(results, teams, group_tied=False):
 
     Follows the Big Ten's 2024 championship-game tiebreaker document step by step. One thing it leaves open: when
     common opponents are themselves tied in the standings, whether to compare against them one at a time (in the
-    order the tiebreaker puts them) or as a group. group_tied=True takes the group reading."""
+    order the tiebreaker puts them) or as a group. group_tied=True takes the group reading, which is the one that matches
+    the Big Ten's own published clinch scenarios (checked against all 128 outcomes of the 2026 final week)."""
     from fractions import Fraction as F
     from itertools import combinations
     opp, W, N = {t: [] for t in teams}, dict.fromkeys(teams, 0), dict.fromkeys(teams, 0)
@@ -959,12 +960,18 @@ def conference_finalists(results, teams, group_tied=False):
             return rank(top, depth, stage) + rank(rest, depth)
         return [tuple(sorted(T))]                                  # needs the ratings service or a draw
 
-    out = []
+    out, filled = [], 0
     for p in sorted(set(pct.values()), reverse=True):
-        out += rank([t for t in teams if pct[t] == p])
-        if len(out) >= 2:
-            break
-    return out[:2]
+        for x in rank([t for t in teams if pct[t] == p]):
+            size = len(x) if isinstance(x, tuple) else 1
+            if filled + size <= 2:                                 # a tie that fits inside the top two is in, whatever its order
+                out += list(x) if isinstance(x, tuple) else [x]
+            else:
+                out.append(x)                                      # straddles the cut: only the ratings service or a draw decides
+            filled += size
+            if filled >= 2:
+                return out
+    return out
 
 
 STANDINGS = "https://site.api.espn.com/apis/v2/sports/football/college-football/standings?group={}"
@@ -1042,9 +1049,25 @@ def fpi_home(fpi, away, home, neutral=False):
     return NormalDist().cdf((fh - fa + (0 if neutral else FPI_HOME)) / FPI_SD)
 
 
+def market_home(summary, g):
+    """Chance the home team wins from the moneylines ESPN shows, with the bookmaker's margin taken out."""
+    implied = lambda m: 100 / (m + 100) if m > 0 else -m / (100 - m)
+    for pc in summary.get("pickcenter") or []:
+        h, a = (pc.get("homeTeamOdds") or {}), (pc.get("awayTeamOdds") or {})
+        try:
+            mh, ma = float(h["moneyLine"]), float(a["moneyLine"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if str(h.get("teamId") or g["home"]["id"]) != g["home"]["id"]:
+            mh, ma = ma, mh
+        ph, pa = implied(mh), implied(ma)
+        return ph / (ph + pa)
+    return None
+
+
 def game_odds(g, fpi, need_pre=True):
-    """(chance the home team wins now, chance it had before kickoff). Before kickoff that's ESPN's matchup predictor;
-    during the game, its live win probability; after it, the result."""
+    """(chance the home team wins now, chance it had before kickoff). Before kickoff that's the betting line ESPN shows
+    (its matchup predictor when there's no line); during the game, ESPN's live win probability; after it, the result."""
     now = (1.0 if g["winner"] == g["home"]["id"] else 0.0) if g["winner"] else None
     pre = fpi_home(fpi, g["away"]["id"], g["home"]["id"], g.get("neutral"))
     if now is None or need_pre:
@@ -1055,6 +1078,9 @@ def game_odds(g, fpi, need_pre=True):
             if home.get("gameProjection") not in (None, ""):
                 p = float(home["gameProjection"]) / 100
                 pre = p if str(home.get("id")) == g["home"]["id"] else 1 - p
+            line = market_home(s, g)                               # the betting line beats a ratings model when there is one
+            if line is not None:
+                pre = line
             wp = s.get("winprobability") or []
             if now is None and g["state"] == "in" and wp and wp[-1].get("homeWinPercentage") is not None:
                 now = min(max(float(wp[-1]["homeWinPercentage"]), 0.001), 0.999)
@@ -1083,7 +1109,8 @@ def title_view(me, nickname, conf_name, members, sched, prob):
     for combo in product(*ids):
         res = dict(played)
         res.update({frozenset(pair): w for pair, w in zip(ids, combo)})
-        outcomes[combo] = (conference_finalists(res, teams, group_tied=True), conference_finalists(res, teams))
+        f = conference_finalists(res, teams, group_tied=True)     # the reading the Big Ten's own clinch scenarios use
+        outcomes[combo] = (f, f)
         w = 1.0
         for (a, h), p, x in zip(ids, ph, combo):
             w *= p if x == h else 1 - p
@@ -1114,7 +1141,6 @@ def title_view(me, nickname, conf_name, members, sched, prob):
     good = count(every)
     lose = count(lambda c: c[mine] != me, outcomes) if mine is not None else (0, 0)
     overall = chance(every, outcomes)
-    ranged = abs(chance(every, outcomes, 0) - chance(every, outcomes, 1)) >= 0.01
     title, lines, rows = f"{conf_name} title game", [], {}
 
     def row(g, pick, level, why, weight, odds=None):
@@ -1183,14 +1209,12 @@ def title_view(me, nickname, conf_name, members, sched, prob):
                     why = f"The exception: if {wn} beats {ln}, {nickname} is better off with {name(other, g)} winning ({pct(o_)} against {pct(p_)}).{timing}"
             row(g, pick, level, why, (cp - co) + (2 if level == "split" else 0), {a: ca, b: cb})
 
-    note = ("Each remaining game is weighted by ESPN's odds: its matchup predictor before kickoff, its live win probability "
-            "during the game. The finalists follow the Big Ten's published tiebreaker; ties it can only settle with a ratings "
+    note = ("Each remaining game is weighted by its odds: the betting line ESPN shows before kickoff (ESPN's matchup predictor "
+            "where there's no line), ESPN's live win probability during the game. The finalists follow the Big Ten's published "
+            "tiebreaker, read the way the conference's own clinch scenarios read it; ties it can only settle with a ratings "
             "service or a draw count as misses.")
     if mine is not None and sum(good):
         note += f" Chances for the other games assume {nickname} wins its own."
-    if ranged:
-        note += (" The rules can be read two ways when common opponents are themselves tied in the standings (compare against "
-                 "them one at a time, or as a group), and these chances average the two.")
 
     def reach(t):
         """How often team t can still be a finalist if it wins / loses its open game: (wins, losses, per side)."""
@@ -1457,8 +1481,8 @@ def playoff_view(me, nickname, conf_name, group, members, sched, add_schedule, r
                           "level": "big" if swing >= 0.08 else "helps" if swing >= 0.03 else "longshot",
                           "chance": {a: round(sides[a], 4), h: round(sides[h], 4)}}
         rows = {gid: r for gid, r in rows.items() if r["level"] == "must" or gid not in cond} | moved
-    note = ("Chances come from playing out the rest of the season 20,000 times. This week's games use ESPN's odds (its matchup "
-            "predictor, or its live win probability once a game starts). The Big Ten title game comes from the conference "
+    note = ("Chances come from playing out the rest of the season 20,000 times. This week's games use the betting line ESPN shows "
+            "(its matchup predictor where there's none, its live win probability once a game starts). The Big Ten title game comes from the conference "
             "tiebreaker and is played out with ESPN's FPI ratings; other conference champions come from FPI's title odds. "
             "The committee is modeled loosely from its latest ranking: a loss costs a team about 6 spots (3 or 4 against a ranked "
             "team), a title-game loss 1 or 2, plus some random reshuffling. Treat it as an estimate, not a prediction of "
@@ -1480,6 +1504,9 @@ def name_of(g, t):
 def final_line(g):
     w, l = (g["home"], g["away"]) if g["winner"] == g["home"]["id"] else (g["away"], g["home"])
     return f"{w['name']} {w['score']}, {l['name']} {l['score']}" if w.get("score") is not None else f"{w['name']} beat {l['name']}"
+
+
+ROOTING_MODEL = 2                  # bump when the way the chances are worked out changes, so the log starts over
 
 
 def rooting_guide(school, team_id, nickname, prev=None):
@@ -1535,19 +1562,21 @@ def rooting_guide(school, team_id, nickname, prev=None):
     views = {k: v for k, v in (("playoff", playoff), ("title", title)) if v and (v["games"] or v["summary"])}
     if not views:
         return None
-    out = {"updated": iso(now_utc()), "default": "playoff" if "playoff" in views else "title", "views": views, "week": week_no}
+    out = {"updated": iso(now_utc()), "default": "playoff" if "playoff" in views else "title", "views": views, "week": week_no,
+           "model": ROOTING_MODEL}
 
     # How the chances have moved as this week's games finished.
     cur = {k: views[k]["pct"] for k in views if views[k].get("pct") is not None}
     if cur:
         prev = prev or {}
-        hist = list(prev.get("history") or []) if prev.get("week") == week_no else []
+        same = prev.get("week") == week_no and prev.get("model") == ROOTING_MODEL   # a new week or a new method starts over
+        hist = list(prev.get("history") or []) if same else []
         tracked = {g["id"]: g for g in week + list(sched.values()) if g["id"] in set((sim or {}).get("seen", [])) | {x["id"] for x in conf_open}}
         listed = {g["id"] for v in (prev.get("views") or {}).values() for g in v.get("games", [])}
         newly = [tracked[gid] for gid in prev.get("open", []) if gid in tracked and tracked[gid]["winner"]]
         if not hist:
             hist.append({"at": out["updated"], "label": "Starting point", **cur})
-        elif newly:
+        elif newly and same:
             moved = max(abs(cur.get(k, 0) - (hist[-1].get(k) or 0)) for k in cur)
             names = [final_line(g) for g in sorted(newly, key=lambda g: (g["id"] not in listed, g["kickoff"]))]
             if moved >= 0.005 or any(g["id"] in listed for g in newly):

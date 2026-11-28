@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-28T05:41:30Z",
+ "updated": "2026-11-28T06:06:46Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -12919,6 +12919,12 @@
  ],
  "news": [
   {
+   "headline": "College football: Iowa demolishes Nebraska | The Hawk Eye - Burlington, Iowa",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPUnctRXlEcGVKN2VkSENQellKUzktWUhJcVBIZnBPZDZBOFdxUktPNjN1S2JacmlldHItSnpUNEVkb0JveDRrb3Z4cXduaV9jcGJpU2lfdl9jZFpVNmJESlREZm5BZUlOdnJlY1p2TU9iY2w0QUhaUE1haEhoZTMtYnktdVllWHB2MW41cFk1S3I3dDRCdGRJUDNYOEJKWFU5MGlsdGdlYWh6M240MG01VHg3UGMwZDJJUm5VSWREVEpFM1lJa0YxcG81OEFZMnNYYnp3UWx2NGoyQTEzeUg3VkhB?oc=5",
+   "published": "2026-11-28T05:00:00Z",
+   "source": "Daily Gate City"
+  },
+  {
    "headline": "Iowa’s Hank Brown Proves CFP Dreams Are Real Again",
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObUcwVjEtem8yRnVUXzBXSFl4TXdMOENvQjctT2k4d3JWcU02Z1NYTkkyenBpamNNTFY1OXYzU2ZiYmdRMFI0Yk14cldKNDdrUDZuUEFhYU84Z0dNLWp0VEl6cVJobTFQRXVsS2d0ZTk5RW0wX3JtU1NBX2pqMFF1R1lFTGtlTjMtQnlWUWpmZHlTX1FkVjZZ?oc=5",
    "published": "2026-11-28T02:47:00Z",
@@ -12965,6 +12971,12 @@
    "url": "https://dailyiowan.com/2026/11/27/grading-no-13-iowas-31-7-victory-over-no-25-nebraska/",
    "published": "2026-11-27T23:29:14Z",
    "source": "The Daily Iowan"
+  },
+  {
+   "headline": "Leistikow's 4 thoughts off Iowa's 31-7 statement win vs Nebraska",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUFd5V0pnaU9GcS03NXhOUVI4LTFxVktvWXZUQlNMNkRqMVkxUWlJSGFoZVZ2THN4MUhjVGNjWVQ0TUhJQ0hocVFmcElheTlMaVJ5ci1RU0tDTjV1UzNGUHRiQTVhZTgzcVNSNVlBWGpCcXFlUTYyNVlZalZhekZtaUNIRm93MlRNM044Zmktd3pIeHhSQ1BoSlc1UWdXaWVMT25OTXB6emltdjNDTlY5ZWswRmtCQ1VZcDJlQWYzTlVhUFdYcWZzNlF4T1RxdEpW?oc=5",
+   "published": "2026-11-27T23:20:00Z",
+   "source": "Hawk Central"
   },
   {
    "headline": "Can Iowa make the CFP? Media reactions to Hawkeyes' statement vs. Nebraska",
@@ -13033,38 +13045,26 @@
    "source": "ESPN"
   },
   {
+   "headline": "See the top moments from Iowa football vs Nebraska in Big Ten game",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZElFdDBQNEVOSHVhd2hPN0g2ME0xWTYtUkRkQ3VfS0JrYVNqejRhMFQtREM5SWxDWTc2UEttY0JxM0pWYTlzNmxSeGJGazFaOS1ESUd2LVRBUlBhdTllR3U3YmE0NmlObmFzMzlDTTFHeGhHdW10aW04cXEyZkpDZk9qd0NLX0dZNG9UTWxJNFRocGNPRlZJV2VjRWQ2dDUweExXU01GOGlCQWdfSlM5ck1NWHktZmJMMDU3ejZ1cFJ2cGIzQndNVHRxU3VsMnNhaEYwN25rLUpYUQ?oc=5",
+   "published": "2026-11-27T21:31:00Z",
+   "source": "Hawk Central"
+  },
+  {
    "headline": "Iowa Football: Everything That Went Right, and Little That Went Wrong vs. Nebraska",
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYlRPZE9Na3JsRlM4MUJoQjdUX19BZUE5Z2Vvd21wbW0wUUw4dWJRVHpxYzVhLVNGSTV2MHhkMWxoODhXcVpzQllGY21sYTRZeXM2emNsSERLRUVwS1ZqVUJfRzFRRnBUNko2R0NNT01VaFdLMGNrRlZkYTJ2Yno3MmJRNGFGdUUxXzFsbmpyMlY?oc=5",
    "published": "2026-11-27T21:30:00Z",
    "source": "Sports Illustrated"
   },
   {
-   "headline": "Hawkeyes Football Instant Reaction: Iowa Dominates Nebraska 31-7",
-   "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQVkdjdGs2WEZjNnZyeXNta1FJRGhfZUxLX1dlcGY3cE5xVUJPYjZQS1hmR3JXeWpmb1VFUWFDMUZ4QTNidmxLMk1yajlidkZmSEVlbXAzS2RLcXltcDcwTVF2VFVSREw0MTZ2VDkxelNwWDZjX1V5UU5vS0F6NEVBYzVrdExHUVhrdUZoSmFJTHhvR0FFSGNUZ2RFbDZrU3RTYmk4V3ExMmJQYTVneU1mUWt3dWhYbDdJM0RhSFhvLWNyOUtUWnhLd0JRVlZuNVNudllNT2JCZXZRVVpZdVVFTlRUWE8zMXhMRWdsUF91RC1iWGMyUUgwNEV6MGg4Y0FJakxuRXJTN1VjLWNIQ1BzQWxiai1ES3FQTVcw?oc=5",
-   "published": "2026-11-27T21:09:54Z",
-   "source": "Black Heart Gold Pants"
-  },
-  {
-   "headline": "Iowa Keeps CFP Hopes Alive, Trounces Nebraska Behind QB Hank Brown",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWHM5RXBOY1hfclBIcllNTVBFYXlpQ2dLTkhhcUtKeTZ4ZHgxRTZaa01RWHpxQ2N3RGNPbTg0SnJxT21YY2x6b3RoTUpqS194U2czeFY2R2RWckhMRGY5Vy1HZmFNRE50RF9WN2MzR1ZEWGFEMHBaSS1LMmphMXFlTDdqRmFaajdVMHFHenc2SHlXWmppSnYxZy1CMUt2cmRlUnJ6d1JmcER3bXdSQzFDWDhaR28wQkVrai1BcdIBvAFBVV95cUxPRlJqd0VLZWlwX0k3ZWNqc3lBWUN0WlpmRWptRkpBS2lrR1MteFQ4Z19iLXgxVXNxRzdsSjdTNmQwczh2OXdfY05CQXBuR29iUTl3UkNrd1BkbkpzUmpWMXByWl8zMnUyeHhXZjRlMTVIY29kQlFYdXpmNXJFOFgzU2ZIclZsQ1ZiaUhpOGRZaUF0OHVaeU1mcXFPbTdaZDJuTFhiVnhIZHFUNTBFRUtmNXRlMVpUTkNqOHdzSQ?oc=5",
-   "published": "2026-11-27T20:48:00Z",
-   "source": "FOX Sports"
-  },
-  {
-   "headline": "Iowa 31-7 Nebraska (Nov 27, 2026) Game Recap",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5xMWlmZkh2c1lkWlNvbWxDcmxERi1iR1ZxODRXNGpocUhGNXllMHNPeUJSa0xYMFJVaXlXMUVGekJJMjNqdFpzLVBpTXBzeVg3Q0xWbXg4eVVGdUxwTVpwNXhvUzlUcktOZ2htbw?oc=5",
-   "published": "2026-11-27T20:46:06Z",
-   "source": "ESPN"
-  },
-  {
-   "headline": "Nebraska Cornhuskers vs. Iowa Hawkeyes: Game Highlights",
-   "url": "https://www.espn.com/video/clip/_/id/50613790/game-highlights",
-   "published": "2026-11-27T20:43:41Z",
-   "source": "ESPN"
+   "headline": "Bring on the chaos! Iowa's statement win over Nebraska should seal its CFP berth",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZFdYaGFuRFhDbDVJTGsxcEliel9oeWNZUlRCYjdkZmpmeXo2UzFBX3EyZGkteUZDUTBnRTJkRlZiOXc2Y0tEOThHV3d6NUFNdnlYczZ1RnFxLTcwUXJPTXNrZmRPSkdRdDFfVEZyUTFETkVsajRwWFN0N2dHcU1Gb0VERkU5OGtFMFlkNzY2Tnk1SFdyaTN6SGpvUGZ2My1ZSkE0am1uZHlSbjB5RU1hVnBHUzVXdDg?oc=5",
+   "published": "2026-11-27T21:10:08Z",
+   "source": "Dear Old Gold"
   }
  ],
  "rooting": {
-  "updated": "2026-11-28T05:41:30Z",
+  "updated": "2026-11-28T06:06:46Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13099,8 +13099,8 @@
       "why": "No. 12 Oregon is 1 spot ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "264": 0.6526,
-       "2483": 0.3533
+       "264": 0.612,
+       "2483": 0.3971
       }
      },
      {
@@ -13128,8 +13128,8 @@
       "why": "No. 10 BYU is 3 spots ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "2132": 0.6384,
-       "252": 0.3579
+       "2132": 0.6157,
+       "252": 0.4024
       }
      },
      {
@@ -13157,95 +13157,8 @@
       "why": "No. 8 Wake Forest is 5 spots ahead of Iowa in the at-large line. A loss could drop it behind.",
       "level": "big",
       "chance": {
-       "150": 0.5726,
-       "154": 0.337
-      }
-     },
-     {
-      "id": "401858311",
-      "kickoff": "2026-11-28T17:00Z",
-      "state": "pre",
-      "detail": "",
-      "network": "",
-      "away": {
-       "id": "103",
-       "abbr": "BC",
-       "name": "Boston College",
-       "rank": null,
-       "score": null
-      },
-      "home": {
-       "id": "2390",
-       "abbr": "MIA",
-       "name": "Miami",
-       "rank": 7,
-       "score": null
-      },
-      "winner": null,
-      "pick": "103",
-      "why": "",
-      "level": "big",
-      "chance": {
-       "103": 0.5537,
-       "2390": 0.3877
-      }
-     },
-     {
-      "id": "401858543",
-      "kickoff": "2026-11-28T20:30Z",
-      "state": "pre",
-      "detail": "",
-      "network": "",
-      "away": {
-       "id": "30",
-       "abbr": "USC",
-       "name": "USC",
-       "rank": 15,
-       "score": null
-      },
-      "home": {
-       "id": "26",
-       "abbr": "UCLA",
-       "name": "UCLA",
-       "rank": 9,
-       "score": null
-      },
-      "winner": null,
-      "pick": "30",
-      "why": "",
-      "level": "big",
-      "chance": {
-       "30": 0.4558,
-       "26": 0.3281
-      }
-     },
-     {
-      "id": "401856757",
-      "kickoff": "2026-11-29T00:30Z",
-      "state": "pre",
-      "detail": "",
-      "network": "",
-      "away": {
-       "id": "2",
-       "abbr": "AUB",
-       "name": "Auburn",
-       "rank": null,
-       "score": null
-      },
-      "home": {
-       "id": "333",
-       "abbr": "ALA",
-       "name": "Alabama",
-       "rank": 6,
-       "score": null
-      },
-      "winner": null,
-      "pick": "2",
-      "why": "No. 6 Alabama is 7 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
-      "level": "big",
-      "chance": {
-       "2": 0.4927,
-       "333": 0.3778
+       "150": 0.5745,
+       "154": 0.4031
       }
      },
      {
@@ -13273,8 +13186,95 @@
       "why": "Indiana is ranked behind Iowa, but a win over Purdue could put it in the Big Ten title game. Winning that would give it the automatic bid and put UCLA in the at-large line ahead of Iowa.",
       "level": "big",
       "chance": {
-       "2509": 0.4925,
-       "84": 0.3858
+       "2509": 0.5664,
+       "84": 0.4226
+      }
+     },
+     {
+      "id": "401858311",
+      "kickoff": "2026-11-28T17:00Z",
+      "state": "pre",
+      "detail": "",
+      "network": "",
+      "away": {
+       "id": "103",
+       "abbr": "BC",
+       "name": "Boston College",
+       "rank": null,
+       "score": null
+      },
+      "home": {
+       "id": "2390",
+       "abbr": "MIA",
+       "name": "Miami",
+       "rank": 7,
+       "score": null
+      },
+      "winner": null,
+      "pick": "103",
+      "why": "",
+      "level": "big",
+      "chance": {
+       "103": 0.5532,
+       "2390": 0.4247
+      }
+     },
+     {
+      "id": "401858543",
+      "kickoff": "2026-11-28T20:30Z",
+      "state": "pre",
+      "detail": "",
+      "network": "",
+      "away": {
+       "id": "30",
+       "abbr": "USC",
+       "name": "USC",
+       "rank": 15,
+       "score": null
+      },
+      "home": {
+       "id": "26",
+       "abbr": "UCLA",
+       "name": "UCLA",
+       "rank": 9,
+       "score": null
+      },
+      "winner": null,
+      "pick": "30",
+      "why": "",
+      "level": "big",
+      "chance": {
+       "30": 0.4671,
+       "26": 0.371
+      }
+     },
+     {
+      "id": "401856757",
+      "kickoff": "2026-11-29T00:30Z",
+      "state": "pre",
+      "detail": "",
+      "network": "",
+      "away": {
+       "id": "2",
+       "abbr": "AUB",
+       "name": "Auburn",
+       "rank": null,
+       "score": null
+      },
+      "home": {
+       "id": "333",
+       "abbr": "ALA",
+       "name": "Alabama",
+       "rank": 6,
+       "score": null
+      },
+      "winner": null,
+      "pick": "2",
+      "why": "No. 6 Alabama is 7 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
+      "level": "big",
+      "chance": {
+       "2": 0.5094,
+       "333": 0.4185
       }
      },
      {
@@ -13302,79 +13302,50 @@
       "why": "No. 5 Tennessee is 8 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
       "level": "helps",
       "chance": {
-       "2633": 0.3829,
-       "238": 0.4477
+       "2633": 0.4253,
+       "238": 0.4667
       }
      },
      {
-      "id": "401858314",
+      "id": "401856761",
       "kickoff": "2026-11-28T17:00Z",
       "state": "pre",
       "detail": "",
       "network": "",
       "away": {
-       "id": "87",
-       "abbr": "ND",
-       "name": "Notre Dame",
-       "rank": 4,
+       "id": "97",
+       "abbr": "LOU",
+       "name": "Louisville",
+       "rank": 19,
        "score": null
       },
       "home": {
-       "id": "183",
-       "abbr": "SYR",
-       "name": "Syracuse",
+       "id": "96",
+       "abbr": "UK",
+       "name": "Kentucky",
        "rank": null,
        "score": null
       },
       "winner": null,
-      "pick": "183",
-      "why": "No. 4 Notre Dame is 9 spots ahead of Iowa in the at-large line. A loss might not drop it far enough, but it would help.",
+      "pick": "96",
+      "why": "",
       "level": "longshot",
       "chance": {
-       "87": 0.3906,
-       "183": 0.4029
+       "97": 0.4285,
+       "96": 0.4388
       }
      }
     ],
-    "note": "Chances come from playing out the rest of the season 20,000 times. This week's games use ESPN's odds (its matchup predictor, or its live win probability once a game starts). The Big Ten title game comes from the conference tiebreaker and is played out with ESPN's FPI ratings; other conference champions come from FPI's title odds. The committee is modeled loosely from its latest ranking: a loss costs a team about 6 spots (3 or 4 against a ranked team), a title-game loss 1 or 2, plus some random reshuffling. Treat it as an estimate, not a prediction of the committee. The field is 12: the ACC, Big Ten, Big 12 and SEC champions, the highest-ranked team from the other conferences, and the next seven in the ranking.",
-    "pct": 0.3911
+    "note": "Chances come from playing out the rest of the season 20,000 times. This week's games use the betting line ESPN shows (its matchup predictor where there's none, its live win probability once a game starts). The Big Ten title game comes from the conference tiebreaker and is played out with ESPN's FPI ratings; other conference champions come from FPI's title odds. The committee is modeled loosely from its latest ranking: a loss costs a team about 6 spots (3 or 4 against a ranked team), a title-game loss 1 or 2, plus some random reshuffling. Treat it as an estimate, not a prediction of the committee. The field is 12: the ACC, Big Ten, Big 12 and SEC champions, the highest-ranked team from the other conferences, and the next seven in the ranking.",
+    "pct": 0.433
    },
    "title": {
     "label": "Big Ten title",
-    "pct": 0.2969,
+    "pct": 0.6245,
     "summary": [
-     "Iowa gets there in 68–86 of the 128 ways the remaining Big Ten games can finish, or 30% once each way is weighted by the odds of its games."
+     "Iowa gets there in 87 of the 128 ways the remaining Big Ten games can finish, or 62% once each way is weighted by the odds of its games."
     ],
     "games": [
-     {
-      "id": "401858538",
-      "kickoff": "2026-11-29T00:00Z",
-      "state": "pre",
-      "detail": "",
-      "network": "FS1",
-      "away": {
-       "id": "2509",
-       "abbr": "PUR",
-       "name": "Purdue",
-       "rank": null,
-       "score": null
-      },
-      "home": {
-       "id": "84",
-       "abbr": "IU",
-       "name": "Indiana",
-       "rank": 14,
-       "score": null
-      },
-      "winner": null,
-      "pick": "2509",
-      "level": "big",
-      "why": "",
-      "chance": {
-       "2509": 0.5639,
-       "84": 0.2826
-      }
-     },
      {
       "id": "401858543",
       "kickoff": "2026-11-28T20:30Z",
@@ -13398,10 +13369,10 @@
       "winner": null,
       "pick": "30",
       "level": "split",
-      "why": "It depends on Washington at Oregon. If Washington wins, Iowa wants UCLA here (100% against 10%). If Oregon wins, it wants USC. That game kicks off later, so you won't know yet. Until then, USC winning is the better bet.",
+      "why": "It depends on Washington at Oregon. If Washington wins, Iowa wants UCLA here (100% against 27%). If Oregon wins, it wants USC. That game kicks off later, so you won't know yet. Until then, USC winning is the better bet.",
       "chance": {
-       "30": 0.4719,
-       "26": 0.1267
+       "30": 0.8734,
+       "26": 0.1729
       }
      },
      {
@@ -13427,10 +13398,10 @@
       "winner": null,
       "pick": null,
       "level": "split",
-      "why": "It depends on USC at UCLA. If USC wins, Iowa wants Oregon here (53% against 10%). If UCLA wins, it wants Washington. That game kicks off first, so you'll know which way to lean.",
+      "why": "It depends on USC at UCLA. If UCLA wins, Iowa wants Washington here (100% against 0%). If USC wins, it wants Oregon. That game kicks off first, so you'll know which way to lean.",
       "chance": {
-       "264": 0.5565,
-       "2483": 0.2595
+       "264": 0.5279,
+       "2483": 0.6447
       }
      },
      {
@@ -13458,27 +13429,51 @@
       "level": "helps",
       "why": "",
       "chance": {
-       "130": 0.3253,
-       "194": 0.2935
+       "130": 0.6996,
+       "194": 0.603
+      }
+     },
+     {
+      "id": "401858538",
+      "kickoff": "2026-11-29T00:00Z",
+      "state": "pre",
+      "detail": "",
+      "network": "FS1",
+      "away": {
+       "id": "2509",
+       "abbr": "PUR",
+       "name": "Purdue",
+       "rank": null,
+       "score": null
+      },
+      "home": {
+       "id": "84",
+       "abbr": "IU",
+       "name": "Indiana",
+       "rank": 14,
+       "score": null
+      },
+      "winner": null,
+      "pick": "2509",
+      "level": "helps",
+      "why": "",
+      "chance": {
+       "2509": 0.7061,
+       "84": 0.618
       }
      }
     ],
-    "note": "Each remaining game is weighted by ESPN's odds: its matchup predictor before kickoff, its live win probability during the game. The finalists follow the Big Ten's published tiebreaker; ties it can only settle with a ratings service or a draw count as misses. The rules can be read two ways when common opponents are themselves tied in the standings (compare against them one at a time, or as a group), and these chances average the two."
+    "note": "Each remaining game is weighted by its odds: the betting line ESPN shows before kickoff (ESPN's matchup predictor where there's no line), ESPN's live win probability during the game. The finalists follow the Big Ten's published tiebreaker, read the way the conference's own clinch scenarios read it; ties it can only settle with a ratings service or a draw count as misses."
    }
   },
   "week": 13,
+  "model": 2,
   "history": [
    {
-    "at": "2026-11-28T05:20:35Z",
+    "at": "2026-11-28T06:06:46Z",
     "label": "Starting point",
-    "playoff": 0.3911,
-    "title": 0.2969
-   },
-   {
-    "at": "2026-11-28T05:41:30Z",
-    "label": "Utah 52, West Virginia 28",
-    "playoff": 0.3911,
-    "title": 0.2969
+    "playoff": 0.433,
+    "title": 0.6245
    }
   ],
   "open": [
