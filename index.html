@@ -224,6 +224,23 @@
   .rtabs{padding:12px 14px 0}
   .rtabs .seg{margin:0}
   .rnote{border-top:1px solid var(--line);padding:10px 14px 11px;font-size:12px;line-height:1.45;color:var(--dim)}
+  .rodds{display:block;margin-top:5px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .rodds b{color:var(--text);font-weight:700}
+  .rchances{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 14px 0}
+  .rchances button{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px 10px;min-width:0}
+  .rchances button[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+  .rchances button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .rchances .lbl{display:block;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .rchances .num{display:block;font:800 30px/1.15 Inter,sans-serif;color:var(--text);font-variant-numeric:tabular-nums}
+  .rchances .chg{display:block;font-size:12px;color:var(--dim)}
+  .chg .up,.rh .up{color:#6fe3a5}
+  .chg .down,.rh .down{color:#FF8A8A}
+  .rhist{border-top:1px solid var(--line);padding:10px 14px 4px}
+  .rhist .h{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
+  .rh{display:flex;gap:10px;align-items:baseline;padding:5px 0;font-size:13px;line-height:1.4}
+  .rh .t{flex:0 0 auto;min-width:62px;white-space:nowrap;color:var(--dim);font-variant-numeric:tabular-nums}
+  .rh .l{flex:1;min-width:0;color:var(--muted)}
+  .rh .n{flex:0 0 auto;white-space:nowrap;color:var(--text);font-weight:700;font-variant-numeric:tabular-nums}
   .bx td:first-child,.bx th:first-child{text-align:left;padding-left:0;font-weight:600}
   .more{font-size:13px;font-weight:600;color:var(--accent)}
   a.news{display:block;padding:11px 14px;color:var(--text);text-decoration:none;border-top:1px solid var(--line)}
@@ -885,7 +902,7 @@ function rootLive(){
 }
 async function syncRooting(){
   if(!rootLive().length) return false;
-  if(Date.now() - (state.rootFetched || 0) > 10*60e3){     // the updater reworks the counts as games finish
+  if(Date.now() - (state.rootFetched || 0) > 5*60e3){      // the updater reworks the chances as games finish
     state.rootFetched = Date.now();
     try{
       const fresh = (await getJSON(`data/college/${state.schoolKey}.json`)).rooting;
@@ -909,13 +926,31 @@ async function syncRooting(){
   }));
   return done.some(Boolean);
 }
+const pctText = p => p == null ? "—" : p < .005 ? (p > 0 ? "<1%" : "0%") : p > .995 ? (p < 1 ? ">99%" : "100%") : Math.round(p * 100) + "%";
+// "+6" / "−4" in percentage points, colored; "" when it hasn't moved a full point.
+function ptsChange(now, then){
+  if(now == null || then == null) return "";
+  const d = Math.round((now - then) * 100);
+  return d ? `<span class="${d > 0 ? "up" : "down"}">${d > 0 ? "▲" : "▼"}${Math.abs(d)}</span>` : "";
+}
 function rootingHTML(){
-  const views = rootViews(state.college.rooting), keys = Object.keys(views);
+  const rooting = state.college.rooting, views = rootViews(rooting), keys = Object.keys(views);
   if(!keys.length) return "";
-  const key = views[state.rootView] ? state.rootView : views[state.college.rooting.default] ? state.college.rooting.default : keys[0];
-  const r = views[key], when = state.college.rooting.updated || r.updated;
+  const key = views[state.rootView] ? state.rootView : views[rooting.default] ? rooting.default : keys[0];
+  const r = views[key], when = rooting.updated || r.updated, hist = rooting.history || [];
   const open = !state.copen.has("rootclosed"), left = (r.games || []).filter(g => g.state !== "post").length;
-  const tabs = keys.length > 1 ? `<div class="rtabs"><div class="seg" role="tablist">${keys.map(k =>
+  const goal = k => k === "playoff" ? "Playoff" : `${views[k].label || "Title"} game`;
+  const oddsLabel = key === "playoff" ? "Playoff chance" : "Title-game chance";
+  const start = hist[0], sameDay = start && new Date(start.at).toDateString() === new Date().toDateString();
+  const since = start ? (sameDay ? "today" : "since " + new Date(start.at).toLocaleDateString([], {weekday:"short"})) : "";
+  const chg = k => {
+    const d = hist.length > 1 && views[k].pct != null && start[k] != null ? Math.abs(Math.round((views[k].pct - start[k]) * 100)) : 0;
+    return d ? `${ptsChange(views[k].pct, start[k])} ${d === 1 ? "pt" : "pts"} ${since}` : hist.length > 1 ? `No change ${since}` : "Updates as games finish";
+  };
+  const tabs = keys.some(k => views[k].pct != null)
+    ? `<div class="rchances" role="tablist">${keys.map(k => `<button role="tab" data-rv="${esc(k)}" aria-pressed="${k === key}" aria-selected="${k === key}">
+        <span class="lbl">${esc(goal(k))}</span><span class="num">${pctText(views[k].pct)}</span><span class="chg">${chg(k)}</span></button>`).join("")}</div>`
+    : keys.length > 1 ? `<div class="rtabs"><div class="seg" role="tablist">${keys.map(k =>
     `<button role="tab" data-rv="${esc(k)}" aria-pressed="${k === key}" aria-selected="${k === key}">${esc(views[k].label || k)}</button>`).join("")}</div></div>` : "";
   const row = g => {
     const pick = g.pick ? (g.pick === g.away.id ? g.away : g.home) : null, other = pick === g.away ? g.home : g.away;
@@ -930,15 +965,25 @@ function rootingHTML(){
                : `${esc(new Date(g.kickoff).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}))}${g.network ? " · " + esc(g.network) : ""}`;
     const tag = g.state === "post" && pick && g.winner ? (g.winner === pick.id ? `<span class="tag win">Went ${esc(school().name)}'s way</span>` : `<span class="tag loss">Didn't help</span>`)
               : `<span class="tag ${esc(g.level)}">${esc(ROOT_TAG[g.level] || "")}</span>`;
+    const ch = g.chance || {}, [first, second] = pick ? [pick, other] : [g.away, g.home];
+    const odds = ch[first.id] != null && ch[second.id] != null
+      ? `<span class="rodds">${oddsLabel} <b>${pctText(ch[first.id])}</b> if ${esc(first.name)} wins · ${pctText(ch[second.id])} if ${esc(second.name)} wins</span>` : "";
     return `<div class="rg"><div class="rhead">${head}${tag}</div>
-      <span class="psub ${g.state === "pre" ? "" : "on"}">${when}</span>
-      <p class="why">${esc(g.why)}</p></div>`;
+      <span class="psub ${g.state === "pre" ? "" : "on"}">${when}</span>${odds}
+      ${g.why ? `<p class="why">${esc(g.why)}</p>` : ""}</div>`;
   };
+  const moves = hist.slice(1).filter(h => h[key] != null).reverse().slice(0, 8);
+  const history = moves.length ? `<div class="rhist"><div class="h">How it's moved</div>${moves.map((h, i, all) => {
+      const before = (all[i + 1] || start)[key];
+      return `<div class="rh"><span class="t">${esc(new Date(h.at).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"}))}</span>
+        <span class="l">${esc(h.label)}</span><span class="n">${pctText(h[key])} ${ptsChange(h[key], before)}</span></div>`;
+    }).join("")}<div class="rh"><span class="t">${esc(new Date(start.at).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"}))}</span>
+        <span class="l">Starting point</span><span class="n">${pctText(start[key])}</span></div></div>` : "";
   return `<div class="section-h">Who to root for</div><div class="game root">${tabs}
     <div class="p" role="button" tabindex="0" aria-expanded="${open}" data-cg="rootclosed"><span class="pmain">
       ${(open ? r.summary : r.summary.slice(0, 1)).map(l => `<span class="rsum">${esc(l)}</span>`).join("")}
       ${open ? "" : `<span class="psub">${plural((r.games || []).length, "games")}${left && left < r.games.length ? `, ${left} still to play` : ""} · tap to open</span>`}</span>${CHEV}</div>
-    ${open ? (r.games || []).map(row).join("") + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(when))}.</div>` : "") : ""}</div>`;
+    ${open ? (r.games || []).map(row).join("") + history + (r.note ? `<div class="rnote">${esc(r.note)} Worked out ${esc(fmtTime(when))}.</div>` : "") : ""}</div>`;
 }
 // "Brown 173 pass yds · Phillips Jr. 76 rush yds · Vonnahme 61 rec yds": the leader of each, by last name.
 function statPreview(tops){
