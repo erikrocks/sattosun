@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-28T05:21:12Z",
+ "updated": "2026-11-28T05:31:22Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -13064,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-28T05:21:12Z",
+  "updated": "2026-11-28T05:31:22Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13281,14 +13281,14 @@
       "id": "401856880",
       "kickoff": "2026-11-28T02:00Z",
       "state": "in",
-      "detail": "5:27 - 4th",
+      "detail": "1:53 - 4th",
       "network": "",
       "away": {
        "id": "277",
        "abbr": "WVU",
        "name": "West Virginia",
        "rank": null,
-       "score": 21
+       "score": 28
       },
       "home": {
        "id": "254",
