@@ -1,7 +1,7 @@
 {
  "school": "iowa",
  "season": 2026,
- "updated": "2026-11-28T02:33:10Z",
+ "updated": "2026-11-28T02:43:22Z",
  "source": "ESPN college football",
  "team": {
   "id": "2294",
@@ -13064,7 +13064,7 @@
   }
  ],
  "rooting": {
-  "updated": "2026-11-28T02:33:10Z",
+  "updated": "2026-11-28T02:43:22Z",
   "default": "playoff",
   "views": {
    "playoff": {
@@ -13253,21 +13253,21 @@
       "id": "401856756",
       "kickoff": "2026-11-28T00:30Z",
       "state": "in",
-      "detail": "Halftime",
+      "detail": "13:15 - 3rd",
       "network": "ABC",
       "away": {
        "id": "251",
        "abbr": "TEX",
        "name": "Texas",
        "rank": 3,
-       "score": 10
+       "score": null
       },
       "home": {
        "id": "245",
        "abbr": "TA&M",
        "name": "Texas A&M",
        "rank": null,
-       "score": 3
+       "score": null
       },
       "winner": null,
       "pick": "245",
@@ -13362,7 +13362,7 @@
       "id": "401858544",
       "kickoff": "2026-11-28T00:30Z",
       "state": "in",
-      "detail": "13:33 - 3rd",
+      "detail": "9:13 - 3rd",
       "network": "NBC",
       "away": {
        "id": "135",
