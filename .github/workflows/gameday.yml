@@ -3,7 +3,7 @@ name: Game day
 # Keeps scores, stats and "Who to root for" fresh while games are on.
 # GitHub starts frequent schedules late and skips most of them, so each run that does land stays up
 # (scripts/gameday.py): it refreshes every 10 minutes while a tracked game is on, waits for a kickoff
-# up to 6 hours away, and hands over to a fresh run before the 6-hour job limit.
+# up to 14 hours away, and hands over to a fresh run before the 6-hour job limit.
 
 on:
   schedule:
